@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace appE2Colsis.Vista
 {
-    public partial class frmMenuPrincipal : Form
+    public partial class frmLogin: Form
     {
-        public frmMenuPrincipal()
+        public frmLogin()
         {
             InitializeComponent();
-        }
-
-        private void frmMenuPrincipal_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
