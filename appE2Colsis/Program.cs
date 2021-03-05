@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using appE2Colsis.Vista;
 
 namespace appE2Colsis
 {
@@ -16,7 +17,7 @@ namespace appE2Colsis
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPrincipal());
+            Application.Run(new frmLogin());
         }
     }
 }

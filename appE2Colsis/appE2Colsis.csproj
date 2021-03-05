@@ -36,9 +36,14 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
       <HintPath>..\..\..\Users\yotas\Documents\Bunifi\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\Users\yotas\Documents\GUNA\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
