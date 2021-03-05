@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\clConexion.cs" />
+    <Compile Include="Datos\clRol.cs" />
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
