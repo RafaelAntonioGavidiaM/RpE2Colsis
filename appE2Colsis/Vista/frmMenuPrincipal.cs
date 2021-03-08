@@ -26,10 +26,10 @@ namespace appE2Colsis.Vista
 
         private void btnPersona_Click(object sender, EventArgs e)
         {
-            frmLogin objLogin = new frmLogin();
+           /* frmLogin objLogin = new frmLogin();
             objLogin.TopLevel = false;
             objLogin.Parent = pnNombre;
-            objLogin.Show();
+            objLogin.Show();*/
             
             
         }
