@@ -27,6 +27,7 @@ namespace appE2Colsis.Datos
 
         //Objetos compartidos
         protected clConexion objConexion = new clConexion();
+        
 
         //Datos de solo lectura
         public DataTable tblPersona;

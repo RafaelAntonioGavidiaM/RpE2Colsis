@@ -58,7 +58,7 @@
             this.txtRol.Location = new System.Drawing.Point(103, 49);
             this.txtRol.Name = "txtRol";
             this.txtRol.PasswordChar = '\0';
-            this.txtRol.Radius = 15;
+            this.txtRol.Radius = 10;
             this.txtRol.SelectedText = "";
             this.txtRol.Size = new System.Drawing.Size(123, 26);
             this.txtRol.TabIndex = 1;
@@ -76,14 +76,14 @@
             this.gunaButton1.ForeColor = System.Drawing.Color.White;
             this.gunaButton1.Image = null;
             this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(64, 94);
+            this.gunaButton1.Location = new System.Drawing.Point(61, 91);
             this.gunaButton1.Name = "gunaButton1";
             this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Radius = 25;
+            this.gunaButton1.Radius = 10;
             this.gunaButton1.Size = new System.Drawing.Size(107, 42);
             this.gunaButton1.TabIndex = 2;
             this.gunaButton1.Text = "Crear Rol";
@@ -95,9 +95,9 @@
             this.groupBox1.Controls.Add(this.gunaButton1);
             this.groupBox1.Controls.Add(this.lblRol);
             this.groupBox1.Controls.Add(this.txtRol);
-            this.groupBox1.Location = new System.Drawing.Point(33, 56);
+            this.groupBox1.Location = new System.Drawing.Point(23, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(260, 195);
+            this.groupBox1.Size = new System.Drawing.Size(280, 426);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
