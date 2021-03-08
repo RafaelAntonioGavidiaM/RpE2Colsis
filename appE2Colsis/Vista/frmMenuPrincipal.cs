@@ -19,7 +19,19 @@ namespace appE2Colsis.Vista
 
         private void frmMenuPrincipal_Load(object sender, EventArgs e)
         {
+            
+            
 
+        }
+
+        private void btnPersona_Click(object sender, EventArgs e)
+        {
+            frmLogin objLogin = new frmLogin();
+            objLogin.TopLevel = false;
+            objLogin.Parent = pnNombre;
+            objLogin.Show();
+            
+            
         }
     }
 }
