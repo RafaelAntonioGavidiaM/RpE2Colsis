@@ -13,9 +13,13 @@ namespace appE2Colsis.Datos
         /// <summary>
         /// Metodo Registrar Rol con solo nombre.
         /// </summary>
-        public void mtdRegistrarRol()
+        public int mtdRegistrarRol()
         {
             string consulta = "insert into rol(nombre) values ('" + nombreRol + "')";
+            clConexion objConexion = new clConexion();
+            int rows=0;
+            rows=objConexion.mtdConectado(consulta);
+            return rows;
 
 
 

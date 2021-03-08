@@ -88,6 +88,7 @@
             this.gunaButton1.TabIndex = 2;
             this.gunaButton1.Text = "Crear Rol";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // groupBox1
             // 

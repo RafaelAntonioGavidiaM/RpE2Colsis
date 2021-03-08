@@ -16,5 +16,11 @@ namespace appE2Colsis.Vista
         {
             InitializeComponent();
         }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+
+
+        }
     }
 }
