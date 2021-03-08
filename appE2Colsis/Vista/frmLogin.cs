@@ -22,9 +22,7 @@ namespace appE2Colsis.Vista
             if (txtUser.Text=="admin" &&txtPswd.Text=="admin2021")
             {
                 pSettings.Visible = true;
-
             }
-
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
