@@ -38,7 +38,9 @@ namespace appE2Colsis.Vista
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.pSettings = new Guna.UI.WinForms.GunaPictureBox();
             this.grpSetting = new Guna.UI.WinForms.GunaGroupBox();
-            this.txtPasswodDB = new Guna.UI.WinForms.GunaTextBox();
+            this.txtDataBaseDB = new Guna.UI.WinForms.GunaTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtPasswordDB = new Guna.UI.WinForms.GunaTextBox();
             this.txtUserDB = new Guna.UI.WinForms.GunaTextBox();
             this.txtPortDB = new Guna.UI.WinForms.GunaTextBox();
             this.txtServerDB = new Guna.UI.WinForms.GunaTextBox();
@@ -47,8 +49,6 @@ namespace appE2Colsis.Vista
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtDataBadeDB = new Guna.UI.WinForms.GunaTextBox();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pSettings)).BeginInit();
             this.grpSetting.SuspendLayout();
@@ -173,9 +173,9 @@ namespace appE2Colsis.Vista
             this.grpSetting.BackColor = System.Drawing.Color.White;
             this.grpSetting.BaseColor = System.Drawing.Color.Transparent;
             this.grpSetting.BorderColor = System.Drawing.Color.Transparent;
-            this.grpSetting.Controls.Add(this.txtDataBadeDB);
+            this.grpSetting.Controls.Add(this.txtDataBaseDB);
             this.grpSetting.Controls.Add(this.label5);
-            this.grpSetting.Controls.Add(this.txtPasswodDB);
+            this.grpSetting.Controls.Add(this.txtPasswordDB);
             this.grpSetting.Controls.Add(this.txtUserDB);
             this.grpSetting.Controls.Add(this.txtPortDB);
             this.grpSetting.Controls.Add(this.txtServerDB);
@@ -194,21 +194,48 @@ namespace appE2Colsis.Vista
             this.grpSetting.Text = "Settings";
             this.grpSetting.TextLocation = new System.Drawing.Point(10, 8);
             // 
-            // txtPasswodDB
+            // txtDataBaseDB
             // 
-            this.txtPasswodDB.BaseColor = System.Drawing.Color.White;
-            this.txtPasswodDB.BorderColor = System.Drawing.Color.Silver;
-            this.txtPasswodDB.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPasswodDB.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtPasswodDB.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtPasswodDB.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtPasswodDB.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPasswodDB.Location = new System.Drawing.Point(160, 144);
-            this.txtPasswodDB.Name = "txtPasswodDB";
-            this.txtPasswodDB.PasswordChar = '*';
-            this.txtPasswodDB.SelectedText = "";
-            this.txtPasswodDB.Size = new System.Drawing.Size(66, 26);
-            this.txtPasswodDB.TabIndex = 8;
+            this.txtDataBaseDB.BaseColor = System.Drawing.Color.White;
+            this.txtDataBaseDB.BorderColor = System.Drawing.Color.Silver;
+            this.txtDataBaseDB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDataBaseDB.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtDataBaseDB.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtDataBaseDB.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtDataBaseDB.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDataBaseDB.Location = new System.Drawing.Point(88, 75);
+            this.txtDataBaseDB.Name = "txtDataBaseDB";
+            this.txtDataBaseDB.PasswordChar = '\0';
+            this.txtDataBaseDB.SelectedText = "";
+            this.txtDataBaseDB.Size = new System.Drawing.Size(116, 26);
+            this.txtDataBaseDB.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(8, 75);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 16);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "DataBase:";
+            // 
+            // txtPasswordDB
+            // 
+            this.txtPasswordDB.BaseColor = System.Drawing.Color.White;
+            this.txtPasswordDB.BorderColor = System.Drawing.Color.Silver;
+            this.txtPasswordDB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPasswordDB.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtPasswordDB.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtPasswordDB.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtPasswordDB.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPasswordDB.Location = new System.Drawing.Point(160, 144);
+            this.txtPasswordDB.Name = "txtPasswordDB";
+            this.txtPasswordDB.PasswordChar = '*';
+            this.txtPasswordDB.SelectedText = "";
+            this.txtPasswordDB.Size = new System.Drawing.Size(66, 26);
+            this.txtPasswordDB.TabIndex = 8;
             // 
             // txtUserDB
             // 
@@ -331,33 +358,6 @@ namespace appE2Colsis.Vista
             this.label1.TabIndex = 0;
             this.label1.Text = "Server:";
             // 
-            // txtDataBadeDB
-            // 
-            this.txtDataBadeDB.BaseColor = System.Drawing.Color.White;
-            this.txtDataBadeDB.BorderColor = System.Drawing.Color.Silver;
-            this.txtDataBadeDB.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDataBadeDB.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtDataBadeDB.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtDataBadeDB.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtDataBadeDB.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtDataBadeDB.Location = new System.Drawing.Point(88, 75);
-            this.txtDataBadeDB.Name = "txtDataBadeDB";
-            this.txtDataBadeDB.PasswordChar = '\0';
-            this.txtDataBadeDB.SelectedText = "";
-            this.txtDataBadeDB.Size = new System.Drawing.Size(116, 26);
-            this.txtDataBadeDB.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(8, 75);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 16);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "DataBase:";
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,7 +396,7 @@ namespace appE2Colsis.Vista
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
         private Guna.UI.WinForms.GunaPictureBox pSettings;
         private Guna.UI.WinForms.GunaGroupBox grpSetting;
-        private Guna.UI.WinForms.GunaTextBox txtPasswodDB;
+        private Guna.UI.WinForms.GunaTextBox txtPasswordDB;
         private Guna.UI.WinForms.GunaTextBox txtUserDB;
         private Guna.UI.WinForms.GunaTextBox txtPortDB;
         private Guna.UI.WinForms.GunaTextBox txtServerDB;
@@ -405,7 +405,7 @@ namespace appE2Colsis.Vista
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI.WinForms.GunaTextBox txtDataBadeDB;
+        private Guna.UI.WinForms.GunaTextBox txtDataBaseDB;
         private System.Windows.Forms.Label label5;
     }
 }

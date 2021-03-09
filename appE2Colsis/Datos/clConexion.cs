@@ -13,11 +13,6 @@ namespace appE2Colsis.Datos
 {
     class clConexion
     {
-        private string server;
-        private string user;
-        private string port;
-        private string database;
-        private string password;
         private string cadenaConexion;
         private MySqlConnection objConexion;
         public clConexion()
@@ -62,27 +57,6 @@ namespace appE2Colsis.Datos
             int filasAfectadas = comando.ExecuteNonQuery();
             objConexion.Close();
             return filasAfectadas;
-        }
-        public void mtdActualizarCadenaConexion()
-        {
-            string cadena = "server = "+server+"; user id = "+user+"; Port = "+port+"; database = "+database+"; Password = "+password;
-
-            XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
-
-            foreach(XmlDocument element in xmlDoc.DocumentElement)
-            {
-                if(element.Name.Equals("appSettings"))
-                {
-                    foreach(XmlNode node in element.ChildNodes)
-                    {
-                        if (node.Attributes[0].Value == "conexion")
-                            node.Attributes[1].Value = cadena;
-                    }
-                }
-            }
-            xmlDoc.Save(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
-            ConfigurationManager.RefreshSection("appSettings");
         }
     }
 }
