@@ -20,7 +20,7 @@ namespace appE2Colsis.Datos
         /// Metodo Registrar Rol con solo nombre.
         /// </summary>
         clConexion objConexion = new clConexion();
-        public int mtdRegistrarRol()
+        public int mtdRegistrarRol() //Registra en la tabla Rol
         {
             string consulta = "insert into rol(nombre) values ('" + nombreRol + "')";
             
@@ -30,7 +30,28 @@ namespace appE2Colsis.Datos
             return rows;
 
         }
-        public List<clRol> mtdPermisos()
+        /// <summary>
+        /// consultar datos en la tabla rol
+        /// </summary>
+        /// <returns>lista datos</returns>
+        public List<clRol> mtdConsultarRol() // consultar datos en la tabla rol
+        {
+            string consulta = "select * from rol";
+            DataTable infoRol = new DataTable();
+          infoRol=  objConexion.mtdDesconectado(consulta);
+            List<clRol> listaRol = new List<clRol>();
+            for (int i = 0; i < infoRol.Rows.Count; i++)
+            {
+                clRol objRol = new clRol();
+                objRol.idRol = int.Parse(infoRol.Rows[i][0].ToString());
+                objRol.nombreRol = infoRol.Rows[i][1].ToString();
+                listaRol.Add(objRol);
+
+            }
+            return listaRol;
+
+        }
+        public List<clRol> mtdPermisos() 
         {
            string consulta = "select * from permiso";
             DataTable datos = new DataTable();

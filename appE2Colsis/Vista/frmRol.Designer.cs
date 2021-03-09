@@ -33,16 +33,16 @@
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.grpfrmrol = new System.Windows.Forms.GroupBox();
+            this.rbHabilitadofrm2 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.frm2 = new System.Windows.Forms.Label();
             this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
             this.grpPermisos = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.rbHabilitadofrm1 = new System.Windows.Forms.RadioButton();
-            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.frm1 = new System.Windows.Forms.Label();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.rbHabilitadofrm2 = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.dgvMostrar = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.grpfrmrol.SuspendLayout();
@@ -132,6 +132,28 @@
             this.grpfrmrol.TabIndex = 9;
             this.grpfrmrol.TabStop = false;
             // 
+            // rbHabilitadofrm2
+            // 
+            this.rbHabilitadofrm2.AutoSize = true;
+            this.rbHabilitadofrm2.Location = new System.Drawing.Point(76, 19);
+            this.rbHabilitadofrm2.Name = "rbHabilitadofrm2";
+            this.rbHabilitadofrm2.Size = new System.Drawing.Size(72, 17);
+            this.rbHabilitadofrm2.TabIndex = 13;
+            this.rbHabilitadofrm2.Text = "Habilitado";
+            this.rbHabilitadofrm2.UseVisualStyleBackColor = false;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Checked = true;
+            this.radioButton5.Location = new System.Drawing.Point(168, 19);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(83, 17);
+            this.radioButton5.TabIndex = 14;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Desabilitado";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
             // frm2
             // 
             this.frm2.AutoSize = true;
@@ -181,6 +203,16 @@
             this.grpPermisos.TabStop = false;
             this.grpPermisos.Text = "groupBox2";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(85, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 17);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Permisos";
+            // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
@@ -203,6 +235,15 @@
             this.rbHabilitadofrm1.Text = "Habilitado";
             this.rbHabilitadofrm1.UseVisualStyleBackColor = false;
             // 
+            // frm1
+            // 
+            this.frm1.AutoSize = true;
+            this.frm1.Location = new System.Drawing.Point(15, 49);
+            this.frm1.Name = "frm1";
+            this.frm1.Size = new System.Drawing.Size(60, 13);
+            this.frm1.TabIndex = 3;
+            this.frm1.Text = "frmPersona";
+            // 
             // gunaButton2
             // 
             this.gunaButton2.AnimationHoverSpeed = 0.07F;
@@ -216,7 +257,7 @@
             this.gunaButton2.ForeColor = System.Drawing.Color.White;
             this.gunaButton2.Image = null;
             this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton2.Location = new System.Drawing.Point(77, 371);
+            this.gunaButton2.Location = new System.Drawing.Point(82, 380);
             this.gunaButton2.Name = "gunaButton2";
             this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -229,47 +270,6 @@
             this.gunaButton2.Text = "Asignar Permisos";
             this.gunaButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton2.Click += new System.EventHandler(this.gunaButton2_Click);
-            // 
-            // frm1
-            // 
-            this.frm1.AutoSize = true;
-            this.frm1.Location = new System.Drawing.Point(15, 49);
-            this.frm1.Name = "frm1";
-            this.frm1.Size = new System.Drawing.Size(60, 13);
-            this.frm1.TabIndex = 3;
-            this.frm1.Text = "frmPersona";
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Checked = true;
-            this.radioButton5.Location = new System.Drawing.Point(168, 19);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(83, 17);
-            this.radioButton5.TabIndex = 14;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Desabilitado";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // rbHabilitadofrm2
-            // 
-            this.rbHabilitadofrm2.AutoSize = true;
-            this.rbHabilitadofrm2.Location = new System.Drawing.Point(76, 19);
-            this.rbHabilitadofrm2.Name = "rbHabilitadofrm2";
-            this.rbHabilitadofrm2.Size = new System.Drawing.Size(72, 17);
-            this.rbHabilitadofrm2.TabIndex = 13;
-            this.rbHabilitadofrm2.Text = "Habilitado";
-            this.rbHabilitadofrm2.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(85, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 17);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Permisos";
             // 
             // dgvMostrar
             // 
@@ -284,7 +284,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(833, 457);
             this.Controls.Add(this.dgvMostrar);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmRol";
