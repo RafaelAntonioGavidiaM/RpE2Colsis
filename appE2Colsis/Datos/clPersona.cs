@@ -22,14 +22,14 @@ namespace appE2Colsis.Datos
         public string direccion { set; get; }
         public string ciudad { set; get; }
         public string correoYemail { set; get; }
-        public Boolean estado { set; get; }
+        public byte estado { set; get; }
         public string clave { set; get; }
 
         //Objetos compartidos
         protected clConexion objConexion = new clConexion();
-        
+
 
         //Datos de solo lectura
-        //public DataTable tblPersona;
+        public DataTable tblPersona;
     }
 }
