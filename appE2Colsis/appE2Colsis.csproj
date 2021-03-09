@@ -81,6 +81,12 @@
     <Compile Include="Vista\frmMenuPrincipal.Designer.cs">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\frmRePersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmRePersonal.Designer.cs">
+      <DependentUpon>frmRePersonal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmRol.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmRePersonal.resx">
+      <DependentUpon>frmRePersonal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmRol.resx">
       <DependentUpon>frmRol.cs</DependentUpon>
