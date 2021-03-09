@@ -30,6 +30,6 @@ namespace appE2Colsis.Datos
         
 
         //Datos de solo lectura
-        public DataTable tblPersona;
+        //public DataTable tblPersona;
     }
 }
