@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace appE2Colsis.Vista
 {
@@ -22,6 +23,7 @@ namespace appE2Colsis.Vista
             if (txtUser.Text=="admin" &&txtPswd.Text=="admin2021")
             {
                 pSettings.Visible = true;
+                mtdCargarDatosDB();
             }
         }
 
@@ -40,7 +42,14 @@ namespace appE2Colsis.Vista
         {
             pSettings.Visible = false;
             grpSetting.Visible = false;
-
+        }
+        private void mtdCargarDatosDB()
+        {
+            txtServerDB.Text = ConfigurationManager.AppSettings["server"];
+            txtDataBadeDB.Text = ConfigurationManager.AppSettings["database"];
+            txtPortDB.Text = ConfigurationManager.AppSettings["port"];
+            txtUserDB.Text = ConfigurationManager.AppSettings["user"];
+            txtUserDB.Text = ConfigurationManager.AppSettings["pasword"];
         }
     }
 }
