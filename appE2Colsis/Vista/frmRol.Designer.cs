@@ -43,11 +43,21 @@
             this.rbHabilitadofrm1 = new System.Windows.Forms.RadioButton();
             this.frm1 = new System.Windows.Forms.Label();
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
-            this.dgvMostrar = new System.Windows.Forms.DataGridView();
+            this.grpEliminarRol = new System.Windows.Forms.GroupBox();
+            this.gunaButton4 = new Guna.UI.WinForms.GunaButton();
+            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
+            this.btnSeleccionar = new Guna.UI.WinForms.GunaButton();
+            this.cmbRol = new Guna.UI.WinForms.GunaComboBox();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.dgvContenidoRol = new System.Windows.Forms.DataGrid();
+            this.dgvSeleccionar = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.grpfrmrol.SuspendLayout();
             this.grpPermisos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrar)).BeginInit();
+            this.grpEliminarRol.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContenidoRol)).BeginInit();
+            this.dgvSeleccionar.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblRol
@@ -271,13 +281,134 @@
             this.gunaButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton2.Click += new System.EventHandler(this.gunaButton2_Click);
             // 
-            // dgvMostrar
+            // grpEliminarRol
             // 
-            this.dgvMostrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMostrar.Location = new System.Drawing.Point(323, 44);
-            this.dgvMostrar.Name = "dgvMostrar";
-            this.dgvMostrar.Size = new System.Drawing.Size(482, 355);
-            this.dgvMostrar.TabIndex = 18;
+            this.grpEliminarRol.Controls.Add(this.dgvSeleccionar);
+            this.grpEliminarRol.Controls.Add(this.btnSeleccionar);
+            this.grpEliminarRol.Controls.Add(this.cmbRol);
+            this.grpEliminarRol.Controls.Add(this.gunaLabel1);
+            this.grpEliminarRol.Location = new System.Drawing.Point(310, 12);
+            this.grpEliminarRol.Name = "grpEliminarRol";
+            this.grpEliminarRol.Size = new System.Drawing.Size(276, 426);
+            this.grpEliminarRol.TabIndex = 4;
+            this.grpEliminarRol.TabStop = false;
+            // 
+            // gunaButton4
+            // 
+            this.gunaButton4.AnimationHoverSpeed = 0.07F;
+            this.gunaButton4.AnimationSpeed = 0.03F;
+            this.gunaButton4.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButton4.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaButton4.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton4.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton4.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaButton4.ForeColor = System.Drawing.Color.White;
+            this.gunaButton4.Image = null;
+            this.gunaButton4.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton4.Location = new System.Drawing.Point(79, 197);
+            this.gunaButton4.Name = "gunaButton4";
+            this.gunaButton4.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton4.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton4.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton4.OnHoverImage = null;
+            this.gunaButton4.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton4.Radius = 10;
+            this.gunaButton4.Size = new System.Drawing.Size(69, 31);
+            this.gunaButton4.TabIndex = 6;
+            this.gunaButton4.Text = "Eliminar";
+            this.gunaButton4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButton4.Click += new System.EventHandler(this.gunaButton4_Click);
+            // 
+            // gunaLabel2
+            // 
+            this.gunaLabel2.AutoSize = true;
+            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel2.Location = new System.Drawing.Point(6, 11);
+            this.gunaLabel2.Name = "gunaLabel2";
+            this.gunaLabel2.Size = new System.Drawing.Size(213, 15);
+            this.gunaLabel2.TabIndex = 5;
+            this.gunaLabel2.Text = "El Rol contiene los siguientes permisos:\r\n";
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.AnimationHoverSpeed = 0.07F;
+            this.btnSeleccionar.AnimationSpeed = 0.03F;
+            this.btnSeleccionar.BackColor = System.Drawing.Color.Transparent;
+            this.btnSeleccionar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnSeleccionar.BorderColor = System.Drawing.Color.Black;
+            this.btnSeleccionar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSeleccionar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
+            this.btnSeleccionar.Image = null;
+            this.btnSeleccionar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSeleccionar.Location = new System.Drawing.Point(25, 109);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnSeleccionar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSeleccionar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSeleccionar.OnHoverImage = null;
+            this.btnSeleccionar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSeleccionar.Radius = 10;
+            this.btnSeleccionar.Size = new System.Drawing.Size(69, 31);
+            this.btnSeleccionar.TabIndex = 3;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
+            // cmbRol
+            // 
+            this.cmbRol.BackColor = System.Drawing.Color.Transparent;
+            this.cmbRol.BaseColor = System.Drawing.Color.White;
+            this.cmbRol.BorderColor = System.Drawing.Color.Silver;
+            this.cmbRol.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRol.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbRol.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbRol.ForeColor = System.Drawing.Color.Black;
+            this.cmbRol.FormattingEnabled = true;
+            this.cmbRol.Location = new System.Drawing.Point(25, 77);
+            this.cmbRol.Name = "cmbRol";
+            this.cmbRol.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmbRol.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cmbRol.Size = new System.Drawing.Size(150, 26);
+            this.cmbRol.TabIndex = 1;
+            
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel1.Location = new System.Drawing.Point(22, 49);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(153, 15);
+            this.gunaLabel1.TabIndex = 0;
+            this.gunaLabel1.Text = "Seleccione el Rol a eliminar:";
+            // 
+            // dgvContenidoRol
+            // 
+            this.dgvContenidoRol.AlternatingBackColor = System.Drawing.Color.White;
+            this.dgvContenidoRol.BackgroundColor = System.Drawing.Color.White;
+            this.dgvContenidoRol.CaptionBackColor = System.Drawing.Color.White;
+            this.dgvContenidoRol.DataMember = "";
+            this.dgvContenidoRol.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this.dgvContenidoRol.Location = new System.Drawing.Point(9, 50);
+            this.dgvContenidoRol.Name = "dgvContenidoRol";
+            this.dgvContenidoRol.ReadOnly = true;
+            this.dgvContenidoRol.Size = new System.Drawing.Size(223, 141);
+            this.dgvContenidoRol.TabIndex = 7;
+            // 
+            // dgvSeleccionar
+            // 
+            this.dgvSeleccionar.Controls.Add(this.dgvContenidoRol);
+            this.dgvSeleccionar.Controls.Add(this.gunaLabel2);
+            this.dgvSeleccionar.Controls.Add(this.gunaButton4);
+            this.dgvSeleccionar.Location = new System.Drawing.Point(6, 146);
+            this.dgvSeleccionar.Name = "dgvSeleccionar";
+            this.dgvSeleccionar.Size = new System.Drawing.Size(265, 245);
+            this.dgvSeleccionar.TabIndex = 8;
+            this.dgvSeleccionar.TabStop = false;
             // 
             // frmRol
             // 
@@ -285,7 +416,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(833, 457);
-            this.Controls.Add(this.dgvMostrar);
+            this.Controls.Add(this.grpEliminarRol);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmRol";
             this.Text = "frmRol";
@@ -296,7 +427,11 @@
             this.grpfrmrol.PerformLayout();
             this.grpPermisos.ResumeLayout(false);
             this.grpPermisos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrar)).EndInit();
+            this.grpEliminarRol.ResumeLayout(false);
+            this.grpEliminarRol.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContenidoRol)).EndInit();
+            this.dgvSeleccionar.ResumeLayout(false);
+            this.dgvSeleccionar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -318,6 +453,14 @@
         private System.Windows.Forms.RadioButton rbHabilitadofrm2;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvMostrar;
+        private System.Windows.Forms.GroupBox grpEliminarRol;
+        private Guna.UI.WinForms.GunaButton gunaButton4;
+        private Guna.UI.WinForms.GunaLabel gunaLabel2;
+        private Guna.UI.WinForms.GunaButton btnSeleccionar;
+        private Guna.UI.WinForms.GunaComboBox cmbRol;
+        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.DataGrid dgvContenidoRol;
+        private System.Windows.Forms.GroupBox dgvSeleccionar;
     }
 }
