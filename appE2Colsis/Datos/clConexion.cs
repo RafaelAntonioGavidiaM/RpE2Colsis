@@ -7,16 +7,27 @@ using MySql.Data.MySqlClient;
 using System.Data;
 using System.Windows.Forms;
 using System.Configuration;
+using System.Xml;
 
 namespace appE2Colsis.Datos
 {
     class clConexion
     {
-        MySqlConnection objConexion;
+        private string cadenaConexion;
+        private MySqlConnection objConexion;
         public clConexion()
         {
-            string cadena = ConfigurationManager.AppSettings["conexion"];
-            objConexion = new MySqlConnection(cadena);
+            mtdCrearCadenaConexion();
+            objConexion = new MySqlConnection(cadenaConexion);
+        }
+        private void mtdCrearCadenaConexion()
+        {
+            string server = ConfigurationManager.AppSettings["server"];
+            string user = ConfigurationManager.AppSettings["user"];
+            string port = ConfigurationManager.AppSettings["port"];
+            string database = ConfigurationManager.AppSettings["database"];
+            string password = ConfigurationManager.AppSettings["password"];
+            cadenaConexion = "server = " + server + "; user id = " + user + "; Port = " + port + "; database = " + database + "; Password = " + password;
         }
         public void mtdIniciarConexion()
         {
