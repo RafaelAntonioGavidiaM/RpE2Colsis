@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\clConexion.cs" />
+    <Compile Include="Datos\clLogin.cs" />
     <Compile Include="Datos\clPersona.cs" />
     <Compile Include="Datos\clRePersonal.cs" />
     <Compile Include="Datos\clRol.cs" />

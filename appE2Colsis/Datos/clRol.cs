@@ -23,10 +23,10 @@ namespace appE2Colsis.Datos
         public int mtdRegistrarRol() //Registra en la tabla Rol
         {
             string consulta = "insert into rol(nombre) values ('" + nombreRol + "')";
-            
-            int rows=0;
-            rows=objConexion.mtdConectado(consulta);
-            
+
+            int rows = 0;
+            rows = objConexion.mtdConectado(consulta);
+
             return rows;
 
         }
@@ -38,7 +38,7 @@ namespace appE2Colsis.Datos
         {
             string consulta = "select * from rol";
             DataTable infoRol = new DataTable();
-          infoRol=  objConexion.mtdDesconectado(consulta);
+            infoRol = objConexion.mtdDesconectado(consulta);
             List<clRol> listaRol = new List<clRol>();
             for (int i = 0; i < infoRol.Rows.Count; i++)
             {
@@ -51,11 +51,15 @@ namespace appE2Colsis.Datos
             return listaRol;
 
         }
-        public List<clRol> mtdPermisos() 
+        /// <summary>
+        /// Metodo para consultar permisos en la tabla permisos
+        /// </summary>
+        /// <returns></returns>
+        public List<clRol> mtdPermisos()
         {
-           string consulta = "select * from permiso";
+            string consulta = "select * from permiso";
             DataTable datos = new DataTable();
-           datos= objConexion.mtdDesconectado(consulta);
+            datos = objConexion.mtdDesconectado(consulta);
             List<clRol> listaPermisos = new List<clRol>();
             for (int i = 0; i < datos.Rows.Count; i++)
             {
@@ -68,6 +72,77 @@ namespace appE2Colsis.Datos
                 listaPermisos.Add(objRol);
             }
             return listaPermisos;
+
+
+        }
+        /// <summary>
+        /// Consulta Permisos Segun el rol a buscar
+        /// </summary>
+        public List<clRol> mtdColsutarPermisosRoles()
+        {
+            string consulta = "select rol.idRol, rol.nombre,rol_permiso.nombreFormulario,permiso.nombrePermiso from rol_permiso inner join permiso on rol_permiso.idPermiso=permiso.idPermiso inner join rol on rol_permiso.idRol=rol.idRol where rol.nombre='" + nombreRol + "'";
+            DataTable resultado = new DataTable();
+            resultado = objConexion.mtdDesconectado(consulta);
+            List<clRol> listaRol = new List<clRol>();
+            for (int i = 0; i < resultado.Rows.Count; i++)
+            {
+                clRol objRol = new clRol();
+                objRol.idRol = int.Parse(resultado.Rows[i][0].ToString());
+                objRol.nombreRol = resultado.Rows[i][1].ToString();
+                objRol.nombreFormulario = resultado.Rows[i][2].ToString();
+                objRol.nombrePermiso = resultado.Rows[i][3].ToString();
+
+                listaRol.Add(objRol);
+            }
+            return listaRol;
+
+
+        }
+        /// <summary>
+        /// Metodo Para registrar permisos en la tabla rol_permisos
+        /// </summary>
+        /// <param name="lista"></param>
+        /// <returns>Int de rows Afectadas </returns>
+        public int mtdRegistrarPermisos(List<clRol> lista)
+        {
+            string consulta = null;
+            int rows = 0;
+            for (int i = 0; i < lista.Count; i++)
+            {
+                foreach (var item in lista)
+                {
+                    consulta = "insert into rol_permiso (idRol,nombreFormulario,idPermiso) values ('"+item.idRol+"','"+item.nombreFormulario+"','"+item.idPermiso+"')";
+                   rows= objConexion.mtdConectado(consulta);
+                    rows = rows + rows;
+
+                }
+                
+                
+
+            }
+            return rows;
+
+        }
+        /// <summary>
+        /// Metodo para eliminar rol y permisos en la base de datos
+        /// </summary>
+        public int mtdEliminarRolYPermisos()
+        {
+            string consulta1 = null;
+            string consuta2 = null;
+            int rows = 0;
+            string[] consultas = new  string[2];
+            consultas[0] = consuta2 = "delete from rol_permiso where idRol ='" + idRol + "'";//Eliminara los permisos en la tabla rol_permiso
+            consultas[1]= consulta1 = "delete from rol where idRol ='"+idRol+"'";//Eliminara el registro en la tabla rol
+           
+            for (int i = 0; i < consultas.Length; i++)
+            { 
+                rows =objConexion.mtdConectado(consultas[i]);
+
+                rows = rows + rows;
+
+            }
+            return rows;
 
 
         }
