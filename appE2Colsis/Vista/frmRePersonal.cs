@@ -34,7 +34,11 @@ namespace appE2Colsis.Vista
             dgvEmpleado.DataSource = listRePersonal;
 
             objRol = new clRol();
-            
+            listRol = new List<clRol>();
+            listRol = objRol.mtdConsultarRol();
+            cmbRol.DataSource = listRol;
+            cmbRol.DisplayMember = "rol";
+            cmbRol.ValueMember = "idRol";
 
 
 
