@@ -18,12 +18,11 @@ namespace appE2Colsis.Vista
             InitializeComponent();
         }
         clRePersonal objRePersonal;
-        List<clRePersonal> listRePersonal;
-        List<clRol> listRol;
+        List<clRePersonal> listRePersonal;   
         clRol objRol;
         private void frmRePersonal_Load(object sender, EventArgs e)
         {
-
+            mtdCargar();
         }
 
         public void mtdCargar()
@@ -34,16 +33,17 @@ namespace appE2Colsis.Vista
             dgvEmpleado.DataSource = listRePersonal;
 
             objRol = new clRol();
-            listRol = new List<clRol>();
-            listRol = objRol.mtdConsultarRol();
-            cmbRol.DataSource = listRol;
-            cmbRol.DisplayMember = "rol";
+            List<clRol> listaRol = new List<clRol>();
+            listaRol = objRol.mtdConsultarRol();
+            cmbRol.DataSource = listaRol;
+            cmbRol.DisplayMember = "nombreRol";
             cmbRol.ValueMember = "idRol";
 
 
-
-
         }
+
+
+
 
     }
 }
