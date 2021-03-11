@@ -89,6 +89,12 @@
     <Compile Include="Vista\frmRePersonal.Designer.cs">
       <DependentUpon>frmRePersonal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\frmReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmReporte.Designer.cs">
+      <DependentUpon>frmReporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmRol.cs">
       <SubType>Form</SubType>
     </Compile>
