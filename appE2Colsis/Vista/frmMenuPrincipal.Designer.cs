@@ -52,9 +52,9 @@ namespace appE2Colsis.Vista
             this.gunaPanel1.Controls.Add(this.btnPersona);
             this.gunaPanel1.Controls.Add(this.gunaPictureBox1);
             this.gunaPanel1.Location = new System.Drawing.Point(3, 2);
-            this.gunaPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(363, 711);
+            this.gunaPanel1.Size = new System.Drawing.Size(363, 910);
             this.gunaPanel1.TabIndex = 0;
             // 
             // gunaLabel1
@@ -82,7 +82,7 @@ namespace appE2Colsis.Vista
             this.gunaButton4.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton4.Image")));
             this.gunaButton4.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton4.Location = new System.Drawing.Point(0, 436);
-            this.gunaButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaButton4.Margin = new System.Windows.Forms.Padding(4);
             this.gunaButton4.Name = "gunaButton4";
             this.gunaButton4.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton4.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -108,7 +108,7 @@ namespace appE2Colsis.Vista
             this.gunaButton3.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton3.Image")));
             this.gunaButton3.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton3.Location = new System.Drawing.Point(0, 377);
-            this.gunaButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaButton3.Margin = new System.Windows.Forms.Padding(4);
             this.gunaButton3.Name = "gunaButton3";
             this.gunaButton3.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton3.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -134,7 +134,7 @@ namespace appE2Colsis.Vista
             this.btnRol.Image = null;
             this.btnRol.ImageSize = new System.Drawing.Size(20, 20);
             this.btnRol.Location = new System.Drawing.Point(0, 318);
-            this.btnRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRol.Margin = new System.Windows.Forms.Padding(4);
             this.btnRol.Name = "btnRol";
             this.btnRol.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnRol.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -161,7 +161,7 @@ namespace appE2Colsis.Vista
             this.btnPersona.Image = null;
             this.btnPersona.ImageSize = new System.Drawing.Size(20, 20);
             this.btnPersona.Location = new System.Drawing.Point(0, 254);
-            this.btnPersona.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPersona.Margin = new System.Windows.Forms.Padding(4);
             this.btnPersona.Name = "btnPersona";
             this.btnPersona.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnPersona.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -180,7 +180,7 @@ namespace appE2Colsis.Vista
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
             this.gunaPictureBox1.Location = new System.Drawing.Point(109, 32);
-            this.gunaPictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaPictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
             this.gunaPictureBox1.Size = new System.Drawing.Size(139, 122);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -191,16 +191,16 @@ namespace appE2Colsis.Vista
             // 
             this.pnNombre.BackColor = System.Drawing.Color.White;
             this.pnNombre.Location = new System.Drawing.Point(373, 2);
-            this.pnNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnNombre.Margin = new System.Windows.Forms.Padding(4);
             this.pnNombre.Name = "pnNombre";
-            this.pnNombre.Size = new System.Drawing.Size(1099, 780);
+            this.pnNombre.Size = new System.Drawing.Size(1226, 910);
             this.pnNombre.TabIndex = 1;
             // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1476, 787);
+            this.ClientSize = new System.Drawing.Size(1600, 916);
             this.Controls.Add(this.pnNombre);
             this.Controls.Add(this.gunaPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

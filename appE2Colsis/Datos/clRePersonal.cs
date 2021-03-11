@@ -15,25 +15,27 @@ namespace appE2Colsis.Datos
         public List<clRePersonal> mtdListar()
         {
 
-            string consulta = "select * from personal";
+            string consulta = ("select * from personal");
 
-            tblPersona = new DataTable();
+            DataTable tblPersona = new DataTable();
             objConexion = new clConexion();
-            objConexion.mtdConectado(consulta);
+            tblPersona = objConexion.mtdDesconectado(consulta);
+
 
             List<clRePersonal> listRePersonal = new List<clRePersonal>();
 
             for (int i = 0; i < tblPersona.Rows.Count; i++)
             {
                 clRePersonal objRePersonal = new clRePersonal();
-
+                objRePersonal.idPersonal = int.Parse(tblPersona.Rows[i]["idPersonal"].ToString());
                 objRePersonal.nombre = tblPersona.Rows[i]["nombre"].ToString();
                 objRePersonal.apellido = tblPersona.Rows[i]["apellido"].ToString();
-                objRePersonal.documento = tblPersona.Rows[i]["documnento"].ToString();
+                objRePersonal.documento = tblPersona.Rows[i]["documento"].ToString();
                 objRePersonal.telefono = tblPersona.Rows[i]["telefono"].ToString();
+                objRePersonal.direccion = tblPersona.Rows[i]["direccion"].ToString();
                 objRePersonal.ciudad = tblPersona.Rows[i]["ciudad"].ToString();
                 objRePersonal.correoYemail = tblPersona.Rows[i]["correo"].ToString();
-                objRePersonal.estado = byte.Parse(tblPersona.Rows[i]["estado"].ToString());
+                objRePersonal.estado = tblPersona.Rows[i]["estado"].ToString();
                 objRePersonal.idRol = int.Parse(tblPersona.Rows[i]["idRol"].ToString());
 
                 listRePersonal.Add(objRePersonal);
@@ -45,14 +47,46 @@ namespace appE2Colsis.Datos
         }
 
 
-        public int mtdRegistrar()
+        public int mtdRegistrar(List<clRePersonal> listRePersonal)
         {
-            String consulta = "insert into empleado(nombre, apellido, documento, telefono, ciudad, correo, estado, idRol) values('" + nombre + "', '" + apellido + "', '" + documento + "', '" + telefono + "', '" + ciudad + "', '" + correoYemail + "', '" + estado + "', '" + idRol + "')";
 
-            objConexion = new clConexion();
-            int resultado = objConexion.mtdConectado(consulta);
+            int resultado = 0;
+            foreach (var item in listRePersonal)
+            {
+                String consulta = "insert into personal(nombre, apellido, documento, telefono, direccion, ciudad, correo, estado, idRol) values('" + item.nombre + "', '" + item.apellido + "', '" + item.documento + "', '" + item.telefono + "', '" + item.direccion + "', '" + item.ciudad + "','" + item.correoYemail + "', '" + item.estado + "', '" + item.idRol + "')";
 
+
+                objConexion = new clConexion();
+                resultado = objConexion.mtdConectado(consulta);
+
+
+            }
             return resultado;
+
+
+        }
+
+
+        public int mtdEliminarPersonal(int idPersonal)
+        {
+
+            string consulta = "delete from personal where idPersonal = " + idPersonal;
+            objConexion = new clConexion();
+            int eliminar = objConexion.mtdConectado(consulta);
+            return eliminar;
+
+        }
+
+        public int mtdActualizar()
+        {
+
+
+            string consulta = "update personal set nombre='" + nombre + "',apellido= '" + apellido + "', documento='" + documento + "',telefono='" + telefono + "', direccion= '" + direccion + "',ciudad='" + ciudad + "',correo='" + correoYemail + "',estado='" + estado + "',idRol='" + idRol + " ' where documento = ' " + documento + "'";
+            objConexion = new clConexion();
+            int Resultado = objConexion.mtdConectado(consulta);
+
+            return Resultado;
+
         }
     }
 }

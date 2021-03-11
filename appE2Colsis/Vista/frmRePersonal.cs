@@ -18,11 +18,20 @@ namespace appE2Colsis.Vista
             InitializeComponent();
         }
         clRePersonal objRePersonal;
-        List<clRePersonal> listRePersonal;   
+        List<clRePersonal> listRePersonal;
         clRol objRol;
+        clPersona objPersona;
+        List<clRol> listaRol;
         private void frmRePersonal_Load(object sender, EventArgs e)
         {
             mtdCargar();
+            dgvEmpleado.Columns["idRol"].Visible = false;
+            dgvEmpleado.Columns["tipoDocumento"].Visible = false;
+            dgvEmpleado.Columns["fechaNacimiento"].Visible = false;
+            dgvEmpleado.Columns["tipoSangre"].Visible = false;
+            dgvEmpleado.Columns["tipoSeguroYseguroMedico"].Visible = false;
+            dgvEmpleado.Columns["seguroEstudiantil"].Visible = false;           
+            dgvEmpleado.Columns["clave"].Visible = false;
         }
 
         public void mtdCargar()
@@ -33,7 +42,7 @@ namespace appE2Colsis.Vista
             dgvEmpleado.DataSource = listRePersonal;
 
             objRol = new clRol();
-            List<clRol> listaRol = new List<clRol>();
+            listaRol = new List<clRol>();
             listaRol = objRol.mtdConsultarRol();
             cmbRol.DataSource = listaRol;
             cmbRol.DisplayMember = "nombreRol";
@@ -42,8 +51,158 @@ namespace appE2Colsis.Vista
 
         }
 
+        public void mtdCargarDatos()
+        {
+            
+            listRePersonal = new List<clRePersonal>();
+
+            for (int i = 0; i < 1; i++)
+            {
+                clRePersonal objRePersonal = new clRePersonal();
+                objRePersonal.nombre = txtNombre.Text;
+                objRePersonal.apellido = txtApellido.Text;
+                objRePersonal.documento = txtDocumento.Text;
+                objRePersonal.telefono = txtTelefono.Text;
+                objRePersonal.direccion = txtDireccion.Text;
+                objRePersonal.ciudad = txtCiudad.Text;
+                objRePersonal.correoYemail = txtCorreo.Text;              
+                objRePersonal.estado = txtEstado.Text;
+                objRePersonal.idRol = int.Parse(cmbRol.SelectedValue.ToString());
+
+                listRePersonal.Add(objRePersonal);
+            }
+            
+            
+
+        }
 
 
 
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            mtdCargarDatos();
+            DialogResult opcion = MessageBox.Show("Desea registrar un nuevo personal ","Advertencia", MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation);
+            if (opcion == DialogResult.Yes)
+            {
+                int Registro = objRePersonal.mtdRegistrar(listRePersonal);
+
+                if (Registro > 0)
+                {
+                    MessageBox.Show("se realizo el registro exitosamente","Registro Exitoso",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                    mtdCargar();
+                }
+                else
+                {
+                    MessageBox.Show("no se pudo hacer el registro correspondinete del nuevo personal","Erro",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                } 
+            }
+        }
+        int idPersona = 0;
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult opcion = MessageBox.Show(" Desea eliminar el empleado " + txtNombre.Text + " " + txtApellido.Text, " eliminar empleado ", MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation);
+            if (opcion == DialogResult.Yes)
+            {
+                int filasAfectadas = objRePersonal.mtdEliminarPersonal(idPersona);
+                if (filasAfectadas > 0)
+                {
+                    MessageBox.Show("Se realizo el delete correctamente","Eliminar Empleado",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    mtdCargar();
+                }
+                else
+                {
+                    MessageBox.Show("no se pudo elimnar la persona seleccionada","error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
+
+            }
+
+        }
+
+        private void dgvEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            try
+            {
+                if (dgvEmpleado.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    
+                    dgvEmpleado.CurrentRow.Selected = true;
+                    idPersona = int.Parse(dgvEmpleado.Rows[e.RowIndex].Cells["idPersonal"].FormattedValue.ToString());
+                    txtNombre.Text = dgvEmpleado.Rows[e.RowIndex].Cells["nombre"].FormattedValue.ToString();
+                    txtApellido.Text = dgvEmpleado.Rows[e.RowIndex].Cells["apellido"].FormattedValue.ToString();
+                    txtDocumento.Text = dgvEmpleado.Rows[e.RowIndex].Cells["documento"].FormattedValue.ToString();
+                    txtTelefono.Text = dgvEmpleado.Rows[e.RowIndex].Cells["telefono"].FormattedValue.ToString();
+                    txtDireccion.Text = dgvEmpleado.Rows[e.RowIndex].Cells["direccion"].FormattedValue.ToString();
+                    txtCiudad.Text = dgvEmpleado.Rows[e.RowIndex].Cells["ciudad"].FormattedValue.ToString();
+                    txtCorreo.Text = dgvEmpleado.Rows[e.RowIndex].Cells["correoYemail"].FormattedValue.ToString();
+                    txtEstado.Text = dgvEmpleado.Rows[e.RowIndex].Cells["estado"].FormattedValue.ToString();
+
+                    string rol = dgvEmpleado.Rows[e.RowIndex].Cells["idRol"].FormattedValue.ToString();
+                    
+                    for (int i = 0; i < listaRol.Count; i++)
+                    {
+                        if (listaRol[i].idRol == int.Parse(rol))
+                        {
+                            cmbRol.Text = listaRol[i].nombreRol;
+                        }
+                    }
+
+                }
+            }
+            catch (Exception )
+            {
+                MessageBox.Show("No se puede editar este campo","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                
+            }
+
+
+        }
+        
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            listRePersonal = new List<clRePersonal>();
+            listRePersonal = objRePersonal.mtdListar();
+            int contador = 0;
+            for (int i = 0; i < listRePersonal.Count; i++)
+            {
+                if (listRePersonal[i].nombre == txtNombre.Text && listRePersonal[i].apellido == txtApellido.Text && listRePersonal[i].documento == txtDocumento.Text && listRePersonal[i].telefono == txtTelefono.Text && listRePersonal[i].direccion == txtDireccion.Text && listRePersonal[i].ciudad == txtCiudad.Text && listRePersonal[i].correoYemail == txtCorreo.Text && listRePersonal[i].estado == txtEstado.Text && cmbRol.SelectedValue.Equals(listRePersonal[i].idRol))
+                {
+
+                    MessageBox.Show("No se registra ningun cambio");
+                    contador = contador + 1;
+                }
+            }
+            if (contador != 0)
+            {
+                MessageBox.Show("Verifique la informacion que desea actualizar");
+            }
+            else
+            {
+                objRePersonal.nombre = txtNombre.Text;
+                objRePersonal.apellido = txtApellido.Text;
+                objRePersonal.documento = txtDocumento.Text;
+                objRePersonal.telefono = txtTelefono.Text;
+                objRePersonal.direccion = txtDireccion.Text;
+                objRePersonal.ciudad = txtCiudad.Text;
+                objRePersonal.correoYemail = txtCorreo.Text;
+                objRePersonal.estado = txtEstado.Text;
+                objRePersonal.idRol = int.Parse(cmbRol.SelectedValue.ToString());
+
+                
+
+                objRePersonal.mtdActualizar();
+                int filas = objRePersonal.mtdActualizar();
+
+                if (filas > 0)
+                {
+                    MessageBox.Show("Actualizacion exitosa");
+                    mtdCargar();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo realizar la actualizacion correctamente");
+                }
+            }
+        }
     }
 }
