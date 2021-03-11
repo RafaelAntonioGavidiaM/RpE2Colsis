@@ -7,7 +7,7 @@ using System.Data;
 
 namespace appE2Colsis.Datos
 {
-    class clRol
+    class clRol : clPersona
     {
         public int idRol { get; set; }
         public string nombreRol { get; set; }
@@ -16,10 +16,12 @@ namespace appE2Colsis.Datos
         public string nombrePermiso { get; set; }
         public int permiso { get; set; }
 
+        public string estadoPersona { get; set; } //usado solo para filtrar
+
         /// <summary>
         /// Metodo Registrar Rol con solo nombre.
         /// </summary>
-        clConexion objConexion = new clConexion();
+       // clConexion objConexion = new clConexion();
         public int mtdRegistrarRol() //Registra en la tabla Rol
         {
             string consulta = "insert into rol(nombre) values ('" + nombreRol + "')";
@@ -104,14 +106,14 @@ namespace appE2Colsis.Datos
         /// </summary>
         /// <param name="lista"></param>
         /// <returns>Int de rows Afectadas </returns>
-        public int mtdRegistrarPermisos(List<clRol> lista)
+        public int mtdRegistrarPermisos(List<clRol> lista, int idRolCrear)
         {
             string consulta = null;
             int rows = 0;
 
             foreach (var item in lista)
             {
-                consulta = "insert into rol_permiso (idRol,nombreFormulario,idPermiso) values ('" + idRol + "','" + item.nombreFormulario + "','" + item.idPermiso + "')";
+                consulta = "insert into rol_permiso (idRol,nombreFormulario,idPermiso) values ('" + idRolCrear + "','" + item.nombreFormulario + "','" + item.idPermiso + "')";
                 rows = objConexion.mtdConectado(consulta);
                 rows = rows + rows;
 
@@ -149,16 +151,16 @@ namespace appE2Colsis.Datos
         /// </summary>
         /// <param name="lista"></param>
         /// <returns>int filas Afectadas</returns>
-        public int  mtdModificarRolPermisos(List<clRol> lista)
+        public int mtdModificarRolPermisos(List<clRol> lista, int idRolM, string nombreRolM)
         {
             int rows = 0;
-           string consultasTblRol = "Update  rol set nombre='" + nombreRol + "' where idRol='" + idRol + "'";//Actualiza nombre rol en caso de ser necesario
+           string consultasTblRol = "Update  rol set nombre='" + nombreRolM + "' where idRol='" + idRolM + "'";//Actualiza nombre rol en caso de ser necesario
 
           rows =  objConexion.mtdConectado(consultasTblRol);
 
             foreach (var item in lista)
             {
-             string consultaTblRolPermiso ="Update  rol_permiso set idRol='"+idRol+"',nombreFormulario='"+item.nombreFormulario+"',idPermiso='"+item.idPermiso+"' where nombreFormulario='"+item.nombreFormulario+"' ";//Actualiza la informacion de la tabla rol_permiso
+             string consultaTblRolPermiso ="Update  rol_permiso set nombreFormulario='"+item.nombreFormulario+"',idPermiso='"+item.idPermiso+"' where nombreFormulario='"+item.nombreFormulario+"' and idRol="+idRolM+" ";//Actualiza la informacion de la tabla rol_permiso
 
                 rows = objConexion.mtdConectado(consultaTblRolPermiso);
                 rows = rows + rows;
@@ -171,6 +173,47 @@ namespace appE2Colsis.Datos
 
 
         }
+        /// <summary>
+        /// Metodo para Filtrar roles y mostrar las personas que estan incluidas en el rol
+        /// </summary>
+        /// <returns>Int con filas Afectadas</returns>
+
+        public List<clRol> mtdFiltrar(string nombreRolFiltrar)
+        {
+            string consulta = "select rol.idRol,rol.nombre,personal.nombre,personal.apellido,personal.documento,personal.telefono,personal.ciudad,personal.estado from rol inner join personal on rol.idRol = personal.idRol where rol.nombre='"+nombreRolFiltrar+"'";
+            DataTable resultado = new DataTable();
+           resultado= objConexion.mtdDesconectado(consulta);
+
+            List<clRol> listaRol = new List<clRol>();
+            for (int i = 0; i < resultado.Rows.Count; i++)
+            {
+                clRol objRol = new clRol();
+                objRol.idRol =int.Parse (resultado.Rows[i][0].ToString());
+                objRol.nombreRol = resultado.Rows[i][1].ToString();
+                objRol.nombre = resultado.Rows[i][2].ToString();
+                objRol.apellido = resultado.Rows[i][3].ToString();
+                objRol.documento = resultado.Rows[i][4].ToString();
+                objRol.telefono = resultado.Rows[i][5].ToString();
+                objRol.ciudad = resultado.Rows[i][6].ToString();
+                objRol.estadoPersona= resultado.Rows[i][7].ToString();
+
+                listaRol.Add(objRol);
+                
+
+
+
+
+
+            }
+            return listaRol;
+
+          
+
+
+
+
+        }
+
 
 
     }

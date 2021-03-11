@@ -19,11 +19,12 @@ namespace appE2Colsis.Vista
         List<clRol> listaRoles = new List<clRol>();
         List<clRol> permisos = new List<clRol>();
         List<clRol> listaModificar = new List<clRol>();
+        List<clRol> listaRolFiltrar = new List<clRol>();
         string[] decision = new string[2];
         
         clRol objRol = new clRol();
         int rows = 0;
-        int idRol = 0;// Necesario para asignar permisos
+       // int idRol = 0; // Necesario para asignar permisos
         public frmRol()
         {
             InitializeComponent();
@@ -48,6 +49,37 @@ namespace appE2Colsis.Vista
          
 
         }
+        
+
+
+        /// <summary>
+        /// Este metodo escondera y mostrará la opcion deseada segun el boton que la persona de clic crear,eliminar,modificar
+        /// </summary>
+        public void mtdMostrarOpciones( Control valor)
+        {
+            Control[] opcionSolicitada = new Control[3];
+            opcionSolicitada[0] = grpCrear;
+            opcionSolicitada[1] = grpModificar;
+            opcionSolicitada[2] = grpEliminarRol;
+
+            for (int i = 0; i < opcionSolicitada.Length; i++)
+            {
+                if (opcionSolicitada[i]==valor)
+                {
+                    opcionSolicitada[i].Visible = true;
+                    
+
+                }
+                else
+                {
+                    opcionSolicitada[i].Visible = false;
+                    opcionSolicitada[i].BackColor = TransparencyKey;
+                }
+            }
+
+
+
+        }
 
         public void mtdBlanquearRegistrar()
         {
@@ -67,6 +99,11 @@ namespace appE2Colsis.Vista
             cmbModificar.DataSource = listaRol;
             cmbModificar.DisplayMember = "nombreRol";
             cmbModificar.ValueMember = "idRol";
+            cmbFiltrar.DataSource = listaRol;
+            cmbFiltrar.DisplayMember="nombreRol";
+            cmbFiltrar.ValueMember = "idRol";
+
+
         }
 
         
@@ -189,7 +226,7 @@ namespace appE2Colsis.Vista
 
         private void gunaButton2_Click_1(object sender, EventArgs e)
         {
-           
+           int idRolCrear = 0;
 
             foreach (var item in permisos)
             {
@@ -213,23 +250,29 @@ namespace appE2Colsis.Vista
 
                 if (txtRol.Text == item.nombreRol)
                 {
-                    idRol = item.idRol;
+                    idRolCrear = item.idRol;
                 
 
                 }
             }
-            objRol.idRol = idRol;
+           
 
-          rows =  objRol.mtdRegistrarPermisos(permisos);
+          rows =  objRol.mtdRegistrarPermisos(permisos,idRolCrear);
             mtdComprobar();
             mtdCargarCmbRol();
             mtdBlanquearRegistrar();
             grpPermisos.Visible = false;
+            permisos.Clear();
+
         }
 
         private void frmRol_Load_1(object sender, EventArgs e)
         {
             mtdCargarCmbRol();
+            Control valor = grpCrear;
+            mtdMostrarOpciones(valor);
+
+
 
             decision[0] = "Habilitado";
             decision[1] = "Desabilitado";
@@ -274,20 +317,23 @@ namespace appE2Colsis.Vista
 
             }
 
+            listaRoles.Clear();
+
         }
 
         private void cmbModificar_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+         //   int idRol = 0;
            objRol.nombreRol= cmbModificar.Text;
            
-           listaModificar= objRol.mtdColsutarPermisosRoles();
+           listaModificar= objRol.mtdColsutarPermisosRoles(); //lista se carga con los valores solicitados
             foreach (var item in listaModificar)
             {
                 if (cmbModificar.Text==item.nombreRol)
                 {
                     txtModificar.Text = item.nombreRol;
-                    idRol = item.idRol;
+                    lblMrol.Text = item.nombreRol;
+                  //  idRol = item.idRol;
                 }
                 
 
@@ -300,7 +346,7 @@ namespace appE2Colsis.Vista
         {
             foreach (var item in listaModificar)
             {
-                if (cmbModificar.Text == item.nombreRol)
+                if (lblMrol.Text == item.nombreRol)
                 {
                     item.nombreRol = txtModificar.Text;
                     
@@ -362,18 +408,65 @@ namespace appE2Colsis.Vista
 
         private void btnModificarRegistros_Click(object sender, EventArgs e)
         {
-            foreach (var item in listaModificar)
+            
+            
+                int idRolModificar = listaModificar[0].idRol;
+              string nombreRolModificar   = listaModificar[0].nombreRol;
+
+            
+
+            
+           rows = objRol.mtdModificarRolPermisos(listaModificar,idRolModificar,nombreRolModificar);
+            mtdComprobar();
+            txtModificar.Clear();
+            listaModificar = objRol.mtdColsutarPermisosRoles();
+            mtdCargarCmbRol();
+
+
+
+
+
+        }
+
+        private void cmbFiltrar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string nombreRol = cmbFiltrar.Text;
+            
+
+
+            listaRolFiltrar= objRol.mtdFiltrar(nombreRol);
+            try
             {
-                objRol.idRol = item.idRol;
-                objRol.nombreRol = item.nombreRol;
+                dataGridView2.DataSource = listaRolFiltrar;
 
             }
+            catch (Exception)
+            {
 
+                
+            }
             
-           rows = objRol.mtdModificarRolPermisos(listaModificar);
-            mtdComprobar();
             
 
+        }
+
+        private void Crear_Click(object sender, EventArgs e)
+        {
+            Control valor = grpCrear;
+            mtdMostrarOpciones(valor);
+
+        }
+
+        private void Modificar_Click(object sender, EventArgs e)
+        {
+            Control valor = grpModificar;
+            mtdMostrarOpciones(valor);
+        }
+
+        private void Eliminar_Click(object sender, EventArgs e)
+        {
+            Control valor = grpEliminarRol;
+            mtdMostrarOpciones(valor);
         }
     }
 }
