@@ -31,12 +31,12 @@ namespace appE2Colsis.Vista
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
-            this.btnPersona = new Guna.UI.WinForms.GunaButton();
-            this.btnRol = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton4 = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaButton4 = new Guna.UI.WinForms.GunaButton();
+            this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
+            this.btnRol = new Guna.UI.WinForms.GunaButton();
+            this.btnPersona = new Guna.UI.WinForms.GunaButton();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.pnNombre = new System.Windows.Forms.Panel();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
@@ -51,99 +51,22 @@ namespace appE2Colsis.Vista
             this.gunaPanel1.Controls.Add(this.btnRol);
             this.gunaPanel1.Controls.Add(this.btnPersona);
             this.gunaPanel1.Controls.Add(this.gunaPictureBox1);
-            this.gunaPanel1.Location = new System.Drawing.Point(2, 2);
+            this.gunaPanel1.Location = new System.Drawing.Point(3, 2);
+            this.gunaPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(272, 578);
+            this.gunaPanel1.Size = new System.Drawing.Size(363, 711);
             this.gunaPanel1.TabIndex = 0;
             // 
-            // gunaPictureBox1
+            // gunaLabel1
             // 
-            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
-            this.gunaPictureBox1.Location = new System.Drawing.Point(82, 26);
-            this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(104, 99);
-            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaPictureBox1.TabIndex = 0;
-            this.gunaPictureBox1.TabStop = false;
-            // 
-            // btnPersona
-            // 
-            this.btnPersona.AnimationHoverSpeed = 0.07F;
-            this.btnPersona.AnimationSpeed = 0.03F;
-            this.btnPersona.BackColor = System.Drawing.Color.Transparent;
-            this.btnPersona.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnPersona.BorderColor = System.Drawing.Color.Black;
-            this.btnPersona.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnPersona.FocusedColor = System.Drawing.Color.Empty;
-            this.btnPersona.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPersona.ForeColor = System.Drawing.Color.White;
-            this.btnPersona.Image = null;
-            this.btnPersona.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnPersona.Location = new System.Drawing.Point(0, 206);
-            this.btnPersona.Name = "btnPersona";
-            this.btnPersona.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnPersona.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnPersona.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnPersona.OnHoverImage = null;
-            this.btnPersona.OnPressedColor = System.Drawing.Color.Black;
-            this.btnPersona.Radius = 30;
-            this.btnPersona.Size = new System.Drawing.Size(278, 46);
-            this.btnPersona.TabIndex = 1;
-            this.btnPersona.Text = "Persona";
-            this.btnPersona.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnPersona.Click += new System.EventHandler(this.btnPersona_Click);
-            // 
-            // btnRol
-            // 
-            this.btnRol.AnimationHoverSpeed = 0.07F;
-            this.btnRol.AnimationSpeed = 0.03F;
-            this.btnRol.BackColor = System.Drawing.Color.Transparent;
-            this.btnRol.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnRol.BorderColor = System.Drawing.Color.Black;
-            this.btnRol.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnRol.FocusedColor = System.Drawing.Color.Empty;
-            this.btnRol.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRol.ForeColor = System.Drawing.Color.White;
-            this.btnRol.Image = null;
-            this.btnRol.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnRol.Location = new System.Drawing.Point(0, 258);
-            this.btnRol.Name = "btnRol";
-            this.btnRol.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnRol.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnRol.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnRol.OnHoverImage = null;
-            this.btnRol.OnPressedColor = System.Drawing.Color.Black;
-            this.btnRol.Radius = 30;
-            this.btnRol.Size = new System.Drawing.Size(278, 42);
-            this.btnRol.TabIndex = 2;
-            this.btnRol.Text = "Rol";
-            this.btnRol.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // gunaButton3
-            // 
-            this.gunaButton3.AnimationHoverSpeed = 0.07F;
-            this.gunaButton3.AnimationSpeed = 0.03F;
-            this.gunaButton3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton3.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaButton3.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton3.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton3.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaButton3.ForeColor = System.Drawing.Color.White;
-            this.gunaButton3.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton3.Image")));
-            this.gunaButton3.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton3.Location = new System.Drawing.Point(0, 306);
-            this.gunaButton3.Name = "gunaButton3";
-            this.gunaButton3.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton3.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton3.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton3.OnHoverImage = null;
-            this.gunaButton3.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton3.Radius = 30;
-            this.gunaButton3.Size = new System.Drawing.Size(278, 42);
-            this.gunaButton3.TabIndex = 3;
-            this.gunaButton3.Text = "Notas";
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel1.Location = new System.Drawing.Point(79, 174);
+            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(86, 20);
+            this.gunaLabel1.TabIndex = 5;
+            this.gunaLabel1.Text = "gunaLabel1";
             // 
             // gunaButton4
             // 
@@ -158,7 +81,8 @@ namespace appE2Colsis.Vista
             this.gunaButton4.ForeColor = System.Drawing.Color.White;
             this.gunaButton4.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton4.Image")));
             this.gunaButton4.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton4.Location = new System.Drawing.Point(0, 354);
+            this.gunaButton4.Location = new System.Drawing.Point(0, 436);
+            this.gunaButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaButton4.Name = "gunaButton4";
             this.gunaButton4.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton4.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -166,38 +90,123 @@ namespace appE2Colsis.Vista
             this.gunaButton4.OnHoverImage = null;
             this.gunaButton4.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton4.Radius = 30;
-            this.gunaButton4.Size = new System.Drawing.Size(278, 42);
+            this.gunaButton4.Size = new System.Drawing.Size(371, 52);
             this.gunaButton4.TabIndex = 4;
             this.gunaButton4.Text = "gunaButton4";
             // 
-            // gunaLabel1
+            // gunaButton3
             // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel1.Location = new System.Drawing.Point(59, 141);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(68, 15);
-            this.gunaLabel1.TabIndex = 5;
-            this.gunaLabel1.Text = "gunaLabel1";
+            this.gunaButton3.AnimationHoverSpeed = 0.07F;
+            this.gunaButton3.AnimationSpeed = 0.03F;
+            this.gunaButton3.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButton3.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaButton3.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton3.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton3.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaButton3.ForeColor = System.Drawing.Color.White;
+            this.gunaButton3.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton3.Image")));
+            this.gunaButton3.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton3.Location = new System.Drawing.Point(0, 377);
+            this.gunaButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaButton3.Name = "gunaButton3";
+            this.gunaButton3.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton3.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton3.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton3.OnHoverImage = null;
+            this.gunaButton3.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton3.Radius = 30;
+            this.gunaButton3.Size = new System.Drawing.Size(371, 52);
+            this.gunaButton3.TabIndex = 3;
+            this.gunaButton3.Text = "Notas";
+            // 
+            // btnRol
+            // 
+            this.btnRol.AnimationHoverSpeed = 0.07F;
+            this.btnRol.AnimationSpeed = 0.03F;
+            this.btnRol.BackColor = System.Drawing.Color.Transparent;
+            this.btnRol.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnRol.BorderColor = System.Drawing.Color.Black;
+            this.btnRol.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnRol.FocusedColor = System.Drawing.Color.Empty;
+            this.btnRol.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRol.ForeColor = System.Drawing.Color.White;
+            this.btnRol.Image = null;
+            this.btnRol.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnRol.Location = new System.Drawing.Point(0, 318);
+            this.btnRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRol.Name = "btnRol";
+            this.btnRol.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnRol.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnRol.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnRol.OnHoverImage = null;
+            this.btnRol.OnPressedColor = System.Drawing.Color.Black;
+            this.btnRol.Radius = 30;
+            this.btnRol.Size = new System.Drawing.Size(371, 52);
+            this.btnRol.TabIndex = 2;
+            this.btnRol.Text = "Rol";
+            this.btnRol.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnPersona
+            // 
+            this.btnPersona.AnimationHoverSpeed = 0.07F;
+            this.btnPersona.AnimationSpeed = 0.03F;
+            this.btnPersona.BackColor = System.Drawing.Color.Transparent;
+            this.btnPersona.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnPersona.BorderColor = System.Drawing.Color.Black;
+            this.btnPersona.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnPersona.FocusedColor = System.Drawing.Color.Empty;
+            this.btnPersona.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersona.ForeColor = System.Drawing.Color.White;
+            this.btnPersona.Image = null;
+            this.btnPersona.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnPersona.Location = new System.Drawing.Point(0, 254);
+            this.btnPersona.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPersona.Name = "btnPersona";
+            this.btnPersona.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnPersona.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnPersona.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnPersona.OnHoverImage = null;
+            this.btnPersona.OnPressedColor = System.Drawing.Color.Black;
+            this.btnPersona.Radius = 30;
+            this.btnPersona.Size = new System.Drawing.Size(371, 57);
+            this.btnPersona.TabIndex = 1;
+            this.btnPersona.Text = "Persona";
+            this.btnPersona.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnPersona.Click += new System.EventHandler(this.btnPersona_Click);
+            // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
+            this.gunaPictureBox1.Location = new System.Drawing.Point(109, 32);
+            this.gunaPictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(139, 122);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox1.TabIndex = 0;
+            this.gunaPictureBox1.TabStop = false;
             // 
             // pnNombre
             // 
             this.pnNombre.BackColor = System.Drawing.Color.White;
-            this.pnNombre.Location = new System.Drawing.Point(280, 2);
+            this.pnNombre.Location = new System.Drawing.Point(373, 2);
+            this.pnNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnNombre.Name = "pnNombre";
-            this.pnNombre.Size = new System.Drawing.Size(712, 578);
+            this.pnNombre.Size = new System.Drawing.Size(1099, 780);
             this.pnNombre.TabIndex = 1;
             // 
             // frmMenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(992, 585);
+            this.ClientSize = new System.Drawing.Size(1476, 787);
             this.Controls.Add(this.pnNombre);
             this.Controls.Add(this.gunaPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmMenuPrincipal";
             this.Text = "frmMenuPrincipal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();
