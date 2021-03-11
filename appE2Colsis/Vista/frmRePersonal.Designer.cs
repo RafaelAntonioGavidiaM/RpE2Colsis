@@ -48,7 +48,7 @@ namespace appE2Colsis.Vista
             this.txtEstado = new Guna.UI.WinForms.GunaTextBox();
             this.cmbRol = new Guna.UI.WinForms.GunaComboBox();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
-            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
+            this.btnRegistrar = new Guna.UI.WinForms.GunaButton();
             this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.dgvEmpleado = new System.Windows.Forms.DataGridView();
@@ -281,7 +281,7 @@ namespace appE2Colsis.Vista
             this.gunaGroupBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaGroupBox1.BaseColor = System.Drawing.Color.White;
             this.gunaGroupBox1.BorderColor = System.Drawing.Color.Gainsboro;
-            this.gunaGroupBox1.Controls.Add(this.gunaButton2);
+            this.gunaGroupBox1.Controls.Add(this.btnRegistrar);
             this.gunaGroupBox1.Controls.Add(this.gunaButton3);
             this.gunaGroupBox1.Controls.Add(this.gunaButton1);
             this.gunaGroupBox1.Controls.Add(this.txtNombre);
@@ -308,28 +308,29 @@ namespace appE2Colsis.Vista
             this.gunaGroupBox1.Text = "Registro";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
             // 
-            // gunaButton2
+            // btnRegistrar
             // 
-            this.gunaButton2.AnimationHoverSpeed = 0.07F;
-            this.gunaButton2.AnimationSpeed = 0.03F;
-            this.gunaButton2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaButton2.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton2.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaButton2.ForeColor = System.Drawing.Color.White;
-            this.gunaButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton2.Image")));
-            this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton2.Location = new System.Drawing.Point(3, 397);
-            this.gunaButton2.Name = "gunaButton2";
-            this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton2.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton2.OnHoverImage = null;
-            this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton2.Size = new System.Drawing.Size(124, 42);
-            this.gunaButton2.TabIndex = 18;
-            this.gunaButton2.Text = "Registrar";
+            this.btnRegistrar.AnimationHoverSpeed = 0.07F;
+            this.btnRegistrar.AnimationSpeed = 0.03F;
+            this.btnRegistrar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnRegistrar.BorderColor = System.Drawing.Color.Black;
+            this.btnRegistrar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnRegistrar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
+            this.btnRegistrar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnRegistrar.Location = new System.Drawing.Point(3, 397);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnRegistrar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnRegistrar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnRegistrar.OnHoverImage = null;
+            this.btnRegistrar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnRegistrar.Size = new System.Drawing.Size(124, 42);
+            this.btnRegistrar.TabIndex = 18;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // gunaButton3
             // 
@@ -427,7 +428,7 @@ namespace appE2Colsis.Vista
         private Guna.UI.WinForms.GunaTextBox txtEstado;
         private Guna.UI.WinForms.GunaComboBox cmbRol;
         private Guna.UI.WinForms.GunaGroupBox gunaGroupBox1;
-        private Guna.UI.WinForms.GunaButton gunaButton2;
+        private Guna.UI.WinForms.GunaButton btnRegistrar;
         private Guna.UI.WinForms.GunaButton gunaButton3;
         private Guna.UI.WinForms.GunaButton gunaButton1;
         private System.Windows.Forms.DataGridView dgvEmpleado;

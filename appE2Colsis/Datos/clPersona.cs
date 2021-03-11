@@ -22,7 +22,7 @@ namespace appE2Colsis.Datos
         public string direccion { set; get; }
         public string ciudad { set; get; }
         public string correoYemail { set; get; }
-        public byte estado { set; get; }
+        public string estado { set; get; }
         public string clave { set; get; }
 
         //Objetos compartidos

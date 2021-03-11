@@ -33,7 +33,8 @@ namespace appE2Colsis.Datos
                 objRePersonal.telefono = tblPersona.Rows[i]["telefono"].ToString();
                 objRePersonal.ciudad = tblPersona.Rows[i]["ciudad"].ToString();
                 objRePersonal.correoYemail = tblPersona.Rows[i]["correo"].ToString();
-                objRePersonal.estado = byte.Parse(tblPersona.Rows[i]["estado"].ToString());
+                //objRePersonal.estado = byte.Parse(tblPersona.Rows[i]["estado"].ToString());
+                objRePersonal.estado = tblPersona.Rows[i]["estado"].ToString();
                 objRePersonal.idRol = int.Parse(tblPersona.Rows[i]["idRol"].ToString());
 
                 listRePersonal.Add(objRePersonal);
@@ -45,13 +46,27 @@ namespace appE2Colsis.Datos
         }
 
 
-        public int mtdRegistrar()
+        public int mtdRegistrar(List<clRePersonal> listRePersonal)
         {
-            String consulta = "insert into empleado(nombre, apellido, documento, telefono, ciudad, correo, estado, idRol) values('" + nombre + "', '" + apellido + "', '" + documento + "', '" + telefono + "', '" + ciudad + "', '" + correoYemail + "', '" + estado + "', '" + idRol + "')";
+            /*  String consulta = "insert into personal(nombre, apellido, documento, telefono, ciudad, correo, estado, idRol) values('" + nombre + "', '" + apellido + "', '" + documento + "', '" + telefono + "', '" + ciudad + "', '" + correoYemail + "', '" + estado + "', '" + idRol + "')";
 
-            objConexion = new clConexion();
-            int resultado = objConexion.mtdConectado(consulta);
+              objConexion = new clConexion();
+              int resultado = objConexion.mtdConectado(consulta);
 
+              return resultado;*/
+
+
+            int resultado = 0;
+            foreach (var item in listRePersonal)
+            {
+                String consulta = "insert into personal(nombre, apellido, documento, telefono, ciudad, correo, estado, idRol) values('" +item.nombre + "', '" + item.apellido + "', '" + item.documento + "', '" + item.telefono + "', '" + item.ciudad + "', '" + item.correoYemail + "', '" + item.estado + "', '" + item.idRol + "')";
+
+
+                objConexion = new clConexion();
+                resultado = objConexion.mtdConectado(consulta);
+
+                
+            }
             return resultado;
         }
     }
