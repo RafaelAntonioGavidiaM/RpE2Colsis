@@ -178,6 +178,8 @@ namespace appE2Colsis.Vista
             }
             else
             {
+
+                objRePersonal.idPersonal = idPersona;
                 objRePersonal.nombre = txtNombre.Text;
                 objRePersonal.apellido = txtApellido.Text;
                 objRePersonal.documento = txtDocumento.Text;

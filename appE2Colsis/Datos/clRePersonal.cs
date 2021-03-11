@@ -81,7 +81,7 @@ namespace appE2Colsis.Datos
         {
 
 
-            string consulta = "update personal set nombre='" + nombre + "',apellido= '" + apellido + "', documento='" + documento + "',telefono='" + telefono + "', direccion= '" + direccion + "',ciudad='" + ciudad + "',correo='" + correoYemail + "',estado='" + estado + "',idRol='" + idRol + " ' where documento = ' " + documento + "'";
+            string consulta = "update personal set nombre='" + nombre + "',apellido= '" + apellido + "', documento='" + documento + "',telefono='" + telefono + "', direccion= '" + direccion + "',ciudad='" + ciudad + "',correo='" + correoYemail + "',estado='" + estado + "',idRol='" + idRol + " ' where idPersonal='"+idPersonal+"'";
             objConexion = new clConexion();
             int Resultado = objConexion.mtdConectado(consulta);
 
