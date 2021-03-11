@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI">
-      <HintPath>..\..\Guna.UI.dll</HintPath>
+      <HintPath>..\..\..\..\..\Downloads\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
@@ -61,6 +61,7 @@
     <Compile Include="Datos\clLogin.cs" />
     <Compile Include="Datos\clPersona.cs" />
     <Compile Include="Datos\clRePersonal.cs" />
+    <Compile Include="Datos\clReporte.cs" />
     <Compile Include="Datos\clRol.cs" />
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
