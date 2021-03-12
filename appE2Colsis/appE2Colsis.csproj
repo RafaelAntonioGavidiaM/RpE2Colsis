@@ -33,8 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GemBox.Spreadsheet, Version=47.0.0.1129, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL" />
     <Reference Include="Guna.UI">
-      <HintPath>..\..\Guna.UI.dll</HintPath>
+      <HintPath>..\..\..\..\..\Downloads\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
@@ -61,6 +62,7 @@
     <Compile Include="Datos\clLogin.cs" />
     <Compile Include="Datos\clPersona.cs" />
     <Compile Include="Datos\clRePersonal.cs" />
+    <Compile Include="Datos\clReporte.cs" />
     <Compile Include="Datos\clRol.cs" />
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -88,6 +90,12 @@
     <Compile Include="Vista\frmRePersonal.Designer.cs">
       <DependentUpon>frmRePersonal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\frmReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmReporte.Designer.cs">
+      <DependentUpon>frmReporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmRol.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmRePersonal.resx">
       <DependentUpon>frmRePersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmReporte.resx">
+      <DependentUpon>frmReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmRol.resx">
       <DependentUpon>frmRol.cs</DependentUpon>
