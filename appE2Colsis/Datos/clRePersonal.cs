@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 
+
 namespace appE2Colsis.Datos
 {
     class clRePersonal : clPersona
@@ -86,6 +87,29 @@ namespace appE2Colsis.Datos
             int Resultado = objConexion.mtdConectado(consulta);
 
             return Resultado;
+
+        }
+
+
+        public void mtdBuscar()
+        {
+
+
+            string consulta = "select * from personal where nombre ='" + nombre + "',or documento='" + documento + "'";
+            tblPersona = new DataTable();
+            objConexion = new clConexion();
+            tblPersona = objConexion.mtdDesconectado(consulta);
+
+            nombre = tblPersona.Rows[0]["nombre"].ToString();
+            apellido = tblPersona.Rows[0]["apellido"].ToString();
+            documento = tblPersona.Rows[0]["documento"].ToString();
+            telefono = tblPersona.Rows[0]["telefono"].ToString();
+            ciudad = tblPersona.Rows[0]["ciudad"].ToString();
+            correoYemail = tblPersona.Rows[0]["correo"].ToString();
+            estado = tblPersona.Rows[0]["estado"].ToString();
+            idRol = int.Parse(tblPersona.Rows[0]["idRol"].ToString());
+            direccion = tblPersona.Rows[0]["direccion"].ToString();
+
 
         }
     }

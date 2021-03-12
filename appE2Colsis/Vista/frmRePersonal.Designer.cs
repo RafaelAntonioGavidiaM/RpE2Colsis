@@ -29,7 +29,6 @@ namespace appE2Colsis.Vista
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRePersonal));
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
@@ -45,17 +44,21 @@ namespace appE2Colsis.Vista
             this.txtTelefono = new Guna.UI.WinForms.GunaTextBox();
             this.txtCiudad = new Guna.UI.WinForms.GunaTextBox();
             this.txtCorreo = new Guna.UI.WinForms.GunaTextBox();
-            this.txtEstado = new Guna.UI.WinForms.GunaTextBox();
             this.cmbRol = new Guna.UI.WinForms.GunaComboBox();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
+            this.label = new Guna.UI.WinForms.GunaLabel();
             this.btnRegistrar = new Guna.UI.WinForms.GunaButton();
             this.btnActualizar = new Guna.UI.WinForms.GunaButton();
+            this.txtDireccion = new Guna.UI.WinForms.GunaTextBox();
             this.btnEliminar = new Guna.UI.WinForms.GunaButton();
             this.dgvEmpleado = new System.Windows.Forms.DataGridView();
-            this.label = new Guna.UI.WinForms.GunaLabel();
-            this.txtDireccion = new Guna.UI.WinForms.GunaTextBox();
+            this.grbBuscqueda = new Guna.UI.WinForms.GunaGroupBox();
+            this.txtBuscar = new Guna.UI.WinForms.GunaTextBox();
+            this.btnBuscar = new Guna.UI.WinForms.GunaButton();
+            this.cmbEstado = new Guna.UI.WinForms.GunaComboBox();
             this.gunaGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
+            this.grbBuscqueda.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaLabel1
@@ -244,22 +247,6 @@ namespace appE2Colsis.Vista
             this.txtCorreo.Size = new System.Drawing.Size(243, 32);
             this.txtCorreo.TabIndex = 14;
             // 
-            // txtEstado
-            // 
-            this.txtEstado.BaseColor = System.Drawing.Color.White;
-            this.txtEstado.BorderColor = System.Drawing.Color.Silver;
-            this.txtEstado.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEstado.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtEstado.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtEstado.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtEstado.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtEstado.Location = new System.Drawing.Point(122, 336);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.PasswordChar = '\0';
-            this.txtEstado.SelectedText = "";
-            this.txtEstado.Size = new System.Drawing.Size(243, 32);
-            this.txtEstado.TabIndex = 15;
-            // 
             // cmbRol
             // 
             this.cmbRol.BackColor = System.Drawing.Color.Transparent;
@@ -283,6 +270,7 @@ namespace appE2Colsis.Vista
             this.gunaGroupBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaGroupBox1.BaseColor = System.Drawing.Color.White;
             this.gunaGroupBox1.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gunaGroupBox1.Controls.Add(this.cmbEstado);
             this.gunaGroupBox1.Controls.Add(this.label);
             this.gunaGroupBox1.Controls.Add(this.btnRegistrar);
             this.gunaGroupBox1.Controls.Add(this.btnActualizar);
@@ -291,7 +279,6 @@ namespace appE2Colsis.Vista
             this.gunaGroupBox1.Controls.Add(this.txtNombre);
             this.gunaGroupBox1.Controls.Add(this.cmbRol);
             this.gunaGroupBox1.Controls.Add(this.gunaLabel1);
-            this.gunaGroupBox1.Controls.Add(this.txtEstado);
             this.gunaGroupBox1.Controls.Add(this.gunaLabel2);
             this.gunaGroupBox1.Controls.Add(this.txtCorreo);
             this.gunaGroupBox1.Controls.Add(this.gunaLabel3);
@@ -312,6 +299,16 @@ namespace appE2Colsis.Vista
             this.gunaGroupBox1.Text = "Registro";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
             // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.label.Location = new System.Drawing.Point(24, 216);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(72, 20);
+            this.label.TabIndex = 20;
+            this.label.Text = "Direccion";
+            // 
             // btnRegistrar
             // 
             this.btnRegistrar.AnimationHoverSpeed = 0.07F;
@@ -320,9 +317,9 @@ namespace appE2Colsis.Vista
             this.btnRegistrar.BorderColor = System.Drawing.Color.Black;
             this.btnRegistrar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnRegistrar.FocusedColor = System.Drawing.Color.Empty;
-            this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRegistrar.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.Image")));
+            this.btnRegistrar.Image = null;
             this.btnRegistrar.ImageSize = new System.Drawing.Size(20, 20);
             this.btnRegistrar.Location = new System.Drawing.Point(21, 471);
             this.btnRegistrar.Name = "btnRegistrar";
@@ -334,6 +331,7 @@ namespace appE2Colsis.Vista
             this.btnRegistrar.Size = new System.Drawing.Size(124, 42);
             this.btnRegistrar.TabIndex = 18;
             this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnActualizar
@@ -344,9 +342,9 @@ namespace appE2Colsis.Vista
             this.btnActualizar.BorderColor = System.Drawing.Color.Black;
             this.btnActualizar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnActualizar.FocusedColor = System.Drawing.Color.Empty;
-            this.btnActualizar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnActualizar.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
+            this.btnActualizar.Image = null;
             this.btnActualizar.ImageSize = new System.Drawing.Size(20, 20);
             this.btnActualizar.Location = new System.Drawing.Point(151, 471);
             this.btnActualizar.Name = "btnActualizar";
@@ -358,52 +356,8 @@ namespace appE2Colsis.Vista
             this.btnActualizar.Size = new System.Drawing.Size(121, 42);
             this.btnActualizar.TabIndex = 19;
             this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.AnimationHoverSpeed = 0.07F;
-            this.btnEliminar.AnimationSpeed = 0.03F;
-            this.btnEliminar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnEliminar.BorderColor = System.Drawing.Color.Black;
-            this.btnEliminar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnEliminar.FocusedColor = System.Drawing.Color.Empty;
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEliminar.Location = new System.Drawing.Point(278, 471);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnEliminar.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnEliminar.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnEliminar.OnHoverImage = null;
-            this.btnEliminar.OnPressedColor = System.Drawing.Color.Black;
-            this.btnEliminar.Size = new System.Drawing.Size(130, 42);
-            this.btnEliminar.TabIndex = 17;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // dgvEmpleado
-            // 
-            this.dgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmpleado.Location = new System.Drawing.Point(462, 9);
-            this.dgvEmpleado.Name = "dgvEmpleado";
-            this.dgvEmpleado.RowHeadersWidth = 51;
-            this.dgvEmpleado.RowTemplate.Height = 24;
-            this.dgvEmpleado.Size = new System.Drawing.Size(744, 596);
-            this.dgvEmpleado.TabIndex = 18;
-            this.dgvEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleado_CellContentClick);
-            // 
-            // label
-            // 
-            this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label.Location = new System.Drawing.Point(24, 216);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(72, 20);
-            this.label.TabIndex = 20;
-            this.label.Text = "Direccion";
             // 
             // txtDireccion
             // 
@@ -421,11 +375,129 @@ namespace appE2Colsis.Vista
             this.txtDireccion.Size = new System.Drawing.Size(243, 32);
             this.txtDireccion.TabIndex = 21;
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.AnimationHoverSpeed = 0.07F;
+            this.btnEliminar.AnimationSpeed = 0.03F;
+            this.btnEliminar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnEliminar.BorderColor = System.Drawing.Color.Black;
+            this.btnEliminar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnEliminar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnEliminar.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Image = null;
+            this.btnEliminar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnEliminar.Location = new System.Drawing.Point(278, 471);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnEliminar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnEliminar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnEliminar.OnHoverImage = null;
+            this.btnEliminar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnEliminar.Size = new System.Drawing.Size(130, 42);
+            this.btnEliminar.TabIndex = 17;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // dgvEmpleado
+            // 
+            this.dgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpleado.Location = new System.Drawing.Point(462, 114);
+            this.dgvEmpleado.Name = "dgvEmpleado";
+            this.dgvEmpleado.RowHeadersWidth = 51;
+            this.dgvEmpleado.RowTemplate.Height = 24;
+            this.dgvEmpleado.Size = new System.Drawing.Size(744, 491);
+            this.dgvEmpleado.TabIndex = 18;
+            this.dgvEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleado_CellContentClick);
+            // 
+            // grbBuscqueda
+            // 
+            this.grbBuscqueda.BackColor = System.Drawing.Color.Transparent;
+            this.grbBuscqueda.BaseColor = System.Drawing.Color.White;
+            this.grbBuscqueda.BorderColor = System.Drawing.Color.Gainsboro;
+            this.grbBuscqueda.Controls.Add(this.txtBuscar);
+            this.grbBuscqueda.Controls.Add(this.btnBuscar);
+            this.grbBuscqueda.Font = new System.Drawing.Font("Agency FB", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbBuscqueda.LineColor = System.Drawing.Color.Gainsboro;
+            this.grbBuscqueda.Location = new System.Drawing.Point(462, 11);
+            this.grbBuscqueda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grbBuscqueda.Name = "grbBuscqueda";
+            this.grbBuscqueda.Size = new System.Drawing.Size(744, 95);
+            this.grbBuscqueda.TabIndex = 22;
+            this.grbBuscqueda.Text = "Busqueda Personal";
+            this.grbBuscqueda.TextLocation = new System.Drawing.Point(10, 8);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BaseColor = System.Drawing.Color.White;
+            this.txtBuscar.BorderColor = System.Drawing.Color.Silver;
+            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscar.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtBuscar.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtBuscar.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBuscar.Location = new System.Drawing.Point(23, 53);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.PasswordChar = '\0';
+            this.txtBuscar.SelectedText = "";
+            this.txtBuscar.Size = new System.Drawing.Size(617, 37);
+            this.txtBuscar.TabIndex = 20;
+            this.txtBuscar.Tag = "Ingrese el nombre o documento";
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.btnBuscar.AnimationHoverSpeed = 0.07F;
+            this.btnBuscar.AnimationSpeed = 0.03F;
+            this.btnBuscar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnBuscar.BorderColor = System.Drawing.Color.Black;
+            this.btnBuscar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnBuscar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnBuscar.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Image = null;
+            this.btnBuscar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnBuscar.Location = new System.Drawing.Point(660, 52);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnBuscar.OnHoverBorderColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnBuscar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnBuscar.OnHoverImage = null;
+            this.btnBuscar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnBuscar.Size = new System.Drawing.Size(81, 33);
+            this.btnBuscar.TabIndex = 19;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // cmbEstado
+            // 
+            this.cmbEstado.BackColor = System.Drawing.Color.Transparent;
+            this.cmbEstado.BaseColor = System.Drawing.Color.White;
+            this.cmbEstado.BorderColor = System.Drawing.Color.Silver;
+            this.cmbEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstado.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbEstado.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbEstado.ForeColor = System.Drawing.Color.Black;
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Location = new System.Drawing.Point(122, 336);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmbEstado.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cmbEstado.Size = new System.Drawing.Size(243, 31);
+            this.cmbEstado.TabIndex = 22;
+            // 
             // frmRePersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1218, 611);
+            this.Controls.Add(this.grbBuscqueda);
             this.Controls.Add(this.dgvEmpleado);
             this.Controls.Add(this.gunaGroupBox1);
             this.Controls.Add(this.gunaLabel8);
@@ -436,6 +508,7 @@ namespace appE2Colsis.Vista
             this.gunaGroupBox1.ResumeLayout(false);
             this.gunaGroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).EndInit();
+            this.grbBuscqueda.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -458,7 +531,6 @@ namespace appE2Colsis.Vista
         private Guna.UI.WinForms.GunaTextBox txtTelefono;
         private Guna.UI.WinForms.GunaTextBox txtCiudad;
         private Guna.UI.WinForms.GunaTextBox txtCorreo;
-        private Guna.UI.WinForms.GunaTextBox txtEstado;
         private Guna.UI.WinForms.GunaComboBox cmbRol;
         private Guna.UI.WinForms.GunaGroupBox gunaGroupBox1;
         private Guna.UI.WinForms.GunaButton btnRegistrar;
@@ -467,5 +539,9 @@ namespace appE2Colsis.Vista
         private System.Windows.Forms.DataGridView dgvEmpleado;
         private Guna.UI.WinForms.GunaLabel label;
         private Guna.UI.WinForms.GunaTextBox txtDireccion;
+        private Guna.UI.WinForms.GunaGroupBox grbBuscqueda;
+        private Guna.UI.WinForms.GunaTextBox txtBuscar;
+        private Guna.UI.WinForms.GunaButton btnBuscar;
+        private Guna.UI.WinForms.GunaComboBox cmbEstado;
     }
 }
