@@ -37,5 +37,13 @@ namespace appE2Colsis.Vista
             objRePersonal.Show();
             
         }
+
+        private void btnRol_Click(object sender, EventArgs e)
+        {
+            frmRol objRol = new frmRol();
+            objRol.TopLevel = false;
+            objRol.Parent = pnNombre;
+            objRol.Show();
+        }
     }
 }

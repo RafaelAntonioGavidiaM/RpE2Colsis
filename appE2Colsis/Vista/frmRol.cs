@@ -20,8 +20,10 @@ namespace appE2Colsis.Vista
         List<clRol> permisos = new List<clRol>();
         List<clRol> listaModificar = new List<clRol>();
         List<clRol> listaRolFiltrar = new List<clRol>();
+        List<clRol> listaRol = new List<clRol>();// lista trae valores de la tabla rol
         string[] decision = new string[2];
-        
+        int registro = 0; //Almacena si encuentra algun registro con el nombre de rol y lo comprueba por medio del mtdComprobarRol
+
         clRol objRol = new clRol();
         int rows = 0;
        // int idRol = 0; // Necesario para asignar permisos
@@ -91,7 +93,7 @@ namespace appE2Colsis.Vista
         public void mtdCargarCmbRol()
         {
             
-            List<clRol> listaRol = new List<clRol>();
+            
            listaRol= objRol.mtdConsultarRol();
             cmbRol.DataSource = listaRol;
             cmbRol.DisplayMember = "nombreRol";
@@ -106,16 +108,58 @@ namespace appE2Colsis.Vista
 
         }
 
-        
+        public void mtdComprobarRol(string validar) //Comprueba si ya existe un rol con el mismo nombre que con el que el usuario desea ingresar o modificar 
+        {
+            foreach (var item in listaRol)
+            {
+                if (item.nombreRol == validar)
+                {
+
+                    registro = 1;
+                }
+                else if (validar == "")
+                {
+
+                    registro = 2;
+
+                }
+
+
+
+            }
+
+
+        }
+
 
 
         private void gunaButton1_Click(object sender, EventArgs e) // Permite crear un registro en la tabla rol
         {
 
+
+            mtdComprobarRol(txtRol.Text);
+           
+
+            if (registro==0)
+            {
+                objRol.nombreRol = txtRol.Text;
+                rows = objRol.mtdRegistrarRol();
+                mtdComprobar();
+                btnPermisos.Visible = true;
+            }
+            else if (registro==1)
+            {
+                MessageBox.Show("Este Rol ya esta ingresado en el sistema ", "Error al Ingresar rol", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (registro==2)
+            {
+                MessageBox.Show("No se pueden ingresar valores nulos  ", "Error al Ingresar Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }      
             
-            objRol.nombreRol = txtRol.Text;
-           rows=  objRol.mtdRegistrarRol();
-            mtdComprobar();
+
+
+            
             
 
             
@@ -126,9 +170,12 @@ namespace appE2Colsis.Vista
 
         public void mtdListarDecisionPermiso()
         {
-            string[] formularios = new string[2];
+            string[] formularios = new string[4]; // Añadir formularios
             formularios[0] = "frmLogin";
             formularios[1] = "frmRol";
+            formularios[2] = "frmRepersonal";
+            formularios[3] = "frmInformes";
+
             decision[0] = "Habilitado";
             decision[1] = "Desabilitado";
 
@@ -136,7 +183,7 @@ namespace appE2Colsis.Vista
 
 
 
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < formularios.Length; i++)
             {
                 clRol objRolPermiso = new clRol();
                 objRolPermiso.nombreFormulario = formularios[i];
@@ -144,7 +191,19 @@ namespace appE2Colsis.Vista
                 permisos.Add(objRolPermiso);
 
             }
+
+
             dgvMostrar.DataSource = permisos;
+          /* for (int i = 0; i < permisos.Count; i++)
+            {
+                dgvMostrar.Rows[i].Cells["nombreFormulario"].Value = permisos[i].nombreFormulario;
+                dgvMostrar.Rows[i].Cells["nombrePermiso"].Value = permisos[i].nombrePermiso;
+
+            }*/
+                
+
+            
+
             cmbDecision.DataSource = decision;
             cmbDecision.DisplayMember = "nombrePermiso";
             
@@ -179,7 +238,10 @@ namespace appE2Colsis.Vista
             objRol.nombreRol = cmbRol.Text;
 
             listaRoles = objRol.mtdColsutarPermisosRoles();
-            dgvContenidoRol.DataSource = listaRoles;
+             dgvContenidoRol.DataSource = listaRoles;
+
+            
+
         }
 
        
@@ -224,6 +286,8 @@ namespace appE2Colsis.Vista
 
         }
 
+        
+
         private void gunaButton2_Click_1(object sender, EventArgs e)
         {
            int idRolCrear = 0;
@@ -263,6 +327,7 @@ namespace appE2Colsis.Vista
             mtdBlanquearRegistrar();
             grpPermisos.Visible = false;
             permisos.Clear();
+            btnPermisos.Visible = false;
 
         }
 
@@ -282,6 +347,7 @@ namespace appE2Colsis.Vista
 
             dgvSeleccionar.Visible = false;
             grpPermisos.Visible = false;
+            btnPermisos.Visible = false;
 
         }
 
@@ -317,7 +383,7 @@ namespace appE2Colsis.Vista
 
             }
 
-            listaRoles.Clear();
+            dgvSeleccionar.Visible = false; // oculta el groupbox de eliminar
 
         }
 
@@ -344,19 +410,40 @@ namespace appE2Colsis.Vista
 
         private void gunaButton5_Click(object sender, EventArgs e)
         {
-            foreach (var item in listaModificar)
-            {
-                if (lblMrol.Text == item.nombreRol)
-                {
-                    item.nombreRol = txtModificar.Text;
-                    
-                    
-                }
+            string validar = txtModificar.Text;
+            mtdComprobarRol(validar);
 
-                
+            if (registro == 0)
+            {
+
+                foreach (var item in listaModificar)
+                {
+                    if (lblMrol.Text == item.nombreRol)
+                    {
+                        item.nombreRol = txtModificar.Text;
+
+
+                    }
+
+
+
+                }
+                dataGridView1.Refresh();
 
             }
-            dataGridView1.Refresh();
+            else if (registro == 1)
+            {
+                MessageBox.Show("Este Rol ya esta ingresado en el sistema ", "Error al Ingresar rol", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (registro == 2)
+            {
+                MessageBox.Show("No se pueden ingresar valores nulos  ", "Error al Ingresar Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+
+
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -39,7 +39,7 @@
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.lblFormulario = new System.Windows.Forms.Label();
             this.cmbDecision = new System.Windows.Forms.ComboBox();
-            this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
+            this.btnPermisos = new Guna.UI.WinForms.GunaButton();
             this.grpEliminarRol = new System.Windows.Forms.GroupBox();
             this.dgvSeleccionar = new System.Windows.Forms.GroupBox();
             this.dgvContenidoRol = new System.Windows.Forms.DataGrid();
@@ -51,6 +51,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.grpModificar = new System.Windows.Forms.GroupBox();
+            this.lblMrol = new Guna.UI.WinForms.GunaLabel();
             this.gunaButton5 = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.txtModificar = new Guna.UI.WinForms.GunaTextBox();
@@ -67,7 +68,6 @@
             this.Crear = new Guna.UI.WinForms.GunaButton();
             this.Modificar = new Guna.UI.WinForms.GunaButton();
             this.Eliminar = new Guna.UI.WinForms.GunaButton();
-            this.lblMrol = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.gunaImageReplaceColor1 = new Guna.UI.WinForms.GunaImageReplaceColor(this.components);
             this.grpCrear.SuspendLayout();
@@ -139,7 +139,7 @@
             // grpCrear
             // 
             this.grpCrear.Controls.Add(this.grpPermisos);
-            this.grpCrear.Controls.Add(this.gunaButton3);
+            this.grpCrear.Controls.Add(this.btnPermisos);
             this.grpCrear.Controls.Add(this.gunaButton1);
             this.grpCrear.Controls.Add(this.lblRol);
             this.grpCrear.Controls.Add(this.txtRol);
@@ -192,9 +192,9 @@
             // dgvMostrar
             // 
             this.dgvMostrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMostrar.Location = new System.Drawing.Point(7, 29);
+            this.dgvMostrar.Location = new System.Drawing.Point(9, 18);
             this.dgvMostrar.Name = "dgvMostrar";
-            this.dgvMostrar.Size = new System.Drawing.Size(220, 118);
+            this.dgvMostrar.Size = new System.Drawing.Size(237, 118);
             this.dgvMostrar.TabIndex = 18;
             this.dgvMostrar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMostrar_CellContentClick);
             // 
@@ -242,32 +242,32 @@
             this.cmbDecision.Size = new System.Drawing.Size(121, 21);
             this.cmbDecision.TabIndex = 10;
             // 
-            // gunaButton3
+            // btnPermisos
             // 
-            this.gunaButton3.AnimationHoverSpeed = 0.07F;
-            this.gunaButton3.AnimationSpeed = 0.03F;
-            this.gunaButton3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton3.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaButton3.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton3.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton3.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaButton3.ForeColor = System.Drawing.Color.White;
-            this.gunaButton3.Image = null;
-            this.gunaButton3.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton3.Location = new System.Drawing.Point(135, 93);
-            this.gunaButton3.Name = "gunaButton3";
-            this.gunaButton3.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton3.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton3.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton3.OnHoverImage = null;
-            this.gunaButton3.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton3.Radius = 10;
-            this.gunaButton3.Size = new System.Drawing.Size(107, 29);
-            this.gunaButton3.TabIndex = 8;
-            this.gunaButton3.Text = "Permisos";
-            this.gunaButton3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton3.Click += new System.EventHandler(this.gunaButton3_Click);
+            this.btnPermisos.AnimationHoverSpeed = 0.07F;
+            this.btnPermisos.AnimationSpeed = 0.03F;
+            this.btnPermisos.BackColor = System.Drawing.Color.Transparent;
+            this.btnPermisos.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnPermisos.BorderColor = System.Drawing.Color.Black;
+            this.btnPermisos.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnPermisos.FocusedColor = System.Drawing.Color.Empty;
+            this.btnPermisos.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPermisos.ForeColor = System.Drawing.Color.White;
+            this.btnPermisos.Image = null;
+            this.btnPermisos.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnPermisos.Location = new System.Drawing.Point(135, 93);
+            this.btnPermisos.Name = "btnPermisos";
+            this.btnPermisos.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnPermisos.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnPermisos.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnPermisos.OnHoverImage = null;
+            this.btnPermisos.OnPressedColor = System.Drawing.Color.Black;
+            this.btnPermisos.Radius = 10;
+            this.btnPermisos.Size = new System.Drawing.Size(107, 29);
+            this.btnPermisos.TabIndex = 8;
+            this.btnPermisos.Text = "Permisos";
+            this.btnPermisos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnPermisos.Click += new System.EventHandler(this.gunaButton3_Click);
             // 
             // grpEliminarRol
             // 
@@ -275,7 +275,7 @@
             this.grpEliminarRol.Controls.Add(this.btnSeleccionar);
             this.grpEliminarRol.Controls.Add(this.cmbRol);
             this.grpEliminarRol.Controls.Add(this.gunaLabel1);
-            this.grpEliminarRol.Location = new System.Drawing.Point(11, 153);
+            this.grpEliminarRol.Location = new System.Drawing.Point(362, 153);
             this.grpEliminarRol.Name = "grpEliminarRol";
             this.grpEliminarRol.Size = new System.Drawing.Size(311, 446);
             this.grpEliminarRol.TabIndex = 4;
@@ -410,11 +410,21 @@
             this.grpModificar.Controls.Add(this.cmbMod);
             this.grpModificar.Controls.Add(this.cmbModificar);
             this.grpModificar.Controls.Add(this.gunaLabel3);
-            this.grpModificar.Location = new System.Drawing.Point(12, 153);
+            this.grpModificar.Location = new System.Drawing.Point(694, 153);
             this.grpModificar.Name = "grpModificar";
             this.grpModificar.Size = new System.Drawing.Size(311, 446);
             this.grpModificar.TabIndex = 5;
             this.grpModificar.TabStop = false;
+            // 
+            // lblMrol
+            // 
+            this.lblMrol.AutoSize = true;
+            this.lblMrol.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMrol.Location = new System.Drawing.Point(105, 77);
+            this.lblMrol.Name = "lblMrol";
+            this.lblMrol.Size = new System.Drawing.Size(28, 17);
+            this.lblMrol.TabIndex = 27;
+            this.lblMrol.Text = "Rol";
             // 
             // gunaButton5
             // 
@@ -429,7 +439,7 @@
             this.gunaButton5.ForeColor = System.Drawing.Color.White;
             this.gunaButton5.Image = null;
             this.gunaButton5.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton5.Location = new System.Drawing.Point(237, 120);
+            this.gunaButton5.Location = new System.Drawing.Point(237, 111);
             this.gunaButton5.Name = "gunaButton5";
             this.gunaButton5.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton5.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -463,7 +473,7 @@
             this.txtModificar.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtModificar.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtModificar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtModificar.Location = new System.Drawing.Point(108, 123);
+            this.txtModificar.Location = new System.Drawing.Point(108, 114);
             this.txtModificar.Name = "txtModificar";
             this.txtModificar.PasswordChar = '\0';
             this.txtModificar.Radius = 10;
@@ -612,9 +622,9 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(338, 169);
+            this.dataGridView2.Location = new System.Drawing.Point(1039, 147);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(780, 454);
+            this.dataGridView2.Size = new System.Drawing.Size(138, 446);
             this.dataGridView2.TabIndex = 8;
             // 
             // Crear
@@ -686,7 +696,7 @@
             this.Eliminar.ImageSize = new System.Drawing.Size(20, 20);
             this.Eliminar.Location = new System.Drawing.Point(362, 122);
             this.Eliminar.Name = "Eliminar";
-            this.Eliminar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.Eliminar.OnHoverBaseColor = System.Drawing.Color.Red;
             this.Eliminar.OnHoverBorderColor = System.Drawing.Color.Black;
             this.Eliminar.OnHoverForeColor = System.Drawing.Color.White;
             this.Eliminar.OnHoverImage = null;
@@ -697,16 +707,6 @@
             this.Eliminar.Text = "Eliminar";
             this.Eliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
-            // 
-            // lblMrol
-            // 
-            this.lblMrol.AutoSize = true;
-            this.lblMrol.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMrol.Location = new System.Drawing.Point(105, 77);
-            this.lblMrol.Name = "lblMrol";
-            this.lblMrol.Size = new System.Drawing.Size(28, 17);
-            this.lblMrol.TabIndex = 27;
-            this.lblMrol.Text = "Rol";
             // 
             // gunaLabel6
             // 
@@ -728,18 +728,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1255, 764);
+            this.ClientSize = new System.Drawing.Size(1170, 689);
             this.Controls.Add(this.gunaLabel6);
             this.Controls.Add(this.Eliminar);
             this.Controls.Add(this.Modificar);
             this.Controls.Add(this.Crear);
             this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.grpEliminarRol);
             this.Controls.Add(this.gunaLabel5);
             this.Controls.Add(this.cmbFiltrar);
             this.Controls.Add(this.grpModificar);
-            this.Controls.Add(this.grpEliminarRol);
             this.Controls.Add(this.grpCrear);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRol";
             this.Text = "frmRol";
             this.Load += new System.EventHandler(this.frmRol_Load_1);
@@ -768,7 +771,7 @@
         private Guna.UI.WinForms.GunaTextBox txtRol;
         private Guna.UI.WinForms.GunaButton gunaButton1;
         private System.Windows.Forms.GroupBox grpCrear;
-        private Guna.UI.WinForms.GunaButton gunaButton3;
+        private Guna.UI.WinForms.GunaButton btnPermisos;
         private Guna.UI.WinForms.GunaButton gunaButton2;
         private System.Windows.Forms.GroupBox grpEliminarRol;
         private Guna.UI.WinForms.GunaButton gunaButton4;
