@@ -30,6 +30,22 @@ namespace appE2Colsis.Vista
         }
         List<clRol> listaPermisos = new List<clRol>();
 
+        private void mtdCerrarFormulario(string formulario = "")
+        {
+            FormCollection formulariosApp = Application.OpenForms;
+
+            for (int i = 0; i < formulariosApp.Count; i++)
+            {
+                var nombre = formulariosApp[i].Name;
+                if (nombre != "frmMenuPrincipal" && nombre != formulario)
+                {
+                    formulariosApp[i].Hide();
+                }
+            }
+
+
+        }
+
         public void mtdVerificaPermisos(string nombreFormulario)// Este metodo verificará los permisos que el usuario tiene para el ingreso al programa 
         {
 
@@ -93,16 +109,29 @@ namespace appE2Colsis.Vista
             objRePersonal.TopLevel = false;
             objRePersonal.Parent = pnNombre;
             objRePersonal.Show();
+            mtdCerrarFormulario("frmRePersonal");
             
         }
 
         private void btnRol_Click(object sender, EventArgs e)
         {
-           /* frmRol objRol = new frmRol();
+            frmRol objRol = new frmRol();
             objRol.TopLevel = false;
             objRol.Parent = pnNombre;
-            objRol.Show();*/
-            mtdVerificaPermisos("frmRol");
+            objRol.Show();
+            mtdCerrarFormulario("frmRol");
+            //mtdVerificaPermisos("frmRol");
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            frmReporte objReporte = new frmReporte();
+            objReporte.TopLevel = false;
+            objReporte.Parent = pnNombre;
+            objReporte.Show();
+            mtdCerrarFormulario("frmReporte");
+            
+
         }
     }
 }
