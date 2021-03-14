@@ -33,7 +33,42 @@ namespace appE2Colsis.Vista
         }
 
         
-        
+        public void mtdEsconderCampos(DataGridView nombre)//Oculta los campos innecesarios de las columnas 
+        {
+           /*dgvMostrar.Columns[0].Visible = false;
+            dgvMostrar.Columns[1].Visible = false;
+            dgvMostrar.Columns[2].Visible = true;
+            dgvMostrar.Columns[3].Visible = false;
+            dgvMostrar.Columns[4].Visible = true;
+            dgvMostrar.Columns[5].Visible = false;*/
+
+            int contador = 0;
+            for (int i = 0; i < nombre.Columns.Count; i++)
+            {
+                if (contador==2 || contador==4)
+                {
+                    nombre.Columns[i].Visible = true;
+
+                }
+                else
+                {
+                    nombre.Columns[i].Visible = false;
+
+                }
+                contador++;
+
+            }
+
+
+            
+
+
+
+
+            
+
+
+        }
 
         public void mtdComprobar()
         {
@@ -218,12 +253,8 @@ namespace appE2Colsis.Vista
 
 
             mtdListarDecisionPermiso();
-            dgvMostrar.Columns[0].Visible = false;
-            dgvMostrar.Columns[1].Visible = false;
-            dgvMostrar.Columns[2].Visible = true;
-            dgvMostrar.Columns[3].Visible = false;
-            dgvMostrar.Columns[4].Visible = true;
-            dgvMostrar.Columns[5].Visible = false;
+
+            mtdEsconderCampos(dgvMostrar);
 
 
 
@@ -348,6 +379,8 @@ namespace appE2Colsis.Vista
             dgvSeleccionar.Visible = false;
             grpPermisos.Visible = false;
             btnPermisos.Visible = false;
+            mtdEsconderCampos(dgvModificar);
+            grpSeccionMod.Visible = false;
 
         }
 
@@ -355,17 +388,27 @@ namespace appE2Colsis.Vista
         {
             mtdCargarGridEliminar();
             dgvSeleccionar.Visible = true;
+            mtdEsconderCampos(dgvContenidoRol);
         }
 
         private void gunaButton4_Click_1(object sender, EventArgs e)
         {
             int idRolEliminar = 0;//id que me permitira eliminar los registro en rol y rol_permisos
-            foreach (var item in listaRoles)
+            /* foreach (var item in listaRoles)
+             {
+                 if (cmbRol.Text == item.nombreRol)
+                 {
+                     idRolEliminar = item.idRol;
+
+                 }
+
+             }*/
+
+            foreach (var item in listaRol)
             {
-                if (cmbRol.Text == item.nombreRol)
+                if (cmbRol.Text==item.nombreRol)
                 {
                     idRolEliminar = item.idRol;
-
                 }
 
             }
@@ -405,11 +448,13 @@ namespace appE2Colsis.Vista
 
 
             }
-            dataGridView1.DataSource = listaModificar;
+            dgvModificar.DataSource = listaModificar;
+            mtdEsconderCampos(dgvModificar);
         }
 
         private void gunaButton5_Click(object sender, EventArgs e)
         {
+            
             string validar = txtModificar.Text;
             mtdComprobarRol(validar);
 
@@ -428,7 +473,7 @@ namespace appE2Colsis.Vista
 
 
                 }
-                dataGridView1.Refresh();
+                dgvModificar.Refresh();
 
             }
             else if (registro == 1)
@@ -450,10 +495,10 @@ namespace appE2Colsis.Vista
         {
             try
             {
-                if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                if (dgvModificar.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
-                    lblFrmModificar.Text = dataGridView1.Rows[e.RowIndex].Cells["nombreFormulario"].FormattedValue.ToString();
-                    cmbMod.Text = dataGridView1.Rows[e.RowIndex].Cells["nombrePermiso"].FormattedValue.ToString();
+                    lblFrmModificar.Text = dgvModificar.Rows[e.RowIndex].Cells["nombreFormulario"].FormattedValue.ToString();
+                    cmbMod.Text = dgvModificar.Rows[e.RowIndex].Cells["nombrePermiso"].FormattedValue.ToString();
 
 
                 }
@@ -489,13 +534,13 @@ namespace appE2Colsis.Vista
 
             }
 
-            dataGridView1.Refresh();
+            dgvModificar.Refresh();
 
         }
 
         private void btnModificarRegistros_Click(object sender, EventArgs e)
         {
-            
+            grpSeccionMod.Visible = false;
             
                 int idRolModificar = listaModificar[0].idRol;
               string nombreRolModificar   = listaModificar[0].nombreRol;
@@ -524,8 +569,19 @@ namespace appE2Colsis.Vista
             listaRolFiltrar= objRol.mtdFiltrar(nombreRol);
             try
             {
-                dataGridView2.DataSource = listaRolFiltrar;
+               // dgvDatosPersona.DataSource = listaRolFiltrar;
 
+              for (int i = 0; i < listaRolFiltrar.Count; i++)
+                {
+                    dgvDatosPersona.Rows.Add();
+                    dgvDatosPersona.Rows[i].Cells["nombre"].Value = listaRolFiltrar[i].nombre;
+                    dgvDatosPersona.Rows[i].Cells["apellido"].Value = listaRolFiltrar[i].apellido;
+                    dgvDatosPersona.Rows[i].Cells["documento"].Value = listaRolFiltrar[i].documento;
+                    dgvDatosPersona.Rows[i].Cells["telefono"].Value = listaRolFiltrar[i].telefono;
+                    dgvDatosPersona.Rows[i].Cells["ciudad"].Value = listaRolFiltrar[i].ciudad;
+                    dgvDatosPersona.Rows[i].Cells["estado"].Value = listaRolFiltrar[i].estadoPersona;
+
+                }
             }
             catch (Exception)
             {
@@ -554,6 +610,11 @@ namespace appE2Colsis.Vista
         {
             Control valor = grpEliminarRol;
             mtdMostrarOpciones(valor);
+        }
+
+        private void btnSeleccionMod_Click(object sender, EventArgs e)
+        {
+            grpSeccionMod.Visible = true;
         }
     }
 }

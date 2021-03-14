@@ -31,7 +31,7 @@ namespace appE2Colsis.Vista
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.lblnombreApellido = new Guna.UI.WinForms.GunaLabel();
             this.gunaButton4 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
             this.btnRol = new Guna.UI.WinForms.GunaButton();
@@ -46,7 +46,7 @@ namespace appE2Colsis.Vista
             // 
             this.gunaPanel1.AutoSize = true;
             this.gunaPanel1.BackColor = System.Drawing.Color.White;
-            this.gunaPanel1.Controls.Add(this.gunaLabel1);
+            this.gunaPanel1.Controls.Add(this.lblnombreApellido);
             this.gunaPanel1.Controls.Add(this.gunaButton4);
             this.gunaPanel1.Controls.Add(this.gunaButton3);
             this.gunaPanel1.Controls.Add(this.btnRol);
@@ -57,15 +57,15 @@ namespace appE2Colsis.Vista
             this.gunaPanel1.Size = new System.Drawing.Size(299, 739);
             this.gunaPanel1.TabIndex = 0;
             // 
-            // gunaLabel1
+            // lblnombreApellido
             // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel1.Location = new System.Drawing.Point(59, 141);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(68, 15);
-            this.gunaLabel1.TabIndex = 5;
-            this.gunaLabel1.Text = "gunaLabel1";
+            this.lblnombreApellido.AutoSize = true;
+            this.lblnombreApellido.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombreApellido.Location = new System.Drawing.Point(53, 142);
+            this.lblnombreApellido.Name = "lblnombreApellido";
+            this.lblnombreApellido.Size = new System.Drawing.Size(121, 22);
+            this.lblnombreApellido.TabIndex = 5;
+            this.lblnombreApellido.Text = "gunaLabel1";
             // 
             // gunaButton4
             // 
@@ -173,10 +173,12 @@ namespace appE2Colsis.Vista
             // 
             // gunaPictureBox1
             // 
-            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.Black;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
             this.gunaPictureBox1.Location = new System.Drawing.Point(82, 26);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Radius = 50;
             this.gunaPictureBox1.Size = new System.Drawing.Size(104, 99);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox1.TabIndex = 0;
@@ -198,7 +200,7 @@ namespace appE2Colsis.Vista
             this.ClientSize = new System.Drawing.Size(1200, 744);
             this.Controls.Add(this.pnNombre);
             this.Controls.Add(this.gunaPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMenuPrincipal";
             this.Text = "frmMenuPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -215,7 +217,7 @@ namespace appE2Colsis.Vista
 
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
-        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaLabel lblnombreApellido;
         private Guna.UI.WinForms.GunaButton gunaButton4;
         private Guna.UI.WinForms.GunaButton gunaButton3;
         private Guna.UI.WinForms.GunaButton btnRol;
