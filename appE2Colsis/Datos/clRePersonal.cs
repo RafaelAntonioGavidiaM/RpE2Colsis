@@ -37,9 +37,9 @@ namespace appE2Colsis.Datos
                 objRePersonal.ciudad = tblPersona.Rows[i]["ciudad"].ToString();
                 objRePersonal.correoYemail = tblPersona.Rows[i]["correo"].ToString();
                 objRePersonal.estado = tblPersona.Rows[i]["estado"].ToString();
-                objRePersonal.clave = tblPersona.Rows[i]["password"].ToString();
+                
                 objRePersonal.idRol = int.Parse(tblPersona.Rows[i]["idRol"].ToString());
-
+                objRePersonal.clave = tblPersona.Rows[i]["password"].ToString();
                 listRePersonal.Add(objRePersonal);
 
             }

@@ -145,7 +145,7 @@ namespace appE2Colsis.Vista
                     txtDireccion.Text = dgvEmpleado.Rows[e.RowIndex].Cells["direccion"].FormattedValue.ToString();
                     txtCiudad.Text = dgvEmpleado.Rows[e.RowIndex].Cells["ciudad"].FormattedValue.ToString();
                     txtCorreo.Text = dgvEmpleado.Rows[e.RowIndex].Cells["correoYemail"].FormattedValue.ToString();
-                    txtClave.Text = dgvEmpleado.Rows[e.RowIndex].Cells["password"].FormattedValue.ToString(); 
+                     txtClave.Text = dgvEmpleado.Rows[e.RowIndex].Cells["clave"].FormattedValue.ToString();
                     cmbEstado.Text = dgvEmpleado.Rows[e.RowIndex].Cells["estado"].FormattedValue.ToString();
 
                     string rol = dgvEmpleado.Rows[e.RowIndex].Cells["idRol"].FormattedValue.ToString();
