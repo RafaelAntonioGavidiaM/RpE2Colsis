@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Xml;
+using appE2Colsis.Datos;
 
 namespace appE2Colsis.Vista
 {
@@ -18,7 +19,7 @@ namespace appE2Colsis.Vista
         {
             InitializeComponent();
         }
-
+        clLogin objLogin = new clLogin();
         private void gunaButton1_Click(object sender, EventArgs e)
         {
             if (txtUser.Text=="admin" &&txtPswd.Text=="admin2021")
@@ -26,6 +27,28 @@ namespace appE2Colsis.Vista
                 pSettings.Visible = true;
                 mtdCargarDatosDB();
             }
+            else
+            {
+                objLogin.documento = txtUser.Text;
+                objLogin.password = txtPswd.Text;
+                objLogin.mtdLogin();
+                if (objLogin.nombre=="" && objLogin.apellido=="" && objLogin.idRol==0)
+                {
+                    MessageBox.Show("El usuario No existe", "Usuario No Existe", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                else
+                {
+                    frmMenuPrincipal objFrmMenuP = new frmMenuPrincipal(objLogin.idRol, objLogin.nombre, objLogin.apellido);
+                    objFrmMenuP.Show();
+                    this.Hide();
+                }
+
+
+
+            }
+
+
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -99,5 +122,7 @@ namespace appE2Colsis.Vista
 
             MessageBox.Show("DataBase actualizada correctamente");
         }
+
+       
     }
 }
