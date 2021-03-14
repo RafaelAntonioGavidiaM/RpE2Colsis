@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 
+
 namespace appE2Colsis.Datos
 {
     class clRePersonal : clPersona
@@ -36,6 +37,7 @@ namespace appE2Colsis.Datos
                 objRePersonal.ciudad = tblPersona.Rows[i]["ciudad"].ToString();
                 objRePersonal.correoYemail = tblPersona.Rows[i]["correo"].ToString();
                 objRePersonal.estado = tblPersona.Rows[i]["estado"].ToString();
+                objRePersonal.clave = tblPersona.Rows[i]["password"].ToString();
                 objRePersonal.idRol = int.Parse(tblPersona.Rows[i]["idRol"].ToString());
 
                 listRePersonal.Add(objRePersonal);
@@ -53,7 +55,7 @@ namespace appE2Colsis.Datos
             int resultado = 0;
             foreach (var item in listRePersonal)
             {
-                String consulta = "insert into personal(nombre, apellido, documento, telefono, direccion, ciudad, correo, estado, idRol) values('" + item.nombre + "', '" + item.apellido + "', '" + item.documento + "', '" + item.telefono + "', '" + item.direccion + "', '" + item.ciudad + "','" + item.correoYemail + "', '" + item.estado + "', '" + item.idRol + "')";
+                String consulta = "insert into personal(nombre, apellido, documento, telefono, direccion, ciudad, correo, password, estado, idRol) values('" + item.nombre + "', '" + item.apellido + "', '" + item.documento + "', '" + item.telefono + "', '" + item.direccion + "', '" + item.ciudad + "','" + item.correoYemail + "', '" + item.clave + "','" + item.estado + "', '" + item.idRol + "')";
 
 
                 objConexion = new clConexion();
@@ -81,11 +83,49 @@ namespace appE2Colsis.Datos
         {
 
 
-            string consulta = "update personal set nombre='" + nombre + "',apellido= '" + apellido + "', documento='" + documento + "',telefono='" + telefono + "', direccion= '" + direccion + "',ciudad='" + ciudad + "',correo='" + correoYemail + "',estado='" + estado + "',idRol='" + idRol + " ' where idPersonal='"+idPersonal+"'";
+            string consulta = "update personal set nombre='" + nombre + "',apellido= '" + apellido + "', documento='" + documento + "',telefono='" + telefono + "', direccion= '" + direccion + "',ciudad='" + ciudad + "',correo='" + correoYemail + "',password='" + clave + "',estado='" + estado + "',idRol='" + idRol + " ' where idPersonal='"+idPersonal+"'";
             objConexion = new clConexion();
             int Resultado = objConexion.mtdConectado(consulta);
-
             return Resultado;
+
+        }
+
+
+        public List<clRePersonal> mtdBuscar()
+        {
+
+
+            string consulta = "select * from personal where nombre ='" + nombre + "' or documento='" + documento + "'";
+            tblPersona = new DataTable();
+            objConexion = new clConexion();
+
+            tblPersona = objConexion.mtdDesconectado(consulta);
+
+            List<clRePersonal> listBuscar = new List<clRePersonal>();
+
+            for (int i = 0; i < tblPersona.Rows.Count; i++)
+            {
+                clRePersonal objRePersonal = new clRePersonal();
+                objRePersonal.idPersonal = int.Parse(tblPersona.Rows[i]["idPersonal"].ToString());
+                objRePersonal.nombre = tblPersona.Rows[i]["nombre"].ToString();
+                objRePersonal.apellido = tblPersona.Rows[i]["apellido"].ToString();
+                objRePersonal.documento = tblPersona.Rows[i]["documento"].ToString();
+                objRePersonal.telefono = tblPersona.Rows[i]["telefono"].ToString();
+                objRePersonal.direccion = tblPersona.Rows[i]["direccion"].ToString();
+                objRePersonal.ciudad = tblPersona.Rows[i]["ciudad"].ToString();
+                objRePersonal.correoYemail = tblPersona.Rows[i]["correo"].ToString();
+                objRePersonal.clave = tblPersona.Rows[i]["password"].ToString();
+                objRePersonal.estado = tblPersona.Rows[i]["estado"].ToString();
+                objRePersonal.idRol = int.Parse(tblPersona.Rows[i]["idRol"].ToString());
+
+                listBuscar.Add(objRePersonal);
+
+
+            }
+
+            return listBuscar;
+            
+
 
         }
     }
