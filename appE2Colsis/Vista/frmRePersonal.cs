@@ -96,7 +96,7 @@ namespace appE2Colsis.Vista
 
                 if (Registro > 0)
                 {
-                    MessageBox.Show("se realizo el registro exitosamente", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("se realizo el registro exitosamente", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     mtdCargar();
                     mtdBorrarTxt();
                 }
