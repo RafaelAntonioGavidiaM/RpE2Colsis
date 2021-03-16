@@ -15,7 +15,9 @@ namespace appE2Colsis.Vista
     public partial class frmReporte : Form
     {
         clReporte objReporte = new clReporte();
-        Boolean seCargoLosCursos = false;
+        Boolean seCargoLosCursos = false; 
+        DataTable resultado = new DataTable(); //Almacena notas segun periodo y curso
+
         public frmReporte()
         {
             InitializeComponent();
@@ -49,9 +51,10 @@ namespace appE2Colsis.Vista
         private void mtdCargarEstudiantes()
         {
             objReporte.mtdListarEstudiantes();
-            cmbNombres.DataSource = objReporte.tblPersona;
-            cmbNombres.DisplayMember = "nombres";
-            cmbNombres.ValueMember = "idEstudiante";
+            lbEstudiantes.DataSource = objReporte.tblPersona;
+            lbEstudiantes.DisplayMember = "nombreCompleto";
+            lbEstudiantes.ValueMember = "idEstudiante";
+
         }
         private void mtdCargarPeriodo()
         {
@@ -63,7 +66,7 @@ namespace appE2Colsis.Vista
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            objReporte.idEstudiante = int.Parse(cmbNombres.SelectedValue.ToString());
+            objReporte.idEstudiante = int.Parse(lbEstudiantes.SelectedValue.ToString());
             objReporte.idPeriodo = int.Parse(cmbPeriodo.SelectedValue.ToString());
             objReporte.mtdListarReporte();
             dataGridView1.DataSource = objReporte.tblPersona;
@@ -96,13 +99,36 @@ namespace appE2Colsis.Vista
 
             ExcelWorksheet ws = archivoExcel.Worksheets.Add("Reporte");
 
-            ws.InsertDataTable(objReporte.tblPersona,
+            ws.InsertDataTable(resultado,//toma los datos a exportar
                     new InsertDataTableOptions()
                     {
                         ColumnHeaders = true,
                         StartRow = 0
                     });
             archivoExcel.Save(ruta);
+        }
+
+        private void cmbPeriodo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int periodo = 0;
+            int grado = int.Parse(cmbGrado.SelectedValue.ToString());
+            try
+            {
+                 periodo = int.Parse(cmbPeriodo.SelectedValue.ToString());
+
+            }
+            catch (Exception)
+            {
+
+                 periodo = 0;
+            }
+            
+            
+           resultado =objReporte.mtdListarEstudiantesPeriodo(grado, periodo);
+            dataGridView1.DataSource = resultado;
+
+
+
         }
     }
 }
