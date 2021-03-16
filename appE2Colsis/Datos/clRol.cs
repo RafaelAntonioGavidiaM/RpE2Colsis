@@ -33,6 +33,27 @@ namespace appE2Colsis.Datos
 
         }
         /// <summary>
+        /// Verifica los permisos dependiendo el formulario al que desea acceder
+        /// </summary>
+        /// <param name="idRolP"> rol al que pertenece la persona</param>
+        /// <param name="nombreFormularioP"> formulario al que desea ingresar</param>
+        
+        public int mtdAccesoModulos(int idPersonal,string nombreFormularioP)
+        {
+            string consulta= "select count(rol_permiso.idPermiso) from personal inner join rol on personal.idRol = rol.idRol inner join rol_permiso on rol.idRol = rol_permiso.idRol where personal.idPersonal ="+idPersonal+" and rol_permiso.nombreFormulario = '"+nombreFormularioP+"' and rol_permiso.idPermiso = 1";
+
+            DataTable resultado = new DataTable();
+            resultado= objConexion.mtdDesconectado(consulta);
+            int registros = 0;
+            registros = int.Parse(resultado.Rows[0][0].ToString());
+            return registros;
+
+        }
+
+
+
+
+        /// <summary>
         /// consultar datos en la tabla rol
         /// </summary>
         /// <returns>lista datos</returns>

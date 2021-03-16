@@ -12,21 +12,27 @@ namespace appE2Colsis.Datos
     {
         public string password { get; set; }
         public int idRol { get; set; }
+        public int idPermiso { get; set; }
 
+        public int idPersonal { get; set; }
         /// <summary>
         /// Permite el logueo del usuario en la aplicacion
         /// </summary>
         /// 
         public void mtdLogin()
         {
-            string consulta = "select * from personal where documento='"+documento+"' and password='"+password+"'";
+            string consulta = "select personal.nombre,personal.apellido,personal.idRol,rol_permiso.idPermiso,personal.idPersonal from personal inner join rol on personal.idRol = rol.idRol inner join rol_permiso on rol.idRol = rol_permiso.idRol where nombreFormulario ='frmLogin' and rol_permiso.idPermiso = 1 and personal.documento ='"+documento+"' and personal.password ='"+password+"'" ;
             DataTable resultado = new DataTable();
             resultado =objConexion.mtdDesconectado(consulta);
             try
             {
-                nombre = resultado.Rows[0][1].ToString();
-                apellido = resultado.Rows[0][2].ToString();
-                idRol = int.Parse(resultado.Rows[0]["idRol"].ToString());
+                nombre = resultado.Rows[0][0].ToString();
+                apellido = resultado.Rows[0][1].ToString();
+                idRol = int.Parse(resultado.Rows[0][2].ToString());
+                idPermiso= int.Parse(resultado.Rows[0][3].ToString());
+                idPersonal= int.Parse(resultado.Rows[0][4].ToString());
+
+
             }
             catch (Exception)
             {

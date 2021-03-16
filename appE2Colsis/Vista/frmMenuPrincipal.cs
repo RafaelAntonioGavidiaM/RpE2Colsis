@@ -19,11 +19,14 @@ namespace appE2Colsis.Vista
         public string nombrePersona { get; set; }
 
         public string apellido { get; set; }
-        public frmMenuPrincipal(int idRol,string nombrePersona,string apellido)
+        public int idPersonal { get; set; }
+
+        public frmMenuPrincipal(int idRol,string nombrePersona,string apellido, int idPersonal)
         {
             this.idRol = idRol;
             this.nombrePersona = nombrePersona;
             this.apellido = apellido;
+            this.idPersonal = idPersonal;
 
 
             InitializeComponent();
@@ -46,43 +49,21 @@ namespace appE2Colsis.Vista
 
         }
 
-        public void mtdVerificaPermisos(string nombreFormulario)// Este metodo verificará los permisos que el usuario tiene para el ingreso al programa 
+        public void mtdVerificaPermisos(string nombreFormulario,Control btn)// Este metodo verificará los permisos que el usuario tiene para el ingreso al programa 
         {
+            clRol objRol = new clRol();
+          int registros=  objRol.mtdAccesoModulos(idPersonal, nombreFormulario);
 
-            clLogin objlogin = new clLogin();
-            
-            objlogin.idRol = idRol;
-           listaPermisos= objlogin.mtdConsultarPermisos();
-            Boolean ingreso = false;
-
-            foreach (var item in listaPermisos)
+            if (registros>0) //permisos segun boton
             {
-                if (item.nombreFormulario==nombreFormulario && item.idPermiso==1)
-                {
-
-                    ingreso = true;
-
-
-                }
-                
-
-            }
-            if (ingreso==true)
-            {
-                Type type = Type.GetType("appE2Colsis.Vista"+nombreFormulario); // This == null
-                object obj = Activator.CreateInstance(type);
-                (obj as Form).Parent = pnNombre;
-                (obj as Form).Show();
-
-
+                btn.Visible = true;
 
             }
             else
             {
-                MessageBox.Show("No tiene permisos para acceder a esta opcion");
-                
-            }
+                btn.Visible = false;
 
+            }
 
 
 
@@ -91,10 +72,25 @@ namespace appE2Colsis.Vista
         }
 
 
-        private void frmMenuPrincipal_Load(object sender, EventArgs e)
+        private void frmMenuPrincipal_Load(object sender, EventArgs e) 
         {
-            string nombrecompleto = nombrePersona + " " + apellido;
+            string nombrecompleto = nombrePersona + " " + apellido; ///Se agregan formularios y botones
             lblnombreApellido.Text = nombrecompleto;
+            Control[] btn = new Control[3];
+            btn[0] = btnPersona;
+            btn[1] = btnRol;
+            btn[2] = btnReporte;
+
+            string[] nombreFormularioV = new string[3];
+            nombreFormularioV[0] = "frmRePersonal";
+            nombreFormularioV[1] = "frmRol";
+            nombreFormularioV[2] = "frmReporte";
+
+            for (int i = 0; i < nombreFormularioV.Length; i++)
+            {
+                mtdVerificaPermisos(nombreFormularioV[i], btn[i]);
+            }
+
 
         }
 

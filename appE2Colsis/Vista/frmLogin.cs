@@ -22,31 +22,29 @@ namespace appE2Colsis.Vista
         clLogin objLogin = new clLogin();
         private void gunaButton1_Click(object sender, EventArgs e)
         {
+            objLogin.documento = txtUser.Text;
+            objLogin.password = txtPswd.Text;
+
+            objLogin.mtdLogin();
+
             if (txtUser.Text=="admin" &&txtPswd.Text=="admin2021")
             {
                 pSettings.Visible = true;
                 mtdCargarDatosDB();
             }
-            else
+            else if (objLogin.documento==txtUser.Text && objLogin.password==txtPswd.Text && objLogin.idPermiso==1 )
             {
-                objLogin.documento = txtUser.Text;
-                objLogin.password = txtPswd.Text;
-                objLogin.mtdLogin();
-                if (objLogin.nombre=="" && objLogin.apellido=="" && objLogin.idRol==0)
-                {
-                    MessageBox.Show("El usuario No existe", "Usuario No Existe", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-                else
-                {
-                    frmMenuPrincipal objFrmMenuP = new frmMenuPrincipal(objLogin.idRol, objLogin.nombre, objLogin.apellido);
-                    objFrmMenuP.Show();
-                    this.Hide();
-                }
-
+                frmMenuPrincipal objFrmMenuP = new frmMenuPrincipal(objLogin.idRol, objLogin.nombre, objLogin.apellido,objLogin.idPersonal);
+                objFrmMenuP.Show();
+                this.Hide();
 
 
             }
+            else
+            {
+                MessageBox.Show("No se puede realizar el ingreso", "Error Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
 
 
         }

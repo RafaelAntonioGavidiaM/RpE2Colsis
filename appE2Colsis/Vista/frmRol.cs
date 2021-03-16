@@ -145,6 +145,7 @@ namespace appE2Colsis.Vista
 
         public void mtdComprobarRol(string validar) //Comprueba si ya existe un rol con el mismo nombre que con el que el usuario desea ingresar o modificar 
         {
+            registro = 0;
             foreach (var item in listaRol)
             {
                 if (item.nombreRol == validar)
@@ -172,12 +173,13 @@ namespace appE2Colsis.Vista
         {
 
 
-            mtdComprobarRol(txtRol.Text);
+            mtdComprobarRol(txtRol.Text.ToUpper());
            
 
             if (registro==0)
             {
-                objRol.nombreRol = txtRol.Text;
+                objRol.nombreRol = txtRol.Text.ToUpper();
+                txtRol.Text = objRol.nombreRol;
                 rows = objRol.mtdRegistrarRol();
                 mtdComprobar();
                 btnPermisos.Visible = true;
@@ -209,7 +211,7 @@ namespace appE2Colsis.Vista
             formularios[0] = "frmLogin";
             formularios[1] = "frmRol";
             formularios[2] = "frmRepersonal";
-            formularios[3] = "frmInformes";
+            formularios[3] = "frmReporte";
 
             decision[0] = "Habilitado";
             decision[1] = "Desabilitado";
@@ -455,7 +457,7 @@ namespace appE2Colsis.Vista
         private void gunaButton5_Click(object sender, EventArgs e)
         {
             
-            string validar = txtModificar.Text;
+            string validar = txtModificar.Text.ToUpper();
             mtdComprobarRol(validar);
 
             if (registro == 0)
@@ -465,8 +467,8 @@ namespace appE2Colsis.Vista
                 {
                     if (lblMrol.Text == item.nombreRol)
                     {
-                        item.nombreRol = txtModificar.Text;
-
+                        item.nombreRol = txtModificar.Text.ToUpper();
+                        
 
                     }
 
