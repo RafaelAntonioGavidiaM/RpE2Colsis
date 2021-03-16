@@ -137,11 +137,12 @@ namespace appE2Colsis.Vista
             this.txtPswd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPswd.Location = new System.Drawing.Point(95, 168);
             this.txtPswd.Name = "txtPswd";
-            this.txtPswd.PasswordChar = '\0';
+            this.txtPswd.PasswordChar = '●';
             this.txtPswd.Radius = 18;
             this.txtPswd.SelectedText = "";
             this.txtPswd.Size = new System.Drawing.Size(129, 43);
             this.txtPswd.TabIndex = 4;
+            this.txtPswd.UseSystemPasswordChar = true;
             // 
             // gunaPictureBox1
             // 
@@ -187,7 +188,7 @@ namespace appE2Colsis.Vista
             this.grpSetting.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpSetting.ForeColor = System.Drawing.Color.Black;
             this.grpSetting.LineColor = System.Drawing.Color.Transparent;
-            this.grpSetting.Location = new System.Drawing.Point(24, 83);
+            this.grpSetting.Location = new System.Drawing.Point(13, 217);
             this.grpSetting.Name = "grpSetting";
             this.grpSetting.Size = new System.Drawing.Size(239, 214);
             this.grpSetting.TabIndex = 7;

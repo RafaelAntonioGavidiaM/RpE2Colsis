@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using appE2Colsis.Datos;
-
+using MySql.Data.MySqlClient;
 namespace appE2Colsis.Vista
 {
     public partial class frmRePersonal : Form
@@ -22,6 +22,9 @@ namespace appE2Colsis.Vista
         clRol objRol;
         clPersona objPersona;
         List<clRol> listaRol;
+        MySqlConnection objConnection = new MySqlConnection();
+        string[] decision = new string[2];
+        
         private void frmRePersonal_Load(object sender, EventArgs e)
         {
             mtdCargar();
@@ -30,8 +33,12 @@ namespace appE2Colsis.Vista
             dgvEmpleado.Columns["fechaNacimiento"].Visible = false;
             dgvEmpleado.Columns["tipoSangre"].Visible = false;
             dgvEmpleado.Columns["tipoSeguroYseguroMedico"].Visible = false;
-            dgvEmpleado.Columns["seguroEstudiantil"].Visible = false;           
-            dgvEmpleado.Columns["clave"].Visible = false;
+            dgvEmpleado.Columns["seguroEstudiantil"].Visible = false;
+            
+
+            decision[0] = "Habilitado";
+            decision[1] = "Desabilitado";
+            cmbEstado.DataSource = decision;
         }
 
         public void mtdCargar()
@@ -53,7 +60,7 @@ namespace appE2Colsis.Vista
 
         public void mtdCargarDatos()
         {
-            
+
             listRePersonal = new List<clRePersonal>();
 
             for (int i = 0; i < 1; i++)
@@ -65,14 +72,15 @@ namespace appE2Colsis.Vista
                 objRePersonal.telefono = txtTelefono.Text;
                 objRePersonal.direccion = txtDireccion.Text;
                 objRePersonal.ciudad = txtCiudad.Text;
-                objRePersonal.correoYemail = txtCorreo.Text;              
-                objRePersonal.estado = txtEstado.Text;
+                objRePersonal.correoYemail = txtCorreo.Text;               
+                objRePersonal.clave = txtClave.Text;
+                objRePersonal.estado = cmbEstado.Text;               
                 objRePersonal.idRol = int.Parse(cmbRol.SelectedValue.ToString());
 
                 listRePersonal.Add(objRePersonal);
             }
-            
-            
+
+
 
         }
 
@@ -81,37 +89,39 @@ namespace appE2Colsis.Vista
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             mtdCargarDatos();
-            DialogResult opcion = MessageBox.Show("Desea registrar un nuevo personal ","Advertencia", MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation);
+            DialogResult opcion = MessageBox.Show("Desea registrar un nuevo personal ", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (opcion == DialogResult.Yes)
             {
                 int Registro = objRePersonal.mtdRegistrar(listRePersonal);
 
                 if (Registro > 0)
                 {
-                    MessageBox.Show("se realizo el registro exitosamente","Registro Exitoso",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                    MessageBox.Show("se realizo el registro exitosamente", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     mtdCargar();
+                    mtdBorrarTxt();
                 }
                 else
                 {
-                    MessageBox.Show("no se pudo hacer el registro correspondinete del nuevo personal","Erro",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                } 
+                    MessageBox.Show("no se pudo hacer el registro correspondinete del nuevo personal", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         int idPersona = 0;
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            DialogResult opcion = MessageBox.Show(" Desea eliminar el empleado " + txtNombre.Text + " " + txtApellido.Text, " eliminar empleado ", MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation);
+            DialogResult opcion = MessageBox.Show(" Desea eliminar el empleado " + txtNombre.Text + " " + txtApellido.Text, " eliminar empleado ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (opcion == DialogResult.Yes)
             {
                 int filasAfectadas = objRePersonal.mtdEliminarPersonal(idPersona);
                 if (filasAfectadas > 0)
                 {
-                    MessageBox.Show("Se realizo el delete correctamente","Eliminar Empleado",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Se realizo el delete correctamente", "Eliminar Empleado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     mtdCargar();
+                    mtdBorrarTxt();
                 }
                 else
                 {
-                    MessageBox.Show("no se pudo elimnar la persona seleccionada","error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("no se pudo elimnar la persona seleccionada", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
@@ -125,7 +135,7 @@ namespace appE2Colsis.Vista
             {
                 if (dgvEmpleado.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
-                    
+
                     dgvEmpleado.CurrentRow.Selected = true;
                     idPersona = int.Parse(dgvEmpleado.Rows[e.RowIndex].Cells["idPersonal"].FormattedValue.ToString());
                     txtNombre.Text = dgvEmpleado.Rows[e.RowIndex].Cells["nombre"].FormattedValue.ToString();
@@ -135,10 +145,12 @@ namespace appE2Colsis.Vista
                     txtDireccion.Text = dgvEmpleado.Rows[e.RowIndex].Cells["direccion"].FormattedValue.ToString();
                     txtCiudad.Text = dgvEmpleado.Rows[e.RowIndex].Cells["ciudad"].FormattedValue.ToString();
                     txtCorreo.Text = dgvEmpleado.Rows[e.RowIndex].Cells["correoYemail"].FormattedValue.ToString();
-                    txtEstado.Text = dgvEmpleado.Rows[e.RowIndex].Cells["estado"].FormattedValue.ToString();
+                     txtClave.Text = dgvEmpleado.Rows[e.RowIndex].Cells["clave"].FormattedValue.ToString();
+                    cmbEstado.Text = dgvEmpleado.Rows[e.RowIndex].Cells["estado"].FormattedValue.ToString();
 
                     string rol = dgvEmpleado.Rows[e.RowIndex].Cells["idRol"].FormattedValue.ToString();
-                    
+                    string estado = dgvEmpleado.Rows[e.RowIndex].Cells["estado"].FormattedValue.ToString();
+
                     for (int i = 0; i < listaRol.Count; i++)
                     {
                         if (listaRol[i].idRol == int.Parse(rol))
@@ -146,18 +158,25 @@ namespace appE2Colsis.Vista
                             cmbRol.Text = listaRol[i].nombreRol;
                         }
                     }
+                    for (int i = 0; i < listRePersonal.Count; i++)
+                    {
+                        if (listRePersonal[i].estado == estado)
+                        {
+                            cmbEstado.Text = listRePersonal[i].estado;
+                        }
+                    }
 
                 }
             }
-            catch (Exception )
+            catch (Exception)
             {
-                MessageBox.Show("No se puede editar este campo","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-                
+                MessageBox.Show("No se puede editar este campo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
             }
 
 
         }
-        
+
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             listRePersonal = new List<clRePersonal>();
@@ -165,7 +184,7 @@ namespace appE2Colsis.Vista
             int contador = 0;
             for (int i = 0; i < listRePersonal.Count; i++)
             {
-                if (listRePersonal[i].nombre == txtNombre.Text && listRePersonal[i].apellido == txtApellido.Text && listRePersonal[i].documento == txtDocumento.Text && listRePersonal[i].telefono == txtTelefono.Text && listRePersonal[i].direccion == txtDireccion.Text && listRePersonal[i].ciudad == txtCiudad.Text && listRePersonal[i].correoYemail == txtCorreo.Text && listRePersonal[i].estado == txtEstado.Text && cmbRol.SelectedValue.Equals(listRePersonal[i].idRol))
+                if (listRePersonal[i].nombre == txtNombre.Text && listRePersonal[i].apellido == txtApellido.Text && listRePersonal[i].documento == txtDocumento.Text && listRePersonal[i].telefono == txtTelefono.Text && listRePersonal[i].direccion == txtDireccion.Text && listRePersonal[i].ciudad == txtCiudad.Text && listRePersonal[i].correoYemail == txtCorreo.Text && listRePersonal[i].clave == txtClave.Text && cmbEstado.SelectedValue.Equals(listRePersonal[i].estado) && cmbRol.SelectedValue.Equals(listRePersonal[i].idRol))
                 {
 
                     MessageBox.Show("No se registra ningun cambio");
@@ -187,10 +206,11 @@ namespace appE2Colsis.Vista
                 objRePersonal.direccion = txtDireccion.Text;
                 objRePersonal.ciudad = txtCiudad.Text;
                 objRePersonal.correoYemail = txtCorreo.Text;
-                objRePersonal.estado = txtEstado.Text;
+                objRePersonal.clave = txtClave.Text;
+                objRePersonal.estado = cmbEstado.SelectedValue.ToString();
                 objRePersonal.idRol = int.Parse(cmbRol.SelectedValue.ToString());
 
-                
+
 
                 objRePersonal.mtdActualizar();
                 int filas = objRePersonal.mtdActualizar();
@@ -199,12 +219,54 @@ namespace appE2Colsis.Vista
                 {
                     MessageBox.Show("Actualizacion exitosa");
                     mtdCargar();
+                    mtdBorrarTxt();
                 }
                 else
                 {
                     MessageBox.Show("No se pudo realizar la actualizacion correctamente");
                 }
             }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+            mtdCargar();
+         
+
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            List<clRePersonal> ListPersona = new List<clRePersonal>();
+            objRePersonal.nombre = txtBuscar.Text;
+            objRePersonal.documento = txtBuscar.Text;
+
+            ListPersona = objRePersonal.mtdBuscar();
+
+            foreach (var item in ListPersona)
+            {
+                if (txtBuscar.Text == item.nombre || txtBuscar.Text == item.documento)
+                {
+                    dgvEmpleado.DataSource = ListPersona;
+                }
+            }
+
+            
+        }
+
+        public void mtdBorrarTxt()
+        {
+
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtDocumento.Clear();
+            txtTelefono.Clear();
+            txtDireccion.Clear();
+            txtCiudad.Clear();
+            txtCorreo.Clear();
+            txtClave.Clear();
+
         }
     }
 }
