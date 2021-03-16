@@ -44,18 +44,41 @@ namespace appE2Colsis.Datos
 
         }
 
-        public int mtdRegistrarAsignatura(List<clAsignatura> listReAsignatura)
+        public int mtdRegistrarAsignatura()
         {
-            int resultado = 0;
-            foreach (var item in listReAsignatura)
-            {
-                string consulta = "insert into asignatura (nombreAsignatura,idArea) values ('" + item.nombreAsignatura + "''" + item.idArea + "')";
 
-                objConexion = new clConexion();        
-                resultado = objConexion.mtdConectado(consulta); 
-            }
+            int resultado = 0;
+            string consulta = "insert into asignatura (nombreAsignatura,idArea) values ('" + nombreAsignatura + "','" + idArea + "')";
+
+            objConexion = new clConexion();        
+            resultado = objConexion.mtdConectado(consulta); 
+            
             return resultado;
 
+
+        }
+
+
+        public int mtdEliminarAsignatura(int idAsignatura)
+        {
+
+
+            string consulta = "delete from asignatura where idAsignatura = " + idAsignatura;
+            objConexion = new clConexion();
+            int eliminar = objConexion.mtdConectado(consulta);
+            return eliminar;
+
+
+        }
+
+
+        public int mtdModificarAsignatura()
+        {
+
+            string consulta = "update asignatura set nombreAsignatura = '" + nombreAsignatura + "',idArea ='" + idArea + "' where idAsignatura='" + idAsignatura + "'" ;
+            objConexion = new clConexion();
+            int resultado = objConexion.mtdConectado(consulta);
+            return resultado;
 
         }
         // tabla area (listado y metdos de registrar, eliminar y modificar)

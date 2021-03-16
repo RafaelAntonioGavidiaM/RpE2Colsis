@@ -135,7 +135,7 @@ namespace appE2Colsis.Vista
             {
                 if (dgvEmpleado.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
-
+                    
                     dgvEmpleado.CurrentRow.Selected = true;
                     idPersona = int.Parse(dgvEmpleado.Rows[e.RowIndex].Cells["idPersonal"].FormattedValue.ToString());
                     txtNombre.Text = dgvEmpleado.Rows[e.RowIndex].Cells["nombre"].FormattedValue.ToString();

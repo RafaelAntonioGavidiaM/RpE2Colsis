@@ -115,6 +115,7 @@ namespace appE2Colsis.Vista
             this.btnModificarAsignatura.TabIndex = 11;
             this.btnModificarAsignatura.Text = "Modificar";
             this.btnModificarAsignatura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnModificarAsignatura.Click += new System.EventHandler(this.btnModificarAsignatura_Click);
             // 
             // cmbArea
             // 
@@ -157,6 +158,7 @@ namespace appE2Colsis.Vista
             this.btnEliminarAsignatura.TabIndex = 10;
             this.btnEliminarAsignatura.Text = "Eliminar";
             this.btnEliminarAsignatura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnEliminarAsignatura.Click += new System.EventHandler(this.btnEliminarAsignatura_Click);
             // 
             // btnRegistarAsignatura
             // 
