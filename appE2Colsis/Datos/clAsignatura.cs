@@ -9,20 +9,22 @@ namespace appE2Colsis.Datos
 {
     class clAsignatura
     {
-        
+
         public int idAsignatura { get; set; }
         public string nombreAsignatura { get; set; }
         public int idArea { get; set; }
         public string nombreArea { get; set; }
 
         // tabla asignatura (listado y metdos de registrar, eliminar y modificar)
-        clConexion objConexion;
+        clConexion objConexion = new clConexion();
+
+        //Parametros de solo lectura externa
+        public DataTable tblAsignatura;
         public List<clAsignatura> mtdListarAsignatura()
         {
 
             string consulta = "select * from asignatura";
             DataTable tblAsignatura = new DataTable();
-            objConexion = new clConexion();
             tblAsignatura = objConexion.mtdDesconectado(consulta);
 
             List<clAsignatura> listAsignatura = new List<clAsignatura>();
@@ -50,9 +52,8 @@ namespace appE2Colsis.Datos
             int resultado = 0;
             string consulta = "insert into asignatura (nombreAsignatura,idArea) values ('" + nombreAsignatura + "','" + idArea + "')";
 
-            objConexion = new clConexion();        
-            resultado = objConexion.mtdConectado(consulta); 
-            
+            resultado = objConexion.mtdConectado(consulta);
+
             return resultado;
 
 
@@ -64,7 +65,6 @@ namespace appE2Colsis.Datos
 
 
             string consulta = "delete from asignatura where idAsignatura = " + idAsignatura;
-            objConexion = new clConexion();
             int eliminar = objConexion.mtdConectado(consulta);
             return eliminar;
 
@@ -75,12 +75,12 @@ namespace appE2Colsis.Datos
         public int mtdModificarAsignatura()
         {
 
-            string consulta = "update asignatura set nombreAsignatura = '" + nombreAsignatura + "',idArea ='" + idArea + "' where idAsignatura='" + idAsignatura + "'" ;
-            objConexion = new clConexion();
+            string consulta = "update asignatura set nombreAsignatura = '" + nombreAsignatura + "',idArea ='" + idArea + "' where idAsignatura='" + idAsignatura + "'";
             int resultado = objConexion.mtdConectado(consulta);
             return resultado;
 
         }
+
         // tabla area (listado y metdos de registrar, eliminar y modificar)
 
         public List<clAsignatura> mtdListarArea()
@@ -88,7 +88,6 @@ namespace appE2Colsis.Datos
 
             string consulta = "select * from area";
             DataTable tblArea = new DataTable();
-            objConexion = new clConexion();
             tblArea = objConexion.mtdDesconectado(consulta);
 
             List<clAsignatura> listArea = new List<clAsignatura>();
@@ -106,7 +105,42 @@ namespace appE2Colsis.Datos
 
         }
 
+        public int mtdRegistrarArea(List<clAsignatura> listaArea)
+        {
+            int resultado = 0;
+            foreach (var item in listaArea)
+            {
+                string consulta = "insert into area (nombreArea) values ('" + item.nombreArea + "')";
 
+                resultado = objConexion.mtdConectado(consulta); 
+            }
+            return resultado;
+            
+        }
 
+        public int mtdEliminarArea(int idArea)
+        {
+
+            string consulta = "delete from area where idArea = " + idArea;
+            int eliminarArea = objConexion.mtdConectado(consulta);
+            return eliminarArea;
+
+        }
+
+        public int mtdModificarArea()
+        {
+            string consulta = "update area set nombreArea = '" + nombreArea + "' where idArea = "+idArea;
+            return objConexion.mtdConectado(consulta);
+        }
+
+        public void mtdBuscarAsignaturaPorArea()
+        {
+            string consulta = "select * from asignatura where idArea= " + idArea;
+            tblAsignatura = new DataTable();
+            tblAsignatura = objConexion.mtdDesconectado(consulta);
+        }
     }
+
+
+    
 }

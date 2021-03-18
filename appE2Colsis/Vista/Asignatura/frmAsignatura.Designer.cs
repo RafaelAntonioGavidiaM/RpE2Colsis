@@ -31,6 +31,8 @@ namespace appE2Colsis.Vista
         {
             this.dgvArea = new System.Windows.Forms.DataGridView();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
+            this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
+            this.txtId = new Guna.UI.WinForms.GunaTextBox();
             this.btnModificarAsignatura = new Guna.UI.WinForms.GunaButton();
             this.cmbArea = new Guna.UI.WinForms.GunaComboBox();
             this.btnEliminarAsignatura = new Guna.UI.WinForms.GunaButton();
@@ -39,7 +41,9 @@ namespace appE2Colsis.Vista
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.txtAsignatura = new Guna.UI.WinForms.GunaTextBox();
             this.gunaGroupBox2 = new Guna.UI.WinForms.GunaGroupBox();
+            this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             this.btnModificarArea = new Guna.UI.WinForms.GunaButton();
+            this.txtIdArea = new Guna.UI.WinForms.GunaTextBox();
             this.btnEliminarArea = new Guna.UI.WinForms.GunaButton();
             this.btnRegistrarArea = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
@@ -50,9 +54,7 @@ namespace appE2Colsis.Vista
             this.dgvAsignatura = new System.Windows.Forms.DataGridView();
             this.gunaGroupBox3 = new Guna.UI.WinForms.GunaGroupBox();
             this.cmbFiltroArea = new Guna.UI.WinForms.GunaComboBox();
-            this.cmbFiltroAsignatura = new Guna.UI.WinForms.GunaComboBox();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArea)).BeginInit();
             this.gunaGroupBox1.SuspendLayout();
             this.gunaGroupBox2.SuspendLayout();
@@ -70,12 +72,15 @@ namespace appE2Colsis.Vista
             this.dgvArea.RowTemplate.Height = 24;
             this.dgvArea.Size = new System.Drawing.Size(329, 127);
             this.dgvArea.TabIndex = 0;
+            this.dgvArea.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArea_CellContentClick);
             // 
             // gunaGroupBox1
             // 
             this.gunaGroupBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaGroupBox1.BaseColor = System.Drawing.Color.White;
             this.gunaGroupBox1.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gunaGroupBox1.Controls.Add(this.gunaLabel7);
+            this.gunaGroupBox1.Controls.Add(this.txtId);
             this.gunaGroupBox1.Controls.Add(this.btnModificarAsignatura);
             this.gunaGroupBox1.Controls.Add(this.cmbArea);
             this.gunaGroupBox1.Controls.Add(this.btnEliminarAsignatura);
@@ -91,6 +96,32 @@ namespace appE2Colsis.Vista
             this.gunaGroupBox1.TabIndex = 1;
             this.gunaGroupBox1.Text = "Registro De Asignatura";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
+            // 
+            // gunaLabel7
+            // 
+            this.gunaLabel7.AutoSize = true;
+            this.gunaLabel7.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel7.Location = new System.Drawing.Point(11, 58);
+            this.gunaLabel7.Name = "gunaLabel7";
+            this.gunaLabel7.Size = new System.Drawing.Size(99, 20);
+            this.gunaLabel7.TabIndex = 13;
+            this.gunaLabel7.Text = "ID Asignatura";
+            // 
+            // txtId
+            // 
+            this.txtId.BaseColor = System.Drawing.Color.White;
+            this.txtId.BorderColor = System.Drawing.Color.Silver;
+            this.txtId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtId.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtId.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtId.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtId.Location = new System.Drawing.Point(112, 45);
+            this.txtId.Name = "txtId";
+            this.txtId.PasswordChar = '\0';
+            this.txtId.SelectedText = "";
+            this.txtId.Size = new System.Drawing.Size(220, 32);
+            this.txtId.TabIndex = 12;
             // 
             // btnModificarAsignatura
             // 
@@ -189,7 +220,7 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel2.Location = new System.Drawing.Point(28, 126);
+            this.gunaLabel2.Location = new System.Drawing.Point(31, 132);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(40, 20);
             this.gunaLabel2.TabIndex = 3;
@@ -199,7 +230,7 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel1.Location = new System.Drawing.Point(11, 70);
+            this.gunaLabel1.Location = new System.Drawing.Point(11, 95);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(80, 20);
             this.gunaLabel1.TabIndex = 2;
@@ -214,7 +245,7 @@ namespace appE2Colsis.Vista
             this.txtAsignatura.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtAsignatura.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtAsignatura.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtAsignatura.Location = new System.Drawing.Point(112, 58);
+            this.txtAsignatura.Location = new System.Drawing.Point(112, 83);
             this.txtAsignatura.Name = "txtAsignatura";
             this.txtAsignatura.PasswordChar = '\0';
             this.txtAsignatura.SelectedText = "";
@@ -226,7 +257,9 @@ namespace appE2Colsis.Vista
             this.gunaGroupBox2.BackColor = System.Drawing.Color.Transparent;
             this.gunaGroupBox2.BaseColor = System.Drawing.Color.White;
             this.gunaGroupBox2.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gunaGroupBox2.Controls.Add(this.gunaLabel8);
             this.gunaGroupBox2.Controls.Add(this.btnModificarArea);
+            this.gunaGroupBox2.Controls.Add(this.txtIdArea);
             this.gunaGroupBox2.Controls.Add(this.btnEliminarArea);
             this.gunaGroupBox2.Controls.Add(this.btnRegistrarArea);
             this.gunaGroupBox2.Controls.Add(this.gunaLabel4);
@@ -240,6 +273,16 @@ namespace appE2Colsis.Vista
             this.gunaGroupBox2.TabIndex = 2;
             this.gunaGroupBox2.Text = "Registro De Area";
             this.gunaGroupBox2.TextLocation = new System.Drawing.Point(10, 8);
+            // 
+            // gunaLabel8
+            // 
+            this.gunaLabel8.AutoSize = true;
+            this.gunaLabel8.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel8.Location = new System.Drawing.Point(28, 50);
+            this.gunaLabel8.Name = "gunaLabel8";
+            this.gunaLabel8.Size = new System.Drawing.Size(59, 20);
+            this.gunaLabel8.TabIndex = 15;
+            this.gunaLabel8.Text = "ID Area";
             // 
             // btnModificarArea
             // 
@@ -264,6 +307,23 @@ namespace appE2Colsis.Vista
             this.btnModificarArea.TabIndex = 8;
             this.btnModificarArea.Text = "Modificar";
             this.btnModificarArea.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnModificarArea.Click += new System.EventHandler(this.btnModificarArea_Click);
+            // 
+            // txtIdArea
+            // 
+            this.txtIdArea.BaseColor = System.Drawing.Color.White;
+            this.txtIdArea.BorderColor = System.Drawing.Color.Silver;
+            this.txtIdArea.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIdArea.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtIdArea.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtIdArea.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtIdArea.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIdArea.Location = new System.Drawing.Point(112, 38);
+            this.txtIdArea.Name = "txtIdArea";
+            this.txtIdArea.PasswordChar = '\0';
+            this.txtIdArea.SelectedText = "";
+            this.txtIdArea.Size = new System.Drawing.Size(220, 32);
+            this.txtIdArea.TabIndex = 14;
             // 
             // btnEliminarArea
             // 
@@ -288,6 +348,7 @@ namespace appE2Colsis.Vista
             this.btnEliminarArea.TabIndex = 7;
             this.btnEliminarArea.Text = "Eliminar";
             this.btnEliminarArea.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnEliminarArea.Click += new System.EventHandler(this.btnEliminarArea_Click);
             // 
             // btnRegistrarArea
             // 
@@ -312,12 +373,13 @@ namespace appE2Colsis.Vista
             this.btnRegistrarArea.TabIndex = 6;
             this.btnRegistrarArea.Text = "Registrar";
             this.btnRegistrarArea.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnRegistrarArea.Click += new System.EventHandler(this.btnRegistrarArea_Click);
             // 
             // gunaLabel4
             // 
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel4.Location = new System.Drawing.Point(28, 64);
+            this.gunaLabel4.Location = new System.Drawing.Point(28, 76);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(43, 20);
             this.gunaLabel4.TabIndex = 5;
@@ -332,7 +394,7 @@ namespace appE2Colsis.Vista
             this.txtArea.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtArea.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtArea.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtArea.Location = new System.Drawing.Point(112, 52);
+            this.txtArea.Location = new System.Drawing.Point(112, 76);
             this.txtArea.Name = "txtArea";
             this.txtArea.PasswordChar = '\0';
             this.txtArea.SelectedText = "";
@@ -348,6 +410,7 @@ namespace appE2Colsis.Vista
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(1199, 60);
             this.gunaPanel1.TabIndex = 3;
+            this.gunaPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gunaPanel1_Paint);
             // 
             // gunaButton1
             // 
@@ -399,9 +462,7 @@ namespace appE2Colsis.Vista
             this.gunaGroupBox3.BaseColor = System.Drawing.Color.White;
             this.gunaGroupBox3.BorderColor = System.Drawing.Color.Gainsboro;
             this.gunaGroupBox3.Controls.Add(this.cmbFiltroArea);
-            this.gunaGroupBox3.Controls.Add(this.cmbFiltroAsignatura);
             this.gunaGroupBox3.Controls.Add(this.gunaLabel6);
-            this.gunaGroupBox3.Controls.Add(this.gunaLabel5);
             this.gunaGroupBox3.Font = new System.Drawing.Font("Agency FB", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaGroupBox3.LineColor = System.Drawing.Color.Gainsboro;
             this.gunaGroupBox3.Location = new System.Drawing.Point(429, 67);
@@ -422,50 +483,23 @@ namespace appE2Colsis.Vista
             this.cmbFiltroArea.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbFiltroArea.ForeColor = System.Drawing.Color.Black;
             this.cmbFiltroArea.FormattingEnabled = true;
-            this.cmbFiltroArea.Location = new System.Drawing.Point(446, 47);
+            this.cmbFiltroArea.Location = new System.Drawing.Point(96, 47);
             this.cmbFiltroArea.Name = "cmbFiltroArea";
             this.cmbFiltroArea.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbFiltroArea.OnHoverItemForeColor = System.Drawing.Color.White;
             this.cmbFiltroArea.Size = new System.Drawing.Size(267, 31);
             this.cmbFiltroArea.TabIndex = 12;
-            // 
-            // cmbFiltroAsignatura
-            // 
-            this.cmbFiltroAsignatura.BackColor = System.Drawing.Color.Transparent;
-            this.cmbFiltroAsignatura.BaseColor = System.Drawing.Color.White;
-            this.cmbFiltroAsignatura.BorderColor = System.Drawing.Color.Silver;
-            this.cmbFiltroAsignatura.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbFiltroAsignatura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFiltroAsignatura.FocusedColor = System.Drawing.Color.Empty;
-            this.cmbFiltroAsignatura.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbFiltroAsignatura.ForeColor = System.Drawing.Color.Black;
-            this.cmbFiltroAsignatura.FormattingEnabled = true;
-            this.cmbFiltroAsignatura.Location = new System.Drawing.Point(123, 47);
-            this.cmbFiltroAsignatura.Name = "cmbFiltroAsignatura";
-            this.cmbFiltroAsignatura.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cmbFiltroAsignatura.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cmbFiltroAsignatura.Size = new System.Drawing.Size(231, 31);
-            this.cmbFiltroAsignatura.TabIndex = 13;
+            this.cmbFiltroArea.SelectionChangeCommitted += new System.EventHandler(this.cmbFiltroArea_SelectionChangeCommitted);
             // 
             // gunaLabel6
             // 
             this.gunaLabel6.AutoSize = true;
             this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel6.Location = new System.Drawing.Point(377, 52);
+            this.gunaLabel6.Location = new System.Drawing.Point(27, 52);
             this.gunaLabel6.Name = "gunaLabel6";
             this.gunaLabel6.Size = new System.Drawing.Size(40, 20);
             this.gunaLabel6.TabIndex = 12;
             this.gunaLabel6.Text = "Area";
-            // 
-            // gunaLabel5
-            // 
-            this.gunaLabel5.AutoSize = true;
-            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel5.Location = new System.Drawing.Point(26, 52);
-            this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(80, 20);
-            this.gunaLabel5.TabIndex = 12;
-            this.gunaLabel5.Text = "Asignatura";
             // 
             // frmAsignatura
             // 
@@ -518,8 +552,10 @@ namespace appE2Colsis.Vista
         private Guna.UI.WinForms.GunaButton gunaButton1;
         private Guna.UI.WinForms.GunaGroupBox gunaGroupBox3;
         private Guna.UI.WinForms.GunaComboBox cmbFiltroArea;
-        private Guna.UI.WinForms.GunaComboBox cmbFiltroAsignatura;
         private Guna.UI.WinForms.GunaLabel gunaLabel6;
-        private Guna.UI.WinForms.GunaLabel gunaLabel5;
+        private Guna.UI.WinForms.GunaTextBox txtId;
+        private Guna.UI.WinForms.GunaLabel gunaLabel7;
+        private Guna.UI.WinForms.GunaLabel gunaLabel8;
+        private Guna.UI.WinForms.GunaTextBox txtIdArea;
     }
 }
