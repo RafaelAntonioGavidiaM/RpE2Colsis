@@ -31,12 +31,13 @@ namespace appE2Colsis.Vista
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.btnReporte = new Guna.UI.WinForms.GunaButton();
             this.lblnombreApellido = new Guna.UI.WinForms.GunaLabel();
             this.btnRol = new Guna.UI.WinForms.GunaButton();
             this.btnPersona = new Guna.UI.WinForms.GunaButton();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.pnNombre = new System.Windows.Forms.Panel();
-            this.btnReporte = new Guna.UI.WinForms.GunaButton();
+            this.btnEstudiante = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -45,6 +46,7 @@ namespace appE2Colsis.Vista
             // 
             this.gunaPanel1.AutoSize = true;
             this.gunaPanel1.BackColor = System.Drawing.Color.White;
+            this.gunaPanel1.Controls.Add(this.btnEstudiante);
             this.gunaPanel1.Controls.Add(this.btnReporte);
             this.gunaPanel1.Controls.Add(this.lblnombreApellido);
             this.gunaPanel1.Controls.Add(this.btnRol);
@@ -54,6 +56,33 @@ namespace appE2Colsis.Vista
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(299, 739);
             this.gunaPanel1.TabIndex = 0;
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.AnimationHoverSpeed = 0.07F;
+            this.btnReporte.AnimationSpeed = 0.03F;
+            this.btnReporte.BackColor = System.Drawing.Color.Transparent;
+            this.btnReporte.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnReporte.BorderColor = System.Drawing.Color.Black;
+            this.btnReporte.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnReporte.FocusedColor = System.Drawing.Color.Empty;
+            this.btnReporte.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.ForeColor = System.Drawing.Color.White;
+            this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
+            this.btnReporte.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnReporte.Location = new System.Drawing.Point(38, 405);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnReporte.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnReporte.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnReporte.OnHoverImage = null;
+            this.btnReporte.OnPressedColor = System.Drawing.Color.Black;
+            this.btnReporte.Radius = 20;
+            this.btnReporte.Size = new System.Drawing.Size(258, 42);
+            this.btnReporte.TabIndex = 6;
+            this.btnReporte.Text = "Reporte";
+            this.btnReporte.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // lblnombreApellido
             // 
@@ -78,7 +107,7 @@ namespace appE2Colsis.Vista
             this.btnRol.ForeColor = System.Drawing.Color.White;
             this.btnRol.Image = ((System.Drawing.Image)(resources.GetObject("btnRol.Image")));
             this.btnRol.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnRol.Location = new System.Drawing.Point(38, 287);
+            this.btnRol.Location = new System.Drawing.Point(38, 348);
             this.btnRol.Name = "btnRol";
             this.btnRol.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnRol.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -141,39 +170,39 @@ namespace appE2Colsis.Vista
             this.pnNombre.Size = new System.Drawing.Size(920, 739);
             this.pnNombre.TabIndex = 1;
             // 
-            // btnReporte
+            // btnEstudiante
             // 
-            this.btnReporte.AnimationHoverSpeed = 0.07F;
-            this.btnReporte.AnimationSpeed = 0.03F;
-            this.btnReporte.BackColor = System.Drawing.Color.Transparent;
-            this.btnReporte.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnReporte.BorderColor = System.Drawing.Color.Black;
-            this.btnReporte.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnReporte.FocusedColor = System.Drawing.Color.Empty;
-            this.btnReporte.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReporte.ForeColor = System.Drawing.Color.White;
-            this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
-            this.btnReporte.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnReporte.Location = new System.Drawing.Point(38, 344);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnReporte.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnReporte.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnReporte.OnHoverImage = null;
-            this.btnReporte.OnPressedColor = System.Drawing.Color.Black;
-            this.btnReporte.Radius = 20;
-            this.btnReporte.Size = new System.Drawing.Size(258, 42);
-            this.btnReporte.TabIndex = 6;
-            this.btnReporte.Text = "Reporte";
-            this.btnReporte.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            this.btnEstudiante.AnimationHoverSpeed = 0.07F;
+            this.btnEstudiante.AnimationSpeed = 0.03F;
+            this.btnEstudiante.BackColor = System.Drawing.Color.Transparent;
+            this.btnEstudiante.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnEstudiante.BorderColor = System.Drawing.Color.Black;
+            this.btnEstudiante.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnEstudiante.FocusedColor = System.Drawing.Color.Empty;
+            this.btnEstudiante.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstudiante.ForeColor = System.Drawing.Color.White;
+            this.btnEstudiante.Image = ((System.Drawing.Image)(resources.GetObject("btnEstudiante.Image")));
+            this.btnEstudiante.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnEstudiante.Location = new System.Drawing.Point(38, 286);
+            this.btnEstudiante.Name = "btnEstudiante";
+            this.btnEstudiante.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnEstudiante.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnEstudiante.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnEstudiante.OnHoverImage = null;
+            this.btnEstudiante.OnPressedColor = System.Drawing.Color.Black;
+            this.btnEstudiante.Radius = 20;
+            this.btnEstudiante.Size = new System.Drawing.Size(255, 46);
+            this.btnEstudiante.TabIndex = 7;
+            this.btnEstudiante.Text = "Estudiante";
+            this.btnEstudiante.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnEstudiante.Click += new System.EventHandler(this.btnEstudiante_Click);
             // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1200, 744);
+            this.ClientSize = new System.Drawing.Size(1200, 741);
             this.Controls.Add(this.pnNombre);
             this.Controls.Add(this.gunaPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -198,5 +227,6 @@ namespace appE2Colsis.Vista
         private Guna.UI.WinForms.GunaButton btnPersona;
         private System.Windows.Forms.Panel pnNombre;
         private Guna.UI.WinForms.GunaButton btnReporte;
+        private Guna.UI.WinForms.GunaButton btnEstudiante;
     }
 }

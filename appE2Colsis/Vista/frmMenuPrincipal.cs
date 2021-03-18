@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using appE2Colsis.Datos;
 using System.Reflection;
+using appE2Colsis.Vista.Empleado;
 
 
 namespace appE2Colsis.Vista
@@ -128,6 +129,15 @@ namespace appE2Colsis.Vista
             mtdCerrarFormulario("frmReporte");
             
 
+        }
+
+        private void btnEstudiante_Click(object sender, EventArgs e)
+        {
+            frmEstudiante objEstudiante = new frmEstudiante();
+            objEstudiante.TopLevel = false;
+            objEstudiante.Parent = pnNombre;
+            objEstudiante.Show();
+            mtdCerrarFormulario("frmEstudiante");
         }
     }
 }
