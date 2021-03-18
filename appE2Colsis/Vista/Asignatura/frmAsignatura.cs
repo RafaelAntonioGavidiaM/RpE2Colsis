@@ -21,7 +21,7 @@ namespace appE2Colsis.Vista
         clAsignatura objArea;
         List<clAsignatura> listAsignatura;
         List<clAsignatura> listArea;
-        
+
         private void frmAsignatura_Load(object sender, EventArgs e)
         {
             mtdcargar();
@@ -74,21 +74,12 @@ namespace appE2Colsis.Vista
 
         //metodos y del groupbox de registro de asignatura 
 
-        public void  mtdCargarDatosAsignatura()
+        public void mtdCargarDatosAsignatura()
         {
-            listAsignatura = new List<clAsignatura>();
-
-            for (int i = 0; i < 1; i++)
-            {
-                clAsignatura objDatosAsignatura = new clAsignatura();
-                objAsignatura.nombreAsignatura = txtAsignatura.Text;
-                objAsignatura.idArea = int.Parse(cmbArea.SelectedValue.ToString());
-
-                listAsignatura.Add(objAsignatura);
-            }
-
+            objAsignatura.nombreAsignatura = txtAsignatura.Text;
+            objAsignatura.idArea = int.Parse(cmbArea.SelectedValue.ToString());
         }
-        
+
         private void dgvAsignatura_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -116,7 +107,7 @@ namespace appE2Colsis.Vista
             catch (Exception)
             {
             }
-            
+
         }
 
         private void btnRegistarAsignatura_Click(object sender, EventArgs e)
@@ -133,11 +124,12 @@ namespace appE2Colsis.Vista
 
                     MessageBox.Show("Se regsitro la asignatura correctamente", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     mtdcargar();
+                    mtdBorrarTxt();
 
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo hacer el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El nombre de asignatura ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
 
@@ -146,7 +138,7 @@ namespace appE2Colsis.Vista
         int idAsignatura = 0;
         private void btnEliminarAsignatura_Click(object sender, EventArgs e)
         {
-            DialogResult opcion = MessageBox.Show(" Desea eliminar la asignatura"," Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            DialogResult opcion = MessageBox.Show(" Desea eliminar la asignatura", " Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (opcion == DialogResult.Yes)
             {
                 int filasAfectadas = objAsignatura.mtdEliminarAsignatura(idAsignatura);
@@ -154,10 +146,11 @@ namespace appE2Colsis.Vista
                 {
                     MessageBox.Show("Se elimino  la asignatura correctamente", "Eliminaddo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     mtdcargar();
+                    mtdBorrarTxt();
                 }
                 else
                 {
-                    MessageBox.Show("No se puedo hacer la eliminacion", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("No se puedo hacer la eliminacion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
 
@@ -166,60 +159,28 @@ namespace appE2Colsis.Vista
 
         private void btnModificarAsignatura_Click(object sender, EventArgs e)
         {
-            listAsignatura = new List<clAsignatura>();
-            listAsignatura = objAsignatura.mtdListarAsignatura();
-            int contador = 0;
-            for (int i = 0; i < listAsignatura.Count; i++)
+            objAsignatura.idAsignatura = idAsignatura;
+            objAsignatura.nombreAsignatura = txtAsignatura.Text;
+            objAsignatura.idArea = int.Parse(cmbArea.SelectedValue.ToString());
+
+            if (objAsignatura.mtdModificarAsignatura() > 0)
             {
-                if (listAsignatura[i].nombreAsignatura == txtAsignatura.Text && cmbArea.SelectedValue.Equals(listAsignatura[i].idArea))
-                {
-                    MessageBox.Show("No se registro ningun cambio", "Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-                    contador = contador + 1;
-                }
-            }
-            if (contador != 0)
-            {
-                MessageBox.Show("Verifique la informacion que desea modificar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Actualizacion exitoso");
+                mtdcargar();
+                mtdBorrarTxt();
             }
             else
             {
-                objAsignatura.idAsignatura = idAsignatura;
-                objAsignatura.nombreAsignatura = txtAsignatura.Text;
-                objAsignatura.idArea = int.Parse(cmbArea.SelectedValue.ToString());
-
-                objAsignatura.mtdModificarAsignatura();
-                int filas = objAsignatura.mtdModificarAsignatura();
-
-                if (filas > 0)
-                {
-                    MessageBox.Show("Actualizacion exitoso");
-                    mtdcargar();
-                }
-                else
-                {
-                    MessageBox.Show("No se pudo actualizar");
-                }
+                MessageBox.Show("El nombre de Asignatura ya existe");
             }
-
-          
         }
 
         // metodos y groupbox de area
 
         public void mtdCargarDatosArea()
         {
-
-            listArea = new List<clAsignatura>();
-
-            for (int i = 0; i < 1; i++)
-            {
-                clAsignatura objDatosArea = new clAsignatura();
-                objDatosArea.nombreArea = txtArea.Text;
-
-                listArea.Add(objDatosArea);
-            }
-
-
+            objArea = new clAsignatura();
+            objArea.nombreArea = txtArea.Text;
         }
 
         private void dgvArea_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -241,18 +202,17 @@ namespace appE2Colsis.Vista
 
             if (opcion == DialogResult.Yes)
             {
-                int registro = objArea.mtdRegistrarArea(listArea);
-
-                if (registro > 0)
+                if (objArea.mtdRegistrarArea() > 0)
                 {
 
                     MessageBox.Show("Se regsitro el area correctamente", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     mtdcargar();
+                    mtdBorrarTxt();
 
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo hacer el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El area ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
@@ -269,6 +229,7 @@ namespace appE2Colsis.Vista
                 {
                     MessageBox.Show("Se elimino el area correctamente", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     mtdcargar();
+                    mtdBorrarTxt();
                 }
                 else
                 {
@@ -281,53 +242,46 @@ namespace appE2Colsis.Vista
 
         private void btnModificarArea_Click(object sender, EventArgs e)
         {
-            listArea = new List<clAsignatura>();
-            listArea = objArea.mtdListarArea();
-            Boolean validarExistencia =false;
-            for (int i = 0; i < listArea.Count; i++)
+
+            objArea.idArea = int.Parse(txtIdArea.Text);
+            objArea.nombreArea = txtArea.Text;
+                   
+            if (objArea.mtdModificarArea() > 0)
             {
-                if (listArea[i].nombreArea == txtArea.Text)
-                {
-                    MessageBox.Show("No se registro ningun cambio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    validarExistencia = true;
-                }
-            }
-            if (validarExistencia == true)
-            {
-                MessageBox.Show("Verifique la informacion que desea modificar", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Actualizacion exitoso");
+                mtdcargar();
+                mtdBorrarTxt();
             }
             else
             {
-                objArea.idArea = int.Parse(txtIdArea.Text);
-                objArea.nombreArea = txtArea.Text;
-                
-                objArea.mtdModificarArea();
-                int filas = objArea.mtdModificarArea();
-
-                if (filas > 0)
-                {
-                    MessageBox.Show("Actualizacion exitoso");
-                    mtdcargar();
-                }
-                else
-                {
-                    MessageBox.Show("No se pudo actualizar");
-                }
+                MessageBox.Show("No se pudo actualizar");
             }
+
         }
 
         private void cmbFiltroArea_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            
+
             objAsignatura = new clAsignatura();
             objAsignatura.idArea = int.Parse(cmbFiltroArea.SelectedValue.ToString());
             objAsignatura.mtdBuscarAsignaturaPorArea();
             dgvAsignatura.DataSource = objAsignatura.tblAsignatura;
         }
 
-        private void gunaPanel1_Paint(object sender, PaintEventArgs e)
-        {
 
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            mtdcargar();
+        }
+
+        // metdos de limpieza de textBox
+
+        public void mtdBorrarTxt()
+        {
+            txtAsignatura.Clear();
+            txtArea.Clear();
+            txtId.Clear();
+            txtIdArea.Clear();
         }
     }
 }

@@ -49,10 +49,11 @@ namespace appE2Colsis.Datos
         public int mtdRegistrarAsignatura()
         {
 
-            int resultado = 0;
-            string consulta = "insert into asignatura (nombreAsignatura,idArea) values ('" + nombreAsignatura + "','" + idArea + "')";
+            string consulta = "insert into asignatura (nombreAsignatura,idArea) " +
+                              "select '" + nombreAsignatura + "', " + idArea + " " +
+                              "from dual where not exists (select * from asignatura where nombreAsignatura = '" + nombreAsignatura + "')";
 
-            resultado = objConexion.mtdConectado(consulta);
+            int resultado = objConexion.mtdConectado(consulta);
 
             return resultado;
 
@@ -75,7 +76,10 @@ namespace appE2Colsis.Datos
         public int mtdModificarAsignatura()
         {
 
-            string consulta = "update asignatura set nombreAsignatura = '" + nombreAsignatura + "',idArea ='" + idArea + "' where idAsignatura='" + idAsignatura + "'";
+            string consulta = "update asignatura " +
+                              "set nombreAsignatura = '" + nombreAsignatura + "', idArea = " + idArea + " " +
+                              "where idAsignatura =" + idAsignatura + " " +
+                              "and not exists(select * from asignatura where nombreAsignatura = '" + nombreAsignatura + "')";
             int resultado = objConexion.mtdConectado(consulta);
             return resultado;
 
@@ -105,17 +109,12 @@ namespace appE2Colsis.Datos
 
         }
 
-        public int mtdRegistrarArea(List<clAsignatura> listaArea)
+        public int mtdRegistrarArea()
         {
-            int resultado = 0;
-            foreach (var item in listaArea)
-            {
-                string consulta = "insert into area (nombreArea) values ('" + item.nombreArea + "')";
-
-                resultado = objConexion.mtdConectado(consulta); 
-            }
-            return resultado;
-            
+            string consulta = "insert into area (nombreArea) " +
+                              "select '" + nombreArea + "' " +
+                              "from dual where not exists (select * from area where nombreArea = '" + nombreArea + "')";
+            return objConexion.mtdConectado(consulta);
         }
 
         public int mtdEliminarArea(int idArea)
@@ -129,7 +128,10 @@ namespace appE2Colsis.Datos
 
         public int mtdModificarArea()
         {
-            string consulta = "update area set nombreArea = '" + nombreArea + "' where idArea = "+idArea;
+            string consulta = "update area " +
+                              "set nombreArea = '" + nombreArea + "' " +
+                              "where idArea = "+ idArea +" " +
+                              "and not exists(select * from area where nombreArea = '" + nombreArea + "')";
             return objConexion.mtdConectado(consulta);
         }
 
@@ -142,5 +144,5 @@ namespace appE2Colsis.Datos
     }
 
 
-    
+
 }
