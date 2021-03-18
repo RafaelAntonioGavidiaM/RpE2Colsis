@@ -188,7 +188,7 @@ namespace appE2Colsis.Vista
             this.grpSetting.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpSetting.ForeColor = System.Drawing.Color.Black;
             this.grpSetting.LineColor = System.Drawing.Color.Transparent;
-            this.grpSetting.Location = new System.Drawing.Point(13, 217);
+            this.grpSetting.Location = new System.Drawing.Point(35, 61);
             this.grpSetting.Name = "grpSetting";
             this.grpSetting.Size = new System.Drawing.Size(239, 214);
             this.grpSetting.TabIndex = 7;
