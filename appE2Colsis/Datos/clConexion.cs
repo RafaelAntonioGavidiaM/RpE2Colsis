@@ -38,7 +38,6 @@ namespace appE2Colsis.Datos
             catch (Exception error)
             {
                 MessageBox.Show(error.Message);
-                throw;
             }
         }
         public DataTable mtdDesconectado(string consulta)
@@ -52,9 +51,10 @@ namespace appE2Colsis.Datos
         }
         public int mtdConectado(string consulta)
         {
+            int filasAfectadas = 0;
             mtdIniciarConexion();
             MySqlCommand comando = new MySqlCommand(consulta, objConexion);
-            int filasAfectadas = comando.ExecuteNonQuery();
+            filasAfectadas = comando.ExecuteNonQuery();
             objConexion.Close();
             return filasAfectadas;
         }
