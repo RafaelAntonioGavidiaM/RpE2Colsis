@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using appE2Colsis.Vista;
+using appE2Colsis.Vista.Empleado;
 
 namespace appE2Colsis
 {
