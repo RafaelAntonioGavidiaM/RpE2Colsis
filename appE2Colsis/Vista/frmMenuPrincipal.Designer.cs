@@ -31,6 +31,7 @@ namespace appE2Colsis.Vista
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.btnNotas = new Guna.UI.WinForms.GunaButton();
             this.btnReporte = new Guna.UI.WinForms.GunaButton();
             this.lblnombreApellido = new Guna.UI.WinForms.GunaLabel();
             this.btnRol = new Guna.UI.WinForms.GunaButton();
@@ -46,6 +47,7 @@ namespace appE2Colsis.Vista
             // 
             this.gunaPanel1.AutoSize = true;
             this.gunaPanel1.BackColor = System.Drawing.Color.White;
+            this.gunaPanel1.Controls.Add(this.btnNotas);
             this.gunaPanel1.Controls.Add(this.btnEstudiante);
             this.gunaPanel1.Controls.Add(this.btnReporte);
             this.gunaPanel1.Controls.Add(this.lblnombreApellido);
@@ -56,6 +58,33 @@ namespace appE2Colsis.Vista
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(299, 739);
             this.gunaPanel1.TabIndex = 0;
+            // 
+            // btnNotas
+            // 
+            this.btnNotas.AnimationHoverSpeed = 0.07F;
+            this.btnNotas.AnimationSpeed = 0.03F;
+            this.btnNotas.BackColor = System.Drawing.Color.Transparent;
+            this.btnNotas.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnNotas.BorderColor = System.Drawing.Color.Black;
+            this.btnNotas.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnNotas.FocusedColor = System.Drawing.Color.Empty;
+            this.btnNotas.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNotas.ForeColor = System.Drawing.Color.White;
+            this.btnNotas.Image = ((System.Drawing.Image)(resources.GetObject("btnNotas.Image")));
+            this.btnNotas.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnNotas.Location = new System.Drawing.Point(26, 512);
+            this.btnNotas.Name = "btnNotas";
+            this.btnNotas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnNotas.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnNotas.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnNotas.OnHoverImage = null;
+            this.btnNotas.OnPressedColor = System.Drawing.Color.Black;
+            this.btnNotas.Radius = 20;
+            this.btnNotas.Size = new System.Drawing.Size(258, 42);
+            this.btnNotas.TabIndex = 7;
+            this.btnNotas.Text = "Notas";
+            this.btnNotas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnNotas.Click += new System.EventHandler(this.btnNotas_Click);
             // 
             // btnReporte
             // 
@@ -70,7 +99,7 @@ namespace appE2Colsis.Vista
             this.btnReporte.ForeColor = System.Drawing.Color.White;
             this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
             this.btnReporte.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnReporte.Location = new System.Drawing.Point(38, 405);
+            this.btnReporte.Location = new System.Drawing.Point(38, 344);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnReporte.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -227,6 +256,7 @@ namespace appE2Colsis.Vista
         private Guna.UI.WinForms.GunaButton btnPersona;
         private System.Windows.Forms.Panel pnNombre;
         private Guna.UI.WinForms.GunaButton btnReporte;
+        private Guna.UI.WinForms.GunaButton btnNotas;
         private Guna.UI.WinForms.GunaButton btnEstudiante;
     }
 }
