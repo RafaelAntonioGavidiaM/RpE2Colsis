@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Datos\clConexion.cs" />
     <Compile Include="Datos\clLogin.cs" />
+    <Compile Include="Datos\clNota.cs" />
     <Compile Include="Datos\clPersona.cs" />
     <Compile Include="Datos\clRePersonal.cs" />
     <Compile Include="Datos\clReporte.cs" />
@@ -83,6 +84,12 @@
     </Compile>
     <Compile Include="Vista\frmMenuPrincipal.Designer.cs">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmNota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmNota.Designer.cs">
+      <DependentUpon>frmNota.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmRePersonal.cs">
       <SubType>Form</SubType>
@@ -114,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmNota.resx">
+      <DependentUpon>frmNota.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmRePersonal.resx">
       <DependentUpon>frmRePersonal.cs</DependentUpon>

@@ -129,5 +129,16 @@ namespace appE2Colsis.Vista
             
 
         }
+
+        private void btnNotas_Click(object sender, EventArgs e)
+        {
+            frmNota objNota = new frmNota(idPersonal);
+            objNota.TopLevel = false;
+            objNota.Parent = pnNombre;
+            objNota.Show();
+            mtdCerrarFormulario("frmNota");
+
+
+        }
     }
 }
