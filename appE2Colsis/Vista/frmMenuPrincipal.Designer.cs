@@ -32,13 +32,13 @@ namespace appE2Colsis.Vista
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.btnNotas = new Guna.UI.WinForms.GunaButton();
+            this.btnEstudiante = new Guna.UI.WinForms.GunaButton();
             this.btnReporte = new Guna.UI.WinForms.GunaButton();
             this.lblnombreApellido = new Guna.UI.WinForms.GunaLabel();
             this.btnRol = new Guna.UI.WinForms.GunaButton();
             this.btnPersona = new Guna.UI.WinForms.GunaButton();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.pnNombre = new System.Windows.Forms.Panel();
-            this.btnEstudiante = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,7 +72,7 @@ namespace appE2Colsis.Vista
             this.btnNotas.ForeColor = System.Drawing.Color.White;
             this.btnNotas.Image = ((System.Drawing.Image)(resources.GetObject("btnNotas.Image")));
             this.btnNotas.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnNotas.Location = new System.Drawing.Point(26, 512);
+            this.btnNotas.Location = new System.Drawing.Point(35, 396);
             this.btnNotas.Name = "btnNotas";
             this.btnNotas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnNotas.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -85,6 +85,33 @@ namespace appE2Colsis.Vista
             this.btnNotas.Text = "Notas";
             this.btnNotas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnNotas.Click += new System.EventHandler(this.btnNotas_Click);
+            // 
+            // btnEstudiante
+            // 
+            this.btnEstudiante.AnimationHoverSpeed = 0.07F;
+            this.btnEstudiante.AnimationSpeed = 0.03F;
+            this.btnEstudiante.BackColor = System.Drawing.Color.Transparent;
+            this.btnEstudiante.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnEstudiante.BorderColor = System.Drawing.Color.Black;
+            this.btnEstudiante.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnEstudiante.FocusedColor = System.Drawing.Color.Empty;
+            this.btnEstudiante.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstudiante.ForeColor = System.Drawing.Color.White;
+            this.btnEstudiante.Image = ((System.Drawing.Image)(resources.GetObject("btnEstudiante.Image")));
+            this.btnEstudiante.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnEstudiante.Location = new System.Drawing.Point(38, 286);
+            this.btnEstudiante.Name = "btnEstudiante";
+            this.btnEstudiante.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnEstudiante.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnEstudiante.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnEstudiante.OnHoverImage = null;
+            this.btnEstudiante.OnPressedColor = System.Drawing.Color.Black;
+            this.btnEstudiante.Radius = 20;
+            this.btnEstudiante.Size = new System.Drawing.Size(255, 46);
+            this.btnEstudiante.TabIndex = 7;
+            this.btnEstudiante.Text = "Estudiante";
+            this.btnEstudiante.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnEstudiante.Click += new System.EventHandler(this.btnEstudiante_Click);
             // 
             // btnReporte
             // 
@@ -198,33 +225,6 @@ namespace appE2Colsis.Vista
             this.pnNombre.Name = "pnNombre";
             this.pnNombre.Size = new System.Drawing.Size(920, 739);
             this.pnNombre.TabIndex = 1;
-            // 
-            // btnEstudiante
-            // 
-            this.btnEstudiante.AnimationHoverSpeed = 0.07F;
-            this.btnEstudiante.AnimationSpeed = 0.03F;
-            this.btnEstudiante.BackColor = System.Drawing.Color.Transparent;
-            this.btnEstudiante.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnEstudiante.BorderColor = System.Drawing.Color.Black;
-            this.btnEstudiante.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnEstudiante.FocusedColor = System.Drawing.Color.Empty;
-            this.btnEstudiante.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstudiante.ForeColor = System.Drawing.Color.White;
-            this.btnEstudiante.Image = ((System.Drawing.Image)(resources.GetObject("btnEstudiante.Image")));
-            this.btnEstudiante.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnEstudiante.Location = new System.Drawing.Point(38, 286);
-            this.btnEstudiante.Name = "btnEstudiante";
-            this.btnEstudiante.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnEstudiante.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnEstudiante.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnEstudiante.OnHoverImage = null;
-            this.btnEstudiante.OnPressedColor = System.Drawing.Color.Black;
-            this.btnEstudiante.Radius = 20;
-            this.btnEstudiante.Size = new System.Drawing.Size(255, 46);
-            this.btnEstudiante.TabIndex = 7;
-            this.btnEstudiante.Text = "Estudiante";
-            this.btnEstudiante.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnEstudiante.Click += new System.EventHandler(this.btnEstudiante_Click);
             // 
             // frmMenuPrincipal
             // 
