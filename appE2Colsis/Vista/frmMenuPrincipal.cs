@@ -139,5 +139,14 @@ namespace appE2Colsis.Vista
             objEstudiante.Show();
             mtdCerrarFormulario("frmEstudiante");
         }
+
+        private void btnAsignaturas_Click(object sender, EventArgs e)
+        {
+            frmAsignatura objAsignaturas = new frmAsignatura();
+            objAsignaturas.TopLevel = false;
+            objAsignaturas.Parent = pnNombre;
+            objAsignaturas.Show();
+            mtdCerrarFormulario("frmAsignatura");
+        }
     }
 }

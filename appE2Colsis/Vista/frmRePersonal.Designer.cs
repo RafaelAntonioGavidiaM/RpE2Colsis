@@ -46,6 +46,8 @@ namespace appE2Colsis.Vista
             this.txtCorreo = new Guna.UI.WinForms.GunaTextBox();
             this.cmbRol = new Guna.UI.WinForms.GunaComboBox();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
+            this.txtClave = new Guna.UI.WinForms.GunaTextBox();
+            this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
             this.cmbEstado = new Guna.UI.WinForms.GunaComboBox();
             this.label = new Guna.UI.WinForms.GunaLabel();
             this.btnRegistrar = new Guna.UI.WinForms.GunaButton();
@@ -56,8 +58,6 @@ namespace appE2Colsis.Vista
             this.grbBuscqueda = new Guna.UI.WinForms.GunaGroupBox();
             this.txtBuscar = new Guna.UI.WinForms.GunaTextBox();
             this.btnRecargar = new Guna.UI.WinForms.GunaButton();
-            this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
-            this.txtClave = new Guna.UI.WinForms.GunaTextBox();
             this.gunaGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
             this.grbBuscqueda.SuspendLayout();
@@ -303,6 +303,32 @@ namespace appE2Colsis.Vista
             this.gunaGroupBox1.Text = "Registro";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
             // 
+            // txtClave
+            // 
+            this.txtClave.BaseColor = System.Drawing.Color.White;
+            this.txtClave.BorderColor = System.Drawing.Color.Silver;
+            this.txtClave.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtClave.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtClave.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtClave.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtClave.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtClave.Location = new System.Drawing.Point(122, 334);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '\0';
+            this.txtClave.SelectedText = "";
+            this.txtClave.Size = new System.Drawing.Size(243, 32);
+            this.txtClave.TabIndex = 24;
+            // 
+            // gunaLabel10
+            // 
+            this.gunaLabel10.AutoSize = true;
+            this.gunaLabel10.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel10.Location = new System.Drawing.Point(28, 340);
+            this.gunaLabel10.Name = "gunaLabel10";
+            this.gunaLabel10.Size = new System.Drawing.Size(45, 20);
+            this.gunaLabel10.TabIndex = 23;
+            this.gunaLabel10.Text = "Clave";
+            // 
             // cmbEstado
             // 
             this.cmbEstado.BackColor = System.Drawing.Color.Transparent;
@@ -496,32 +522,6 @@ namespace appE2Colsis.Vista
             this.btnRecargar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnRecargar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // gunaLabel10
-            // 
-            this.gunaLabel10.AutoSize = true;
-            this.gunaLabel10.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel10.Location = new System.Drawing.Point(28, 340);
-            this.gunaLabel10.Name = "gunaLabel10";
-            this.gunaLabel10.Size = new System.Drawing.Size(45, 20);
-            this.gunaLabel10.TabIndex = 23;
-            this.gunaLabel10.Text = "Clave";
-            // 
-            // txtClave
-            // 
-            this.txtClave.BaseColor = System.Drawing.Color.White;
-            this.txtClave.BorderColor = System.Drawing.Color.Silver;
-            this.txtClave.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtClave.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtClave.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtClave.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtClave.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtClave.Location = new System.Drawing.Point(122, 334);
-            this.txtClave.Name = "txtClave";
-            this.txtClave.PasswordChar = '\0';
-            this.txtClave.SelectedText = "";
-            this.txtClave.Size = new System.Drawing.Size(243, 32);
-            this.txtClave.TabIndex = 24;
-            // 
             // frmRePersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -531,6 +531,7 @@ namespace appE2Colsis.Vista
             this.Controls.Add(this.dgvEmpleado);
             this.Controls.Add(this.gunaGroupBox1);
             this.Controls.Add(this.gunaLabel8);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRePersonal";
             this.Text = "frmRePersonal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
