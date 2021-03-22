@@ -32,7 +32,6 @@ namespace appE2Colsis.Vista
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.btnAsignaturas = new Guna.UI.WinForms.GunaButton();
-            this.btnEstudiante = new Guna.UI.WinForms.GunaButton();
             this.btnNotas = new Guna.UI.WinForms.GunaButton();
             this.btnEstudiante = new Guna.UI.WinForms.GunaButton();
             this.btnReporte = new Guna.UI.WinForms.GunaButton();
@@ -57,10 +56,9 @@ namespace appE2Colsis.Vista
             this.gunaPanel1.Controls.Add(this.btnRol);
             this.gunaPanel1.Controls.Add(this.btnPersona);
             this.gunaPanel1.Controls.Add(this.gunaPictureBox1);
-            this.gunaPanel1.Location = new System.Drawing.Point(3, 2);
-            this.gunaPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.gunaPanel1.Location = new System.Drawing.Point(2, 2);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(399, 910);
+            this.gunaPanel1.Size = new System.Drawing.Size(302, 739);
             this.gunaPanel1.TabIndex = 0;
             // 
             // btnAsignaturas
@@ -76,8 +74,7 @@ namespace appE2Colsis.Vista
             this.btnAsignaturas.ForeColor = System.Drawing.Color.White;
             this.btnAsignaturas.Image = ((System.Drawing.Image)(resources.GetObject("btnAsignaturas.Image")));
             this.btnAsignaturas.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnAsignaturas.Location = new System.Drawing.Point(51, 568);
-            this.btnAsignaturas.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAsignaturas.Location = new System.Drawing.Point(38, 420);
             this.btnAsignaturas.Name = "btnAsignaturas";
             this.btnAsignaturas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnAsignaturas.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -85,39 +82,11 @@ namespace appE2Colsis.Vista
             this.btnAsignaturas.OnHoverImage = null;
             this.btnAsignaturas.OnPressedColor = System.Drawing.Color.Black;
             this.btnAsignaturas.Radius = 20;
-            this.btnAsignaturas.Size = new System.Drawing.Size(344, 52);
+            this.btnAsignaturas.Size = new System.Drawing.Size(258, 42);
             this.btnAsignaturas.TabIndex = 8;
             this.btnAsignaturas.Text = "Asignaturas";
             this.btnAsignaturas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnAsignaturas.Click += new System.EventHandler(this.btnAsignaturas_Click);
-            // 
-            // btnEstudiante
-            // 
-            this.btnEstudiante.AnimationHoverSpeed = 0.07F;
-            this.btnEstudiante.AnimationSpeed = 0.03F;
-            this.btnEstudiante.BackColor = System.Drawing.Color.Transparent;
-            this.btnEstudiante.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnEstudiante.BorderColor = System.Drawing.Color.Black;
-            this.btnEstudiante.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnEstudiante.FocusedColor = System.Drawing.Color.Empty;
-            this.btnEstudiante.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstudiante.ForeColor = System.Drawing.Color.White;
-            this.btnEstudiante.Image = ((System.Drawing.Image)(resources.GetObject("btnEstudiante.Image")));
-            this.btnEstudiante.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnEstudiante.Location = new System.Drawing.Point(51, 352);
-            this.btnEstudiante.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEstudiante.Name = "btnEstudiante";
-            this.btnEstudiante.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnEstudiante.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnEstudiante.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnEstudiante.OnHoverImage = null;
-            this.btnEstudiante.OnPressedColor = System.Drawing.Color.Black;
-            this.btnEstudiante.Radius = 20;
-            this.btnEstudiante.Size = new System.Drawing.Size(340, 57);
-            this.btnEstudiante.TabIndex = 7;
-            this.btnEstudiante.Text = "Estudiante";
-            this.btnEstudiante.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnEstudiante.Click += new System.EventHandler(this.btnEstudiante_Click);
             // 
             // btnNotas
             // 
@@ -132,7 +101,8 @@ namespace appE2Colsis.Vista
             this.btnNotas.ForeColor = System.Drawing.Color.White;
             this.btnNotas.Image = ((System.Drawing.Image)(resources.GetObject("btnNotas.Image")));
             this.btnNotas.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnNotas.Location = new System.Drawing.Point(32, 376);
+            this.btnNotas.Location = new System.Drawing.Point(38, 371);
+            this.btnNotas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNotas.Name = "btnNotas";
             this.btnNotas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnNotas.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -140,7 +110,7 @@ namespace appE2Colsis.Vista
             this.btnNotas.OnHoverImage = null;
             this.btnNotas.OnPressedColor = System.Drawing.Color.Black;
             this.btnNotas.Radius = 20;
-            this.btnNotas.Size = new System.Drawing.Size(258, 42);
+            this.btnNotas.Size = new System.Drawing.Size(258, 44);
             this.btnNotas.TabIndex = 7;
             this.btnNotas.Text = "Notas";
             this.btnNotas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -159,7 +129,7 @@ namespace appE2Colsis.Vista
             this.btnEstudiante.ForeColor = System.Drawing.Color.White;
             this.btnEstudiante.Image = ((System.Drawing.Image)(resources.GetObject("btnEstudiante.Image")));
             this.btnEstudiante.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnEstudiante.Location = new System.Drawing.Point(35, 276);
+            this.btnEstudiante.Location = new System.Drawing.Point(38, 468);
             this.btnEstudiante.Name = "btnEstudiante";
             this.btnEstudiante.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnEstudiante.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -167,7 +137,7 @@ namespace appE2Colsis.Vista
             this.btnEstudiante.OnHoverImage = null;
             this.btnEstudiante.OnPressedColor = System.Drawing.Color.Black;
             this.btnEstudiante.Radius = 20;
-            this.btnEstudiante.Size = new System.Drawing.Size(255, 46);
+            this.btnEstudiante.Size = new System.Drawing.Size(253, 37);
             this.btnEstudiante.TabIndex = 7;
             this.btnEstudiante.Text = "Estudiante";
             this.btnEstudiante.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -186,9 +156,7 @@ namespace appE2Colsis.Vista
             this.btnReporte.ForeColor = System.Drawing.Color.White;
             this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
             this.btnReporte.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnReporte.Location = new System.Drawing.Point(51, 498);
-            this.btnReporte.Margin = new System.Windows.Forms.Padding(4);
-            this.btnReporte.Location = new System.Drawing.Point(38, 344);
+            this.btnReporte.Location = new System.Drawing.Point(41, 276);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnReporte.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -196,7 +164,7 @@ namespace appE2Colsis.Vista
             this.btnReporte.OnHoverImage = null;
             this.btnReporte.OnPressedColor = System.Drawing.Color.Black;
             this.btnReporte.Radius = 20;
-            this.btnReporte.Size = new System.Drawing.Size(344, 52);
+            this.btnReporte.Size = new System.Drawing.Size(258, 42);
             this.btnReporte.TabIndex = 6;
             this.btnReporte.Text = "Reporte";
             this.btnReporte.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -206,10 +174,9 @@ namespace appE2Colsis.Vista
             // 
             this.lblnombreApellido.AutoSize = true;
             this.lblnombreApellido.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnombreApellido.Location = new System.Drawing.Point(71, 175);
-            this.lblnombreApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblnombreApellido.Location = new System.Drawing.Point(53, 142);
             this.lblnombreApellido.Name = "lblnombreApellido";
-            this.lblnombreApellido.Size = new System.Drawing.Size(153, 30);
+            this.lblnombreApellido.Size = new System.Drawing.Size(121, 22);
             this.lblnombreApellido.TabIndex = 5;
             this.lblnombreApellido.Text = "gunaLabel1";
             // 
@@ -226,8 +193,7 @@ namespace appE2Colsis.Vista
             this.btnRol.ForeColor = System.Drawing.Color.White;
             this.btnRol.Image = ((System.Drawing.Image)(resources.GetObject("btnRol.Image")));
             this.btnRol.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnRol.Location = new System.Drawing.Point(51, 428);
-            this.btnRol.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRol.Location = new System.Drawing.Point(41, 324);
             this.btnRol.Name = "btnRol";
             this.btnRol.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnRol.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -235,7 +201,7 @@ namespace appE2Colsis.Vista
             this.btnRol.OnHoverImage = null;
             this.btnRol.OnPressedColor = System.Drawing.Color.Black;
             this.btnRol.Radius = 20;
-            this.btnRol.Size = new System.Drawing.Size(344, 52);
+            this.btnRol.Size = new System.Drawing.Size(258, 42);
             this.btnRol.TabIndex = 2;
             this.btnRol.Text = "Rol";
             this.btnRol.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -254,8 +220,7 @@ namespace appE2Colsis.Vista
             this.btnPersona.ForeColor = System.Drawing.Color.White;
             this.btnPersona.Image = ((System.Drawing.Image)(resources.GetObject("btnPersona.Image")));
             this.btnPersona.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnPersona.Location = new System.Drawing.Point(55, 276);
-            this.btnPersona.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPersona.Location = new System.Drawing.Point(41, 224);
             this.btnPersona.Name = "btnPersona";
             this.btnPersona.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnPersona.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -263,7 +228,7 @@ namespace appE2Colsis.Vista
             this.btnPersona.OnHoverImage = null;
             this.btnPersona.OnPressedColor = System.Drawing.Color.Black;
             this.btnPersona.Radius = 20;
-            this.btnPersona.Size = new System.Drawing.Size(340, 57);
+            this.btnPersona.Size = new System.Drawing.Size(255, 46);
             this.btnPersona.TabIndex = 1;
             this.btnPersona.Text = "Persona";
             this.btnPersona.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -274,11 +239,10 @@ namespace appE2Colsis.Vista
             this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.Black;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
-            this.gunaPictureBox1.Location = new System.Drawing.Point(109, 32);
-            this.gunaPictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(82, 26);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
             this.gunaPictureBox1.Radius = 50;
-            this.gunaPictureBox1.Size = new System.Drawing.Size(139, 122);
+            this.gunaPictureBox1.Size = new System.Drawing.Size(104, 99);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox1.TabIndex = 0;
             this.gunaPictureBox1.TabStop = false;
@@ -287,21 +251,20 @@ namespace appE2Colsis.Vista
             // 
             this.pnNombre.AutoSize = true;
             this.pnNombre.BackColor = System.Drawing.Color.White;
-            this.pnNombre.Location = new System.Drawing.Point(373, 2);
-            this.pnNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.pnNombre.Location = new System.Drawing.Point(280, 2);
             this.pnNombre.Name = "pnNombre";
-            this.pnNombre.Size = new System.Drawing.Size(1227, 910);
+            this.pnNombre.Size = new System.Drawing.Size(920, 739);
             this.pnNombre.TabIndex = 1;
             // 
             // frmMenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1600, 912);
+            this.ClientSize = new System.Drawing.Size(1200, 741);
             this.Controls.Add(this.pnNombre);
             this.Controls.Add(this.gunaPanel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmMenuPrincipal";
             this.Text = "frmMenuPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
