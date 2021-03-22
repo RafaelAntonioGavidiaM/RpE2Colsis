@@ -53,6 +53,33 @@ namespace appE2Colsis.Vista
 
         }
 
+        public void mtdMostrarOpciones(Control valor)
+        {
+            Control[] opcionSolicitada = new Control[3];
+            opcionSolicitada[0] = grpCrearNota;
+            opcionSolicitada[1] = grpModificarNota;
+            opcionSolicitada[2] = grpEliminarNota;
+
+            for (int i = 0; i < opcionSolicitada.Length; i++)
+            {
+                if (opcionSolicitada[i] == valor)
+                {
+                    opcionSolicitada[i].Visible = true;
+
+
+                }
+                else
+                {
+                    opcionSolicitada[i].Visible = false;
+                    opcionSolicitada[i].BackColor = TransparencyKey;
+                }
+            }
+
+
+
+        }
+
+
         private void frmNota_Load(object sender, EventArgs e)
         {
             objNota.idDocente = idDocente;
@@ -70,10 +97,30 @@ namespace appE2Colsis.Vista
             cmbCursoF.ValueMember = "idCurso";
             cmbAsignaturaF.DisplayMember = "nombreAsignatura";
             cmbAsignaturaF.ValueMember = "idAsignatura";
+            cmbEliminarC.DataSource = listaCursos;
+            cmbEliminarA.DataSource = listaCursos;
+            cmbEliminarC.DisplayMember= "nombreCurso";
+            cmbEliminarC.ValueMember= "idCurso";
+            cmbEliminarA.DisplayMember= "nombreAsignatura";
+            cmbEliminarA.ValueMember= "idAsignatura";
+            cmbModificarA.DataSource = listaCursos;
+            cmbModificarC.DataSource = listaCursos;
+            cmbModificarA.DisplayMember= "nombreAsignatura";
+            cmbModificarA.ValueMember= "idAsignatura";
+            cmbModificarC.DisplayMember = "nombreCurso";
+            cmbModificarC.ValueMember = "idCurso";
 
 
 
+            // estado modificar 
+            cmbEstado.Items.Add("Habilitado");
+            cmbEstado.Items.Add("Desabilitado");
 
+            // visible grp
+            grpCrearNota.Visible = false;
+            grpModificarNota.Visible = false;
+            grpEliminarNota.Visible = false;
+            grpActualizarNota.Visible = false;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -127,7 +174,7 @@ namespace appE2Colsis.Vista
             int contador = 0;
             for (int i = 0; i < dgvEstudianteNotas.Columns.Count; i++)
             {
-                if (contador == 0 || contador == 1 || contador == 8)
+                if ( contador == 1 || contador == 8)
                 {
                     dgvEstudianteNotas.Columns[i].Visible = true;
 
@@ -169,7 +216,7 @@ namespace appE2Colsis.Vista
         private void dgvEstudianteNotas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            try
+           /* try
             {
                 if (dgvEstudianteNotas.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
@@ -192,27 +239,18 @@ namespace appE2Colsis.Vista
             {
 
             }
-
+           */
 
 
         }
 
-        private void btnCambiarN_Click(object sender, EventArgs e)
-        {
-            foreach (var item in listaNotas)
-            {
-                if (item.nombreNota == lblNota.Text)
-                {
-                    item.nota = float.Parse(txtCalificacion.Text);
-
-                }
-            }
-            dgvEstudianteNotas.Refresh();
-        }
+       
 
         private void btnActualizarDB_Click(object sender, EventArgs e)
         {
-            int rows = objNota.mtdActualizarNotas(listaNotas);
+         
+
+             int rows = objNota.mtdActualizarNotas(listaNotas);
 
             if (rows > 0)
             {
@@ -293,6 +331,124 @@ namespace appE2Colsis.Vista
         private void grpImportar_Click(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void btnEliminarNota_Click(object sender, EventArgs e)
+        {
+            objNota.idNota =int.Parse( cmbNotaEliminar.SelectedValue.ToString());
+        int filasEliminadas =  objNota.mtdEliminarNota();
+            DialogResult opcion = MessageBox.Show("¿Desea Eliminar la Nota y sus Asignaciones?", "Opcion Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (opcion==DialogResult.Yes)
+            {
+                if (filasEliminadas > 0)
+                {
+                    MessageBox.Show("Se Elimino la Nota y su asignacion a los estudiantes", "Eliminacion Concretada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar el registro deseado", "No se pudo Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+
+            
+
+            
+
+
+        }
+
+        private void btnMostarNotas_Click(object sender, EventArgs e)
+        {
+            objNota.idCurso = int.Parse(cmbEliminarC.SelectedValue.ToString());
+            objNota.idAsignatura = int.Parse(cmbEliminarA.SelectedValue.ToString());
+            objNota.idDocente = idDocente;
+            List<clNota> listaNombresNotas = new List<clNota>();
+           listaNombresNotas= objNota.mtdMostrarNotasSegunCursoAsignatura();
+            cmbNotaEliminar.DataSource = listaNombresNotas;
+            cmbNotaEliminar.DisplayMember = "nombreNota";
+            cmbNotaEliminar.ValueMember = "idNota";
+
+
+        }
+
+        private void btnSeleccionarM_Click(object sender, EventArgs e)
+        {
+            objNota.idCurso = int.Parse(cmbEliminarC.SelectedValue.ToString());
+            objNota.idAsignatura = int.Parse(cmbEliminarA.SelectedValue.ToString());
+            objNota.idDocente = idDocente;
+            List<clNota> listaNombresNotas = new List<clNota>();
+            listaNombresNotas = objNota.mtdMostrarNotasSegunCursoAsignatura();
+            cmbNotaModificar.DataSource = listaNombresNotas;
+           cmbNotaModificar.DisplayMember = "nombreNota";
+            cmbNotaModificar.ValueMember = "idNota";
+
+
+        }
+
+        private void gunaButton4_Click(object sender, EventArgs e)
+        {
+            objNota.idNota = int.Parse( cmbNotaModificar.SelectedValue.ToString());
+
+            string nombreRename = txtNuevoNombre.Text;
+            nombreRename= nombreRename.Replace(" ", String.Empty);
+
+            objNota.nombreNota = nombreRename;
+            int estado = 0;
+            if (cmbEstado.Text=="Habilitado")
+            {
+                estado = 1;
+            }
+            else
+            {
+                estado = 0;
+            }
+
+            objNota.estadoNota = estado;
+
+         int rows =   objNota.mtdActualizarNota();
+
+            if (rows>0)
+            {
+                MessageBox.Show("Nota Modificada Exitosamente", "Succesful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                MessageBox.Show("No fue posible modificar la nota", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+
+
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            Control valor = grpCrearNota;
+            mtdMostrarOpciones(valor);
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Control valor = grpModificarNota;
+            mtdMostrarOpciones(valor);
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Control valor = grpEliminarNota;
+            mtdMostrarOpciones(valor);
+
+        }
+
+        private void btnActualizarNota_Click(object sender, EventArgs e)
+        {
+
+            grpActualizarNota.Visible = true;
 
         }
     }

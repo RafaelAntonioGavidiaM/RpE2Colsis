@@ -134,21 +134,31 @@ namespace appE2Colsis.Datos
 
 
 
-        } 
+        }
 
 
-       
+
 
         /// <summary>
         /// Consulta notas segun curso y asignatura de todos los estudiantes 
         /// </summary>
         /// <returns>lista con estudiantes y notas </returns>
 
+        int PeriodoConsulta = 0;
         public DataTable mtdConsultarNotasDeEstudiantes()
         {
+
+
+            DateTime fechaActual = DateTime.Now;
+            String fecha = Convert.ToDateTime(fechaActual).ToString("yyyy-MM-dd");
+            string consultaPeriodo = "select idPeriodo from periodo where fechaInicio<'" + fecha + "' and fechaFin>'" + fecha + "'";
+            DataTable resultadoPeriodo = new DataTable();
+            resultadoPeriodo = objConexion.mtdDesconectado(consultaPeriodo);
+            PeriodoConsulta = int.Parse(resultadoPeriodo.Rows[0][0].ToString());
+
             string consultaNombresNotas = "select  distinct nota.nombreNota \n" +
-                " from asignaturanota inner join estudiante on asignaturanota.idEstudiante = estudiante.idEstudiante inner join nota on asignaturanota.idNota = nota.idNota inner join asignatura on nota.idAsignatura = asignatura.idAsignatura where \n" +
-                " nota.idCurso =" + idCurso + " and asignatura.idAsignatura =" + idAsignatura + "";
+                " from asignaturanota inner join estudiante on asignaturanota.idEstudiante = estudiante.idEstudiante inner join nota on asignaturanota.idNota = nota.idNota inner join asignatura on nota.idAsignatura = asignatura.idAsignatura  inner join periodo on nota.idPeriodo = periodo.idPeriodo where \n" +
+                " nota.idCurso =" + idCurso + " and asignatura.idAsignatura =" + idAsignatura + " and periodo.idPeriodo="+PeriodoConsulta+" ";
 
             DataTable NombresNotas = new DataTable();
             NombresNotas =objConexion.mtdDesconectado(consultaNombresNotas);
@@ -202,8 +212,8 @@ namespace appE2Colsis.Datos
         {
             string consultaNotasPorEstudiante = "select nota.idNota as idNota, nota.nombreNota as Nombre,asignaturanota.nota as Calificacion  \n " +
                 "from asignaturanota inner join estudiante on asignaturanota.idEstudiante = estudiante.idEstudiante  \n " +
-                "inner join nota on asignaturanota.idNota = nota.idNota inner join asignatura on nota.idAsignatura = asignatura.idAsignatura  \n " +
-                "where nota.idCurso ="+idCurso+" and asignatura.idAsignatura ="+idAsignatura+" and estudiante.idEstudiante ="+idEstudiante+"  and nota.estadoNota =1";
+                "inner join nota on asignaturanota.idNota = nota.idNota inner join asignatura on nota.idAsignatura = asignatura.idAsignatura inner join periodo on nota.idPeriodo=periodo.idPeriodo \n " +
+                "where nota.idCurso ="+idCurso+" and asignatura.idAsignatura ="+idAsignatura+" and estudiante.idEstudiante ="+idEstudiante+"  and nota.estadoNota =1 and periodo.idPeriodo="+PeriodoConsulta+"";
 
             DataTable resultado = new DataTable();
             resultado= objConexion.mtdDesconectado(consultaNotasPorEstudiante);
@@ -239,6 +249,61 @@ namespace appE2Colsis.Datos
             }
 
             return rows;
+
+        }
+
+        public List<clNota> mtdMostrarNotasSegunCursoAsignatura()
+        {
+            DateTime fechaActual = DateTime.Now;
+            String fecha = Convert.ToDateTime(fechaActual).ToString("yyyy-MM-dd");
+            string consultaPeriodo = "select idPeriodo from periodo where fechaInicio<'" + fecha + "' and fechaFin>'" + fecha + "'";
+            DataTable resultadoPeriodo = new DataTable();
+            resultadoPeriodo = objConexion.mtdDesconectado(consultaPeriodo);
+            PeriodoConsulta = int.Parse(resultadoPeriodo.Rows[0][0].ToString());
+
+            string consultaNotas = "select idNota,nombreNota from nota where idAsignatura ="+idAsignatura+" and idDocente ="+idDocente+"  and idPeriodo ="+PeriodoConsulta+" and idCurso ="+idCurso+"";
+            DataTable resultado = new DataTable();
+           resultado= objConexion.mtdDesconectado(consultaNotas);
+            List<clNota> listaNombreNotas = new List<clNota>();
+            for (int i = 0; i < resultado.Rows.Count; i++)
+            {
+                clNota objNota = new clNota();
+                objNota.idNota = int.Parse(resultado.Rows[i][0].ToString());
+                objNota.nombreNota = resultado.Rows[i][1].ToString();
+                listaNombreNotas.Add(objNota);
+
+
+                
+
+            }
+            return listaNombreNotas;
+
+        }
+        public int mtdEliminarNota()
+        {
+            string[] consultas = new string[2];
+            consultas[0] = "delete from asignaturanota where idNota=" + idNota + "";
+            consultas[1] = "delete from nota where idNota=" + idNota + "";
+            int filasModificadas=0;
+            for (int i = 0; i < consultas.Length; i++)
+            {
+               filasModificadas= objConexion.mtdConectado(consultas[i]);
+                filasModificadas = filasModificadas + filasModificadas;
+
+            }
+            return filasModificadas;
+
+        }
+        public int  mtdActualizarNota()
+        {
+            string consultaActualizar = "update nota  set nombreNota='"+nombreNota+"', estadoNota="+estadoNota+" where idNota="+idNota+"" ;
+           int rows = objConexion.mtdConectado(consultaActualizar);
+            return rows;
+
+
+
+
+
 
         }
 
