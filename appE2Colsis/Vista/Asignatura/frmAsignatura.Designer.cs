@@ -53,9 +53,9 @@ namespace appE2Colsis.Vista
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.dgvAsignatura = new System.Windows.Forms.DataGridView();
             this.gunaGroupBox3 = new Guna.UI.WinForms.GunaGroupBox();
+            this.btnRecargar = new Guna.UI.WinForms.GunaButton();
             this.cmbFiltroArea = new Guna.UI.WinForms.GunaComboBox();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
-            this.btnRecargar = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArea)).BeginInit();
             this.gunaGroupBox1.SuspendLayout();
             this.gunaGroupBox2.SuspendLayout();
@@ -411,7 +411,6 @@ namespace appE2Colsis.Vista
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(1199, 60);
             this.gunaPanel1.TabIndex = 3;
-            
             // 
             // gunaButton1
             // 
@@ -474,6 +473,31 @@ namespace appE2Colsis.Vista
             this.gunaGroupBox3.Text = "Filtro";
             this.gunaGroupBox3.TextLocation = new System.Drawing.Point(10, 8);
             // 
+            // btnRecargar
+            // 
+            this.btnRecargar.AnimationHoverSpeed = 0.07F;
+            this.btnRecargar.AnimationSpeed = 0.03F;
+            this.btnRecargar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnRecargar.BorderColor = System.Drawing.Color.Black;
+            this.btnRecargar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnRecargar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnRecargar.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecargar.ForeColor = System.Drawing.Color.White;
+            this.btnRecargar.Image = null;
+            this.btnRecargar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnRecargar.Location = new System.Drawing.Point(621, 45);
+            this.btnRecargar.Name = "btnRecargar";
+            this.btnRecargar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnRecargar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnRecargar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnRecargar.OnHoverImage = null;
+            this.btnRecargar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnRecargar.Size = new System.Drawing.Size(99, 36);
+            this.btnRecargar.TabIndex = 14;
+            this.btnRecargar.Text = "Recargar";
+            this.btnRecargar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
+            // 
             // cmbFiltroArea
             // 
             this.cmbFiltroArea.BackColor = System.Drawing.Color.Transparent;
@@ -503,31 +527,6 @@ namespace appE2Colsis.Vista
             this.gunaLabel6.TabIndex = 12;
             this.gunaLabel6.Text = "Area";
             // 
-            // btnRecargar
-            // 
-            this.btnRecargar.AnimationHoverSpeed = 0.07F;
-            this.btnRecargar.AnimationSpeed = 0.03F;
-            this.btnRecargar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnRecargar.BorderColor = System.Drawing.Color.Black;
-            this.btnRecargar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnRecargar.FocusedColor = System.Drawing.Color.Empty;
-            this.btnRecargar.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecargar.ForeColor = System.Drawing.Color.White;
-            this.btnRecargar.Image = null;
-            this.btnRecargar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnRecargar.Location = new System.Drawing.Point(621, 45);
-            this.btnRecargar.Name = "btnRecargar";
-            this.btnRecargar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnRecargar.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnRecargar.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnRecargar.OnHoverImage = null;
-            this.btnRecargar.OnPressedColor = System.Drawing.Color.Black;
-            this.btnRecargar.Size = new System.Drawing.Size(99, 36);
-            this.btnRecargar.TabIndex = 14;
-            this.btnRecargar.Text = "Recargar";
-            this.btnRecargar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
-            // 
             // frmAsignatura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -539,6 +538,7 @@ namespace appE2Colsis.Vista
             this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.gunaGroupBox2);
             this.Controls.Add(this.gunaGroupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAsignatura";
             this.Text = "frmAsignatura";
             this.Load += new System.EventHandler(this.frmAsignatura_Load);
