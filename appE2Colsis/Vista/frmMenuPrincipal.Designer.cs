@@ -132,7 +132,7 @@ namespace appE2Colsis.Vista
             this.btnNotas.ForeColor = System.Drawing.Color.White;
             this.btnNotas.Image = ((System.Drawing.Image)(resources.GetObject("btnNotas.Image")));
             this.btnNotas.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnNotas.Location = new System.Drawing.Point(35, 396);
+            this.btnNotas.Location = new System.Drawing.Point(32, 376);
             this.btnNotas.Name = "btnNotas";
             this.btnNotas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnNotas.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -159,7 +159,7 @@ namespace appE2Colsis.Vista
             this.btnEstudiante.ForeColor = System.Drawing.Color.White;
             this.btnEstudiante.Image = ((System.Drawing.Image)(resources.GetObject("btnEstudiante.Image")));
             this.btnEstudiante.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnEstudiante.Location = new System.Drawing.Point(38, 286);
+            this.btnEstudiante.Location = new System.Drawing.Point(35, 276);
             this.btnEstudiante.Name = "btnEstudiante";
             this.btnEstudiante.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnEstudiante.OnHoverBorderColor = System.Drawing.Color.Black;

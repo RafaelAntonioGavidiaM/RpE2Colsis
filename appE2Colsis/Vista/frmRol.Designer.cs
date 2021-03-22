@@ -285,7 +285,7 @@
             this.grpEliminarRol.Controls.Add(this.btnSeleccionar);
             this.grpEliminarRol.Controls.Add(this.cmbRol);
             this.grpEliminarRol.Controls.Add(this.gunaLabel1);
-            this.grpEliminarRol.Location = new System.Drawing.Point(341, 187);
+            this.grpEliminarRol.Location = new System.Drawing.Point(11, 172);
             this.grpEliminarRol.Name = "grpEliminarRol";
             this.grpEliminarRol.Size = new System.Drawing.Size(311, 446);
             this.grpEliminarRol.TabIndex = 4;
@@ -408,7 +408,7 @@
             this.grpModificar.Controls.Add(this.btnSeleccionMod);
             this.grpModificar.Controls.Add(this.cmbModificar);
             this.grpModificar.Controls.Add(this.gunaLabel3);
-            this.grpModificar.Location = new System.Drawing.Point(686, 187);
+            this.grpModificar.Location = new System.Drawing.Point(11, 172);
             this.grpModificar.Name = "grpModificar";
             this.grpModificar.Size = new System.Drawing.Size(311, 446);
             this.grpModificar.TabIndex = 5;
@@ -825,8 +825,8 @@
             this.Controls.Add(this.Eliminar);
             this.Controls.Add(this.Modificar);
             this.Controls.Add(this.Crear);
-            this.Controls.Add(this.grpModificar);
             this.Controls.Add(this.grpEliminarRol);
+            this.Controls.Add(this.grpModificar);
             this.Controls.Add(this.dgvDatosPersona);
             this.Controls.Add(this.gunaLabel5);
             this.Controls.Add(this.cmbFiltrar);
