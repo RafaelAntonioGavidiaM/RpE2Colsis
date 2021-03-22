@@ -17,7 +17,7 @@ namespace appE2Colsis
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCurso());
+            Application.Run(new frmLogin());
         }
     }
 }
