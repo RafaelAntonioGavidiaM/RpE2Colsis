@@ -10,6 +10,7 @@ namespace appE2Colsis.Datos
     class clPersona
     {
         //Atributos compartidos
+        public int idPersona  { set; get; }
         public string nombre { set; get; }
         public string apellido { set; get; }
         public string documento { set; get; }
@@ -24,6 +25,8 @@ namespace appE2Colsis.Datos
         public string correoYemail { set; get; }
         public string estado { set; get; }
         public string clave { set; get; }
+
+
 
         //Objetos compartidos
         protected clConexion objConexion = new clConexion();
