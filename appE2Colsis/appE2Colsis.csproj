@@ -62,6 +62,8 @@
     <Compile Include="Datos\clAcudiente.cs" />
     <Compile Include="Datos\clConexion.cs" />
     <Compile Include="Datos\clEstudiante.cs" />
+    <Compile Include="Datos\clCursos.cs" />
+    <Compile Include="Datos\clDocente.cs" />
     <Compile Include="Datos\clLogin.cs" />
     <Compile Include="Datos\clNota.cs" />
     <Compile Include="Datos\clPersona.cs" />
@@ -93,6 +95,18 @@
     </Compile>
     <Compile Include="Vista\Empleado\frmListarAcudientes.Designer.cs">
       <DependentUpon>frmListarAcudientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmCursos.Designer.cs">
+      <DependentUpon>frmCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmFiltrarDocentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmFiltrarDocentes.Designer.cs">
+      <DependentUpon>frmFiltrarDocentes.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmLogin.cs">
       <SubType>Form</SubType>
@@ -145,6 +159,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Empleado\frmListarAcudientes.resx">
       <DependentUpon>frmListarAcudientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmCursos.resx">
+      <DependentUpon>frmCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmFiltrarDocentes.resx">
+      <DependentUpon>frmFiltrarDocentes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
