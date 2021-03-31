@@ -411,6 +411,7 @@ namespace appE2Colsis.Vista
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(1199, 60);
             this.gunaPanel1.TabIndex = 3;
+            
             // 
             // gunaButton1
             // 

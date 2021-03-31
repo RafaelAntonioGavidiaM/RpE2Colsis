@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Datos\clAsignatura.cs" />
     <Compile Include="Datos\clAcudiente.cs" />
+    <Compile Include="Datos\clAsistencia.cs" />
     <Compile Include="Datos\clConexion.cs" />
     <Compile Include="Datos\clEstudiante.cs" />
     <Compile Include="Datos\clCursos.cs" />
@@ -95,6 +96,12 @@
     </Compile>
     <Compile Include="Vista\Empleado\frmListarAcudientes.Designer.cs">
       <DependentUpon>frmListarAcudientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmAsistencia.Designer.cs">
+      <DependentUpon>frmAsistencia.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmCursos.cs">
       <SubType>Form</SubType>
@@ -159,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Empleado\frmListarAcudientes.resx">
       <DependentUpon>frmListarAcudientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmAsistencia.resx">
+      <DependentUpon>frmAsistencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmCursos.resx">
       <DependentUpon>frmCursos.cs</DependentUpon>
