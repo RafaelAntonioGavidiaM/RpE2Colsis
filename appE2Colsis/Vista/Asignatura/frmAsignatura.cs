@@ -283,5 +283,7 @@ namespace appE2Colsis.Vista
             txtId.Clear();
             txtIdArea.Clear();
         }
+
+        
     }
 }

@@ -224,9 +224,7 @@ namespace appE2Colsis.Datos
                 objNota.idNota= int.Parse(resultado.Rows[i][0].ToString());
                 objNota.nombreNota = resultado.Rows[i][1].ToString();
                 objNota.nota = float.Parse( resultado.Rows[i][2].ToString());
-                listaNotas.Add(objNota);
-                
-
+                listaNotas.Add(objNota);               
             }
 
             return listaNotas;
