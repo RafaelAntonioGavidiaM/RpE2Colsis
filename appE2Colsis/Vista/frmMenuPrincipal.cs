@@ -159,5 +159,11 @@ namespace appE2Colsis.Vista
             objAsignaturas.Show();
             mtdCerrarFormulario("frmAsignatura");
         }
+
+        private void gunaPictureBox2_Click(object sender, EventArgs e)
+        {
+            frmPeriodo objPeriodo = new frmPeriodo();
+            objPeriodo.Show();
+        }
     }
 }

@@ -173,7 +173,7 @@ namespace appE2Colsis.Vista
             // 
             this.dgvMostrarNEstudiantes.BackgroundColor = System.Drawing.Color.White;
             this.dgvMostrarNEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMostrarNEstudiantes.Location = new System.Drawing.Point(22, 149);
+            this.dgvMostrarNEstudiantes.Location = new System.Drawing.Point(6, 149);
             this.dgvMostrarNEstudiantes.Name = "dgvMostrarNEstudiantes";
             this.dgvMostrarNEstudiantes.Size = new System.Drawing.Size(626, 359);
             this.dgvMostrarNEstudiantes.TabIndex = 4;
@@ -310,9 +310,9 @@ namespace appE2Colsis.Vista
             this.grpActualizarNota.Controls.Add(this.lblEstudiante);
             this.grpActualizarNota.Controls.Add(this.btnActualizarDB);
             this.grpActualizarNota.Controls.Add(this.dgvEstudianteNotas);
-            this.grpActualizarNota.Location = new System.Drawing.Point(1090, 44);
+            this.grpActualizarNota.Location = new System.Drawing.Point(654, 0);
             this.grpActualizarNota.Name = "grpActualizarNota";
-            this.grpActualizarNota.Size = new System.Drawing.Size(396, 649);
+            this.grpActualizarNota.Size = new System.Drawing.Size(408, 649);
             this.grpActualizarNota.TabIndex = 15;
             this.grpActualizarNota.TabStop = false;
             // 
@@ -322,9 +322,8 @@ namespace appE2Colsis.Vista
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(103, 60);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(105, 20);
+            this.label9.Size = new System.Drawing.Size(0, 20);
             this.label9.TabIndex = 17;
-            this.label9.Text = "Asignar  Nota";
             // 
             // grpCrearNota
             // 
@@ -335,9 +334,9 @@ namespace appE2Colsis.Vista
             this.grpCrearNota.Controls.Add(this.btnRegistrar);
             this.grpCrearNota.Controls.Add(this.cmbAsignatura);
             this.grpCrearNota.Controls.Add(this.cmbCurso);
-            this.grpCrearNota.Location = new System.Drawing.Point(12, 44);
+            this.grpCrearNota.Location = new System.Drawing.Point(14, 547);
             this.grpCrearNota.Name = "grpCrearNota";
-            this.grpCrearNota.Size = new System.Drawing.Size(311, 169);
+            this.grpCrearNota.Size = new System.Drawing.Size(359, 242);
             this.grpCrearNota.TabIndex = 16;
             this.grpCrearNota.TabStop = false;
             // 
@@ -376,10 +375,11 @@ namespace appE2Colsis.Vista
             this.grpFiltroAsignatura.Controls.Add(this.cmbAsignaturaF);
             this.grpFiltroAsignatura.Controls.Add(this.dgvMostrarNEstudiantes);
             this.grpFiltroAsignatura.Controls.Add(this.cmbCursoF);
+            this.grpFiltroAsignatura.Controls.Add(this.grpActualizarNota);
             this.grpFiltroAsignatura.Controls.Add(this.btnBuscar);
             this.grpFiltroAsignatura.Location = new System.Drawing.Point(399, 44);
             this.grpFiltroAsignatura.Name = "grpFiltroAsignatura";
-            this.grpFiltroAsignatura.Size = new System.Drawing.Size(685, 649);
+            this.grpFiltroAsignatura.Size = new System.Drawing.Size(1062, 649);
             this.grpFiltroAsignatura.TabIndex = 17;
             this.grpFiltroAsignatura.TabStop = false;
             // 
@@ -416,9 +416,9 @@ namespace appE2Colsis.Vista
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(243, 64);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(166, 20);
+            this.label5.Size = new System.Drawing.Size(140, 20);
             this.label5.TabIndex = 16;
-            this.label5.Text = "Fiiltro Asignatura Nota";
+            this.label5.Text = "Estudiantes Curso";
             // 
             // btnExportarAN
             // 
@@ -487,7 +487,7 @@ namespace appE2Colsis.Vista
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = null;
             this.btnEliminar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEliminar.Location = new System.Drawing.Point(7, 219);
+            this.btnEliminar.Location = new System.Drawing.Point(265, 21);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnEliminar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -495,7 +495,7 @@ namespace appE2Colsis.Vista
             this.btnEliminar.OnHoverImage = null;
             this.btnEliminar.OnPressedColor = System.Drawing.Color.Black;
             this.btnEliminar.Radius = 10;
-            this.btnEliminar.Size = new System.Drawing.Size(110, 26);
+            this.btnEliminar.Size = new System.Drawing.Size(99, 26);
             this.btnEliminar.TabIndex = 19;
             this.btnEliminar.Text = "Eliminar Nota";
             this.btnEliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -511,9 +511,9 @@ namespace appE2Colsis.Vista
             this.grpEliminarNota.Controls.Add(this.btnEliminarNota);
             this.grpEliminarNota.Controls.Add(this.cmbEliminarA);
             this.grpEliminarNota.Controls.Add(this.cmbEliminarC);
-            this.grpEliminarNota.Location = new System.Drawing.Point(9, 251);
+            this.grpEliminarNota.Location = new System.Drawing.Point(14, 301);
             this.grpEliminarNota.Name = "grpEliminarNota";
-            this.grpEliminarNota.Size = new System.Drawing.Size(338, 169);
+            this.grpEliminarNota.Size = new System.Drawing.Size(359, 242);
             this.grpEliminarNota.TabIndex = 20;
             this.grpEliminarNota.TabStop = false;
             // 
@@ -668,7 +668,7 @@ namespace appE2Colsis.Vista
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Image = null;
             this.btnModificar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnModificar.Location = new System.Drawing.Point(7, 426);
+            this.btnModificar.Location = new System.Drawing.Point(130, 21);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnModificar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -696,9 +696,9 @@ namespace appE2Colsis.Vista
             this.grpModificarNota.Controls.Add(this.gunaButton4);
             this.grpModificarNota.Controls.Add(this.cmbModificarA);
             this.grpModificarNota.Controls.Add(this.cmbModificarC);
-            this.grpModificarNota.Location = new System.Drawing.Point(5, 449);
+            this.grpModificarNota.Location = new System.Drawing.Point(14, 53);
             this.grpModificarNota.Name = "grpModificarNota";
-            this.grpModificarNota.Size = new System.Drawing.Size(359, 244);
+            this.grpModificarNota.Size = new System.Drawing.Size(359, 242);
             this.grpModificarNota.TabIndex = 21;
             this.grpModificarNota.TabStop = false;
             // 
@@ -802,6 +802,7 @@ namespace appE2Colsis.Vista
             this.cmbNotaModificar.Radius = 10;
             this.cmbNotaModificar.Size = new System.Drawing.Size(134, 26);
             this.cmbNotaModificar.TabIndex = 22;
+            this.cmbNotaModificar.SelectedIndexChanged += new System.EventHandler(this.cmbNotaModificar_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -906,9 +907,8 @@ namespace appE2Colsis.Vista
             this.Controls.Add(this.grpEliminarNota);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.grpFiltroAsignatura);
-            this.Controls.Add(this.btnCrear);
-            this.Controls.Add(this.grpActualizarNota);
             this.Controls.Add(this.grpCrearNota);
+            this.Controls.Add(this.btnCrear);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmNota";

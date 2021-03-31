@@ -31,6 +31,7 @@ namespace appE2Colsis.Vista
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.btnAsignaturas = new Guna.UI.WinForms.GunaButton();
             this.btnNotas = new Guna.UI.WinForms.GunaButton();
             this.btnEstudiante = new Guna.UI.WinForms.GunaButton();
@@ -41,6 +42,7 @@ namespace appE2Colsis.Vista
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.pnNombre = new System.Windows.Forms.Panel();
             this.gunaPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,6 +50,7 @@ namespace appE2Colsis.Vista
             // 
             this.gunaPanel1.AutoSize = true;
             this.gunaPanel1.BackColor = System.Drawing.Color.White;
+            this.gunaPanel1.Controls.Add(this.gunaPictureBox2);
             this.gunaPanel1.Controls.Add(this.btnAsignaturas);
             this.gunaPanel1.Controls.Add(this.btnNotas);
             this.gunaPanel1.Controls.Add(this.btnEstudiante);
@@ -60,6 +63,18 @@ namespace appE2Colsis.Vista
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(302, 739);
             this.gunaPanel1.TabIndex = 0;
+            // 
+            // gunaPictureBox2
+            // 
+            this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox2.Image")));
+            this.gunaPictureBox2.Location = new System.Drawing.Point(228, 11);
+            this.gunaPictureBox2.Name = "gunaPictureBox2";
+            this.gunaPictureBox2.Size = new System.Drawing.Size(44, 37);
+            this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox2.TabIndex = 9;
+            this.gunaPictureBox2.TabStop = false;
+            this.gunaPictureBox2.Click += new System.EventHandler(this.gunaPictureBox2_Click);
             // 
             // btnAsignaturas
             // 
@@ -102,7 +117,7 @@ namespace appE2Colsis.Vista
             this.btnNotas.Image = ((System.Drawing.Image)(resources.GetObject("btnNotas.Image")));
             this.btnNotas.ImageSize = new System.Drawing.Size(40, 40);
             this.btnNotas.Location = new System.Drawing.Point(38, 371);
-            this.btnNotas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNotas.Margin = new System.Windows.Forms.Padding(2);
             this.btnNotas.Name = "btnNotas";
             this.btnNotas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnNotas.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -239,7 +254,7 @@ namespace appE2Colsis.Vista
             this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.Black;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
-            this.gunaPictureBox1.Location = new System.Drawing.Point(82, 26);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(100, 26);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
             this.gunaPictureBox1.Radius = 50;
             this.gunaPictureBox1.Size = new System.Drawing.Size(104, 99);
@@ -261,16 +276,17 @@ namespace appE2Colsis.Vista
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1200, 741);
+            this.ClientSize = new System.Drawing.Size(1196, 740);
             this.Controls.Add(this.pnNombre);
             this.Controls.Add(this.gunaPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMenuPrincipal";
             this.Text = "frmMenuPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -289,5 +305,6 @@ namespace appE2Colsis.Vista
         private Guna.UI.WinForms.GunaButton btnNotas;
         private Guna.UI.WinForms.GunaButton btnEstudiante;
         private Guna.UI.WinForms.GunaButton btnAsignaturas;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox2;
     }
 }

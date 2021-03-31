@@ -60,12 +60,14 @@
   <ItemGroup>
     <Compile Include="Datos\clAsignatura.cs" />
     <Compile Include="Datos\clAcudiente.cs" />
+    <Compile Include="Datos\clAsignaturaCurso.cs" />
     <Compile Include="Datos\clConexion.cs" />
     <Compile Include="Datos\clEstudiante.cs" />
     <Compile Include="Datos\clCursos.cs" />
     <Compile Include="Datos\clDocente.cs" />
     <Compile Include="Datos\clLogin.cs" />
     <Compile Include="Datos\clNota.cs" />
+    <Compile Include="Datos\clPeriodo.cs" />
     <Compile Include="Datos\clPersona.cs" />
     <Compile Include="Datos\clRePersonal.cs" />
     <Compile Include="Datos\clReporte.cs" />
@@ -96,6 +98,12 @@
     <Compile Include="Vista\Empleado\frmListarAcudientes.Designer.cs">
       <DependentUpon>frmListarAcudientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\frmAsignaturaCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmAsignaturaCurso.Designer.cs">
+      <DependentUpon>frmAsignaturaCurso.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmCursos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +133,12 @@
     </Compile>
     <Compile Include="Vista\frmNota.Designer.cs">
       <DependentUpon>frmNota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmPeriodo.Designer.cs">
+      <DependentUpon>frmPeriodo.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmRePersonal.cs">
       <SubType>Form</SubType>
@@ -160,6 +174,9 @@
     <EmbeddedResource Include="Vista\Empleado\frmListarAcudientes.resx">
       <DependentUpon>frmListarAcudientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmAsignaturaCurso.resx">
+      <DependentUpon>frmAsignaturaCurso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmCursos.resx">
       <DependentUpon>frmCursos.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmNota.resx">
       <DependentUpon>frmNota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmPeriodo.resx">
+      <DependentUpon>frmPeriodo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmRePersonal.resx">
       <DependentUpon>frmRePersonal.cs</DependentUpon>

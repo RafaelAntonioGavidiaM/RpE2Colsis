@@ -31,7 +31,8 @@ namespace appE2Colsis.Datos
         }
         public void mtdIniciarConexion()
         {
-            try
+            
+           try
             {
                 objConexion.Open();
             }

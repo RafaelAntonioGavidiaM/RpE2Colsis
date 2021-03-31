@@ -29,6 +29,7 @@ namespace appE2Colsis.Vista
         List<clNota> listaNotas = new List<clNota>();
         DataTable estudiantenota = new DataTable();
         clNota objNota = new clNota();
+        List<clNota> listaCursos = new List<clNota>();
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             string nombreNota = txtNombreNota.Text;
@@ -41,6 +42,7 @@ namespace appE2Colsis.Vista
             if (rows > 0)
             {
                 MessageBox.Show("Se registro exitosamente");
+                mtdRecargarLista();
             }
             else
             {
@@ -65,6 +67,7 @@ namespace appE2Colsis.Vista
                 if (opcionSolicitada[i] == valor)
                 {
                     opcionSolicitada[i].Visible = true;
+                    opcionSolicitada[i].Location = new Point(14,53);
 
 
                 }
@@ -79,12 +82,19 @@ namespace appE2Colsis.Vista
 
         }
 
+        public void mtdRecargarLista()
+        {
+            
+            listaCursos = objNota.mtdConsultarCursos();
+
+        }
+
 
         private void frmNota_Load(object sender, EventArgs e)
         {
             objNota.idDocente = idDocente;
-            List<clNota> listaCursos = new List<clNota>();
-            listaCursos = objNota.mtdConsultarCursos();
+            mtdRecargarLista();
+            
             cmbCurso.DataSource = listaCursos;
             cmbAsignatura.DataSource = listaCursos;
             cmbCurso.DisplayMember = "nombreCurso";
@@ -122,8 +132,10 @@ namespace appE2Colsis.Vista
             grpEliminarNota.Visible = false;
             grpActualizarNota.Visible = false;
         }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Recargas las notas actualizadas en el datagriedview
+        /// </summary>
+        public void mtdRecargaNotas() 
         {
             objNota.idAsignatura = int.Parse(cmbAsignaturaF.SelectedValue.ToString());
             objNota.idCurso = int.Parse(cmbCursoF.SelectedValue.ToString());
@@ -131,6 +143,10 @@ namespace appE2Colsis.Vista
 
             estudiantenota = objNota.mtdConsultarNotasDeEstudiantes();
             dgvMostrarNEstudiantes.DataSource = estudiantenota;
+        }
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            mtdRecargaNotas();
          int   contador = 0;
             for (int i = 0; i < dgvMostrarNEstudiantes.Columns.Count; i++)
             {
@@ -211,6 +227,9 @@ namespace appE2Colsis.Vista
 
 
             }
+            grpActualizarNota.Visible = true;
+
+
         }
 
         private void dgvEstudianteNotas_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -255,6 +274,7 @@ namespace appE2Colsis.Vista
             if (rows > 0)
             {
                 MessageBox.Show("Actualizacion de notas Exitosamente", "Succesful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mtdRecargaNotas();
 
             }
             else
@@ -345,6 +365,7 @@ namespace appE2Colsis.Vista
                 if (filasEliminadas > 0)
                 {
                     MessageBox.Show("Se Elimino la Nota y su asignacion a los estudiantes", "Eliminacion Concretada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    mtdRecargarLista();
                 }
                 else
                 {
@@ -413,6 +434,7 @@ namespace appE2Colsis.Vista
             if (rows>0)
             {
                 MessageBox.Show("Nota Modificada Exitosamente", "Succesful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mtdRecargarLista();
 
             }
             else
@@ -429,6 +451,7 @@ namespace appE2Colsis.Vista
         {
             Control valor = grpCrearNota;
             mtdMostrarOpciones(valor);
+            
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -450,6 +473,11 @@ namespace appE2Colsis.Vista
 
             grpActualizarNota.Visible = true;
 
+        }
+
+        private void cmbNotaModificar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtNuevoNombre.Text = cmbNotaModificar.Text;
         }
     }
 }
