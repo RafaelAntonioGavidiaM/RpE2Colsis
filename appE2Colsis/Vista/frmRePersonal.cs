@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using appE2Colsis.Datos;
 using MySql.Data.MySqlClient;
+using System.IO;
 namespace appE2Colsis.Vista
 {
     public partial class frmRePersonal : Form
@@ -24,7 +25,7 @@ namespace appE2Colsis.Vista
         List<clRol> listaRol;
         MySqlConnection objConnection = new MySqlConnection();
         string[] decision = new string[2];
-        
+
         private void frmRePersonal_Load(object sender, EventArgs e)
         {
             mtdCargar();
@@ -34,7 +35,7 @@ namespace appE2Colsis.Vista
             dgvEmpleado.Columns["tipoSangre"].Visible = false;
             dgvEmpleado.Columns["tipoSeguroYseguroMedico"].Visible = false;
             dgvEmpleado.Columns["seguroEstudiantil"].Visible = false;
-            
+
 
             decision[0] = "Habilitado";
             decision[1] = "Desabilitado";
@@ -72,9 +73,10 @@ namespace appE2Colsis.Vista
                 objRePersonal.telefono = txtTelefono.Text;
                 objRePersonal.direccion = txtDireccion.Text;
                 objRePersonal.ciudad = txtCiudad.Text;
-                objRePersonal.correoYemail = txtCorreo.Text;               
+                objRePersonal.correoYemail = txtCorreo.Text;
                 objRePersonal.clave = txtClave.Text;
-                objRePersonal.estado = cmbEstado.Text;               
+                objRePersonal.estado = cmbEstado.Text;
+                objRePersonal.foto = txtFoto.Text;
                 objRePersonal.idRol = int.Parse(cmbRol.SelectedValue.ToString());
 
                 listRePersonal.Add(objRePersonal);
@@ -98,6 +100,12 @@ namespace appE2Colsis.Vista
                 {
                     MessageBox.Show("se realizo el registro exitosamente", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     mtdCargar();
+                    //GUARDA LA IMAGEN EN LA CARPETA 
+                    string ruta = Directory.GetCurrentDirectory() + "\\fotosPersonal\\";
+                    File.Copy(openFoto.FileName, ruta + txtFoto.Text);
+                    
+                  
+
                     mtdBorrarTxt();
                 }
                 else
@@ -135,7 +143,7 @@ namespace appE2Colsis.Vista
             {
                 if (dgvEmpleado.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
-                    
+
                     dgvEmpleado.CurrentRow.Selected = true;
                     idPersona = int.Parse(dgvEmpleado.Rows[e.RowIndex].Cells["idPersonal"].FormattedValue.ToString());
                     txtNombre.Text = dgvEmpleado.Rows[e.RowIndex].Cells["nombre"].FormattedValue.ToString();
@@ -145,7 +153,7 @@ namespace appE2Colsis.Vista
                     txtDireccion.Text = dgvEmpleado.Rows[e.RowIndex].Cells["direccion"].FormattedValue.ToString();
                     txtCiudad.Text = dgvEmpleado.Rows[e.RowIndex].Cells["ciudad"].FormattedValue.ToString();
                     txtCorreo.Text = dgvEmpleado.Rows[e.RowIndex].Cells["correoYemail"].FormattedValue.ToString();
-                     txtClave.Text = dgvEmpleado.Rows[e.RowIndex].Cells["clave"].FormattedValue.ToString();
+                    txtClave.Text = dgvEmpleado.Rows[e.RowIndex].Cells["clave"].FormattedValue.ToString();
                     cmbEstado.Text = dgvEmpleado.Rows[e.RowIndex].Cells["estado"].FormattedValue.ToString();
 
                     string rol = dgvEmpleado.Rows[e.RowIndex].Cells["idRol"].FormattedValue.ToString();
@@ -184,7 +192,7 @@ namespace appE2Colsis.Vista
             int contador = 0;
             for (int i = 0; i < listRePersonal.Count; i++)
             {
-                if (listRePersonal[i].nombre == txtNombre.Text && listRePersonal[i].apellido == txtApellido.Text && listRePersonal[i].documento == txtDocumento.Text && listRePersonal[i].telefono == txtTelefono.Text && listRePersonal[i].direccion == txtDireccion.Text && listRePersonal[i].ciudad == txtCiudad.Text && listRePersonal[i].correoYemail == txtCorreo.Text && listRePersonal[i].clave == txtClave.Text && cmbEstado.SelectedValue.Equals(listRePersonal[i].estado) && cmbRol.SelectedValue.Equals(listRePersonal[i].idRol))
+                if (listRePersonal[i].nombre == txtNombre.Text && listRePersonal[i].apellido == txtApellido.Text && listRePersonal[i].documento == txtDocumento.Text && listRePersonal[i].telefono == txtTelefono.Text && listRePersonal[i].direccion == txtDireccion.Text && listRePersonal[i].ciudad == txtCiudad.Text && listRePersonal[i].correoYemail == txtCorreo.Text && listRePersonal[i].clave == txtClave.Text && cmbEstado.SelectedValue.Equals(listRePersonal[i].estado) && cmbRol.SelectedValue.Equals(listRePersonal[i].idRol) && txtFoto.Text==listRePersonal[i].foto)
                 {
 
                     MessageBox.Show("No se registra ningun cambio");
@@ -206,6 +214,7 @@ namespace appE2Colsis.Vista
                 objRePersonal.direccion = txtDireccion.Text;
                 objRePersonal.ciudad = txtCiudad.Text;
                 objRePersonal.correoYemail = txtCorreo.Text;
+                objRePersonal.foto = txtFoto.Text;
                 objRePersonal.clave = txtClave.Text;
                 objRePersonal.estado = cmbEstado.SelectedValue.ToString();
                 objRePersonal.idRol = int.Parse(cmbRol.SelectedValue.ToString());
@@ -219,6 +228,8 @@ namespace appE2Colsis.Vista
                 {
                     MessageBox.Show("Actualizacion exitosa");
                     mtdCargar();
+                    string ruta = Directory.GetCurrentDirectory() + "\\fotosPersonal\\";
+                    File.Copy(openFoto.FileName, ruta + txtFoto.Text);
                     mtdBorrarTxt();
                 }
                 else
@@ -232,7 +243,7 @@ namespace appE2Colsis.Vista
         {
 
             mtdCargar();
-         
+
 
         }
 
@@ -252,7 +263,7 @@ namespace appE2Colsis.Vista
                 }
             }
 
-            
+
         }
 
         public void mtdBorrarTxt()
@@ -267,6 +278,24 @@ namespace appE2Colsis.Vista
             txtCorreo.Clear();
             txtClave.Clear();
 
+        }
+
+        string extension = "";
+        string registroFoto = "";
+    
+
+        private void btnBuscarFoto_Click(object sender, EventArgs e)
+        {
+            openFoto.Filter = "Image Files(JPG,PNG,GIF)|*.JPG;*.PNG;*.GIF";
+
+            if (openFoto.ShowDialog() == DialogResult.OK)
+            {
+                string url = openFoto.FileName;
+
+                extension = Path.GetExtension(url);
+                txtFoto.Text = txtDocumento.Text + extension;
+                registroFoto = txtFoto.Text;
+            }
         }
     }
 }

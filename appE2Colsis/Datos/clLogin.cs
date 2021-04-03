@@ -15,6 +15,8 @@ namespace appE2Colsis.Datos
         public int idPermiso { get; set; }
 
         public int idPersonal { get; set; }
+
+        public string foto { get; set; }
         /// <summary>
         /// Permite el logueo del usuario en la aplicacion
         /// </summary>
@@ -31,6 +33,7 @@ namespace appE2Colsis.Datos
                 idRol = int.Parse(resultado.Rows[0][2].ToString());
                 idPermiso= int.Parse(resultado.Rows[0][3].ToString());
                 idPersonal= int.Parse(resultado.Rows[0][4].ToString());
+                foto = resultado.Rows[0][5].ToString();
 
 
             }
