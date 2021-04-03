@@ -37,6 +37,7 @@ namespace appE2Colsis.Datos
                 objRePersonal.ciudad = tblPersona.Rows[i]["ciudad"].ToString();
                 objRePersonal.correoYemail = tblPersona.Rows[i]["correo"].ToString();
                 objRePersonal.estado = tblPersona.Rows[i]["estado"].ToString();
+                objRePersonal.foto = tblPersona.Rows[i]["foto"].ToString();
               
                 objRePersonal.idRol = int.Parse(tblPersona.Rows[i]["idRol"].ToString());
                 objRePersonal.clave = tblPersona.Rows[i]["password"].ToString();
@@ -55,7 +56,7 @@ namespace appE2Colsis.Datos
             int resultado = 0;
             foreach (var item in listRePersonal)
             {
-                String consulta = "insert into personal(nombre, apellido, documento, telefono, direccion, ciudad, correo, password, estado, idRol) values('" + item.nombre + "', '" + item.apellido + "', '" + item.documento + "', '" + item.telefono + "', '" + item.direccion + "', '" + item.ciudad + "','" + item.correoYemail + "', '" + item.clave + "','" + item.estado + "', '" + item.idRol + "')";
+                String consulta = "insert into personal(nombre, apellido, documento, telefono, direccion, ciudad, correo, password, estado, idRol,foto) values('" + item.nombre + "', '" + item.apellido + "', '" + item.documento + "', '" + item.telefono + "', '" + item.direccion + "', '" + item.ciudad + "','" + item.correoYemail + "', '" + item.clave + "','" + item.estado + "', '" + item.idRol + "','"+item.foto+"')";
 
 
                 objConexion = new clConexion();
@@ -83,7 +84,7 @@ namespace appE2Colsis.Datos
         {
 
 
-            string consulta = "update personal set nombre='" + nombre + "',apellido= '" + apellido + "', documento='" + documento + "',telefono='" + telefono + "', direccion= '" + direccion + "',ciudad='" + ciudad + "',correo='" + correoYemail + "',password='" + clave + "',estado='" + estado + "',idRol='" + idRol + " ' where idPersonal='"+idPersonal+"'";
+            string consulta = "update personal set nombre='" + nombre + "',apellido= '" + apellido + "', documento='" + documento + "',telefono='" + telefono + "', direccion= '" + direccion + "',ciudad='" + ciudad + "',correo='" + correoYemail + "',password='" + clave + "',estado='" + estado + "',idRol='" + idRol + "',foto= '" + foto + "' where idPersonal='"+idPersonal+"'";
             objConexion = new clConexion();
             int Resultado = objConexion.mtdConectado(consulta);
             return Resultado;

@@ -34,7 +34,7 @@ namespace appE2Colsis.Vista
             }
             else if (objLogin.documento==txtUser.Text && objLogin.password==txtPswd.Text && objLogin.idPermiso==1 )
             {
-                frmMenuPrincipal objFrmMenuP = new frmMenuPrincipal(objLogin.idRol, objLogin.nombre, objLogin.apellido,objLogin.idPersonal);
+                frmMenuPrincipal objFrmMenuP = new frmMenuPrincipal(objLogin.idRol, objLogin.nombre, objLogin.apellido,objLogin.idPersonal,objLogin.foto);
                 objFrmMenuP.Show();
                 this.Hide();
 

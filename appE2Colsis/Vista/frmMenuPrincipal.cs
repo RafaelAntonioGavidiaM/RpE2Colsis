@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using appE2Colsis.Datos;
 using System.Reflection;
 using appE2Colsis.Vista.Empleado;
+using System.IO;
 
 
 namespace appE2Colsis.Vista
@@ -22,13 +23,15 @@ namespace appE2Colsis.Vista
         public string apellido { get; set; }
         public int idPersonal { get; set; }
 
-        public frmMenuPrincipal(int idRol,string nombrePersona,string apellido, int idPersonal)
+        public string foto { get; set; }
+
+        public frmMenuPrincipal(int idRol,string nombrePersona,string apellido, int idPersonal, string foto)
         {
             this.idRol = idRol;
             this.nombrePersona = nombrePersona;
             this.apellido = apellido;
             this.idPersonal = idPersonal;
-
+            this.foto = foto;
 
             InitializeComponent();
         }
@@ -91,6 +94,20 @@ namespace appE2Colsis.Vista
             {
                 mtdVerificaPermisos(nombreFormularioV[i], btn[i]);
             }
+
+            try
+            {
+                string ruta = Directory.GetCurrentDirectory() + "\\fotosPersonal\\" + foto;
+                pbfoto.Load(ruta);
+
+            }
+            catch (Exception)
+            {
+
+               
+            }
+            
+
 
 
         }

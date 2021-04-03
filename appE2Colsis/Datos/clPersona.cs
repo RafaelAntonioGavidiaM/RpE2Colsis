@@ -25,6 +25,7 @@ namespace appE2Colsis.Datos
         public string correoYemail { set; get; }
         public string estado { set; get; }
         public string clave { set; get; }
+        public string foto { get; set; }
 
 
 
