@@ -78,8 +78,9 @@ namespace appE2Colsis.Vista
 
         private void frmMenuPrincipal_Load(object sender, EventArgs e) 
         {
-            string nombrecompleto = nombrePersona + " " + apellido; ///Se agregan formularios y botones
-            lblnombreApellido.Text = nombrecompleto;
+            ///Se agregan formularios y botones
+            lblnombreApellido.Text = nombrePersona;
+            lblApellido.Text= apellido;
             Control[] btn = new Control[3];
             btn[0] = btnPersona;
             btn[1] = btnRol;
@@ -181,6 +182,25 @@ namespace appE2Colsis.Vista
         {
             frmPeriodo objPeriodo = new frmPeriodo();
             objPeriodo.Show();
+        }
+
+        private void btnCurso_Click(object sender, EventArgs e)
+        {
+            frmCurso objCurso = new frmCurso();
+            objCurso.TopLevel = false;
+            objCurso.Parent = pnNombre;
+            objCurso.Show();
+            mtdCerrarFormulario("frmCurso");
+        }
+
+        private void btnAsistencias_Click(object sender, EventArgs e)
+        {
+            frmAsistencia objAsistencia = new frmAsistencia();
+            objAsistencia.TopLevel = false;
+            objAsistencia.Parent = pnNombre;
+            objAsistencia.Show();
+            mtdCerrarFormulario("frmAsistencia");
+
         }
     }
 }

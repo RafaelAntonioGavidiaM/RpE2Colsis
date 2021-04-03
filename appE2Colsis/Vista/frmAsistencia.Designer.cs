@@ -62,11 +62,12 @@ namespace appE2Colsis.Vista
             // 
             this.dgvAsistencia.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAsistencia.Location = new System.Drawing.Point(583, 174);
+            this.dgvAsistencia.Location = new System.Drawing.Point(437, 141);
+            this.dgvAsistencia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvAsistencia.Name = "dgvAsistencia";
             this.dgvAsistencia.RowHeadersWidth = 51;
             this.dgvAsistencia.RowTemplate.Height = 24;
-            this.dgvAsistencia.Size = new System.Drawing.Size(617, 459);
+            this.dgvAsistencia.Size = new System.Drawing.Size(463, 373);
             this.dgvAsistencia.TabIndex = 0;
             this.dgvAsistencia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAsistencia_CellContentClick);
             // 
@@ -81,11 +82,12 @@ namespace appE2Colsis.Vista
             this.cmbCurso.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbCurso.ForeColor = System.Drawing.Color.Black;
             this.cmbCurso.FormattingEnabled = true;
-            this.cmbCurso.Location = new System.Drawing.Point(114, 43);
+            this.cmbCurso.Location = new System.Drawing.Point(86, 35);
+            this.cmbCurso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbCurso.Name = "cmbCurso";
             this.cmbCurso.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbCurso.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cmbCurso.Size = new System.Drawing.Size(392, 31);
+            this.cmbCurso.Size = new System.Drawing.Size(295, 26);
             this.cmbCurso.TabIndex = 1;
             this.cmbCurso.SelectedIndexChanged += new System.EventHandler(this.cmbCurso_SelectedIndexChanged);
             // 
@@ -100,20 +102,22 @@ namespace appE2Colsis.Vista
             this.cmbAsignatura.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbAsignatura.ForeColor = System.Drawing.Color.Black;
             this.cmbAsignatura.FormattingEnabled = true;
-            this.cmbAsignatura.Location = new System.Drawing.Point(114, 80);
+            this.cmbAsignatura.Location = new System.Drawing.Point(86, 65);
+            this.cmbAsignatura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbAsignatura.Name = "cmbAsignatura";
             this.cmbAsignatura.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbAsignatura.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cmbAsignatura.Size = new System.Drawing.Size(392, 31);
+            this.cmbAsignatura.Size = new System.Drawing.Size(295, 26);
             this.cmbAsignatura.TabIndex = 2;
             // 
             // lblCurso
             // 
             this.lblCurso.AutoSize = true;
             this.lblCurso.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurso.Location = new System.Drawing.Point(45, 43);
+            this.lblCurso.Location = new System.Drawing.Point(34, 35);
+            this.lblCurso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCurso.Name = "lblCurso";
-            this.lblCurso.Size = new System.Drawing.Size(60, 31);
+            this.lblCurso.Size = new System.Drawing.Size(45, 24);
             this.lblCurso.TabIndex = 3;
             this.lblCurso.Text = "Curso";
             // 
@@ -121,9 +125,10 @@ namespace appE2Colsis.Vista
             // 
             this.lblAsignatura.AutoSize = true;
             this.lblAsignatura.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsignatura.Location = new System.Drawing.Point(12, 80);
+            this.lblAsignatura.Location = new System.Drawing.Point(9, 65);
+            this.lblAsignatura.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAsignatura.Name = "lblAsignatura";
-            this.lblAsignatura.Size = new System.Drawing.Size(96, 31);
+            this.lblAsignatura.Size = new System.Drawing.Size(73, 24);
             this.lblAsignatura.TabIndex = 4;
             this.lblAsignatura.Text = "Asignatura";
             // 
@@ -131,9 +136,10 @@ namespace appE2Colsis.Vista
             // 
             this.lblAsistencia.AutoSize = true;
             this.lblAsistencia.Font = new System.Drawing.Font("Agency FB", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsistencia.Location = new System.Drawing.Point(507, 10);
+            this.lblAsistencia.Location = new System.Drawing.Point(380, 8);
+            this.lblAsistencia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAsistencia.Name = "lblAsistencia";
-            this.lblAsistencia.Size = new System.Drawing.Size(151, 45);
+            this.lblAsistencia.Size = new System.Drawing.Size(108, 36);
             this.lblAsistencia.TabIndex = 5;
             this.lblAsistencia.Text = "Asistencia";
             // 
@@ -141,9 +147,10 @@ namespace appE2Colsis.Vista
             // 
             this.gunaPanel1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.gunaPanel1.Controls.Add(this.lblAsistencia);
-            this.gunaPanel1.Location = new System.Drawing.Point(-11, -1);
+            this.gunaPanel1.Location = new System.Drawing.Point(-8, -1);
+            this.gunaPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(1225, 71);
+            this.gunaPanel1.Size = new System.Drawing.Size(919, 58);
             this.gunaPanel1.TabIndex = 7;
             // 
             // cmbCursoFiltro
@@ -157,11 +164,12 @@ namespace appE2Colsis.Vista
             this.cmbCursoFiltro.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbCursoFiltro.ForeColor = System.Drawing.Color.Black;
             this.cmbCursoFiltro.FormattingEnabled = true;
-            this.cmbCursoFiltro.Location = new System.Drawing.Point(145, 61);
+            this.cmbCursoFiltro.Location = new System.Drawing.Point(109, 50);
+            this.cmbCursoFiltro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbCursoFiltro.Name = "cmbCursoFiltro";
             this.cmbCursoFiltro.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbCursoFiltro.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cmbCursoFiltro.Size = new System.Drawing.Size(383, 31);
+            this.cmbCursoFiltro.Size = new System.Drawing.Size(288, 26);
             this.cmbCursoFiltro.TabIndex = 8;
             this.cmbCursoFiltro.SelectedIndexChanged += new System.EventHandler(this.cmbCursoFiltro_SelectedIndexChanged);
             // 
@@ -169,9 +177,10 @@ namespace appE2Colsis.Vista
             // 
             this.lblEstudiante.AutoSize = true;
             this.lblEstudiante.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstudiante.Location = new System.Drawing.Point(54, 61);
+            this.lblEstudiante.Location = new System.Drawing.Point(40, 50);
+            this.lblEstudiante.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEstudiante.Name = "lblEstudiante";
-            this.lblEstudiante.Size = new System.Drawing.Size(60, 31);
+            this.lblEstudiante.Size = new System.Drawing.Size(45, 24);
             this.lblEstudiante.TabIndex = 9;
             this.lblEstudiante.Text = "Curso";
             // 
@@ -187,14 +196,15 @@ namespace appE2Colsis.Vista
             this.btnTomarAsistencia.ForeColor = System.Drawing.Color.White;
             this.btnTomarAsistencia.Image = null;
             this.btnTomarAsistencia.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnTomarAsistencia.Location = new System.Drawing.Point(202, 117);
+            this.btnTomarAsistencia.Location = new System.Drawing.Point(152, 95);
+            this.btnTomarAsistencia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTomarAsistencia.Name = "btnTomarAsistencia";
             this.btnTomarAsistencia.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnTomarAsistencia.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnTomarAsistencia.OnHoverForeColor = System.Drawing.Color.White;
             this.btnTomarAsistencia.OnHoverImage = null;
             this.btnTomarAsistencia.OnPressedColor = System.Drawing.Color.Black;
-            this.btnTomarAsistencia.Size = new System.Drawing.Size(152, 43);
+            this.btnTomarAsistencia.Size = new System.Drawing.Size(114, 35);
             this.btnTomarAsistencia.TabIndex = 10;
             this.btnTomarAsistencia.Text = "Tomar Asistencia";
             this.btnTomarAsistencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -211,9 +221,10 @@ namespace appE2Colsis.Vista
             this.gunaGroupBox1.Controls.Add(this.lblCurso);
             this.gunaGroupBox1.Controls.Add(this.lblAsignatura);
             this.gunaGroupBox1.LineColor = System.Drawing.Color.Gainsboro;
-            this.gunaGroupBox1.Location = new System.Drawing.Point(12, 100);
+            this.gunaGroupBox1.Location = new System.Drawing.Point(9, 81);
+            this.gunaGroupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
-            this.gunaGroupBox1.Size = new System.Drawing.Size(547, 178);
+            this.gunaGroupBox1.Size = new System.Drawing.Size(410, 145);
             this.gunaGroupBox1.TabIndex = 12;
             this.gunaGroupBox1.Text = "Nueva Asistencia";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
@@ -222,9 +233,10 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.Location = new System.Drawing.Point(40, 114);
+            this.gunaLabel1.Location = new System.Drawing.Point(30, 93);
+            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(96, 31);
+            this.gunaLabel1.Size = new System.Drawing.Size(73, 24);
             this.gunaLabel1.TabIndex = 13;
             this.gunaLabel1.Text = "Asignatura";
             // 
@@ -239,11 +251,12 @@ namespace appE2Colsis.Vista
             this.cmbFiltroAsignatura.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbFiltroAsignatura.ForeColor = System.Drawing.Color.Black;
             this.cmbFiltroAsignatura.FormattingEnabled = true;
-            this.cmbFiltroAsignatura.Location = new System.Drawing.Point(145, 116);
+            this.cmbFiltroAsignatura.Location = new System.Drawing.Point(109, 94);
+            this.cmbFiltroAsignatura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbFiltroAsignatura.Name = "cmbFiltroAsignatura";
             this.cmbFiltroAsignatura.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbFiltroAsignatura.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cmbFiltroAsignatura.Size = new System.Drawing.Size(383, 31);
+            this.cmbFiltroAsignatura.Size = new System.Drawing.Size(288, 26);
             this.cmbFiltroAsignatura.TabIndex = 14;
             this.cmbFiltroAsignatura.SelectedIndexChanged += new System.EventHandler(this.cmbFiltroAsignatura_SelectedIndexChanged);
             // 
@@ -251,9 +264,10 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(54, 169);
+            this.gunaLabel2.Location = new System.Drawing.Point(40, 137);
+            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(57, 31);
+            this.gunaLabel2.Size = new System.Drawing.Size(44, 24);
             this.gunaLabel2.TabIndex = 15;
             this.gunaLabel2.Text = "Fecha";
             // 
@@ -270,9 +284,10 @@ namespace appE2Colsis.Vista
             this.gunaGroupBox2.Controls.Add(this.cmbFiltroAsignatura);
             this.gunaGroupBox2.Controls.Add(this.gunaLabel1);
             this.gunaGroupBox2.LineColor = System.Drawing.Color.Gainsboro;
-            this.gunaGroupBox2.Location = new System.Drawing.Point(12, 296);
+            this.gunaGroupBox2.Location = new System.Drawing.Point(9, 240);
+            this.gunaGroupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gunaGroupBox2.Name = "gunaGroupBox2";
-            this.gunaGroupBox2.Size = new System.Drawing.Size(547, 279);
+            this.gunaGroupBox2.Size = new System.Drawing.Size(410, 227);
             this.gunaGroupBox2.TabIndex = 16;
             this.gunaGroupBox2.Text = "Busqueda de asistencia ";
             this.gunaGroupBox2.TextLocation = new System.Drawing.Point(10, 8);
@@ -288,11 +303,12 @@ namespace appE2Colsis.Vista
             this.cmbFechaFiltro.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbFechaFiltro.ForeColor = System.Drawing.Color.Black;
             this.cmbFechaFiltro.FormattingEnabled = true;
-            this.cmbFechaFiltro.Location = new System.Drawing.Point(145, 174);
+            this.cmbFechaFiltro.Location = new System.Drawing.Point(109, 141);
+            this.cmbFechaFiltro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbFechaFiltro.Name = "cmbFechaFiltro";
             this.cmbFechaFiltro.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbFechaFiltro.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cmbFechaFiltro.Size = new System.Drawing.Size(383, 31);
+            this.cmbFechaFiltro.Size = new System.Drawing.Size(288, 26);
             this.cmbFechaFiltro.TabIndex = 17;
             // 
             // btnBuscarAsistencia
@@ -307,14 +323,15 @@ namespace appE2Colsis.Vista
             this.btnBuscarAsistencia.ForeColor = System.Drawing.Color.White;
             this.btnBuscarAsistencia.Image = null;
             this.btnBuscarAsistencia.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnBuscarAsistencia.Location = new System.Drawing.Point(202, 222);
+            this.btnBuscarAsistencia.Location = new System.Drawing.Point(152, 180);
+            this.btnBuscarAsistencia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscarAsistencia.Name = "btnBuscarAsistencia";
             this.btnBuscarAsistencia.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnBuscarAsistencia.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnBuscarAsistencia.OnHoverForeColor = System.Drawing.Color.White;
             this.btnBuscarAsistencia.OnHoverImage = null;
             this.btnBuscarAsistencia.OnPressedColor = System.Drawing.Color.Black;
-            this.btnBuscarAsistencia.Size = new System.Drawing.Size(160, 42);
+            this.btnBuscarAsistencia.Size = new System.Drawing.Size(120, 34);
             this.btnBuscarAsistencia.TabIndex = 16;
             this.btnBuscarAsistencia.Text = "Buscar";
             this.btnBuscarAsistencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -324,9 +341,10 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(610, 86);
+            this.gunaLabel4.Location = new System.Drawing.Point(458, 70);
+            this.gunaLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(74, 31);
+            this.gunaLabel4.Size = new System.Drawing.Size(56, 24);
             this.gunaLabel4.TabIndex = 11;
             this.gunaLabel4.Text = "Nombre";
             // 
@@ -334,9 +352,10 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel5.AutoSize = true;
             this.gunaLabel5.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel5.Location = new System.Drawing.Point(610, 129);
+            this.gunaLabel5.Location = new System.Drawing.Point(458, 105);
+            this.gunaLabel5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(73, 31);
+            this.gunaLabel5.Size = new System.Drawing.Size(56, 24);
             this.gunaLabel5.TabIndex = 12;
             this.gunaLabel5.Text = "Apellido";
             // 
@@ -349,11 +368,12 @@ namespace appE2Colsis.Vista
             this.txtNombre.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtNombre.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNombre.Location = new System.Drawing.Point(701, 84);
+            this.txtNombre.Location = new System.Drawing.Point(526, 68);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PasswordChar = '\0';
             this.txtNombre.SelectedText = "";
-            this.txtNombre.Size = new System.Drawing.Size(285, 32);
+            this.txtNombre.Size = new System.Drawing.Size(214, 26);
             this.txtNombre.TabIndex = 17;
             // 
             // txtApellido
@@ -365,11 +385,12 @@ namespace appE2Colsis.Vista
             this.txtApellido.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtApellido.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtApellido.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtApellido.Location = new System.Drawing.Point(701, 129);
+            this.txtApellido.Location = new System.Drawing.Point(526, 105);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.PasswordChar = '\0';
             this.txtApellido.SelectedText = "";
-            this.txtApellido.Size = new System.Drawing.Size(285, 32);
+            this.txtApellido.Size = new System.Drawing.Size(214, 26);
             this.txtApellido.TabIndex = 18;
             // 
             // btnAsistio
@@ -384,14 +405,15 @@ namespace appE2Colsis.Vista
             this.btnAsistio.ForeColor = System.Drawing.Color.White;
             this.btnAsistio.Image = null;
             this.btnAsistio.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAsistio.Location = new System.Drawing.Point(1013, 86);
+            this.btnAsistio.Location = new System.Drawing.Point(760, 70);
+            this.btnAsistio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAsistio.Name = "btnAsistio";
             this.btnAsistio.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnAsistio.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnAsistio.OnHoverForeColor = System.Drawing.Color.White;
             this.btnAsistio.OnHoverImage = null;
             this.btnAsistio.OnPressedColor = System.Drawing.Color.Black;
-            this.btnAsistio.Size = new System.Drawing.Size(145, 31);
+            this.btnAsistio.Size = new System.Drawing.Size(109, 25);
             this.btnAsistio.TabIndex = 19;
             this.btnAsistio.Text = "Asistio";
             this.btnAsistio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -409,14 +431,15 @@ namespace appE2Colsis.Vista
             this.btnFalto.ForeColor = System.Drawing.Color.White;
             this.btnFalto.Image = null;
             this.btnFalto.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnFalto.Location = new System.Drawing.Point(1013, 130);
+            this.btnFalto.Location = new System.Drawing.Point(760, 106);
+            this.btnFalto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFalto.Name = "btnFalto";
             this.btnFalto.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnFalto.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnFalto.OnHoverForeColor = System.Drawing.Color.White;
             this.btnFalto.OnHoverImage = null;
             this.btnFalto.OnPressedColor = System.Drawing.Color.Black;
-            this.btnFalto.Size = new System.Drawing.Size(145, 31);
+            this.btnFalto.Size = new System.Drawing.Size(109, 25);
             this.btnFalto.TabIndex = 21;
             this.btnFalto.Text = "Falto";
             this.btnFalto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -424,9 +447,10 @@ namespace appE2Colsis.Vista
             // 
             // frmAsistencia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1212, 645);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(909, 524);
             this.Controls.Add(this.btnFalto);
             this.Controls.Add(this.btnAsistio);
             this.Controls.Add(this.txtApellido);
@@ -437,6 +461,8 @@ namespace appE2Colsis.Vista
             this.Controls.Add(this.gunaGroupBox1);
             this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.dgvAsistencia);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmAsistencia";
             this.Text = "frmAsistencia";
             this.Load += new System.EventHandler(this.frmAsistencia_Load);

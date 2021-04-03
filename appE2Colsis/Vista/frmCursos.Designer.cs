@@ -342,9 +342,12 @@ namespace appE2Colsis.Vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.lbCursos);
             this.Controls.Add(this.gunaGroupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCurso";
             this.Load += new System.EventHandler(this.frmCursos_Load);
             this.gunaGroupBox1.ResumeLayout(false);

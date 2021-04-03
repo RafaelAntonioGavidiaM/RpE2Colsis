@@ -210,23 +210,34 @@ namespace appE2Colsis.Vista
 
         private void dgvMostrarNEstudiantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            if (dgvMostrarNEstudiantes.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            try
             {
-                dgvMostrarNEstudiantes.CurrentRow.Selected = true;
-                Curso = int.Parse(dgvMostrarNEstudiantes.Rows[e.RowIndex].Cells[0].FormattedValue.ToString());
-                Asignatura = int.Parse(dgvMostrarNEstudiantes.Rows[e.RowIndex].Cells[1].FormattedValue.ToString());
-                Estudiante = int.Parse(dgvMostrarNEstudiantes.Rows[e.RowIndex].Cells[2].FormattedValue.ToString());
-                lblEstudiante.Text = (dgvMostrarNEstudiantes.Rows[e.RowIndex].Cells[3].FormattedValue.ToString() + " " + dgvMostrarNEstudiantes.Rows[e.RowIndex].Cells[4].FormattedValue.ToString());
+                if (dgvMostrarNEstudiantes.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dgvMostrarNEstudiantes.CurrentRow.Selected = true;
+                    Curso = int.Parse(dgvMostrarNEstudiantes.Rows[e.RowIndex].Cells[0].FormattedValue.ToString());
+                    Asignatura = int.Parse(dgvMostrarNEstudiantes.Rows[e.RowIndex].Cells[1].FormattedValue.ToString());
+                    Estudiante = int.Parse(dgvMostrarNEstudiantes.Rows[e.RowIndex].Cells[2].FormattedValue.ToString());
+                    lblEstudiante.Text = (dgvMostrarNEstudiantes.Rows[e.RowIndex].Cells[3].FormattedValue.ToString() + " " + dgvMostrarNEstudiantes.Rows[e.RowIndex].Cells[4].FormattedValue.ToString());
 
 
-                mtdCargarDgvM();
+                    mtdCargarDgvM();
 
 
 
+
+
+                }
 
 
             }
+            catch (Exception)
+            {
+
+                
+            }
+
+          
             grpActualizarNota.Visible = true;
 
 

@@ -284,6 +284,10 @@ namespace appE2Colsis.Vista
             txtIdArea.Clear();
         }
 
-        
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            frmAsignaturaCurso objAsignaturaCurso = new frmAsignaturaCurso();
+            objAsignaturaCurso.Show();
+        }
     }
 }

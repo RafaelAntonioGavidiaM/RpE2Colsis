@@ -23,7 +23,7 @@ namespace appE2Colsis.Datos
         /// 
         public void mtdLogin()
         {
-            string consulta = "select personal.nombre,personal.apellido,personal.idRol,rol_permiso.idPermiso,personal.idPersonal from personal inner join rol on personal.idRol = rol.idRol inner join rol_permiso on rol.idRol = rol_permiso.idRol  inner join formulario on rol_permiso.nombreFormulario=formulario.idFormulario where  formulario.nombreFormulario ='frmLogin' and rol_permiso.idPermiso = 1 and personal.documento ='" + documento+"' and personal.password ='"+password+"'" ;
+            string consulta ="select personal.nombre,personal.apellido,personal.idRol,rol_permiso.idPermiso,personal.idPersonal,personal.foto from personal inner join rol on personal.idRol = rol.idRol inner join rol_permiso on rol.idRol = rol_permiso.idRol  inner join formulario on rol_permiso.nombreFormulario = formulario.idFormulario where formulario.nombreFormulario = 'frmLogin' and rol_permiso.idPermiso = 1 and personal.documento = '"+ documento+"' and personal.password = '"+password+"'";
             DataTable resultado = new DataTable();
             resultado =objConexion.mtdDesconectado(consulta);
             try

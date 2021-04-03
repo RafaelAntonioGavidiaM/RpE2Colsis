@@ -47,7 +47,7 @@ namespace appE2Colsis.Datos
                          "inner join periodo pe on nota.idPeriodo = pe.idPeriodo " +
                          "inner join asignatura asi on nota.idAsignatura = asi.idAsignatura " +
                          "inner join personal doc on nota.idDocente = doc.idPersonal " +
-                         "inner join asignaturaNota asn on asn.idNota = nota.idNota and asn.idEstudiante = es.idEstudiante " +
+                         "inner join asignaturanota asn on asn.idNota = nota.idNota and asn.idEstudiante = es.idEstudiante " +
                          "where es.idEstudiante = " + idEstudiante + " and nota.idPeriodo = " + idPeriodo;
 
 
@@ -65,7 +65,7 @@ namespace appE2Colsis.Datos
                          "inner join periodo pe on nota.idPeriodo = pe.idPeriodo " +
                          "inner join asignatura asi on nota.idAsignatura = asi.idAsignatura " +
                          "inner join personal doc on nota.idDocente = doc.idPersonal " +
-                         "inner join asignaturaNota asn on asn.idNota = nota.idNota and asn.idEstudiante = es.idEstudiante " +
+                         "inner join asignaturanota asn on asn.idNota = nota.idNota and asn.idEstudiante = es.idEstudiante " +
                          "where cu.idCurso = " + idCursoP + " and nota.idPeriodo = " +idPeriodoP+"";
 
             DataTable resultado = new DataTable();

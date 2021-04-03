@@ -73,6 +73,7 @@ namespace appE2Colsis.Vista
             this.lbEstudiantes.Name = "lbEstudiantes";
             this.lbEstudiantes.Size = new System.Drawing.Size(292, 251);
             this.lbEstudiantes.TabIndex = 23;
+           
             // 
             // cmbPeriodo
             // 
