@@ -104,7 +104,8 @@ namespace appE2Colsis.Vista
                 if (opcionSolicitada[i]==valor)
                 {
                     opcionSolicitada[i].Visible = true;
-                    
+                    opcionSolicitada[i].Location = new Point(12, 172);
+
 
                 }
                 else
@@ -207,11 +208,8 @@ namespace appE2Colsis.Vista
 
         public void mtdListarDecisionPermiso()
         {
-            string[] formularios = new string[4]; // Añadir formularios
-            formularios[0] = "frmLogin";
-            formularios[1] = "frmRol";
-            formularios[2] = "frmRepersonal";
-            formularios[3] = "frmReporte";
+            List<clRol> listaFormularios = new List<clRol>();
+           listaFormularios= objRol.mtdListarFormularios();
 
             decision[0] = "Habilitado";
             decision[1] = "Desabilitado";
@@ -220,10 +218,11 @@ namespace appE2Colsis.Vista
 
 
 
-            for (int i = 0; i < formularios.Length; i++)
+            for (int i = 0; i < listaFormularios.Count; i++)
             {
                 clRol objRolPermiso = new clRol();
-                objRolPermiso.nombreFormulario = formularios[i];
+                objRolPermiso.idFormulario = listaFormularios[i].idFormulario;
+                objRolPermiso.nombreFormulario =listaFormularios[i].nombreFormulario;
                 objRolPermiso.nombrePermiso = decision[0].ToString();
                 permisos.Add(objRolPermiso);
 
@@ -434,8 +433,10 @@ namespace appE2Colsis.Vista
 
         private void cmbModificar_SelectedIndexChanged(object sender, EventArgs e)
         {
-         //   int idRol = 0;
-           objRol.nombreRol= cmbModificar.Text;
+            //   int idRol = 0;
+             objRol.nombreRol= cmbModificar.Text;
+            
+            
            
            listaModificar= objRol.mtdColsutarPermisosRoles(); //lista se carga con los valores solicitados
             foreach (var item in listaModificar)
@@ -565,8 +566,9 @@ namespace appE2Colsis.Vista
         private void cmbFiltrar_SelectedIndexChanged(object sender, EventArgs e)
         {
             string nombreRol = cmbFiltrar.Text;
-            
 
+
+            dgvDatosPersona.Rows.Clear();
 
             listaRolFiltrar= objRol.mtdFiltrar(nombreRol);
             try
@@ -617,6 +619,11 @@ namespace appE2Colsis.Vista
         private void btnSeleccionMod_Click(object sender, EventArgs e)
         {
             grpSeccionMod.Visible = true;
+        }
+
+        private void grpModificar_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

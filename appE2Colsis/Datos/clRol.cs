@@ -18,6 +18,10 @@ namespace appE2Colsis.Datos
 
         public string estadoPersona { get; set; } //usado solo para filtrar
 
+        public int idFormulario { get; set; }
+
+       
+
         /// <summary>
         /// Metodo Registrar Rol con solo nombre.
         /// </summary>
@@ -40,7 +44,7 @@ namespace appE2Colsis.Datos
         
         public int mtdAccesoModulos(int idPersonal,string nombreFormularioP)
         {
-            string consulta= "select count(rol_permiso.idPermiso) from personal inner join rol on personal.idRol = rol.idRol inner join rol_permiso on rol.idRol = rol_permiso.idRol where personal.idPersonal ="+idPersonal+" and rol_permiso.nombreFormulario = '"+nombreFormularioP+"' and rol_permiso.idPermiso = 1";
+            string consulta= "select count(rol_permiso.idPermiso) from personal inner join rol on personal.idRol = rol.idRol inner join rol_permiso on rol.idRol = rol_permiso.idRol inner join formulario on rol_permiso.nombreFormulario=formulario.idFormulario where personal.idPersonal ="+idPersonal+" and formulario.nombreFormulario = '"+nombreFormularioP+"' and rol_permiso.idPermiso = 1";
 
             DataTable resultado = new DataTable();
             resultado= objConexion.mtdDesconectado(consulta);
@@ -103,7 +107,7 @@ namespace appE2Colsis.Datos
         /// </summary>
         public List<clRol> mtdColsutarPermisosRoles()
         {
-            string consulta = "select rol.idRol, rol.nombre,rol_permiso.nombreFormulario,rol_permiso.idPermiso,permiso.nombrePermiso from rol_permiso inner join permiso on rol_permiso.idPermiso=permiso.idPermiso inner join rol on rol_permiso.idRol=rol.idRol where rol.nombre='" + nombreRol + "'";
+            string consulta = "select rol.idRol, rol.nombre,formulario.nombreFormulario,rol_permiso.idPermiso,permiso.nombrePermiso,formulario.idFormulario from rol_permiso inner join permiso on rol_permiso.idPermiso=permiso.idPermiso inner join rol on rol_permiso.idRol=rol.idRol  inner join formulario on rol_permiso.nombreFormulario=formulario.idFormulario where rol.nombre='" + nombreRol + "'";
             DataTable resultado = new DataTable();
             resultado = objConexion.mtdDesconectado(consulta);
             List<clRol> listaRol = new List<clRol>();
@@ -115,6 +119,7 @@ namespace appE2Colsis.Datos
                 objRol.nombreFormulario = resultado.Rows[i][2].ToString();
                 objRol.idPermiso = int.Parse(resultado.Rows[i][3].ToString());
                 objRol.nombrePermiso = resultado.Rows[i][4].ToString();
+                objRol.idFormulario= int.Parse(resultado.Rows[i][5].ToString());
 
                 listaRol.Add(objRol);
             }
@@ -134,7 +139,7 @@ namespace appE2Colsis.Datos
 
             foreach (var item in lista)
             {
-                consulta = "insert into rol_permiso (idRol,nombreFormulario,idPermiso) values ('" + idRolCrear + "','" + item.nombreFormulario + "','" + item.idPermiso + "')";
+                consulta = "insert into rol_permiso (idRol,nombreFormulario,idPermiso) values ('" + idRolCrear + "','" + item.idFormulario + "','" + item.idPermiso + "')";
                 rows = objConexion.mtdConectado(consulta);
                 rows = rows + rows;
 
@@ -181,7 +186,7 @@ namespace appE2Colsis.Datos
 
             foreach (var item in lista)
             {
-             string consultaTblRolPermiso ="Update  rol_permiso set nombreFormulario='"+item.nombreFormulario+"',idPermiso='"+item.idPermiso+"' where nombreFormulario='"+item.nombreFormulario+"' and idRol="+idRolM+" ";//Actualiza la informacion de la tabla rol_permiso
+             string consultaTblRolPermiso ="Update  rol_permiso set nombreFormulario='"+item.idFormulario+"',idPermiso='"+item.idPermiso+"' where nombreFormulario='"+item.idFormulario+"' and idRol="+idRolM+" ";//Actualiza la informacion de la tabla rol_permiso
 
                 rows = objConexion.mtdConectado(consultaTblRolPermiso);
                 rows = rows + rows;
@@ -234,6 +239,31 @@ namespace appE2Colsis.Datos
 
 
         }
+
+        public List<clRol> mtdListarFormularios()
+        {
+            string consulta=" select * from formulario";
+            DataTable resultado = new DataTable();
+           resultado= objConexion.mtdDesconectado(consulta);
+            List<clRol> listaFormularios = new List<clRol>();
+            for (int i = 0; i < resultado.Rows.Count; i++)
+            {
+                clRol objAdd = new clRol();
+                objAdd.idFormulario = int.Parse(resultado.Rows[i][0].ToString());
+                objAdd.nombreFormulario=resultado.Rows[i][1].ToString();
+
+
+                listaFormularios.Add(objAdd);
+
+
+            }
+
+            return listaFormularios;
+
+
+
+        }
+
 
 
 

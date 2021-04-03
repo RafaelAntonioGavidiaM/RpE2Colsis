@@ -153,7 +153,7 @@
             this.grpCrear.Controls.Add(this.gunaButton1);
             this.grpCrear.Controls.Add(this.lblRol);
             this.grpCrear.Controls.Add(this.txtRol);
-            this.grpCrear.Location = new System.Drawing.Point(11, 172);
+            this.grpCrear.Location = new System.Drawing.Point(12, 172);
             this.grpCrear.Name = "grpCrear";
             this.grpCrear.Size = new System.Drawing.Size(312, 446);
             this.grpCrear.TabIndex = 3;
@@ -285,7 +285,7 @@
             this.grpEliminarRol.Controls.Add(this.btnSeleccionar);
             this.grpEliminarRol.Controls.Add(this.cmbRol);
             this.grpEliminarRol.Controls.Add(this.gunaLabel1);
-            this.grpEliminarRol.Location = new System.Drawing.Point(11, 172);
+            this.grpEliminarRol.Location = new System.Drawing.Point(1010, 172);
             this.grpEliminarRol.Name = "grpEliminarRol";
             this.grpEliminarRol.Size = new System.Drawing.Size(311, 446);
             this.grpEliminarRol.TabIndex = 4;
@@ -408,11 +408,12 @@
             this.grpModificar.Controls.Add(this.btnSeleccionMod);
             this.grpModificar.Controls.Add(this.cmbModificar);
             this.grpModificar.Controls.Add(this.gunaLabel3);
-            this.grpModificar.Location = new System.Drawing.Point(11, 172);
+            this.grpModificar.Location = new System.Drawing.Point(1010, 172);
             this.grpModificar.Name = "grpModificar";
             this.grpModificar.Size = new System.Drawing.Size(311, 446);
             this.grpModificar.TabIndex = 5;
             this.grpModificar.TabStop = false;
+            this.grpModificar.Enter += new System.EventHandler(this.grpModificar_Enter);
             // 
             // grpSeccionMod
             // 
@@ -820,13 +821,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1170, 689);
+            this.ClientSize = new System.Drawing.Size(1385, 753);
             this.Controls.Add(this.gunaLabel6);
             this.Controls.Add(this.Eliminar);
             this.Controls.Add(this.Modificar);
             this.Controls.Add(this.Crear);
-            this.Controls.Add(this.grpEliminarRol);
             this.Controls.Add(this.grpModificar);
+            this.Controls.Add(this.grpEliminarRol);
             this.Controls.Add(this.dgvDatosPersona);
             this.Controls.Add(this.gunaLabel5);
             this.Controls.Add(this.cmbFiltrar);

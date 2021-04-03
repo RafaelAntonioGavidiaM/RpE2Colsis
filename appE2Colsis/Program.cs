@@ -20,6 +20,6 @@ namespace appE2Colsis
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
            
-        }
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
     }
 }
