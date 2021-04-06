@@ -31,20 +31,20 @@ namespace appE2Colsis.Vista
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.lblApellido = new Guna.UI.WinForms.GunaLabel();
-            this.lblnombreApellido = new Guna.UI.WinForms.GunaLabel();
-            this.pnNombre = new System.Windows.Forms.Panel();
             this.btnHorario = new Guna.UI.WinForms.GunaButton();
             this.btnAsistencias = new Guna.UI.WinForms.GunaButton();
             this.btnCurso = new Guna.UI.WinForms.GunaButton();
+            this.lblApellido = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.btnAsignaturas = new Guna.UI.WinForms.GunaButton();
             this.btnNotas = new Guna.UI.WinForms.GunaButton();
             this.btnEstudiante = new Guna.UI.WinForms.GunaButton();
             this.btnReporte = new Guna.UI.WinForms.GunaButton();
+            this.lblnombreApellido = new Guna.UI.WinForms.GunaLabel();
             this.btnRol = new Guna.UI.WinForms.GunaButton();
             this.btnPersona = new Guna.UI.WinForms.GunaButton();
             this.pbfoto = new Guna.UI.WinForms.GunaPictureBox();
+            this.pnNombre = new System.Windows.Forms.Panel();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbfoto)).BeginInit();
@@ -73,38 +73,6 @@ namespace appE2Colsis.Vista
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(302, 828);
             this.gunaPanel1.TabIndex = 0;
-            // 
-            // lblApellido
-            // 
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(79, 207);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(121, 22);
-            this.lblApellido.TabIndex = 10;
-            this.lblApellido.Text = "gunaLabel1";
-            // 
-            // lblnombreApellido
-            // 
-            this.lblnombreApellido.AutoSize = true;
-            this.lblnombreApellido.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnombreApellido.Location = new System.Drawing.Point(79, 172);
-            this.lblnombreApellido.Name = "lblnombreApellido";
-            this.lblnombreApellido.Size = new System.Drawing.Size(121, 22);
-            this.lblnombreApellido.TabIndex = 5;
-            this.lblnombreApellido.Text = "gunaLabel1";
-            // 
-            // pnNombre
-            // 
-            this.pnNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnNombre.AutoSize = true;
-            this.pnNombre.BackColor = System.Drawing.Color.White;
-            this.pnNombre.Location = new System.Drawing.Point(280, 2);
-            this.pnNombre.Name = "pnNombre";
-            this.pnNombre.Size = new System.Drawing.Size(1267, 831);
-            this.pnNombre.TabIndex = 1;
             // 
             // btnHorario
             // 
@@ -186,6 +154,16 @@ namespace appE2Colsis.Vista
             this.btnCurso.Text = "Curso";
             this.btnCurso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnCurso.Click += new System.EventHandler(this.btnCurso_Click);
+            // 
+            // lblApellido
+            // 
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido.Location = new System.Drawing.Point(79, 207);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(121, 22);
+            this.lblApellido.TabIndex = 10;
+            this.lblApellido.Text = "gunaLabel1";
             // 
             // gunaPictureBox2
             // 
@@ -308,6 +286,16 @@ namespace appE2Colsis.Vista
             this.btnReporte.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
+            // lblnombreApellido
+            // 
+            this.lblnombreApellido.AutoSize = true;
+            this.lblnombreApellido.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombreApellido.Location = new System.Drawing.Point(79, 172);
+            this.lblnombreApellido.Name = "lblnombreApellido";
+            this.lblnombreApellido.Size = new System.Drawing.Size(121, 22);
+            this.lblnombreApellido.TabIndex = 5;
+            this.lblnombreApellido.Text = "gunaLabel1";
+            // 
             // btnRol
             // 
             this.btnRol.AnimationHoverSpeed = 0.07F;
@@ -375,12 +363,24 @@ namespace appE2Colsis.Vista
             this.pbfoto.TabIndex = 0;
             this.pbfoto.TabStop = false;
             // 
+            // pnNombre
+            // 
+            this.pnNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnNombre.AutoSize = true;
+            this.pnNombre.BackColor = System.Drawing.Color.White;
+            this.pnNombre.Location = new System.Drawing.Point(280, 2);
+            this.pnNombre.Name = "pnNombre";
+            this.pnNombre.Size = new System.Drawing.Size(1267, 831);
+            this.pnNombre.TabIndex = 1;
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1547, 828);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.pnNombre);
             this.Controls.Add(this.gunaPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);

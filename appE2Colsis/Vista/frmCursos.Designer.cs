@@ -68,14 +68,14 @@ namespace appE2Colsis.Vista
             // 
             this.gunaGroupBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaGroupBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaGroupBox1.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gunaGroupBox1.BorderColor = System.Drawing.Color.White;
             this.gunaGroupBox1.Controls.Add(this.groupBox3);
             this.gunaGroupBox1.Controls.Add(this.groupBox1);
             this.gunaGroupBox1.Controls.Add(this.btnEliminar);
             this.gunaGroupBox1.Controls.Add(this.btnRegistrar);
             this.gunaGroupBox1.Controls.Add(this.btnModificar);
             this.gunaGroupBox1.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaGroupBox1.LineColor = System.Drawing.Color.Gainsboro;
+            this.gunaGroupBox1.LineColor = System.Drawing.Color.DodgerBlue;
             this.gunaGroupBox1.Location = new System.Drawing.Point(11, 41);
             this.gunaGroupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
@@ -212,7 +212,7 @@ namespace appE2Colsis.Vista
             this.groupBox1.Controls.Add(this.dvgCursos);
             this.groupBox1.Location = new System.Drawing.Point(401, 34);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(360, 370);
+            this.groupBox1.Size = new System.Drawing.Size(377, 381);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listar Cursos";
@@ -256,7 +256,7 @@ namespace appE2Colsis.Vista
             this.dvgCursos.Location = new System.Drawing.Point(6, 84);
             this.dvgCursos.Name = "dvgCursos";
             this.dvgCursos.ReadOnly = true;
-            this.dvgCursos.Size = new System.Drawing.Size(348, 279);
+            this.dvgCursos.Size = new System.Drawing.Size(368, 283);
             this.dvgCursos.TabIndex = 0;
             this.dvgCursos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgCursos_CellClick);
             // 
@@ -343,7 +343,8 @@ namespace appE2Colsis.Vista
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(827, 481);
             this.ControlBox = false;
             this.Controls.Add(this.lbCursos);
             this.Controls.Add(this.gunaGroupBox1);
