@@ -30,26 +30,37 @@ namespace appE2Colsis.Vista
         DataTable estudiantenota = new DataTable();
         clNota objNota = new clNota();
         List<clNota> listaCursos = new List<clNota>();
+        List<clNota> listaNombresNotas = new List<clNota>();
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            string nombreNota = txtNombreNota.Text;
-            nombreNota = nombreNota.Replace(" ", String.Empty);
-            objNota.nombreNota = nombreNota;
-            objNota.idAsignatura = int.Parse(cmbAsignatura.SelectedValue.ToString());
-            objNota.idCurso = int.Parse(cmbCurso.SelectedValue.ToString());
-            objNota.idDocente = idDocente;
-            int rows = objNota.mtdRegistrarNota();
-            if (rows > 0)
+            if (txtNombreNota.Text==null || txtNombreNota.Text=="")
             {
-                MessageBox.Show("Se registro exitosamente");
-                mtdRecargarLista();
+                MessageBox.Show("No es posible ingresar una nota con valor nulo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("No se pudo Registrar");
+                string nombreNota = txtNombreNota.Text;
+                nombreNota = nombreNota.Replace(" ", String.Empty);
+                objNota.nombreNota = nombreNota;
+                objNota.idAsignatura = int.Parse(cmbAsignatura.SelectedValue.ToString());
+                objNota.idCurso = int.Parse(cmbCurso.SelectedValue.ToString());
+                objNota.idDocente = idDocente;
+                int rows = objNota.mtdRegistrarNota();
+                if (rows > 0)
+                {
+                    MessageBox.Show("Se registro exitosamente");
+                    mtdRecargarLista();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo Registrar");
+
+                }
+                txtNombreNota.Clear();
 
             }
-            txtNombreNota.Clear();
+
+            
 
 
 
@@ -92,34 +103,36 @@ namespace appE2Colsis.Vista
 
         private void frmNota_Load(object sender, EventArgs e)
         {
+            btnSeleccionarM.Visible = false;
+            gunaButton4.Visible = false;
+            btnEliminarNota.Visible = false;
+            btnRegistrar.Visible = false;
+
             objNota.idDocente = idDocente;
             mtdRecargarLista();
             
             cmbCurso.DataSource = listaCursos;
-            cmbAsignatura.DataSource = listaCursos;
             cmbCurso.DisplayMember = "nombreCurso";
             cmbCurso.ValueMember = "idCurso";
-            cmbAsignatura.DisplayMember = "nombreAsignatura";
-            cmbAsignatura.ValueMember = "idAsignatura";
             cmbCursoF.DataSource = listaCursos;
-            cmbAsignaturaF.DataSource = listaCursos;
+            
             cmbCursoF.DisplayMember = "nombreCurso";
             cmbCursoF.ValueMember = "idCurso";
-            cmbAsignaturaF.DisplayMember = "nombreAsignatura";
-            cmbAsignaturaF.ValueMember = "idAsignatura";
+            
             cmbEliminarC.DataSource = listaCursos;
-            cmbEliminarA.DataSource = listaCursos;
+            
             cmbEliminarC.DisplayMember= "nombreCurso";
             cmbEliminarC.ValueMember= "idCurso";
-            cmbEliminarA.DisplayMember= "nombreAsignatura";
-            cmbEliminarA.ValueMember= "idAsignatura";
-            cmbModificarA.DataSource = listaCursos;
+            
+            
             cmbModificarC.DataSource = listaCursos;
-            cmbModificarA.DisplayMember= "nombreAsignatura";
-            cmbModificarA.ValueMember= "idAsignatura";
+           
             cmbModificarC.DisplayMember = "nombreCurso";
             cmbModificarC.ValueMember = "idCurso";
 
+            ComboBox curso = cmbEliminarC;
+            ComboBox asignatura = cmbEliminarA;
+            mtdCargarAsignaturas(curso, asignatura);
 
 
             // estado modificar 
@@ -146,23 +159,7 @@ namespace appE2Colsis.Vista
         }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            mtdRecargaNotas();
-         int   contador = 0;
-            for (int i = 0; i < dgvMostrarNEstudiantes.Columns.Count; i++)
-            {
-                if (contador == 0 || contador == 1 || contador == 2)
-                {
-                    dgvMostrarNEstudiantes.Columns[i].Visible = false;
-
-                }
-                else
-                {
-                   dgvMostrarNEstudiantes.Columns[i].Visible = true;
-
-                }
-                contador++;
-
-            }
+            
 
 
 
@@ -356,7 +353,7 @@ namespace appE2Colsis.Vista
         }
 
 
-        private ExcelFile ef;
+        //private ExcelFile ef;
 
 
         private void grpImportar_Click(object sender, EventArgs e)
@@ -377,6 +374,7 @@ namespace appE2Colsis.Vista
                 {
                     MessageBox.Show("Se Elimino la Nota y su asignacion a los estudiantes", "Eliminacion Concretada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     mtdRecargarLista();
+                    
                 }
                 else
                 {
@@ -396,8 +394,7 @@ namespace appE2Colsis.Vista
         {
             objNota.idCurso = int.Parse(cmbEliminarC.SelectedValue.ToString());
             objNota.idAsignatura = int.Parse(cmbEliminarA.SelectedValue.ToString());
-            objNota.idDocente = idDocente;
-            List<clNota> listaNombresNotas = new List<clNota>();
+            objNota.idDocente = idDocente;         
            listaNombresNotas= objNota.mtdMostrarNotasSegunCursoAsignatura();
             cmbNotaEliminar.DataSource = listaNombresNotas;
             cmbNotaEliminar.DisplayMember = "nombreNota";
@@ -408,15 +405,20 @@ namespace appE2Colsis.Vista
 
         private void btnSeleccionarM_Click(object sender, EventArgs e)
         {
-            objNota.idCurso = int.Parse(cmbEliminarC.SelectedValue.ToString());
-            objNota.idAsignatura = int.Parse(cmbEliminarA.SelectedValue.ToString());
-            objNota.idDocente = idDocente;
-            List<clNota> listaNombresNotas = new List<clNota>();
-            listaNombresNotas = objNota.mtdMostrarNotasSegunCursoAsignatura();
-            cmbNotaModificar.DataSource = listaNombresNotas;
-           cmbNotaModificar.DisplayMember = "nombreNota";
-            cmbNotaModificar.ValueMember = "idNota";
+            
+            
+            
+                objNota.idCurso = int.Parse(cmbModificarC.SelectedValue.ToString());
+                objNota.idAsignatura = int.Parse(cmbModificarA.SelectedValue.ToString());
+                objNota.idDocente = idDocente;
+                listaNombresNotas = objNota.mtdMostrarNotasSegunCursoAsignatura();
+                cmbNotaModificar.DataSource = listaNombresNotas;
+                cmbNotaModificar.DisplayMember = "nombreNota";
+                cmbNotaModificar.ValueMember = "idNota";
 
+            
+            
+            
 
         }
 
@@ -446,6 +448,7 @@ namespace appE2Colsis.Vista
             {
                 MessageBox.Show("Nota Modificada Exitosamente", "Succesful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 mtdRecargarLista();
+
 
             }
             else
@@ -489,6 +492,121 @@ namespace appE2Colsis.Vista
         private void cmbNotaModificar_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtNuevoNombre.Text = cmbNotaModificar.Text;
+        }
+
+        public void mtdCargarAsignaturas(ComboBox curso,ComboBox asignatura)
+        {
+            objNota.idDocente = idDocente;
+            try
+            {
+                objNota.idCurso = int.Parse(curso.SelectedValue.ToString());
+            }
+            catch (Exception)
+            {
+
+
+            }
+
+            List<clNota> lisAsignaturas = new List<clNota>();
+            lisAsignaturas = objNota.mtdConsultarAsignaturas();
+            asignatura.DataSource = lisAsignaturas;
+            asignatura.DisplayMember = "nombreAsignatura";
+            asignatura.ValueMember = "idAsignatura";
+
+        }
+
+        private void cmbModificarC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox curso = cmbModificarC;
+            ComboBox asignatura = cmbModificarA;
+            mtdCargarAsignaturas(curso, asignatura);
+            
+        }
+
+        private void cmbEliminarC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox curso = cmbEliminarC;
+            ComboBox asignatura = cmbEliminarA;
+            mtdCargarAsignaturas(curso, asignatura);
+        }
+
+        private void cmbCurso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox curso =cmbCurso ;
+            ComboBox asignatura = cmbAsignatura;
+            mtdCargarAsignaturas(curso, asignatura);
+        }
+
+        private void cmbCursoF_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox curso = cmbCursoF;
+            ComboBox asignatura = cmbAsignaturaF;
+            mtdCargarAsignaturas(curso, asignatura);
+        }
+
+        private void cmbModificarA_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (int.Parse(cmbModificarA.SelectedValue.ToString()) > 0)
+            {
+                btnSeleccionarM.Visible = true;
+                gunaButton4.Visible = true;
+
+            }
+            else
+            {
+                btnSeleccionarM.Visible = false;
+                gunaButton4.Visible = false;
+            }
+        }
+
+        private void cmbNotaEliminar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbNotaEliminar.Text==null)
+            {
+                btnEliminarNota.Visible = false;
+
+            }
+            else
+            {
+                btnEliminarNota.Visible = true;
+
+            }
+        }
+
+        private void cmbAsignatura_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbAsignatura.Text == null)
+            {
+                btnRegistrar.Visible = false;
+
+            }
+            else
+            {
+                btnRegistrar.Visible = true;
+
+            }
+
+        }
+
+        private void cmbAsignaturaF_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            mtdRecargaNotas();
+            int contador = 0;
+            for (int i = 0; i < dgvMostrarNEstudiantes.Columns.Count; i++)
+            {
+                if (contador == 0 || contador == 1 || contador == 2)
+                {
+                    dgvMostrarNEstudiantes.Columns[i].Visible = false;
+
+                }
+                else
+                {
+                    dgvMostrarNEstudiantes.Columns[i].Visible = true;
+
+                }
+                contador++;
+
+            }
         }
     }
 }

@@ -34,24 +34,10 @@ namespace appE2Colsis.Vista
             this.btnRegistrar = new Guna.UI.WinForms.GunaButton();
             this.cmbAsignatura = new Guna.UI.WinForms.GunaComboBox();
             this.cmbCurso = new Guna.UI.WinForms.GunaComboBox();
-            this.dgvMostrarNEstudiantes = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cmbAsignaturaF = new Guna.UI.WinForms.GunaComboBox();
-            this.cmbCursoF = new Guna.UI.WinForms.GunaComboBox();
-            this.lblEstudiante = new System.Windows.Forms.Label();
-            this.dgvEstudianteNotas = new System.Windows.Forms.DataGridView();
-            this.btnActualizarDB = new Guna.UI.WinForms.GunaButton();
-            this.btnBuscar = new Guna.UI.WinForms.GunaButton();
-            this.grpActualizarNota = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.grpCrearNota = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.grpFiltroAsignatura = new System.Windows.Forms.GroupBox();
-            this.btnActualizarNota = new Guna.UI.WinForms.GunaButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnExportarAN = new Guna.UI.WinForms.GunaButton();
             this.btnCrear = new Guna.UI.WinForms.GunaButton();
             this.btnEliminar = new Guna.UI.WinForms.GunaButton();
             this.grpEliminarNota = new System.Windows.Forms.GroupBox();
@@ -77,13 +63,23 @@ namespace appE2Colsis.Vista
             this.gunaButton4 = new Guna.UI.WinForms.GunaButton();
             this.cmbModificarA = new Guna.UI.WinForms.GunaComboBox();
             this.cmbModificarC = new Guna.UI.WinForms.GunaComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarNEstudiantes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEstudianteNotas)).BeginInit();
-            this.grpActualizarNota.SuspendLayout();
+            this.grpActualizarNota = new System.Windows.Forms.GroupBox();
+            this.dgvEstudianteNotas = new System.Windows.Forms.DataGridView();
+            this.btnActualizarDB = new Guna.UI.WinForms.GunaButton();
+            this.lblEstudiante = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmbCursoF = new Guna.UI.WinForms.GunaComboBox();
+            this.dgvMostrarNEstudiantes = new System.Windows.Forms.DataGridView();
+            this.cmbAsignaturaF = new Guna.UI.WinForms.GunaComboBox();
+            this.btnExportarAN = new Guna.UI.WinForms.GunaButton();
+            this.label5 = new System.Windows.Forms.Label();
             this.grpCrearNota.SuspendLayout();
-            this.grpFiltroAsignatura.SuspendLayout();
             this.grpEliminarNota.SuspendLayout();
             this.grpModificarNota.SuspendLayout();
+            this.grpActualizarNota.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstudianteNotas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarNEstudiantes)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombreNota
@@ -149,6 +145,7 @@ namespace appE2Colsis.Vista
             this.cmbAsignatura.Radius = 10;
             this.cmbAsignatura.Size = new System.Drawing.Size(131, 26);
             this.cmbAsignatura.TabIndex = 2;
+            this.cmbAsignatura.SelectedIndexChanged += new System.EventHandler(this.cmbAsignatura_SelectedIndexChanged);
             // 
             // cmbCurso
             // 
@@ -168,162 +165,7 @@ namespace appE2Colsis.Vista
             this.cmbCurso.Radius = 10;
             this.cmbCurso.Size = new System.Drawing.Size(83, 26);
             this.cmbCurso.TabIndex = 3;
-            // 
-            // dgvMostrarNEstudiantes
-            // 
-            this.dgvMostrarNEstudiantes.BackgroundColor = System.Drawing.Color.White;
-            this.dgvMostrarNEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMostrarNEstudiantes.Location = new System.Drawing.Point(6, 149);
-            this.dgvMostrarNEstudiantes.Name = "dgvMostrarNEstudiantes";
-            this.dgvMostrarNEstudiantes.Size = new System.Drawing.Size(626, 359);
-            this.dgvMostrarNEstudiantes.TabIndex = 4;
-            this.dgvMostrarNEstudiantes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMostrarNEstudiantes_CellContentClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(38, 107);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Estudiante:";
-            // 
-            // cmbAsignaturaF
-            // 
-            this.cmbAsignaturaF.BackColor = System.Drawing.Color.Transparent;
-            this.cmbAsignaturaF.BaseColor = System.Drawing.Color.White;
-            this.cmbAsignaturaF.BorderColor = System.Drawing.Color.Silver;
-            this.cmbAsignaturaF.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbAsignaturaF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAsignaturaF.FocusedColor = System.Drawing.Color.Empty;
-            this.cmbAsignaturaF.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbAsignaturaF.ForeColor = System.Drawing.Color.Black;
-            this.cmbAsignaturaF.FormattingEnabled = true;
-            this.cmbAsignaturaF.Location = new System.Drawing.Point(260, 121);
-            this.cmbAsignaturaF.Name = "cmbAsignaturaF";
-            this.cmbAsignaturaF.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cmbAsignaturaF.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cmbAsignaturaF.Radius = 10;
-            this.cmbAsignaturaF.Size = new System.Drawing.Size(114, 26);
-            this.cmbAsignaturaF.TabIndex = 7;
-            // 
-            // cmbCursoF
-            // 
-            this.cmbCursoF.BackColor = System.Drawing.Color.Transparent;
-            this.cmbCursoF.BaseColor = System.Drawing.Color.White;
-            this.cmbCursoF.BorderColor = System.Drawing.Color.Silver;
-            this.cmbCursoF.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbCursoF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCursoF.FocusedColor = System.Drawing.Color.Empty;
-            this.cmbCursoF.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbCursoF.ForeColor = System.Drawing.Color.Black;
-            this.cmbCursoF.FormattingEnabled = true;
-            this.cmbCursoF.IntegralHeight = false;
-            this.cmbCursoF.ItemHeight = 20;
-            this.cmbCursoF.Location = new System.Drawing.Point(123, 121);
-            this.cmbCursoF.Name = "cmbCursoF";
-            this.cmbCursoF.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cmbCursoF.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cmbCursoF.Radius = 10;
-            this.cmbCursoF.Size = new System.Drawing.Size(131, 26);
-            this.cmbCursoF.TabIndex = 6;
-            // 
-            // lblEstudiante
-            // 
-            this.lblEstudiante.AutoSize = true;
-            this.lblEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstudiante.Location = new System.Drawing.Point(134, 107);
-            this.lblEstudiante.Name = "lblEstudiante";
-            this.lblEstudiante.Size = new System.Drawing.Size(90, 20);
-            this.lblEstudiante.TabIndex = 8;
-            this.lblEstudiante.Text = "Estudiante:";
-            // 
-            // dgvEstudianteNotas
-            // 
-            this.dgvEstudianteNotas.BackgroundColor = System.Drawing.Color.White;
-            this.dgvEstudianteNotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEstudianteNotas.Location = new System.Drawing.Point(39, 149);
-            this.dgvEstudianteNotas.Name = "dgvEstudianteNotas";
-            this.dgvEstudianteNotas.Size = new System.Drawing.Size(334, 359);
-            this.dgvEstudianteNotas.TabIndex = 9;
-            this.dgvEstudianteNotas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstudianteNotas_CellContentClick);
-            // 
-            // btnActualizarDB
-            // 
-            this.btnActualizarDB.AnimationHoverSpeed = 0.07F;
-            this.btnActualizarDB.AnimationSpeed = 0.03F;
-            this.btnActualizarDB.BackColor = System.Drawing.Color.Transparent;
-            this.btnActualizarDB.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnActualizarDB.BorderColor = System.Drawing.Color.Black;
-            this.btnActualizarDB.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnActualizarDB.FocusedColor = System.Drawing.Color.Empty;
-            this.btnActualizarDB.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizarDB.ForeColor = System.Drawing.Color.White;
-            this.btnActualizarDB.Image = null;
-            this.btnActualizarDB.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnActualizarDB.Location = new System.Drawing.Point(138, 540);
-            this.btnActualizarDB.Name = "btnActualizarDB";
-            this.btnActualizarDB.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnActualizarDB.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnActualizarDB.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnActualizarDB.OnHoverImage = null;
-            this.btnActualizarDB.OnPressedColor = System.Drawing.Color.Black;
-            this.btnActualizarDB.Radius = 10;
-            this.btnActualizarDB.Size = new System.Drawing.Size(167, 36);
-            this.btnActualizarDB.TabIndex = 13;
-            this.btnActualizarDB.Text = "Actualizar Calificacion";
-            this.btnActualizarDB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnActualizarDB.Click += new System.EventHandler(this.btnActualizarDB_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.AnimationHoverSpeed = 0.07F;
-            this.btnBuscar.AnimationSpeed = 0.03F;
-            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.btnBuscar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnBuscar.BorderColor = System.Drawing.Color.Black;
-            this.btnBuscar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnBuscar.FocusedColor = System.Drawing.Color.Empty;
-            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Image = null;
-            this.btnBuscar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnBuscar.Location = new System.Drawing.Point(380, 121);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnBuscar.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnBuscar.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnBuscar.OnHoverImage = null;
-            this.btnBuscar.OnPressedColor = System.Drawing.Color.Black;
-            this.btnBuscar.Radius = 10;
-            this.btnBuscar.Size = new System.Drawing.Size(110, 26);
-            this.btnBuscar.TabIndex = 14;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // grpActualizarNota
-            // 
-            this.grpActualizarNota.Controls.Add(this.label9);
-            this.grpActualizarNota.Controls.Add(this.label1);
-            this.grpActualizarNota.Controls.Add(this.lblEstudiante);
-            this.grpActualizarNota.Controls.Add(this.btnActualizarDB);
-            this.grpActualizarNota.Controls.Add(this.dgvEstudianteNotas);
-            this.grpActualizarNota.Location = new System.Drawing.Point(654, 0);
-            this.grpActualizarNota.Name = "grpActualizarNota";
-            this.grpActualizarNota.Size = new System.Drawing.Size(408, 649);
-            this.grpActualizarNota.TabIndex = 15;
-            this.grpActualizarNota.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(103, 60);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 20);
-            this.label9.TabIndex = 17;
+            this.cmbCurso.SelectedIndexChanged += new System.EventHandler(this.cmbCurso_SelectedIndexChanged);
             // 
             // grpCrearNota
             // 
@@ -366,86 +208,6 @@ namespace appE2Colsis.Vista
             this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 11;
             this.label2.Text = "Nombre Nota";
-            // 
-            // grpFiltroAsignatura
-            // 
-            this.grpFiltroAsignatura.Controls.Add(this.btnActualizarNota);
-            this.grpFiltroAsignatura.Controls.Add(this.label5);
-            this.grpFiltroAsignatura.Controls.Add(this.btnExportarAN);
-            this.grpFiltroAsignatura.Controls.Add(this.cmbAsignaturaF);
-            this.grpFiltroAsignatura.Controls.Add(this.dgvMostrarNEstudiantes);
-            this.grpFiltroAsignatura.Controls.Add(this.cmbCursoF);
-            this.grpFiltroAsignatura.Controls.Add(this.grpActualizarNota);
-            this.grpFiltroAsignatura.Controls.Add(this.btnBuscar);
-            this.grpFiltroAsignatura.Location = new System.Drawing.Point(399, 44);
-            this.grpFiltroAsignatura.Name = "grpFiltroAsignatura";
-            this.grpFiltroAsignatura.Size = new System.Drawing.Size(1062, 649);
-            this.grpFiltroAsignatura.TabIndex = 17;
-            this.grpFiltroAsignatura.TabStop = false;
-            // 
-            // btnActualizarNota
-            // 
-            this.btnActualizarNota.AnimationHoverSpeed = 0.07F;
-            this.btnActualizarNota.AnimationSpeed = 0.03F;
-            this.btnActualizarNota.BackColor = System.Drawing.Color.Transparent;
-            this.btnActualizarNota.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnActualizarNota.BorderColor = System.Drawing.Color.Black;
-            this.btnActualizarNota.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnActualizarNota.FocusedColor = System.Drawing.Color.Empty;
-            this.btnActualizarNota.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizarNota.ForeColor = System.Drawing.Color.White;
-            this.btnActualizarNota.Image = null;
-            this.btnActualizarNota.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnActualizarNota.Location = new System.Drawing.Point(159, 514);
-            this.btnActualizarNota.Name = "btnActualizarNota";
-            this.btnActualizarNota.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnActualizarNota.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnActualizarNota.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnActualizarNota.OnHoverImage = null;
-            this.btnActualizarNota.OnPressedColor = System.Drawing.Color.Black;
-            this.btnActualizarNota.Radius = 10;
-            this.btnActualizarNota.Size = new System.Drawing.Size(127, 41);
-            this.btnActualizarNota.TabIndex = 17;
-            this.btnActualizarNota.Text = "Actualizar Notas";
-            this.btnActualizarNota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnActualizarNota.Click += new System.EventHandler(this.btnActualizarNota_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(243, 64);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 20);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Estudiantes Curso";
-            // 
-            // btnExportarAN
-            // 
-            this.btnExportarAN.AnimationHoverSpeed = 0.07F;
-            this.btnExportarAN.AnimationSpeed = 0.03F;
-            this.btnExportarAN.BackColor = System.Drawing.Color.Transparent;
-            this.btnExportarAN.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnExportarAN.BorderColor = System.Drawing.Color.Black;
-            this.btnExportarAN.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnExportarAN.FocusedColor = System.Drawing.Color.Empty;
-            this.btnExportarAN.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnExportarAN.ForeColor = System.Drawing.Color.White;
-            this.btnExportarAN.Image = ((System.Drawing.Image)(resources.GetObject("btnExportarAN.Image")));
-            this.btnExportarAN.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnExportarAN.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnExportarAN.Location = new System.Drawing.Point(322, 514);
-            this.btnExportarAN.Name = "btnExportarAN";
-            this.btnExportarAN.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnExportarAN.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnExportarAN.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnExportarAN.OnHoverImage = null;
-            this.btnExportarAN.OnPressedColor = System.Drawing.Color.Black;
-            this.btnExportarAN.Radius = 10;
-            this.btnExportarAN.Size = new System.Drawing.Size(157, 41);
-            this.btnExportarAN.TabIndex = 15;
-            this.btnExportarAN.Text = "Exportar a Excel";
-            this.btnExportarAN.Click += new System.EventHandler(this.btnExportarAN_Click);
             // 
             // btnCrear
             // 
@@ -562,6 +324,7 @@ namespace appE2Colsis.Vista
             this.cmbNotaEliminar.Radius = 10;
             this.cmbNotaEliminar.Size = new System.Drawing.Size(131, 26);
             this.cmbNotaEliminar.TabIndex = 14;
+            this.cmbNotaEliminar.SelectedIndexChanged += new System.EventHandler(this.cmbNotaEliminar_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -654,6 +417,7 @@ namespace appE2Colsis.Vista
             this.cmbEliminarC.Radius = 10;
             this.cmbEliminarC.Size = new System.Drawing.Size(83, 26);
             this.cmbEliminarC.TabIndex = 3;
+            this.cmbEliminarC.SelectedIndexChanged += new System.EventHandler(this.cmbEliminarC_SelectedIndexChanged);
             // 
             // btnModificar
             // 
@@ -876,6 +640,7 @@ namespace appE2Colsis.Vista
             this.cmbModificarA.Radius = 10;
             this.cmbModificarA.Size = new System.Drawing.Size(131, 26);
             this.cmbModificarA.TabIndex = 17;
+            this.cmbModificarA.SelectedIndexChanged += new System.EventHandler(this.cmbModificarA_SelectedIndexChanged);
             // 
             // cmbModificarC
             // 
@@ -895,38 +660,212 @@ namespace appE2Colsis.Vista
             this.cmbModificarC.Radius = 10;
             this.cmbModificarC.Size = new System.Drawing.Size(131, 26);
             this.cmbModificarC.TabIndex = 18;
+            this.cmbModificarC.SelectedIndexChanged += new System.EventHandler(this.cmbModificarC_SelectedIndexChanged);
+            // 
+            // grpActualizarNota
+            // 
+            this.grpActualizarNota.Controls.Add(this.label9);
+            this.grpActualizarNota.Controls.Add(this.label1);
+            this.grpActualizarNota.Controls.Add(this.lblEstudiante);
+            this.grpActualizarNota.Controls.Add(this.btnActualizarDB);
+            this.grpActualizarNota.Controls.Add(this.dgvEstudianteNotas);
+            this.grpActualizarNota.Location = new System.Drawing.Point(1018, 83);
+            this.grpActualizarNota.Name = "grpActualizarNota";
+            this.grpActualizarNota.Size = new System.Drawing.Size(408, 455);
+            this.grpActualizarNota.TabIndex = 15;
+            this.grpActualizarNota.TabStop = false;
+            // 
+            // dgvEstudianteNotas
+            // 
+            this.dgvEstudianteNotas.BackgroundColor = System.Drawing.Color.White;
+            this.dgvEstudianteNotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEstudianteNotas.Location = new System.Drawing.Point(43, 68);
+            this.dgvEstudianteNotas.Name = "dgvEstudianteNotas";
+            this.dgvEstudianteNotas.Size = new System.Drawing.Size(334, 237);
+            this.dgvEstudianteNotas.TabIndex = 9;
+            this.dgvEstudianteNotas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstudianteNotas_CellContentClick);
+            // 
+            // btnActualizarDB
+            // 
+            this.btnActualizarDB.AnimationHoverSpeed = 0.07F;
+            this.btnActualizarDB.AnimationSpeed = 0.03F;
+            this.btnActualizarDB.BackColor = System.Drawing.Color.Transparent;
+            this.btnActualizarDB.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnActualizarDB.BorderColor = System.Drawing.Color.Black;
+            this.btnActualizarDB.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnActualizarDB.FocusedColor = System.Drawing.Color.Empty;
+            this.btnActualizarDB.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarDB.ForeColor = System.Drawing.Color.White;
+            this.btnActualizarDB.Image = null;
+            this.btnActualizarDB.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnActualizarDB.Location = new System.Drawing.Point(111, 321);
+            this.btnActualizarDB.Name = "btnActualizarDB";
+            this.btnActualizarDB.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnActualizarDB.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnActualizarDB.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnActualizarDB.OnHoverImage = null;
+            this.btnActualizarDB.OnPressedColor = System.Drawing.Color.Black;
+            this.btnActualizarDB.Radius = 10;
+            this.btnActualizarDB.Size = new System.Drawing.Size(167, 36);
+            this.btnActualizarDB.TabIndex = 13;
+            this.btnActualizarDB.Text = "Actualizar Calificacion";
+            this.btnActualizarDB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnActualizarDB.Click += new System.EventHandler(this.btnActualizarDB_Click);
+            // 
+            // lblEstudiante
+            // 
+            this.lblEstudiante.AutoSize = true;
+            this.lblEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstudiante.Location = new System.Drawing.Point(138, 26);
+            this.lblEstudiante.Name = "lblEstudiante";
+            this.lblEstudiante.Size = new System.Drawing.Size(90, 20);
+            this.lblEstudiante.TabIndex = 8;
+            this.lblEstudiante.Text = "Estudiante:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(42, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Estudiante:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(107, -23);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 20);
+            this.label9.TabIndex = 17;
+            // 
+            // cmbCursoF
+            // 
+            this.cmbCursoF.BackColor = System.Drawing.Color.Transparent;
+            this.cmbCursoF.BaseColor = System.Drawing.Color.White;
+            this.cmbCursoF.BorderColor = System.Drawing.Color.Silver;
+            this.cmbCursoF.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbCursoF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCursoF.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbCursoF.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbCursoF.ForeColor = System.Drawing.Color.Black;
+            this.cmbCursoF.FormattingEnabled = true;
+            this.cmbCursoF.IntegralHeight = false;
+            this.cmbCursoF.ItemHeight = 20;
+            this.cmbCursoF.Location = new System.Drawing.Point(560, 72);
+            this.cmbCursoF.Name = "cmbCursoF";
+            this.cmbCursoF.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmbCursoF.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cmbCursoF.Radius = 10;
+            this.cmbCursoF.Size = new System.Drawing.Size(141, 26);
+            this.cmbCursoF.TabIndex = 6;
+            this.cmbCursoF.SelectedIndexChanged += new System.EventHandler(this.cmbCursoF_SelectedIndexChanged);
+            // 
+            // dgvMostrarNEstudiantes
+            // 
+            this.dgvMostrarNEstudiantes.BackgroundColor = System.Drawing.Color.White;
+            this.dgvMostrarNEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMostrarNEstudiantes.Location = new System.Drawing.Point(386, 112);
+            this.dgvMostrarNEstudiantes.Name = "dgvMostrarNEstudiantes";
+            this.dgvMostrarNEstudiantes.Size = new System.Drawing.Size(626, 359);
+            this.dgvMostrarNEstudiantes.TabIndex = 4;
+            this.dgvMostrarNEstudiantes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMostrarNEstudiantes_CellContentClick);
+            // 
+            // cmbAsignaturaF
+            // 
+            this.cmbAsignaturaF.BackColor = System.Drawing.Color.Transparent;
+            this.cmbAsignaturaF.BaseColor = System.Drawing.Color.White;
+            this.cmbAsignaturaF.BorderColor = System.Drawing.Color.Silver;
+            this.cmbAsignaturaF.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbAsignaturaF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAsignaturaF.FocusedColor = System.Drawing.Color.Empty;
+            this.cmbAsignaturaF.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbAsignaturaF.ForeColor = System.Drawing.Color.Black;
+            this.cmbAsignaturaF.FormattingEnabled = true;
+            this.cmbAsignaturaF.Location = new System.Drawing.Point(707, 72);
+            this.cmbAsignaturaF.Name = "cmbAsignaturaF";
+            this.cmbAsignaturaF.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cmbAsignaturaF.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cmbAsignaturaF.Radius = 10;
+            this.cmbAsignaturaF.Size = new System.Drawing.Size(129, 26);
+            this.cmbAsignaturaF.TabIndex = 7;
+            this.cmbAsignaturaF.SelectedIndexChanged += new System.EventHandler(this.cmbAsignaturaF_SelectedIndexChanged);
+            // 
+            // btnExportarAN
+            // 
+            this.btnExportarAN.AnimationHoverSpeed = 0.07F;
+            this.btnExportarAN.AnimationSpeed = 0.03F;
+            this.btnExportarAN.BackColor = System.Drawing.Color.Transparent;
+            this.btnExportarAN.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnExportarAN.BorderColor = System.Drawing.Color.Black;
+            this.btnExportarAN.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnExportarAN.FocusedColor = System.Drawing.Color.Empty;
+            this.btnExportarAN.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnExportarAN.ForeColor = System.Drawing.Color.White;
+            this.btnExportarAN.Image = ((System.Drawing.Image)(resources.GetObject("btnExportarAN.Image")));
+            this.btnExportarAN.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnExportarAN.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnExportarAN.Location = new System.Drawing.Point(627, 486);
+            this.btnExportarAN.Name = "btnExportarAN";
+            this.btnExportarAN.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnExportarAN.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnExportarAN.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnExportarAN.OnHoverImage = null;
+            this.btnExportarAN.OnPressedColor = System.Drawing.Color.Black;
+            this.btnExportarAN.Radius = 10;
+            this.btnExportarAN.Size = new System.Drawing.Size(157, 41);
+            this.btnExportarAN.TabIndex = 15;
+            this.btnExportarAN.Text = "Exportar a Excel";
+            this.btnExportarAN.Click += new System.EventHandler(this.btnExportarAN_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(623, 27);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(140, 20);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Estudiantes Curso";
             // 
             // frmNota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1781, 801);
+            this.ClientSize = new System.Drawing.Size(1442, 562);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnExportarAN);
+            this.Controls.Add(this.cmbAsignaturaF);
             this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.dgvMostrarNEstudiantes);
             this.Controls.Add(this.grpModificarNota);
+            this.Controls.Add(this.cmbCursoF);
             this.Controls.Add(this.grpEliminarNota);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.grpFiltroAsignatura);
+            this.Controls.Add(this.grpActualizarNota);
             this.Controls.Add(this.grpCrearNota);
             this.Controls.Add(this.btnCrear);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmNota";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmNota";
             this.Load += new System.EventHandler(this.frmNota_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarNEstudiantes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEstudianteNotas)).EndInit();
-            this.grpActualizarNota.ResumeLayout(false);
-            this.grpActualizarNota.PerformLayout();
             this.grpCrearNota.ResumeLayout(false);
             this.grpCrearNota.PerformLayout();
-            this.grpFiltroAsignatura.ResumeLayout(false);
-            this.grpFiltroAsignatura.PerformLayout();
             this.grpEliminarNota.ResumeLayout(false);
             this.grpEliminarNota.PerformLayout();
             this.grpModificarNota.ResumeLayout(false);
             this.grpModificarNota.PerformLayout();
+            this.grpActualizarNota.ResumeLayout(false);
+            this.grpActualizarNota.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstudianteNotas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarNEstudiantes)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -936,23 +875,10 @@ namespace appE2Colsis.Vista
         private Guna.UI.WinForms.GunaButton btnRegistrar;
         private Guna.UI.WinForms.GunaComboBox cmbAsignatura;
         private Guna.UI.WinForms.GunaComboBox cmbCurso;
-        private System.Windows.Forms.DataGridView dgvMostrarNEstudiantes;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI.WinForms.GunaComboBox cmbAsignaturaF;
-        private Guna.UI.WinForms.GunaComboBox cmbCursoF;
-        private System.Windows.Forms.Label lblEstudiante;
-        private System.Windows.Forms.DataGridView dgvEstudianteNotas;
-        private Guna.UI.WinForms.GunaButton btnActualizarDB;
-        private Guna.UI.WinForms.GunaButton btnBuscar;
-        private System.Windows.Forms.GroupBox grpActualizarNota;
         private System.Windows.Forms.GroupBox grpCrearNota;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox grpFiltroAsignatura;
-        private System.Windows.Forms.Label label5;
-        private Guna.UI.WinForms.GunaButton btnExportarAN;
-        private Guna.UI.WinForms.GunaButton btnActualizarNota;
         private Guna.UI.WinForms.GunaButton btnCrear;
         private Guna.UI.WinForms.GunaButton btnEliminar;
         private System.Windows.Forms.GroupBox grpEliminarNota;
@@ -964,7 +890,6 @@ namespace appE2Colsis.Vista
         private Guna.UI.WinForms.GunaButton btnEliminarNota;
         private Guna.UI.WinForms.GunaComboBox cmbEliminarA;
         private Guna.UI.WinForms.GunaComboBox cmbEliminarC;
-        private System.Windows.Forms.Label label9;
         private Guna.UI.WinForms.GunaButton btnModificar;
         private System.Windows.Forms.GroupBox grpModificarNota;
         private System.Windows.Forms.Label label13;
@@ -979,5 +904,16 @@ namespace appE2Colsis.Vista
         private Guna.UI.WinForms.GunaComboBox cmbModificarA;
         private Guna.UI.WinForms.GunaComboBox cmbModificarC;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.GroupBox grpActualizarNota;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblEstudiante;
+        private Guna.UI.WinForms.GunaButton btnActualizarDB;
+        private System.Windows.Forms.DataGridView dgvEstudianteNotas;
+        private Guna.UI.WinForms.GunaComboBox cmbCursoF;
+        private System.Windows.Forms.DataGridView dgvMostrarNEstudiantes;
+        private Guna.UI.WinForms.GunaComboBox cmbAsignaturaF;
+        private Guna.UI.WinForms.GunaButton btnExportarAN;
+        private System.Windows.Forms.Label label5;
     }
 }

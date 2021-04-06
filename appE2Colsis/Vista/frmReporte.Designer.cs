@@ -73,7 +73,6 @@ namespace appE2Colsis.Vista
             this.lbEstudiantes.Name = "lbEstudiantes";
             this.lbEstudiantes.Size = new System.Drawing.Size(292, 251);
             this.lbEstudiantes.TabIndex = 23;
-           
             // 
             // cmbPeriodo
             // 
@@ -199,10 +198,13 @@ namespace appE2Colsis.Vista
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(335, 72);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(453, 407);
+            this.dataGridView1.Size = new System.Drawing.Size(594, 407);
             this.dataGridView1.TabIndex = 20;
             // 
             // groupBox1
@@ -221,7 +223,7 @@ namespace appE2Colsis.Vista
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(866, 589);
+            this.ClientSize = new System.Drawing.Size(1007, 589);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnReporte);

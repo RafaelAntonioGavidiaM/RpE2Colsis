@@ -43,10 +43,22 @@ namespace appE2Colsis.Datos
         }
         public DataTable mtdDesconectado(string consulta)
         {
+           
             mtdIniciarConexion();
             MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, objConexion);
             DataTable tblDatos = new DataTable();
-            adaptador.Fill(tblDatos);
+            try
+            {
+                adaptador.Fill(tblDatos);
+
+            }
+            catch (Exception)
+            {
+
+
+                
+            }
+            
             objConexion.Close();
             return tblDatos;
         }

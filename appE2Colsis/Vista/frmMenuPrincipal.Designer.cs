@@ -31,6 +31,9 @@ namespace appE2Colsis.Vista
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.btnAsistencias = new Guna.UI.WinForms.GunaButton();
+            this.btnCurso = new Guna.UI.WinForms.GunaButton();
+            this.lblApellido = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.btnAsignaturas = new Guna.UI.WinForms.GunaButton();
             this.btnNotas = new Guna.UI.WinForms.GunaButton();
@@ -41,9 +44,6 @@ namespace appE2Colsis.Vista
             this.btnPersona = new Guna.UI.WinForms.GunaButton();
             this.pbfoto = new Guna.UI.WinForms.GunaPictureBox();
             this.pnNombre = new System.Windows.Forms.Panel();
-            this.lblApellido = new Guna.UI.WinForms.GunaLabel();
-            this.btnCurso = new Guna.UI.WinForms.GunaButton();
-            this.btnAsistencias = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbfoto)).BeginInit();
@@ -51,6 +51,8 @@ namespace appE2Colsis.Vista
             // 
             // gunaPanel1
             // 
+            this.gunaPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.gunaPanel1.AutoSize = true;
             this.gunaPanel1.BackColor = System.Drawing.Color.White;
             this.gunaPanel1.Controls.Add(this.btnAsistencias);
@@ -69,6 +71,70 @@ namespace appE2Colsis.Vista
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(302, 828);
             this.gunaPanel1.TabIndex = 0;
+            // 
+            // btnAsistencias
+            // 
+            this.btnAsistencias.AnimationHoverSpeed = 0.07F;
+            this.btnAsistencias.AnimationSpeed = 0.03F;
+            this.btnAsistencias.BackColor = System.Drawing.Color.Transparent;
+            this.btnAsistencias.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnAsistencias.BorderColor = System.Drawing.Color.Black;
+            this.btnAsistencias.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAsistencias.FocusedColor = System.Drawing.Color.Empty;
+            this.btnAsistencias.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsistencias.ForeColor = System.Drawing.Color.White;
+            this.btnAsistencias.Image = ((System.Drawing.Image)(resources.GetObject("btnAsistencias.Image")));
+            this.btnAsistencias.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnAsistencias.Location = new System.Drawing.Point(28, 641);
+            this.btnAsistencias.Name = "btnAsistencias";
+            this.btnAsistencias.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnAsistencias.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnAsistencias.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnAsistencias.OnHoverImage = null;
+            this.btnAsistencias.OnPressedColor = System.Drawing.Color.Black;
+            this.btnAsistencias.Radius = 20;
+            this.btnAsistencias.Size = new System.Drawing.Size(253, 37);
+            this.btnAsistencias.TabIndex = 12;
+            this.btnAsistencias.Text = "Asistencias";
+            this.btnAsistencias.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAsistencias.Click += new System.EventHandler(this.btnAsistencias_Click);
+            // 
+            // btnCurso
+            // 
+            this.btnCurso.AnimationHoverSpeed = 0.07F;
+            this.btnCurso.AnimationSpeed = 0.03F;
+            this.btnCurso.BackColor = System.Drawing.Color.Transparent;
+            this.btnCurso.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnCurso.BorderColor = System.Drawing.Color.Black;
+            this.btnCurso.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCurso.FocusedColor = System.Drawing.Color.Empty;
+            this.btnCurso.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCurso.ForeColor = System.Drawing.Color.White;
+            this.btnCurso.Image = ((System.Drawing.Image)(resources.GetObject("btnCurso.Image")));
+            this.btnCurso.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnCurso.Location = new System.Drawing.Point(28, 598);
+            this.btnCurso.Name = "btnCurso";
+            this.btnCurso.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnCurso.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnCurso.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnCurso.OnHoverImage = null;
+            this.btnCurso.OnPressedColor = System.Drawing.Color.Black;
+            this.btnCurso.Radius = 20;
+            this.btnCurso.Size = new System.Drawing.Size(253, 37);
+            this.btnCurso.TabIndex = 11;
+            this.btnCurso.Text = "Curso";
+            this.btnCurso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnCurso.Click += new System.EventHandler(this.btnCurso_Click);
+            // 
+            // lblApellido
+            // 
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido.Location = new System.Drawing.Point(79, 207);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(121, 22);
+            this.lblApellido.TabIndex = 10;
+            this.lblApellido.Text = "gunaLabel1";
             // 
             // gunaPictureBox2
             // 
@@ -123,7 +189,7 @@ namespace appE2Colsis.Vista
             this.btnNotas.Image = ((System.Drawing.Image)(resources.GetObject("btnNotas.Image")));
             this.btnNotas.ImageSize = new System.Drawing.Size(40, 40);
             this.btnNotas.Location = new System.Drawing.Point(28, 458);
-            this.btnNotas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNotas.Margin = new System.Windows.Forms.Padding(2);
             this.btnNotas.Name = "btnNotas";
             this.btnNotas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnNotas.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -270,76 +336,15 @@ namespace appE2Colsis.Vista
             // 
             // pnNombre
             // 
+            this.pnNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnNombre.AutoSize = true;
             this.pnNombre.BackColor = System.Drawing.Color.White;
             this.pnNombre.Location = new System.Drawing.Point(280, 2);
             this.pnNombre.Name = "pnNombre";
             this.pnNombre.Size = new System.Drawing.Size(1267, 831);
             this.pnNombre.TabIndex = 1;
-            // 
-            // lblApellido
-            // 
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(79, 207);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(121, 22);
-            this.lblApellido.TabIndex = 10;
-            this.lblApellido.Text = "gunaLabel1";
-            // 
-            // btnCurso
-            // 
-            this.btnCurso.AnimationHoverSpeed = 0.07F;
-            this.btnCurso.AnimationSpeed = 0.03F;
-            this.btnCurso.BackColor = System.Drawing.Color.Transparent;
-            this.btnCurso.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnCurso.BorderColor = System.Drawing.Color.Black;
-            this.btnCurso.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnCurso.FocusedColor = System.Drawing.Color.Empty;
-            this.btnCurso.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCurso.ForeColor = System.Drawing.Color.White;
-            this.btnCurso.Image = ((System.Drawing.Image)(resources.GetObject("btnCurso.Image")));
-            this.btnCurso.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnCurso.Location = new System.Drawing.Point(28, 598);
-            this.btnCurso.Name = "btnCurso";
-            this.btnCurso.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnCurso.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnCurso.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnCurso.OnHoverImage = null;
-            this.btnCurso.OnPressedColor = System.Drawing.Color.Black;
-            this.btnCurso.Radius = 20;
-            this.btnCurso.Size = new System.Drawing.Size(253, 37);
-            this.btnCurso.TabIndex = 11;
-            this.btnCurso.Text = "Curso";
-            this.btnCurso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnCurso.Click += new System.EventHandler(this.btnCurso_Click);
-            // 
-            // btnAsistencias
-            // 
-            this.btnAsistencias.AnimationHoverSpeed = 0.07F;
-            this.btnAsistencias.AnimationSpeed = 0.03F;
-            this.btnAsistencias.BackColor = System.Drawing.Color.Transparent;
-            this.btnAsistencias.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnAsistencias.BorderColor = System.Drawing.Color.Black;
-            this.btnAsistencias.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnAsistencias.FocusedColor = System.Drawing.Color.Empty;
-            this.btnAsistencias.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAsistencias.ForeColor = System.Drawing.Color.White;
-            this.btnAsistencias.Image = ((System.Drawing.Image)(resources.GetObject("btnAsistencias.Image")));
-            this.btnAsistencias.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnAsistencias.Location = new System.Drawing.Point(28, 641);
-            this.btnAsistencias.Name = "btnAsistencias";
-            this.btnAsistencias.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnAsistencias.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnAsistencias.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnAsistencias.OnHoverImage = null;
-            this.btnAsistencias.OnPressedColor = System.Drawing.Color.Black;
-            this.btnAsistencias.Radius = 20;
-            this.btnAsistencias.Size = new System.Drawing.Size(253, 37);
-            this.btnAsistencias.TabIndex = 12;
-            this.btnAsistencias.Text = "Asistencias";
-            this.btnAsistencias.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnAsistencias.Click += new System.EventHandler(this.btnAsistencias_Click);
             // 
             // frmMenuPrincipal
             // 
@@ -349,7 +354,7 @@ namespace appE2Colsis.Vista
             this.ClientSize = new System.Drawing.Size(1547, 828);
             this.Controls.Add(this.pnNombre);
             this.Controls.Add(this.gunaPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMenuPrincipal";
             this.Text = "frmMenuPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
