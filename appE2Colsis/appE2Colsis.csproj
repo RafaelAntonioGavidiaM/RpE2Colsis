@@ -66,6 +66,7 @@
     <Compile Include="Datos\clEstudiante.cs" />
     <Compile Include="Datos\clCursos.cs" />
     <Compile Include="Datos\clDocente.cs" />
+    <Compile Include="Datos\clHorario.cs" />
     <Compile Include="Datos\clLogin.cs" />
     <Compile Include="Datos\clNota.cs" />
     <Compile Include="Datos\clPeriodo.cs" />
@@ -127,6 +128,12 @@
     </Compile>
     <Compile Include="Vista\frmFiltrarDocentes.Designer.cs">
       <DependentUpon>frmFiltrarDocentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmHorario.Designer.cs">
+      <DependentUpon>frmHorario.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmLogin.cs">
       <SubType>Form</SubType>
@@ -198,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmFiltrarDocentes.resx">
       <DependentUpon>frmFiltrarDocentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmHorario.resx">
+      <DependentUpon>frmHorario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

@@ -31,19 +31,20 @@ namespace appE2Colsis.Vista
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.lblApellido = new Guna.UI.WinForms.GunaLabel();
+            this.lblnombreApellido = new Guna.UI.WinForms.GunaLabel();
+            this.pnNombre = new System.Windows.Forms.Panel();
+            this.btnHorario = new Guna.UI.WinForms.GunaButton();
             this.btnAsistencias = new Guna.UI.WinForms.GunaButton();
             this.btnCurso = new Guna.UI.WinForms.GunaButton();
-            this.lblApellido = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.btnAsignaturas = new Guna.UI.WinForms.GunaButton();
             this.btnNotas = new Guna.UI.WinForms.GunaButton();
             this.btnEstudiante = new Guna.UI.WinForms.GunaButton();
             this.btnReporte = new Guna.UI.WinForms.GunaButton();
-            this.lblnombreApellido = new Guna.UI.WinForms.GunaLabel();
             this.btnRol = new Guna.UI.WinForms.GunaButton();
             this.btnPersona = new Guna.UI.WinForms.GunaButton();
             this.pbfoto = new Guna.UI.WinForms.GunaPictureBox();
-            this.pnNombre = new System.Windows.Forms.Panel();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbfoto)).BeginInit();
@@ -55,6 +56,7 @@ namespace appE2Colsis.Vista
             | System.Windows.Forms.AnchorStyles.Left)));
             this.gunaPanel1.AutoSize = true;
             this.gunaPanel1.BackColor = System.Drawing.Color.White;
+            this.gunaPanel1.Controls.Add(this.btnHorario);
             this.gunaPanel1.Controls.Add(this.btnAsistencias);
             this.gunaPanel1.Controls.Add(this.btnCurso);
             this.gunaPanel1.Controls.Add(this.lblApellido);
@@ -71,6 +73,65 @@ namespace appE2Colsis.Vista
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(302, 828);
             this.gunaPanel1.TabIndex = 0;
+            // 
+            // lblApellido
+            // 
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido.Location = new System.Drawing.Point(79, 207);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(121, 22);
+            this.lblApellido.TabIndex = 10;
+            this.lblApellido.Text = "gunaLabel1";
+            // 
+            // lblnombreApellido
+            // 
+            this.lblnombreApellido.AutoSize = true;
+            this.lblnombreApellido.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombreApellido.Location = new System.Drawing.Point(79, 172);
+            this.lblnombreApellido.Name = "lblnombreApellido";
+            this.lblnombreApellido.Size = new System.Drawing.Size(121, 22);
+            this.lblnombreApellido.TabIndex = 5;
+            this.lblnombreApellido.Text = "gunaLabel1";
+            // 
+            // pnNombre
+            // 
+            this.pnNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnNombre.AutoSize = true;
+            this.pnNombre.BackColor = System.Drawing.Color.White;
+            this.pnNombre.Location = new System.Drawing.Point(280, 2);
+            this.pnNombre.Name = "pnNombre";
+            this.pnNombre.Size = new System.Drawing.Size(1267, 831);
+            this.pnNombre.TabIndex = 1;
+            // 
+            // btnHorario
+            // 
+            this.btnHorario.AnimationHoverSpeed = 0.07F;
+            this.btnHorario.AnimationSpeed = 0.03F;
+            this.btnHorario.BackColor = System.Drawing.Color.Transparent;
+            this.btnHorario.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnHorario.BorderColor = System.Drawing.Color.Black;
+            this.btnHorario.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnHorario.FocusedColor = System.Drawing.Color.Empty;
+            this.btnHorario.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHorario.ForeColor = System.Drawing.Color.White;
+            this.btnHorario.Image = ((System.Drawing.Image)(resources.GetObject("btnHorario.Image")));
+            this.btnHorario.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnHorario.Location = new System.Drawing.Point(28, 684);
+            this.btnHorario.Name = "btnHorario";
+            this.btnHorario.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnHorario.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnHorario.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnHorario.OnHoverImage = null;
+            this.btnHorario.OnPressedColor = System.Drawing.Color.Black;
+            this.btnHorario.Radius = 20;
+            this.btnHorario.Size = new System.Drawing.Size(253, 37);
+            this.btnHorario.TabIndex = 13;
+            this.btnHorario.Text = "Horario";
+            this.btnHorario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnHorario.Click += new System.EventHandler(this.btnHorario_Click);
             // 
             // btnAsistencias
             // 
@@ -125,16 +186,6 @@ namespace appE2Colsis.Vista
             this.btnCurso.Text = "Curso";
             this.btnCurso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnCurso.Click += new System.EventHandler(this.btnCurso_Click);
-            // 
-            // lblApellido
-            // 
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(79, 207);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(121, 22);
-            this.lblApellido.TabIndex = 10;
-            this.lblApellido.Text = "gunaLabel1";
             // 
             // gunaPictureBox2
             // 
@@ -257,16 +308,6 @@ namespace appE2Colsis.Vista
             this.btnReporte.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
-            // lblnombreApellido
-            // 
-            this.lblnombreApellido.AutoSize = true;
-            this.lblnombreApellido.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnombreApellido.Location = new System.Drawing.Point(79, 172);
-            this.lblnombreApellido.Name = "lblnombreApellido";
-            this.lblnombreApellido.Size = new System.Drawing.Size(121, 22);
-            this.lblnombreApellido.TabIndex = 5;
-            this.lblnombreApellido.Text = "gunaLabel1";
-            // 
             // btnRol
             // 
             this.btnRol.AnimationHoverSpeed = 0.07F;
@@ -334,18 +375,6 @@ namespace appE2Colsis.Vista
             this.pbfoto.TabIndex = 0;
             this.pbfoto.TabStop = false;
             // 
-            // pnNombre
-            // 
-            this.pnNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnNombre.AutoSize = true;
-            this.pnNombre.BackColor = System.Drawing.Color.White;
-            this.pnNombre.Location = new System.Drawing.Point(280, 2);
-            this.pnNombre.Name = "pnNombre";
-            this.pnNombre.Size = new System.Drawing.Size(1267, 831);
-            this.pnNombre.TabIndex = 1;
-            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,5 +413,6 @@ namespace appE2Colsis.Vista
         private Guna.UI.WinForms.GunaLabel lblApellido;
         private Guna.UI.WinForms.GunaButton btnCurso;
         private Guna.UI.WinForms.GunaButton btnAsistencias;
+        private Guna.UI.WinForms.GunaButton btnHorario;
     }
 }

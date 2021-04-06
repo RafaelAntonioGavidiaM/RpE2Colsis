@@ -202,5 +202,14 @@ namespace appE2Colsis.Vista
             mtdCerrarFormulario("frmAsistencia");
 
         }
+
+        private void btnHorario_Click(object sender, EventArgs e)
+        {
+            frmHorario objHorario = new frmHorario();
+            objHorario.TopLevel = false;
+            objHorario.Parent = pnNombre;
+            objHorario.Show();
+            mtdCerrarFormulario("frmHorario");
+        }
     }
 }
