@@ -35,6 +35,8 @@ namespace appE2Colsis.Vista
             dgvEmpleado.Columns["tipoSangre"].Visible = false;
             dgvEmpleado.Columns["tipoSeguroYseguroMedico"].Visible = false;
             dgvEmpleado.Columns["seguroEstudiantil"].Visible = false;
+            dgvEmpleado.Columns["idPersona"].Visible = false;
+
 
 
             decision[0] = "Habilitado";

@@ -47,6 +47,9 @@ namespace appE2Colsis.Vista
             this.txtCorreo = new Guna.UI.WinForms.GunaTextBox();
             this.cmbRol = new Guna.UI.WinForms.GunaComboBox();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
+            this.btnBuscarFoto = new Guna.UI.WinForms.GunaButton();
+            this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
+            this.txtFoto = new Guna.UI.WinForms.GunaTextBox();
             this.txtClave = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
             this.cmbEstado = new Guna.UI.WinForms.GunaComboBox();
@@ -59,10 +62,7 @@ namespace appE2Colsis.Vista
             this.grbBuscqueda = new Guna.UI.WinForms.GunaGroupBox();
             this.txtBuscar = new Guna.UI.WinForms.GunaTextBox();
             this.btnRecargar = new Guna.UI.WinForms.GunaButton();
-            this.txtFoto = new Guna.UI.WinForms.GunaTextBox();
-            this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
             this.openFoto = new System.Windows.Forms.OpenFileDialog();
-            this.btnBuscarFoto = new Guna.UI.WinForms.GunaButton();
             this.gunaGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleado)).BeginInit();
             this.grbBuscqueda.SuspendLayout();
@@ -82,7 +82,7 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel2.Location = new System.Drawing.Point(24, 135);
+            this.gunaLabel2.Location = new System.Drawing.Point(19, 185);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(87, 20);
             this.gunaLabel2.TabIndex = 1;
@@ -92,7 +92,7 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel3.Location = new System.Drawing.Point(24, 95);
+            this.gunaLabel3.Location = new System.Drawing.Point(24, 127);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(72, 20);
             this.gunaLabel3.TabIndex = 2;
@@ -102,7 +102,7 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel4.Location = new System.Drawing.Point(24, 177);
+            this.gunaLabel4.Location = new System.Drawing.Point(24, 242);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(67, 20);
             this.gunaLabel4.TabIndex = 3;
@@ -112,7 +112,7 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel5.AutoSize = true;
             this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel5.Location = new System.Drawing.Point(24, 254);
+            this.gunaLabel5.Location = new System.Drawing.Point(24, 356);
             this.gunaLabel5.Name = "gunaLabel5";
             this.gunaLabel5.Size = new System.Drawing.Size(56, 20);
             this.gunaLabel5.TabIndex = 4;
@@ -122,7 +122,7 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel6.AutoSize = true;
             this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel6.Location = new System.Drawing.Point(24, 296);
+            this.gunaLabel6.Location = new System.Drawing.Point(24, 407);
             this.gunaLabel6.Name = "gunaLabel6";
             this.gunaLabel6.Size = new System.Drawing.Size(54, 20);
             this.gunaLabel6.TabIndex = 5;
@@ -132,7 +132,7 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel7.AutoSize = true;
             this.gunaLabel7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel7.Location = new System.Drawing.Point(24, 413);
+            this.gunaLabel7.Location = new System.Drawing.Point(24, 560);
             this.gunaLabel7.Name = "gunaLabel7";
             this.gunaLabel7.Size = new System.Drawing.Size(54, 20);
             this.gunaLabel7.TabIndex = 6;
@@ -152,7 +152,7 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel9.AutoSize = true;
             this.gunaLabel9.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel9.Location = new System.Drawing.Point(29, 454);
+            this.gunaLabel9.Location = new System.Drawing.Point(26, 618);
             this.gunaLabel9.Name = "gunaLabel9";
             this.gunaLabel9.Size = new System.Drawing.Size(31, 20);
             this.gunaLabel9.TabIndex = 8;
@@ -183,7 +183,7 @@ namespace appE2Colsis.Vista
             this.txtApellido.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtApellido.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtApellido.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtApellido.Location = new System.Drawing.Point(122, 97);
+            this.txtApellido.Location = new System.Drawing.Point(122, 115);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.PasswordChar = '\0';
             this.txtApellido.SelectedText = "";
@@ -199,7 +199,7 @@ namespace appE2Colsis.Vista
             this.txtDocumento.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtDocumento.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtDocumento.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtDocumento.Location = new System.Drawing.Point(122, 135);
+            this.txtDocumento.Location = new System.Drawing.Point(122, 173);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.PasswordChar = '\0';
             this.txtDocumento.SelectedText = "";
@@ -215,7 +215,7 @@ namespace appE2Colsis.Vista
             this.txtTelefono.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtTelefono.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTelefono.Location = new System.Drawing.Point(122, 177);
+            this.txtTelefono.Location = new System.Drawing.Point(122, 230);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.PasswordChar = '\0';
             this.txtTelefono.SelectedText = "";
@@ -231,7 +231,7 @@ namespace appE2Colsis.Vista
             this.txtCiudad.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtCiudad.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtCiudad.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCiudad.Location = new System.Drawing.Point(122, 254);
+            this.txtCiudad.Location = new System.Drawing.Point(123, 344);
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.PasswordChar = '\0';
             this.txtCiudad.SelectedText = "";
@@ -247,7 +247,7 @@ namespace appE2Colsis.Vista
             this.txtCorreo.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtCorreo.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCorreo.Location = new System.Drawing.Point(122, 296);
+            this.txtCorreo.Location = new System.Drawing.Point(122, 395);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.PasswordChar = '\0';
             this.txtCorreo.SelectedText = "";
@@ -265,7 +265,7 @@ namespace appE2Colsis.Vista
             this.cmbRol.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbRol.ForeColor = System.Drawing.Color.Black;
             this.cmbRol.FormattingEnabled = true;
-            this.cmbRol.Location = new System.Drawing.Point(122, 449);
+            this.cmbRol.Location = new System.Drawing.Point(122, 607);
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbRol.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -306,10 +306,59 @@ namespace appE2Colsis.Vista
             this.gunaGroupBox1.LineColor = System.Drawing.Color.Gainsboro;
             this.gunaGroupBox1.Location = new System.Drawing.Point(35, 43);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
-            this.gunaGroupBox1.Size = new System.Drawing.Size(411, 556);
+            this.gunaGroupBox1.Size = new System.Drawing.Size(411, 737);
             this.gunaGroupBox1.TabIndex = 17;
             this.gunaGroupBox1.Text = "Registro";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
+            // 
+            // btnBuscarFoto
+            // 
+            this.btnBuscarFoto.AnimationHoverSpeed = 0.07F;
+            this.btnBuscarFoto.AnimationSpeed = 0.03F;
+            this.btnBuscarFoto.BaseColor = System.Drawing.Color.Transparent;
+            this.btnBuscarFoto.BorderColor = System.Drawing.Color.Black;
+            this.btnBuscarFoto.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnBuscarFoto.FocusedColor = System.Drawing.Color.Empty;
+            this.btnBuscarFoto.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBuscarFoto.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarFoto.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarFoto.Image")));
+            this.btnBuscarFoto.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnBuscarFoto.Location = new System.Drawing.Point(372, 450);
+            this.btnBuscarFoto.Name = "btnBuscarFoto";
+            this.btnBuscarFoto.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.btnBuscarFoto.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnBuscarFoto.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnBuscarFoto.OnHoverImage = null;
+            this.btnBuscarFoto.OnPressedColor = System.Drawing.Color.Black;
+            this.btnBuscarFoto.Size = new System.Drawing.Size(39, 32);
+            this.btnBuscarFoto.TabIndex = 23;
+            this.btnBuscarFoto.Click += new System.EventHandler(this.btnBuscarFoto_Click);
+            // 
+            // gunaLabel11
+            // 
+            this.gunaLabel11.AutoSize = true;
+            this.gunaLabel11.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel11.Location = new System.Drawing.Point(24, 462);
+            this.gunaLabel11.Name = "gunaLabel11";
+            this.gunaLabel11.Size = new System.Drawing.Size(39, 20);
+            this.gunaLabel11.TabIndex = 26;
+            this.gunaLabel11.Text = "Foto";
+            // 
+            // txtFoto
+            // 
+            this.txtFoto.BaseColor = System.Drawing.Color.White;
+            this.txtFoto.BorderColor = System.Drawing.Color.Silver;
+            this.txtFoto.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFoto.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtFoto.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtFoto.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtFoto.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtFoto.Location = new System.Drawing.Point(123, 450);
+            this.txtFoto.Name = "txtFoto";
+            this.txtFoto.PasswordChar = '\0';
+            this.txtFoto.SelectedText = "";
+            this.txtFoto.Size = new System.Drawing.Size(243, 32);
+            this.txtFoto.TabIndex = 25;
             // 
             // txtClave
             // 
@@ -320,7 +369,7 @@ namespace appE2Colsis.Vista
             this.txtClave.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtClave.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtClave.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtClave.Location = new System.Drawing.Point(122, 373);
+            this.txtClave.Location = new System.Drawing.Point(123, 506);
             this.txtClave.Name = "txtClave";
             this.txtClave.PasswordChar = '\0';
             this.txtClave.SelectedText = "";
@@ -331,7 +380,7 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel10.AutoSize = true;
             this.gunaLabel10.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel10.Location = new System.Drawing.Point(24, 373);
+            this.gunaLabel10.Location = new System.Drawing.Point(24, 518);
             this.gunaLabel10.Name = "gunaLabel10";
             this.gunaLabel10.Size = new System.Drawing.Size(45, 20);
             this.gunaLabel10.TabIndex = 23;
@@ -348,7 +397,7 @@ namespace appE2Colsis.Vista
             this.cmbEstado.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbEstado.ForeColor = System.Drawing.Color.Black;
             this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Location = new System.Drawing.Point(122, 413);
+            this.cmbEstado.Location = new System.Drawing.Point(122, 555);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbEstado.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -359,7 +408,7 @@ namespace appE2Colsis.Vista
             // 
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label.Location = new System.Drawing.Point(24, 216);
+            this.label.Location = new System.Drawing.Point(24, 296);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(72, 20);
             this.label.TabIndex = 20;
@@ -377,7 +426,7 @@ namespace appE2Colsis.Vista
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
             this.btnRegistrar.Image = null;
             this.btnRegistrar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnRegistrar.Location = new System.Drawing.Point(21, 494);
+            this.btnRegistrar.Location = new System.Drawing.Point(3, 680);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnRegistrar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -402,7 +451,7 @@ namespace appE2Colsis.Vista
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
             this.btnActualizar.Image = null;
             this.btnActualizar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnActualizar.Location = new System.Drawing.Point(151, 494);
+            this.btnActualizar.Location = new System.Drawing.Point(133, 680);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnActualizar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -424,7 +473,7 @@ namespace appE2Colsis.Vista
             this.txtDireccion.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtDireccion.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtDireccion.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtDireccion.Location = new System.Drawing.Point(122, 216);
+            this.txtDireccion.Location = new System.Drawing.Point(122, 284);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.PasswordChar = '\0';
             this.txtDireccion.SelectedText = "";
@@ -443,7 +492,7 @@ namespace appE2Colsis.Vista
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = null;
             this.btnEliminar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEliminar.Location = new System.Drawing.Point(278, 494);
+            this.btnEliminar.Location = new System.Drawing.Point(260, 680);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnEliminar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -463,7 +512,7 @@ namespace appE2Colsis.Vista
             this.dgvEmpleado.Name = "dgvEmpleado";
             this.dgvEmpleado.RowHeadersWidth = 51;
             this.dgvEmpleado.RowTemplate.Height = 24;
-            this.dgvEmpleado.Size = new System.Drawing.Size(744, 491);
+            this.dgvEmpleado.Size = new System.Drawing.Size(1070, 684);
             this.dgvEmpleado.TabIndex = 18;
             this.dgvEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleado_CellContentClick);
             // 
@@ -479,7 +528,7 @@ namespace appE2Colsis.Vista
             this.grbBuscqueda.Location = new System.Drawing.Point(462, 11);
             this.grbBuscqueda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbBuscqueda.Name = "grbBuscqueda";
-            this.grbBuscqueda.Size = new System.Drawing.Size(744, 95);
+            this.grbBuscqueda.Size = new System.Drawing.Size(1070, 95);
             this.grbBuscqueda.TabIndex = 22;
             this.grbBuscqueda.Text = "Busqueda Personal";
             this.grbBuscqueda.TextLocation = new System.Drawing.Point(10, 8);
@@ -498,7 +547,7 @@ namespace appE2Colsis.Vista
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.PasswordChar = '\0';
             this.txtBuscar.SelectedText = "";
-            this.txtBuscar.Size = new System.Drawing.Size(617, 37);
+            this.txtBuscar.Size = new System.Drawing.Size(929, 37);
             this.txtBuscar.TabIndex = 20;
             this.txtBuscar.Tag = "Ingrese el nombre o documento";
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
@@ -516,7 +565,7 @@ namespace appE2Colsis.Vista
             this.btnRecargar.ForeColor = System.Drawing.Color.White;
             this.btnRecargar.Image = null;
             this.btnRecargar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnRecargar.Location = new System.Drawing.Point(660, 52);
+            this.btnRecargar.Location = new System.Drawing.Point(969, 53);
             this.btnRecargar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRecargar.Name = "btnRecargar";
             this.btnRecargar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -524,71 +573,21 @@ namespace appE2Colsis.Vista
             this.btnRecargar.OnHoverForeColor = System.Drawing.Color.White;
             this.btnRecargar.OnHoverImage = null;
             this.btnRecargar.OnPressedColor = System.Drawing.Color.Black;
-            this.btnRecargar.Size = new System.Drawing.Size(81, 33);
+            this.btnRecargar.Size = new System.Drawing.Size(98, 33);
             this.btnRecargar.TabIndex = 19;
             this.btnRecargar.Text = "Recargar";
             this.btnRecargar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnRecargar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // txtFoto
-            // 
-            this.txtFoto.BaseColor = System.Drawing.Color.White;
-            this.txtFoto.BorderColor = System.Drawing.Color.Silver;
-            this.txtFoto.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFoto.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtFoto.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtFoto.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtFoto.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtFoto.Location = new System.Drawing.Point(122, 335);
-            this.txtFoto.Name = "txtFoto";
-            this.txtFoto.PasswordChar = '\0';
-            this.txtFoto.SelectedText = "";
-            this.txtFoto.Size = new System.Drawing.Size(243, 32);
-            this.txtFoto.TabIndex = 25;
-           
-            // 
-            // gunaLabel11
-            // 
-            this.gunaLabel11.AutoSize = true;
-            this.gunaLabel11.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel11.Location = new System.Drawing.Point(24, 335);
-            this.gunaLabel11.Name = "gunaLabel11";
-            this.gunaLabel11.Size = new System.Drawing.Size(39, 20);
-            this.gunaLabel11.TabIndex = 26;
-            this.gunaLabel11.Text = "Foto";
-            // 
             // openFoto
             // 
             this.openFoto.FileName = "openFileDialog1";
-            // 
-            // btnBuscarFoto
-            // 
-            this.btnBuscarFoto.AnimationHoverSpeed = 0.07F;
-            this.btnBuscarFoto.AnimationSpeed = 0.03F;
-            this.btnBuscarFoto.BaseColor = System.Drawing.Color.Transparent;
-            this.btnBuscarFoto.BorderColor = System.Drawing.Color.Black;
-            this.btnBuscarFoto.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnBuscarFoto.FocusedColor = System.Drawing.Color.Empty;
-            this.btnBuscarFoto.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnBuscarFoto.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarFoto.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarFoto.Image")));
-            this.btnBuscarFoto.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnBuscarFoto.Location = new System.Drawing.Point(369, 334);
-            this.btnBuscarFoto.Name = "btnBuscarFoto";
-            this.btnBuscarFoto.OnHoverBaseColor = System.Drawing.Color.Transparent;
-            this.btnBuscarFoto.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnBuscarFoto.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnBuscarFoto.OnHoverImage = null;
-            this.btnBuscarFoto.OnPressedColor = System.Drawing.Color.Black;
-            this.btnBuscarFoto.Size = new System.Drawing.Size(39, 32);
-            this.btnBuscarFoto.TabIndex = 23;
-            this.btnBuscarFoto.Click += new System.EventHandler(this.btnBuscarFoto_Click);
             // 
             // frmRePersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1218, 611);
+            this.ClientSize = new System.Drawing.Size(1544, 810);
             this.Controls.Add(this.grbBuscqueda);
             this.Controls.Add(this.dgvEmpleado);
             this.Controls.Add(this.gunaGroupBox1);
