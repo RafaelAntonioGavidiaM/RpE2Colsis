@@ -115,7 +115,7 @@ namespace appE2Colsis.Datos
         {
             DateTime fechaActual = DateTime.Now;
             String año = Convert.ToDateTime(fechaActual).ToString("yyyy");
-            string consulta = "select curso.idCurso,curso.nombreCurso from asignaturacurso inner join curso on asignaturacurso.idCurso = curso.idCurso inner join asignatura on asignaturacurso.idAsignatura = asignatura.idAsignatura inner join personal on asignaturacurso.idDocente = personal.idPersonal where personal.idPersonal ="+idDocente+" and curso.año = "+año+"";
+            string consulta = "select  distinct(curso.idCurso),curso.idCurso,curso.nombreCurso from asignaturacurso inner join curso on asignaturacurso.idCurso = curso.idCurso inner join asignatura on asignaturacurso.idAsignatura = asignatura.idAsignatura inner join personal on asignaturacurso.idDocente = personal.idPersonal where personal.idPersonal =" + idDocente+" and curso.año = "+año+"";
             DataTable resultado = new DataTable();
          resultado=   objConexion.mtdDesconectado(consulta);
             List<clNota> listaCursosDocente = new List<clNota>();
@@ -123,7 +123,7 @@ namespace appE2Colsis.Datos
             {
                 clNota objNota = new clNota();
                 objNota.idCurso = int.Parse(resultado.Rows[i][0].ToString());
-                objNota.nombreCurso = resultado.Rows[i][1].ToString();
+                objNota.nombreCurso = resultado.Rows[i][2].ToString();
                 //objNota.idAsignatura =int.Parse(resultado.Rows[i][2].ToString());
                 //objNota.nombreAsignatura = resultado.Rows[i][3].ToString();
                 listaCursosDocente.Add(objNota);

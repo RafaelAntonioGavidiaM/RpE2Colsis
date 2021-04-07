@@ -34,17 +34,27 @@ namespace appE2Colsis.Vista
             }
             else if (objLogin.documento==txtUser.Text && objLogin.password==txtPswd.Text && objLogin.idPermiso==1 )
             {
+                pbiError.Visible = false;
+                //pbiError.Location = new Point(117, 12);
+                panelError.Visible = false;
+                lblError.Visible = false;
+                pbiNormal.Visible = true;
                 frmMenuPrincipal objFrmMenuP = new frmMenuPrincipal(objLogin.idRol, objLogin.nombre, objLogin.apellido,objLogin.idPersonal,objLogin.foto);
                 this.Hide();
                 objFrmMenuP.Show();
                 
-                
+
+
 
 
             }
             else
             {
-                MessageBox.Show("No se puede realizar el ingreso", "Error Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                pbiError.Visible = true;
+                pbiError.Location = new Point(117, 12);
+                panelError.Visible = true;
+                lblError.Visible = true;
+                pbiNormal.Visible = false;
             }
             
 
@@ -55,6 +65,11 @@ namespace appE2Colsis.Vista
         {
             pSettings.Visible = false;
             grpSetting.Visible = false;
+            pbiError.Visible = false;
+            //pbiError.Location = new Point(117, 12);
+            panelError.Visible = false;
+            lblError.Visible = false;
+            pbiNormal.Visible = true;
         }
 
         private void pSettings_Click(object sender, EventArgs e)
@@ -123,6 +138,6 @@ namespace appE2Colsis.Vista
             MessageBox.Show("DataBase actualizada correctamente");
         }
 
-       
+        
     }
 }

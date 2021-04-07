@@ -60,12 +60,12 @@ namespace appE2Colsis.Vista
 
             if (registros>0) //permisos segun boton
             {
-                btn.Visible = true;
+                btn.Enabled = true;
 
             }
             else
             {
-                btn.Visible = false;
+                btn.Enabled = false;
 
             }
 
@@ -81,15 +81,33 @@ namespace appE2Colsis.Vista
             ///Se agregan formularios y botones
             lblnombreApellido.Text = nombrePersona;
             lblApellido.Text= apellido;
-            Control[] btn = new Control[3];
+            Control[] btn = new Control[10];
             btn[0] = btnPersona;
             btn[1] = btnRol;
             btn[2] = btnReporte;
+            btn[3] = btnNotas;
+            btn[4] = btnAsignaturas;
+            btn[5] = btnEstudiante;
+            btn[6] = btnCurso;
+            btn[7] = btnAsistencias;
+            btn[8] = btnHorario;
+            btn[9] = btnPeriodo;
 
-            string[] nombreFormularioV = new string[3];
+            string[] nombreFormularioV = new string[10];
             nombreFormularioV[0] = "frmRePersonal";
             nombreFormularioV[1] = "frmRol";
             nombreFormularioV[2] = "frmReporte";
+            nombreFormularioV[3] = "frmNota";
+            nombreFormularioV[4] = "frmAsignatura";
+            nombreFormularioV[5] = "frmEstudiante";
+            nombreFormularioV[6] = "frmCursos";
+            nombreFormularioV[7] = "frmAsistencia";
+            nombreFormularioV[8] = "frmHorario";
+            nombreFormularioV[9] = "frmPeriodo";
+
+
+
+
 
             for (int i = 0; i < nombreFormularioV.Length; i++)
             {
