@@ -138,6 +138,10 @@ namespace appE2Colsis.Vista
             MessageBox.Show("DataBase actualizada correctamente");
         }
 
-        
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+            
+        }
     }
 }

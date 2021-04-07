@@ -25,6 +25,7 @@ namespace appE2Colsis.Vista
 
         public string foto { get; set; }
 
+        frmLogin objLogin = new frmLogin();
         public frmMenuPrincipal(int idRol,string nombrePersona,string apellido, int idPersonal, string foto)
         {
             this.idRol = idRol;
@@ -140,7 +141,7 @@ namespace appE2Colsis.Vista
 
             frmRePersonal objRePersonal = new frmRePersonal();
             objRePersonal.TopLevel = false;
-            objRePersonal.Parent = pnNombre;
+            objRePersonal.Parent = btn;
             objRePersonal.Show();
             mtdCerrarFormulario("frmRePersonal");
             
@@ -150,7 +151,7 @@ namespace appE2Colsis.Vista
         {
             frmRol objRol = new frmRol();
             objRol.TopLevel = false;
-            objRol.Parent = pnNombre;
+            objRol.Parent = btn;
             objRol.Show();
             mtdCerrarFormulario("frmRol");
             //mtdVerificaPermisos("frmRol");
@@ -160,7 +161,7 @@ namespace appE2Colsis.Vista
         {
             frmReporte objReporte = new frmReporte();
             objReporte.TopLevel = false;
-            objReporte.Parent = pnNombre;
+            objReporte.Parent = btn;
             objReporte.Show();
             mtdCerrarFormulario("frmReporte");
             
@@ -171,7 +172,7 @@ namespace appE2Colsis.Vista
         {
             frmNota objNota = new frmNota(idPersonal);
             objNota.TopLevel = false;
-            objNota.Parent = pnNombre;
+            objNota.Parent = btn;
             objNota.Show();
             mtdCerrarFormulario("frmNota");
 
@@ -182,7 +183,7 @@ namespace appE2Colsis.Vista
         {
             frmEstudiante objEstudiante = new frmEstudiante();
             objEstudiante.TopLevel = false;
-            objEstudiante.Parent = pnNombre;
+            objEstudiante.Parent = btn;
             objEstudiante.Show();
             mtdCerrarFormulario("frmEstudiante");
         }
@@ -191,7 +192,7 @@ namespace appE2Colsis.Vista
         {
             frmAsignatura objAsignaturas = new frmAsignatura();
             objAsignaturas.TopLevel = false;
-            objAsignaturas.Parent = pnNombre;
+            objAsignaturas.Parent = btn;
             objAsignaturas.Show();
             mtdCerrarFormulario("frmAsignatura");
         }
@@ -206,7 +207,7 @@ namespace appE2Colsis.Vista
         {
             frmCurso objCurso = new frmCurso();
             objCurso.TopLevel = false;
-            objCurso.Parent = pnNombre;
+            objCurso.Parent = btn;
             objCurso.Show();
             mtdCerrarFormulario("frmCurso");
         }
@@ -215,7 +216,7 @@ namespace appE2Colsis.Vista
         {
             frmAsistencia objAsistencia = new frmAsistencia();
             objAsistencia.TopLevel = false;
-            objAsistencia.Parent = pnNombre;
+            objAsistencia.Parent = btn;
             objAsistencia.Show();
             mtdCerrarFormulario("frmAsistencia");
 
@@ -225,9 +226,22 @@ namespace appE2Colsis.Vista
         {
             frmHorario objHorario = new frmHorario();
             objHorario.TopLevel = false;
-            objHorario.Parent = pnNombre;
+            objHorario.Parent = btn;
             objHorario.Show();
             mtdCerrarFormulario("frmHorario");
+        }
+
+        private void btnCerrrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Hide();          
+            objLogin.Show();
+            MessageBox.Show("Sesion cerrada correctamente","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            objLogin.Close();
+            Application.Exit();
         }
     }
 }
