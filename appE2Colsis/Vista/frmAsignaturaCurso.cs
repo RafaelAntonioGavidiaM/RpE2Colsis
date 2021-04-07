@@ -139,6 +139,8 @@ namespace appE2Colsis.Vista
 
         public void mtdComprobar(int filas)
         {
+
+
             if (filas>0)
             {
                 MessageBox.Show("Proceso realizado Exitosamente", "Succesful", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -231,13 +233,14 @@ namespace appE2Colsis.Vista
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            
             objAsignaturaCurso.idCurso = int.Parse(cmbCurso.SelectedValue.ToString());
             objAsignaturaCurso.idAsignatura = int.Parse(cmbAsignatura.SelectedValue.ToString());
             objAsignaturaCurso.idPersonal = int.Parse(cmbDocente.SelectedValue.ToString());
             objAsignaturaCurso.idAsignaturaCurso = idAsignaturaCurso;
 
           int filasAfectadas=  objAsignaturaCurso.mtdActualizarCurso();
-            mtdComprobar(rows);
+            mtdComprobar(filasAfectadas);
             mtdCargarDatagriedview();
 
 

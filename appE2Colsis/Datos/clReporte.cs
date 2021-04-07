@@ -29,10 +29,11 @@ namespace appE2Colsis.Datos
         }
         public void mtdListarPeriodos()
         {
-            int añoInicio = int.Parse(DateTime.Now.ToString("yyyy"));
-            int añoFinal = añoInicio + 1;
+            DateTime fechaActual = DateTime.Now;
+           string año = Convert.ToDateTime(fechaActual).ToString("yyyy");
+            
             string sql = "select idPeriodo, nombrePeriodo " +
-                         "from periodo where año between '" + añoInicio + "-01-01' and '" + añoFinal + "-01-01'";
+                         "from periodo where año='"+año+"'";
             tblPersona = new DataTable();
             tblPersona = objConexion.mtdDesconectado(sql);
         }
