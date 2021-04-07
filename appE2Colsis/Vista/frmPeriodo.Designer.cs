@@ -57,11 +57,12 @@ namespace appE2Colsis.Vista
             this.txtNombre.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtNombre.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNombre.Location = new System.Drawing.Point(126, 79);
+            this.txtNombre.Location = new System.Drawing.Point(168, 97);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PasswordChar = '\0';
             this.txtNombre.SelectedText = "";
-            this.txtNombre.Size = new System.Drawing.Size(221, 26);
+            this.txtNombre.Size = new System.Drawing.Size(295, 37);
             this.txtNombre.TabIndex = 0;
             // 
             // dtpInicio
@@ -73,7 +74,8 @@ namespace appE2Colsis.Vista
             this.dtpInicio.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtpInicio.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpInicio.ForeColor = System.Drawing.Color.Black;
-            this.dtpInicio.Location = new System.Drawing.Point(126, 112);
+            this.dtpInicio.Location = new System.Drawing.Point(168, 138);
+            this.dtpInicio.Margin = new System.Windows.Forms.Padding(4);
             this.dtpInicio.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpInicio.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpInicio.Name = "dtpInicio";
@@ -81,7 +83,7 @@ namespace appE2Colsis.Vista
             this.dtpInicio.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtpInicio.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtpInicio.OnPressedColor = System.Drawing.Color.Black;
-            this.dtpInicio.Size = new System.Drawing.Size(221, 27);
+            this.dtpInicio.Size = new System.Drawing.Size(295, 33);
             this.dtpInicio.TabIndex = 1;
             this.dtpInicio.Text = "lunes, 29 de marzo de 2021";
             this.dtpInicio.Value = new System.DateTime(2021, 3, 29, 8, 6, 1, 122);
@@ -95,7 +97,8 @@ namespace appE2Colsis.Vista
             this.dtpFin.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtpFin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpFin.ForeColor = System.Drawing.Color.Black;
-            this.dtpFin.Location = new System.Drawing.Point(126, 148);
+            this.dtpFin.Location = new System.Drawing.Point(168, 182);
+            this.dtpFin.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFin.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpFin.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpFin.Name = "dtpFin";
@@ -103,7 +106,7 @@ namespace appE2Colsis.Vista
             this.dtpFin.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtpFin.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtpFin.OnPressedColor = System.Drawing.Color.Black;
-            this.dtpFin.Size = new System.Drawing.Size(221, 27);
+            this.dtpFin.Size = new System.Drawing.Size(295, 33);
             this.dtpFin.TabIndex = 2;
             this.dtpFin.Text = "lunes, 29 de marzo de 2021";
             this.dtpFin.Value = new System.DateTime(2021, 3, 29, 8, 6, 1, 122);
@@ -117,11 +120,12 @@ namespace appE2Colsis.Vista
             this.btnRegistrar.BorderColor = System.Drawing.Color.Black;
             this.btnRegistrar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnRegistrar.FocusedColor = System.Drawing.Color.Empty;
-            this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRegistrar.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
             this.btnRegistrar.Image = null;
             this.btnRegistrar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnRegistrar.Location = new System.Drawing.Point(142, 233);
+            this.btnRegistrar.Location = new System.Drawing.Point(189, 287);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnRegistrar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -129,7 +133,7 @@ namespace appE2Colsis.Vista
             this.btnRegistrar.OnHoverImage = null;
             this.btnRegistrar.OnPressedColor = System.Drawing.Color.Black;
             this.btnRegistrar.Radius = 10;
-            this.btnRegistrar.Size = new System.Drawing.Size(150, 34);
+            this.btnRegistrar.Size = new System.Drawing.Size(200, 42);
             this.btnRegistrar.TabIndex = 3;
             this.btnRegistrar.Text = "Registrar Periodo";
             this.btnRegistrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -138,30 +142,33 @@ namespace appE2Colsis.Vista
             // gunaLabel1
             // 
             this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel1.Location = new System.Drawing.Point(25, 90);
+            this.gunaLabel1.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.Location = new System.Drawing.Point(33, 111);
+            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(95, 15);
+            this.gunaLabel1.Size = new System.Drawing.Size(107, 24);
             this.gunaLabel1.TabIndex = 4;
             this.gunaLabel1.Text = "Nombre Periodo";
             // 
             // gunaLabel2
             // 
             this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel2.Location = new System.Drawing.Point(50, 124);
+            this.gunaLabel2.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.Location = new System.Drawing.Point(67, 153);
+            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(70, 15);
+            this.gunaLabel2.Size = new System.Drawing.Size(79, 24);
             this.gunaLabel2.TabIndex = 5;
             this.gunaLabel2.Text = "Fecha Inicio";
             // 
             // gunaLabel3
             // 
             this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel3.Location = new System.Drawing.Point(59, 160);
+            this.gunaLabel3.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel3.Location = new System.Drawing.Point(79, 197);
+            this.gunaLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(57, 15);
+            this.gunaLabel3.Size = new System.Drawing.Size(64, 24);
             this.gunaLabel3.TabIndex = 6;
             this.gunaLabel3.Text = "Fecha Fin";
             // 
@@ -174,11 +181,12 @@ namespace appE2Colsis.Vista
             this.btnModificar.BorderColor = System.Drawing.Color.Black;
             this.btnModificar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnModificar.FocusedColor = System.Drawing.Color.Empty;
-            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnModificar.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Image = null;
             this.btnModificar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnModificar.Location = new System.Drawing.Point(142, 233);
+            this.btnModificar.Location = new System.Drawing.Point(189, 287);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnModificar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -186,7 +194,7 @@ namespace appE2Colsis.Vista
             this.btnModificar.OnHoverImage = null;
             this.btnModificar.OnPressedColor = System.Drawing.Color.Black;
             this.btnModificar.Radius = 10;
-            this.btnModificar.Size = new System.Drawing.Size(150, 34);
+            this.btnModificar.Size = new System.Drawing.Size(200, 42);
             this.btnModificar.TabIndex = 7;
             this.btnModificar.Text = "Modificar Periodo";
             this.btnModificar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -203,11 +211,12 @@ namespace appE2Colsis.Vista
             this.cmbFiltrar.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbFiltrar.ForeColor = System.Drawing.Color.Black;
             this.cmbFiltrar.FormattingEnabled = true;
-            this.cmbFiltrar.Location = new System.Drawing.Point(126, 47);
+            this.cmbFiltrar.Location = new System.Drawing.Point(168, 58);
+            this.cmbFiltrar.Margin = new System.Windows.Forms.Padding(4);
             this.cmbFiltrar.Name = "cmbFiltrar";
             this.cmbFiltrar.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbFiltrar.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cmbFiltrar.Size = new System.Drawing.Size(221, 26);
+            this.cmbFiltrar.Size = new System.Drawing.Size(293, 31);
             this.cmbFiltrar.TabIndex = 8;
             this.cmbFiltrar.SelectedIndexChanged += new System.EventHandler(this.cmbFiltrar_SelectedIndexChanged);
             // 
@@ -224,9 +233,11 @@ namespace appE2Colsis.Vista
             this.grpPeriodos.Controls.Add(this.btnRegistrar);
             this.grpPeriodos.Controls.Add(this.gunaLabel2);
             this.grpPeriodos.Controls.Add(this.gunaLabel1);
-            this.grpPeriodos.Location = new System.Drawing.Point(50, 105);
+            this.grpPeriodos.Location = new System.Drawing.Point(67, 129);
+            this.grpPeriodos.Margin = new System.Windows.Forms.Padding(4);
             this.grpPeriodos.Name = "grpPeriodos";
-            this.grpPeriodos.Size = new System.Drawing.Size(426, 284);
+            this.grpPeriodos.Padding = new System.Windows.Forms.Padding(4);
+            this.grpPeriodos.Size = new System.Drawing.Size(568, 350);
             this.grpPeriodos.TabIndex = 9;
             this.grpPeriodos.TabStop = false;
             // 
@@ -239,11 +250,12 @@ namespace appE2Colsis.Vista
             this.btnEliminar.BorderColor = System.Drawing.Color.Black;
             this.btnEliminar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnEliminar.FocusedColor = System.Drawing.Color.Empty;
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEliminar.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = null;
             this.btnEliminar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEliminar.Location = new System.Drawing.Point(142, 233);
+            this.btnEliminar.Location = new System.Drawing.Point(189, 287);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnEliminar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -251,7 +263,7 @@ namespace appE2Colsis.Vista
             this.btnEliminar.OnHoverImage = null;
             this.btnEliminar.OnPressedColor = System.Drawing.Color.Black;
             this.btnEliminar.Radius = 10;
-            this.btnEliminar.Size = new System.Drawing.Size(150, 34);
+            this.btnEliminar.Size = new System.Drawing.Size(200, 42);
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -260,20 +272,22 @@ namespace appE2Colsis.Vista
             // lblPeriodo
             // 
             this.lblPeriodo.AutoSize = true;
-            this.lblPeriodo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblPeriodo.Location = new System.Drawing.Point(59, 52);
+            this.lblPeriodo.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPeriodo.Location = new System.Drawing.Point(79, 64);
+            this.lblPeriodo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPeriodo.Name = "lblPeriodo";
-            this.lblPeriodo.Size = new System.Drawing.Size(48, 15);
+            this.lblPeriodo.Size = new System.Drawing.Size(56, 24);
             this.lblPeriodo.TabIndex = 9;
             this.lblPeriodo.Text = "Periodo";
             // 
             // gunaLabel4
             // 
             this.gunaLabel4.AutoSize = true;
-            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(187, 9);
+            this.gunaLabel4.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel4.Location = new System.Drawing.Point(249, 11);
+            this.gunaLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(200, 25);
+            this.gunaLabel4.Size = new System.Drawing.Size(214, 36);
             this.gunaLabel4.TabIndex = 9;
             this.gunaLabel4.Text = "Periodos Academicos";
             // 
@@ -286,11 +300,12 @@ namespace appE2Colsis.Vista
             this.btnCrearOpcion.BorderColor = System.Drawing.Color.Black;
             this.btnCrearOpcion.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCrearOpcion.FocusedColor = System.Drawing.Color.Empty;
-            this.btnCrearOpcion.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCrearOpcion.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearOpcion.ForeColor = System.Drawing.Color.White;
             this.btnCrearOpcion.Image = null;
             this.btnCrearOpcion.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnCrearOpcion.Location = new System.Drawing.Point(169, 73);
+            this.btnCrearOpcion.Location = new System.Drawing.Point(178, 90);
+            this.btnCrearOpcion.Margin = new System.Windows.Forms.Padding(4);
             this.btnCrearOpcion.Name = "btnCrearOpcion";
             this.btnCrearOpcion.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnCrearOpcion.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -298,7 +313,7 @@ namespace appE2Colsis.Vista
             this.btnCrearOpcion.OnHoverImage = null;
             this.btnCrearOpcion.OnPressedColor = System.Drawing.Color.Black;
             this.btnCrearOpcion.Radius = 10;
-            this.btnCrearOpcion.Size = new System.Drawing.Size(72, 26);
+            this.btnCrearOpcion.Size = new System.Drawing.Size(118, 32);
             this.btnCrearOpcion.TabIndex = 9;
             this.btnCrearOpcion.Text = "Crear";
             this.btnCrearOpcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -313,11 +328,12 @@ namespace appE2Colsis.Vista
             this.btnModificarOpcion.BorderColor = System.Drawing.Color.Black;
             this.btnModificarOpcion.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnModificarOpcion.FocusedColor = System.Drawing.Color.Empty;
-            this.btnModificarOpcion.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnModificarOpcion.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarOpcion.ForeColor = System.Drawing.Color.White;
             this.btnModificarOpcion.Image = null;
             this.btnModificarOpcion.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnModificarOpcion.Location = new System.Drawing.Point(247, 73);
+            this.btnModificarOpcion.Location = new System.Drawing.Point(304, 90);
+            this.btnModificarOpcion.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificarOpcion.Name = "btnModificarOpcion";
             this.btnModificarOpcion.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnModificarOpcion.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -325,7 +341,7 @@ namespace appE2Colsis.Vista
             this.btnModificarOpcion.OnHoverImage = null;
             this.btnModificarOpcion.OnPressedColor = System.Drawing.Color.Black;
             this.btnModificarOpcion.Radius = 10;
-            this.btnModificarOpcion.Size = new System.Drawing.Size(72, 26);
+            this.btnModificarOpcion.Size = new System.Drawing.Size(118, 32);
             this.btnModificarOpcion.TabIndex = 10;
             this.btnModificarOpcion.Text = "Modificar";
             this.btnModificarOpcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -340,11 +356,12 @@ namespace appE2Colsis.Vista
             this.btnEliminarOpcion.BorderColor = System.Drawing.Color.Black;
             this.btnEliminarOpcion.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnEliminarOpcion.FocusedColor = System.Drawing.Color.Empty;
-            this.btnEliminarOpcion.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEliminarOpcion.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarOpcion.ForeColor = System.Drawing.Color.White;
             this.btnEliminarOpcion.Image = null;
             this.btnEliminarOpcion.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEliminarOpcion.Location = new System.Drawing.Point(325, 73);
+            this.btnEliminarOpcion.Location = new System.Drawing.Point(433, 90);
+            this.btnEliminarOpcion.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarOpcion.Name = "btnEliminarOpcion";
             this.btnEliminarOpcion.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnEliminarOpcion.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -352,7 +369,7 @@ namespace appE2Colsis.Vista
             this.btnEliminarOpcion.OnHoverImage = null;
             this.btnEliminarOpcion.OnPressedColor = System.Drawing.Color.Black;
             this.btnEliminarOpcion.Radius = 10;
-            this.btnEliminarOpcion.Size = new System.Drawing.Size(72, 26);
+            this.btnEliminarOpcion.Size = new System.Drawing.Size(118, 32);
             this.btnEliminarOpcion.TabIndex = 11;
             this.btnEliminarOpcion.Text = "Eliminar";
             this.btnEliminarOpcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -360,17 +377,18 @@ namespace appE2Colsis.Vista
             // 
             // frmPeriodo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(563, 445);
+            this.ClientSize = new System.Drawing.Size(751, 548);
             this.Controls.Add(this.btnEliminarOpcion);
             this.Controls.Add(this.btnModificarOpcion);
             this.Controls.Add(this.btnCrearOpcion);
             this.Controls.Add(this.gunaLabel4);
             this.Controls.Add(this.grpPeriodos);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPeriodo";
-            this.Text = "frmPeriodo";
+            this.Text = "Seleccion de periodo";
             this.Load += new System.EventHandler(this.frmPeriodo_Load);
             this.grpPeriodos.ResumeLayout(false);
             this.grpPeriodos.PerformLayout();

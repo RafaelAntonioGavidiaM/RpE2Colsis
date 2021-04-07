@@ -248,6 +248,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\GemBox.Spreadsheet.dll" />
+    <None Include="Resources\colsis_logotipo.png" />
     <None Include="Resources\016-loupe.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

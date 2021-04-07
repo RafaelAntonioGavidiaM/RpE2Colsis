@@ -45,9 +45,10 @@ namespace appE2Colsis.Vista.Empleado
             // 
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel1.Location = new System.Drawing.Point(291, 35);
+            this.gunaLabel1.Location = new System.Drawing.Point(388, 43);
+            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(118, 15);
+            this.gunaLabel1.Size = new System.Drawing.Size(149, 20);
             this.gunaLabel1.TabIndex = 0;
             this.gunaLabel1.Text = "Digite el documento:";
             // 
@@ -60,11 +61,12 @@ namespace appE2Colsis.Vista.Empleado
             this.txtCedula.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtCedula.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtCedula.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCedula.Location = new System.Drawing.Point(443, 35);
+            this.txtCedula.Location = new System.Drawing.Point(591, 43);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.PasswordChar = '\0';
             this.txtCedula.SelectedText = "";
-            this.txtCedula.Size = new System.Drawing.Size(160, 30);
+            this.txtCedula.Size = new System.Drawing.Size(213, 37);
             this.txtCedula.TabIndex = 2;
             // 
             // dgvAcudiente
@@ -97,12 +99,14 @@ namespace appE2Colsis.Vista.Empleado
             this.dgvAcudiente.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAcudiente.EnableHeadersVisualStyles = false;
             this.dgvAcudiente.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvAcudiente.Location = new System.Drawing.Point(12, 84);
+            this.dgvAcudiente.Location = new System.Drawing.Point(16, 103);
+            this.dgvAcudiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvAcudiente.Name = "dgvAcudiente";
             this.dgvAcudiente.ReadOnly = true;
             this.dgvAcudiente.RowHeadersVisible = false;
+            this.dgvAcudiente.RowHeadersWidth = 51;
             this.dgvAcudiente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAcudiente.Size = new System.Drawing.Size(769, 51);
+            this.dgvAcudiente.Size = new System.Drawing.Size(1025, 63);
             this.dgvAcudiente.TabIndex = 3;
             this.dgvAcudiente.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgvAcudiente.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -135,20 +139,22 @@ namespace appE2Colsis.Vista.Empleado
             this.btnBuscar.BorderColor = System.Drawing.Color.Black;
             this.btnBuscar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnBuscar.FocusedColor = System.Drawing.Color.Empty;
-            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBuscar.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Image = null;
             this.btnBuscar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnBuscar.Location = new System.Drawing.Point(633, 35);
+            this.btnBuscar.Location = new System.Drawing.Point(844, 43);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnBuscar.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnBuscar.OnHoverForeColor = System.Drawing.Color.White;
             this.btnBuscar.OnHoverImage = null;
             this.btnBuscar.OnPressedColor = System.Drawing.Color.Black;
-            this.btnBuscar.Size = new System.Drawing.Size(100, 30);
+            this.btnBuscar.Size = new System.Drawing.Size(133, 37);
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnSeleccionar
@@ -159,32 +165,36 @@ namespace appE2Colsis.Vista.Empleado
             this.btnSeleccionar.BorderColor = System.Drawing.Color.Black;
             this.btnSeleccionar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnSeleccionar.FocusedColor = System.Drawing.Color.Empty;
-            this.btnSeleccionar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSeleccionar.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionar.Image = ((System.Drawing.Image)(resources.GetObject("btnSeleccionar.Image")));
+            this.btnSeleccionar.Image = null;
             this.btnSeleccionar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSeleccionar.Location = new System.Drawing.Point(780, 84);
+            this.btnSeleccionar.Location = new System.Drawing.Point(1040, 103);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnSeleccionar.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnSeleccionar.OnHoverForeColor = System.Drawing.Color.White;
             this.btnSeleccionar.OnHoverImage = null;
             this.btnSeleccionar.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSeleccionar.Size = new System.Drawing.Size(135, 51);
+            this.btnSeleccionar.Size = new System.Drawing.Size(180, 63);
             this.btnSeleccionar.TabIndex = 7;
             this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // frmListarAcudientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(927, 148);
+            this.ClientSize = new System.Drawing.Size(1236, 182);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dgvAcudiente);
             this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.gunaLabel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmListarAcudientes";
             this.Text = "Buscar Acudiente";
             this.Load += new System.EventHandler(this.frmListarAcudientes_Load);

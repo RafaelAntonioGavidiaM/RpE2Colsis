@@ -179,5 +179,7 @@ namespace appE2Colsis.Vista
             dvgCursos.Columns["idCurso"].Visible = false;
             dvgCursos.Columns["idDocente"].Visible = false;
         }
+
+      
     }
 }
