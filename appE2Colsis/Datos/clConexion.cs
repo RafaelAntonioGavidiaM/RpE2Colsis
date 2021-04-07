@@ -67,7 +67,15 @@ namespace appE2Colsis.Datos
             int filasAfectadas = 0;
             mtdIniciarConexion();
             MySqlCommand comando = new MySqlCommand(consulta, objConexion);
-            filasAfectadas = comando.ExecuteNonQuery();
+            try
+            {
+                filasAfectadas = comando.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                filasAfectadas = 0;
+            }
             objConexion.Close();
             return filasAfectadas;
         }

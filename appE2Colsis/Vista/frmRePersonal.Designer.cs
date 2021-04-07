@@ -303,7 +303,8 @@ namespace appE2Colsis.Vista
             this.gunaGroupBox1.Controls.Add(this.txtApellido);
             this.gunaGroupBox1.Controls.Add(this.gunaLabel7);
             this.gunaGroupBox1.Controls.Add(this.gunaLabel9);
-            this.gunaGroupBox1.LineColor = System.Drawing.Color.Gainsboro;
+            this.gunaGroupBox1.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaGroupBox1.LineColor = System.Drawing.Color.DodgerBlue;
             this.gunaGroupBox1.Location = new System.Drawing.Point(35, 43);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
             this.gunaGroupBox1.Size = new System.Drawing.Size(411, 737);
@@ -524,7 +525,7 @@ namespace appE2Colsis.Vista
             this.grbBuscqueda.Controls.Add(this.txtBuscar);
             this.grbBuscqueda.Controls.Add(this.btnRecargar);
             this.grbBuscqueda.Font = new System.Drawing.Font("Agency FB", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbBuscqueda.LineColor = System.Drawing.Color.Gainsboro;
+            this.grbBuscqueda.LineColor = System.Drawing.Color.DodgerBlue;
             this.grbBuscqueda.Location = new System.Drawing.Point(462, 11);
             this.grbBuscqueda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbBuscqueda.Name = "grbBuscqueda";
@@ -587,6 +588,7 @@ namespace appE2Colsis.Vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1544, 810);
             this.Controls.Add(this.grbBuscqueda);
             this.Controls.Add(this.dgvEmpleado);

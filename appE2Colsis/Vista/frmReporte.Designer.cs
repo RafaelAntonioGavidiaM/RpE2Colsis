@@ -56,12 +56,12 @@ namespace appE2Colsis.Vista
             this.gunaGroupBox1.Controls.Add(this.btnBuscar);
             this.gunaGroupBox1.Controls.Add(this.cmbGrado);
             this.gunaGroupBox1.Controls.Add(this.gunaLabel9);
-            this.gunaGroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaGroupBox1.LineColor = System.Drawing.Color.Gainsboro;
-            this.gunaGroupBox1.Location = new System.Drawing.Point(11, 72);
-            this.gunaGroupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.gunaGroupBox1.Font = new System.Drawing.Font("Agency FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaGroupBox1.LineColor = System.Drawing.Color.DodgerBlue;
+            this.gunaGroupBox1.Location = new System.Drawing.Point(15, 89);
+            this.gunaGroupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
-            this.gunaGroupBox1.Size = new System.Drawing.Size(308, 468);
+            this.gunaGroupBox1.Size = new System.Drawing.Size(411, 685);
             this.gunaGroupBox1.TabIndex = 18;
             this.gunaGroupBox1.Text = "Digite los Datos :";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
@@ -69,9 +69,11 @@ namespace appE2Colsis.Vista
             // lbEstudiantes
             // 
             this.lbEstudiantes.FormattingEnabled = true;
-            this.lbEstudiantes.Location = new System.Drawing.Point(3, 156);
+            this.lbEstudiantes.ItemHeight = 24;
+            this.lbEstudiantes.Location = new System.Drawing.Point(4, 192);
+            this.lbEstudiantes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbEstudiantes.Name = "lbEstudiantes";
-            this.lbEstudiantes.Size = new System.Drawing.Size(292, 251);
+            this.lbEstudiantes.Size = new System.Drawing.Size(388, 364);
             this.lbEstudiantes.TabIndex = 23;
             // 
             // cmbPeriodo
@@ -85,12 +87,12 @@ namespace appE2Colsis.Vista
             this.cmbPeriodo.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbPeriodo.ForeColor = System.Drawing.Color.Black;
             this.cmbPeriodo.FormattingEnabled = true;
-            this.cmbPeriodo.Location = new System.Drawing.Point(95, 108);
-            this.cmbPeriodo.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbPeriodo.Location = new System.Drawing.Point(127, 133);
+            this.cmbPeriodo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbPeriodo.Name = "cmbPeriodo";
             this.cmbPeriodo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbPeriodo.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cmbPeriodo.Size = new System.Drawing.Size(183, 26);
+            this.cmbPeriodo.Size = new System.Drawing.Size(243, 31);
             this.cmbPeriodo.TabIndex = 22;
             this.cmbPeriodo.SelectedIndexChanged += new System.EventHandler(this.cmbPeriodo_SelectedIndexChanged);
             // 
@@ -98,10 +100,9 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel2.Location = new System.Drawing.Point(22, 113);
-            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel2.Location = new System.Drawing.Point(29, 139);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(48, 15);
+            this.gunaLabel2.Size = new System.Drawing.Size(60, 20);
             this.gunaLabel2.TabIndex = 21;
             this.gunaLabel2.Text = "Periodo";
             // 
@@ -113,21 +114,22 @@ namespace appE2Colsis.Vista
             this.btnBuscar.BorderColor = System.Drawing.Color.Black;
             this.btnBuscar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnBuscar.FocusedColor = System.Drawing.Color.Empty;
-            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBuscar.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = null;
             this.btnBuscar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnBuscar.Location = new System.Drawing.Point(107, 422);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Location = new System.Drawing.Point(127, 607);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnBuscar.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnBuscar.OnHoverForeColor = System.Drawing.Color.White;
             this.btnBuscar.OnHoverImage = null;
             this.btnBuscar.OnPressedColor = System.Drawing.Color.Black;
-            this.btnBuscar.Size = new System.Drawing.Size(113, 34);
+            this.btnBuscar.Size = new System.Drawing.Size(151, 42);
             this.btnBuscar.TabIndex = 18;
             this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // cmbGrado
@@ -141,12 +143,12 @@ namespace appE2Colsis.Vista
             this.cmbGrado.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbGrado.ForeColor = System.Drawing.Color.Black;
             this.cmbGrado.FormattingEnabled = true;
-            this.cmbGrado.Location = new System.Drawing.Point(95, 68);
-            this.cmbGrado.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbGrado.Location = new System.Drawing.Point(127, 84);
+            this.cmbGrado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbGrado.Name = "cmbGrado";
             this.cmbGrado.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbGrado.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cmbGrado.Size = new System.Drawing.Size(183, 26);
+            this.cmbGrado.Size = new System.Drawing.Size(243, 31);
             this.cmbGrado.TabIndex = 16;
             this.cmbGrado.SelectedIndexChanged += new System.EventHandler(this.cmbGrado_SelectedIndexChanged);
             // 
@@ -154,10 +156,9 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel9.AutoSize = true;
             this.gunaLabel9.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel9.Location = new System.Drawing.Point(22, 79);
-            this.gunaLabel9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel9.Location = new System.Drawing.Point(29, 97);
             this.gunaLabel9.Name = "gunaLabel9";
-            this.gunaLabel9.Size = new System.Drawing.Size(39, 15);
+            this.gunaLabel9.Size = new System.Drawing.Size(50, 20);
             this.gunaLabel9.TabIndex = 8;
             this.gunaLabel9.Text = "Grado";
             // 
@@ -173,15 +174,15 @@ namespace appE2Colsis.Vista
             this.btnReporte.ForeColor = System.Drawing.Color.White;
             this.btnReporte.Image = null;
             this.btnReporte.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnReporte.Location = new System.Drawing.Point(525, 497);
-            this.btnReporte.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReporte.Location = new System.Drawing.Point(700, 612);
+            this.btnReporte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnReporte.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnReporte.OnHoverForeColor = System.Drawing.Color.White;
             this.btnReporte.OnHoverImage = null;
             this.btnReporte.OnPressedColor = System.Drawing.Color.Black;
-            this.btnReporte.Size = new System.Drawing.Size(121, 31);
+            this.btnReporte.Size = new System.Drawing.Size(161, 38);
             this.btnReporte.TabIndex = 20;
             this.btnReporte.Text = "Imprimir Reporte ";
             this.btnReporte.Click += new System.EventHandler(this.gunaButton4_Click);
@@ -189,10 +190,11 @@ namespace appE2Colsis.Vista
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(235, 19);
+            this.label1.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(560, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 24);
+            this.label1.Size = new System.Drawing.Size(226, 36);
             this.label1.TabIndex = 19;
             this.label1.Text = "Reporte del Estudiante ";
             // 
@@ -202,34 +204,40 @@ namespace appE2Colsis.Vista
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(335, 72);
+            this.dataGridView1.Location = new System.Drawing.Point(447, 89);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(594, 407);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1030, 695);
             this.dataGridView1.TabIndex = 20;
             // 
             // groupBox1
             // 
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(324, 55);
+            this.groupBox1.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(447, 55);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(473, 384);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(631, 473);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listar Reporte";
             // 
             // frmReporte
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1007, 589);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1490, 858);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.gunaGroupBox1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmReporte";
             this.Text = "frmReporte";
             this.Load += new System.EventHandler(this.frmReporte_Load);

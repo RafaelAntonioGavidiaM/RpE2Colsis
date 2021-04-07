@@ -44,10 +44,10 @@ namespace appE2Colsis.Vista
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbNivelEducativo = new Guna.UI.WinForms.GunaComboBox();
             this.lbNivelE = new Guna.UI.WinForms.GunaLabel();
-            this.dvgCursos = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new Guna.UI.WinForms.GunaButton();
             this.btnRegistrar = new Guna.UI.WinForms.GunaButton();
             this.btnModificar = new Guna.UI.WinForms.GunaButton();
+            this.dvgCursos = new System.Windows.Forms.DataGridView();
             this.gunaGroupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -58,9 +58,10 @@ namespace appE2Colsis.Vista
             // 
             this.lbCursos.AutoSize = true;
             this.lbCursos.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCursos.Location = new System.Drawing.Point(353, 5);
+            this.lbCursos.Location = new System.Drawing.Point(622, 7);
+            this.lbCursos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCursos.Name = "lbCursos";
-            this.lbCursos.Size = new System.Drawing.Size(76, 34);
+            this.lbCursos.Size = new System.Drawing.Size(98, 41);
             this.lbCursos.TabIndex = 19;
             this.lbCursos.Text = "Cursos";
             // 
@@ -76,10 +77,10 @@ namespace appE2Colsis.Vista
             this.gunaGroupBox1.Controls.Add(this.btnModificar);
             this.gunaGroupBox1.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaGroupBox1.LineColor = System.Drawing.Color.DodgerBlue;
-            this.gunaGroupBox1.Location = new System.Drawing.Point(11, 41);
-            this.gunaGroupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.gunaGroupBox1.Location = new System.Drawing.Point(15, 50);
+            this.gunaGroupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
-            this.gunaGroupBox1.Size = new System.Drawing.Size(778, 404);
+            this.gunaGroupBox1.Size = new System.Drawing.Size(1447, 756);
             this.gunaGroupBox1.TabIndex = 20;
             this.gunaGroupBox1.Text = "Complete los campos ";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
@@ -95,9 +96,11 @@ namespace appE2Colsis.Vista
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.txtCurso);
             this.groupBox3.Controls.Add(this.lbNombreC);
-            this.groupBox3.Location = new System.Drawing.Point(25, 34);
+            this.groupBox3.Location = new System.Drawing.Point(33, 118);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(344, 281);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Size = new System.Drawing.Size(458, 285);
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "---------";
@@ -107,15 +110,17 @@ namespace appE2Colsis.Vista
             this.txtDocente.BaseColor = System.Drawing.Color.White;
             this.txtDocente.BorderColor = System.Drawing.Color.Silver;
             this.txtDocente.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDocente.Enabled = false;
             this.txtDocente.FocusedBaseColor = System.Drawing.Color.White;
             this.txtDocente.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtDocente.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtDocente.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtDocente.Location = new System.Drawing.Point(133, 154);
+            this.txtDocente.Location = new System.Drawing.Point(177, 190);
+            this.txtDocente.Margin = new System.Windows.Forms.Padding(4);
             this.txtDocente.Name = "txtDocente";
             this.txtDocente.PasswordChar = '\0';
             this.txtDocente.SelectedText = "";
-            this.txtDocente.Size = new System.Drawing.Size(145, 30);
+            this.txtDocente.Size = new System.Drawing.Size(193, 37);
             this.txtDocente.TabIndex = 29;
             // 
             // btnBuscarDocente
@@ -130,14 +135,15 @@ namespace appE2Colsis.Vista
             this.btnBuscarDocente.ForeColor = System.Drawing.Color.White;
             this.btnBuscarDocente.Image = null;
             this.btnBuscarDocente.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnBuscarDocente.Location = new System.Drawing.Point(272, 154);
+            this.btnBuscarDocente.Location = new System.Drawing.Point(365, 190);
+            this.btnBuscarDocente.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarDocente.Name = "btnBuscarDocente";
             this.btnBuscarDocente.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnBuscarDocente.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnBuscarDocente.OnHoverForeColor = System.Drawing.Color.White;
             this.btnBuscarDocente.OnHoverImage = null;
             this.btnBuscarDocente.OnPressedColor = System.Drawing.Color.Black;
-            this.btnBuscarDocente.Size = new System.Drawing.Size(54, 30);
+            this.btnBuscarDocente.Size = new System.Drawing.Size(72, 37);
             this.btnBuscarDocente.TabIndex = 28;
             this.btnBuscarDocente.Text = "Buscar";
             this.btnBuscarDocente.Click += new System.EventHandler(this.btnBuscarDocente_Click);
@@ -147,33 +153,37 @@ namespace appE2Colsis.Vista
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 29);
+            this.label4.Location = new System.Drawing.Point(25, 36);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 18);
+            this.label4.Size = new System.Drawing.Size(124, 24);
             this.label4.TabIndex = 26;
             this.label4.Text = " Nombre del Curso:";
             // 
             // lbNombre
             // 
             this.lbNombre.AutoSize = true;
-            this.lbNombre.Location = new System.Drawing.Point(61, 154);
+            this.lbNombre.Location = new System.Drawing.Point(77, 196);
+            this.lbNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNombre.Name = "lbNombre";
-            this.lbNombre.Size = new System.Drawing.Size(60, 24);
+            this.lbNombre.Size = new System.Drawing.Size(79, 31);
             this.lbNombre.TabIndex = 24;
             this.lbNombre.Text = "Nombre:";
             // 
             // txtNombreC
             // 
-            this.txtNombreC.Location = new System.Drawing.Point(133, 29);
+            this.txtNombreC.Location = new System.Drawing.Point(177, 36);
+            this.txtNombreC.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreC.Name = "txtNombreC";
-            this.txtNombreC.Size = new System.Drawing.Size(136, 30);
+            this.txtNombreC.Size = new System.Drawing.Size(180, 36);
             this.txtNombreC.TabIndex = 25;
             // 
             // txtAño
             // 
-            this.txtAño.Location = new System.Drawing.Point(133, 107);
+            this.txtAño.Location = new System.Drawing.Point(177, 132);
+            this.txtAño.Margin = new System.Windows.Forms.Padding(4);
             this.txtAño.Name = "txtAño";
-            this.txtAño.Size = new System.Drawing.Size(136, 30);
+            this.txtAño.Size = new System.Drawing.Size(180, 36);
             this.txtAño.TabIndex = 23;
             // 
             // label1
@@ -181,17 +191,19 @@ namespace appE2Colsis.Vista
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(90, 115);
+            this.label1.Location = new System.Drawing.Point(120, 142);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 18);
+            this.label1.Size = new System.Drawing.Size(37, 24);
             this.label1.TabIndex = 22;
             this.label1.Text = "Año:";
             // 
             // txtCurso
             // 
-            this.txtCurso.Location = new System.Drawing.Point(133, 71);
+            this.txtCurso.Location = new System.Drawing.Point(177, 87);
+            this.txtCurso.Margin = new System.Windows.Forms.Padding(4);
             this.txtCurso.Name = "txtCurso";
-            this.txtCurso.Size = new System.Drawing.Size(136, 30);
+            this.txtCurso.Size = new System.Drawing.Size(180, 36);
             this.txtCurso.TabIndex = 5;
             // 
             // lbNombreC
@@ -199,9 +211,10 @@ namespace appE2Colsis.Vista
             this.lbNombreC.AutoSize = true;
             this.lbNombreC.BackColor = System.Drawing.Color.White;
             this.lbNombreC.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNombreC.Location = new System.Drawing.Point(79, 71);
+            this.lbNombreC.Location = new System.Drawing.Point(105, 87);
+            this.lbNombreC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNombreC.Name = "lbNombreC";
-            this.lbNombreC.Size = new System.Drawing.Size(42, 18);
+            this.lbNombreC.Size = new System.Drawing.Size(49, 24);
             this.lbNombreC.TabIndex = 3;
             this.lbNombreC.Text = "Curso:";
             // 
@@ -209,10 +222,11 @@ namespace appE2Colsis.Vista
             // 
             this.groupBox1.Controls.Add(this.cmbNivelEducativo);
             this.groupBox1.Controls.Add(this.lbNivelE);
-            this.groupBox1.Controls.Add(this.dvgCursos);
-            this.groupBox1.Location = new System.Drawing.Point(401, 34);
+            this.groupBox1.Location = new System.Drawing.Point(535, 42);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(377, 381);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(908, 700);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listar Cursos";
@@ -228,37 +242,25 @@ namespace appE2Colsis.Vista
             this.cmbNivelEducativo.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbNivelEducativo.ForeColor = System.Drawing.Color.Black;
             this.cmbNivelEducativo.FormattingEnabled = true;
-            this.cmbNivelEducativo.Location = new System.Drawing.Point(127, 38);
+            this.cmbNivelEducativo.Location = new System.Drawing.Point(178, 53);
+            this.cmbNivelEducativo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbNivelEducativo.Name = "cmbNivelEducativo";
             this.cmbNivelEducativo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbNivelEducativo.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cmbNivelEducativo.Size = new System.Drawing.Size(121, 26);
+            this.cmbNivelEducativo.Size = new System.Drawing.Size(722, 31);
             this.cmbNivelEducativo.TabIndex = 2;
             this.cmbNivelEducativo.SelectionChangeCommitted += new System.EventHandler(this.cmbNivelEducativo_SelectionChangeCommitted);
             // 
             // lbNivelE
             // 
             this.lbNivelE.AutoSize = true;
-            this.lbNivelE.Font = new System.Drawing.Font("Agency FB", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNivelE.Location = new System.Drawing.Point(29, 43);
+            this.lbNivelE.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNivelE.Location = new System.Drawing.Point(36, 51);
+            this.lbNivelE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNivelE.Name = "lbNivelE";
-            this.lbNivelE.Size = new System.Drawing.Size(87, 17);
+            this.lbNivelE.Size = new System.Drawing.Size(134, 31);
             this.lbNivelE.TabIndex = 1;
             this.lbNivelE.Text = "Nivel Educativo:";
-            // 
-            // dvgCursos
-            // 
-            this.dvgCursos.AllowUserToAddRows = false;
-            this.dvgCursos.AllowUserToDeleteRows = false;
-            this.dvgCursos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dvgCursos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dvgCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgCursos.Location = new System.Drawing.Point(6, 84);
-            this.dvgCursos.Name = "dvgCursos";
-            this.dvgCursos.ReadOnly = true;
-            this.dvgCursos.Size = new System.Drawing.Size(368, 283);
-            this.dvgCursos.TabIndex = 0;
-            this.dvgCursos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgCursos_CellClick);
             // 
             // btnEliminar
             // 
@@ -272,15 +274,15 @@ namespace appE2Colsis.Vista
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = null;
             this.btnEliminar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEliminar.Location = new System.Drawing.Point(286, 343);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Location = new System.Drawing.Point(333, 438);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnEliminar.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnEliminar.OnHoverForeColor = System.Drawing.Color.White;
             this.btnEliminar.OnHoverImage = null;
             this.btnEliminar.OnPressedColor = System.Drawing.Color.Black;
-            this.btnEliminar.Size = new System.Drawing.Size(65, 41);
+            this.btnEliminar.Size = new System.Drawing.Size(137, 50);
             this.btnEliminar.TabIndex = 17;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -298,15 +300,15 @@ namespace appE2Colsis.Vista
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
             this.btnRegistrar.Image = null;
             this.btnRegistrar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnRegistrar.Location = new System.Drawing.Point(34, 343);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistrar.Location = new System.Drawing.Point(62, 438);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnRegistrar.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnRegistrar.OnHoverForeColor = System.Drawing.Color.White;
             this.btnRegistrar.OnHoverImage = null;
             this.btnRegistrar.OnPressedColor = System.Drawing.Color.Black;
-            this.btnRegistrar.Size = new System.Drawing.Size(72, 41);
+            this.btnRegistrar.Size = new System.Drawing.Size(128, 50);
             this.btnRegistrar.TabIndex = 18;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -324,31 +326,49 @@ namespace appE2Colsis.Vista
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Image = null;
             this.btnModificar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnModificar.Location = new System.Drawing.Point(158, 343);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModificar.Location = new System.Drawing.Point(196, 438);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnModificar.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnModificar.OnHoverForeColor = System.Drawing.Color.White;
             this.btnModificar.OnHoverImage = null;
             this.btnModificar.OnPressedColor = System.Drawing.Color.Black;
-            this.btnModificar.Size = new System.Drawing.Size(73, 41);
+            this.btnModificar.Size = new System.Drawing.Size(131, 50);
             this.btnModificar.TabIndex = 19;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
+            // dvgCursos
+            // 
+            this.dvgCursos.AllowUserToAddRows = false;
+            this.dvgCursos.AllowUserToDeleteRows = false;
+            this.dvgCursos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dvgCursos.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dvgCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgCursos.Location = new System.Drawing.Point(573, 224);
+            this.dvgCursos.Margin = new System.Windows.Forms.Padding(4);
+            this.dvgCursos.Name = "dvgCursos";
+            this.dvgCursos.ReadOnly = true;
+            this.dvgCursos.RowHeadersWidth = 51;
+            this.dvgCursos.Size = new System.Drawing.Size(877, 560);
+            this.dvgCursos.TabIndex = 0;
+            this.dvgCursos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgCursos_CellClick);
+            // 
             // frmCurso
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(827, 481);
+            this.ClientSize = new System.Drawing.Size(1474, 817);
             this.ControlBox = false;
+            this.Controls.Add(this.dvgCursos);
             this.Controls.Add(this.lbCursos);
             this.Controls.Add(this.gunaGroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCurso";
             this.Load += new System.EventHandler(this.frmCursos_Load);
             this.gunaGroupBox1.ResumeLayout(false);

@@ -95,9 +95,10 @@
             // 
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRol.Location = new System.Drawing.Point(12, 58);
+            this.lblRol.Location = new System.Drawing.Point(16, 71);
+            this.lblRol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(85, 17);
+            this.lblRol.Size = new System.Drawing.Size(106, 21);
             this.lblRol.TabIndex = 0;
             this.lblRol.Text = "Nombre Rol";
             // 
@@ -111,12 +112,13 @@
             this.txtRol.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtRol.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtRol.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtRol.Location = new System.Drawing.Point(103, 58);
+            this.txtRol.Location = new System.Drawing.Point(137, 71);
+            this.txtRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtRol.Name = "txtRol";
             this.txtRol.PasswordChar = '\0';
             this.txtRol.Radius = 10;
             this.txtRol.SelectedText = "";
-            this.txtRol.Size = new System.Drawing.Size(123, 26);
+            this.txtRol.Size = new System.Drawing.Size(164, 37);
             this.txtRol.TabIndex = 1;
             // 
             // gunaButton1
@@ -128,11 +130,12 @@
             this.gunaButton1.BorderColor = System.Drawing.Color.Black;
             this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaButton1.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaButton1.ForeColor = System.Drawing.Color.White;
             this.gunaButton1.Image = null;
             this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(60, 91);
+            this.gunaButton1.Location = new System.Drawing.Point(80, 112);
+            this.gunaButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaButton1.Name = "gunaButton1";
             this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -140,7 +143,7 @@
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton1.Radius = 10;
-            this.gunaButton1.Size = new System.Drawing.Size(69, 31);
+            this.gunaButton1.Size = new System.Drawing.Size(92, 38);
             this.gunaButton1.TabIndex = 2;
             this.gunaButton1.Text = "Crear Rol";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -153,9 +156,11 @@
             this.grpCrear.Controls.Add(this.gunaButton1);
             this.grpCrear.Controls.Add(this.lblRol);
             this.grpCrear.Controls.Add(this.txtRol);
-            this.grpCrear.Location = new System.Drawing.Point(12, 172);
+            this.grpCrear.Location = new System.Drawing.Point(16, 212);
+            this.grpCrear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpCrear.Name = "grpCrear";
-            this.grpCrear.Size = new System.Drawing.Size(312, 446);
+            this.grpCrear.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpCrear.Size = new System.Drawing.Size(416, 549);
             this.grpCrear.TabIndex = 3;
             this.grpCrear.TabStop = false;
             // 
@@ -166,9 +171,11 @@
             this.grpPermisos.Controls.Add(this.gunaButton2);
             this.grpPermisos.Controls.Add(this.lblFormulario);
             this.grpPermisos.Controls.Add(this.cmbDecision);
-            this.grpPermisos.Location = new System.Drawing.Point(9, 128);
+            this.grpPermisos.Location = new System.Drawing.Point(12, 158);
+            this.grpPermisos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpPermisos.Name = "grpPermisos";
-            this.grpPermisos.Size = new System.Drawing.Size(272, 274);
+            this.grpPermisos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpPermisos.Size = new System.Drawing.Size(363, 337);
             this.grpPermisos.TabIndex = 20;
             this.grpPermisos.TabStop = false;
             // 
@@ -181,11 +188,12 @@
             this.btnOk.BorderColor = System.Drawing.Color.Black;
             this.btnOk.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnOk.FocusedColor = System.Drawing.Color.Empty;
-            this.btnOk.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnOk.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.ForeColor = System.Drawing.Color.White;
             this.btnOk.Image = null;
             this.btnOk.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnOk.Location = new System.Drawing.Point(203, 153);
+            this.btnOk.Location = new System.Drawing.Point(271, 188);
+            this.btnOk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOk.Name = "btnOk";
             this.btnOk.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnOk.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -193,7 +201,7 @@
             this.btnOk.OnHoverImage = null;
             this.btnOk.OnPressedColor = System.Drawing.Color.Black;
             this.btnOk.Radius = 10;
-            this.btnOk.Size = new System.Drawing.Size(63, 29);
+            this.btnOk.Size = new System.Drawing.Size(84, 36);
             this.btnOk.TabIndex = 19;
             this.btnOk.Text = "Definir";
             this.btnOk.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -202,9 +210,11 @@
             // dgvMostrar
             // 
             this.dgvMostrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMostrar.Location = new System.Drawing.Point(9, 18);
+            this.dgvMostrar.Location = new System.Drawing.Point(12, 22);
+            this.dgvMostrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvMostrar.Name = "dgvMostrar";
-            this.dgvMostrar.Size = new System.Drawing.Size(245, 118);
+            this.dgvMostrar.RowHeadersWidth = 51;
+            this.dgvMostrar.Size = new System.Drawing.Size(327, 145);
             this.dgvMostrar.TabIndex = 18;
             this.dgvMostrar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMostrar_CellContentClick);
             // 
@@ -217,11 +227,12 @@
             this.gunaButton2.BorderColor = System.Drawing.Color.Black;
             this.gunaButton2.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gunaButton2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaButton2.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaButton2.ForeColor = System.Drawing.Color.White;
             this.gunaButton2.Image = null;
             this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton2.Location = new System.Drawing.Point(67, 217);
+            this.gunaButton2.Location = new System.Drawing.Point(89, 267);
+            this.gunaButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaButton2.Name = "gunaButton2";
             this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -229,7 +240,7 @@
             this.gunaButton2.OnHoverImage = null;
             this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton2.Radius = 10;
-            this.gunaButton2.Size = new System.Drawing.Size(107, 29);
+            this.gunaButton2.Size = new System.Drawing.Size(143, 36);
             this.gunaButton2.TabIndex = 7;
             this.gunaButton2.Text = "Asignar Permisos";
             this.gunaButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -238,18 +249,20 @@
             // lblFormulario
             // 
             this.lblFormulario.AutoSize = true;
-            this.lblFormulario.Location = new System.Drawing.Point(6, 158);
+            this.lblFormulario.Location = new System.Drawing.Point(8, 194);
+            this.lblFormulario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFormulario.Name = "lblFormulario";
-            this.lblFormulario.Size = new System.Drawing.Size(35, 13);
+            this.lblFormulario.Size = new System.Drawing.Size(46, 17);
             this.lblFormulario.TabIndex = 9;
             this.lblFormulario.Text = "label1";
             // 
             // cmbDecision
             // 
             this.cmbDecision.FormattingEnabled = true;
-            this.cmbDecision.Location = new System.Drawing.Point(76, 158);
+            this.cmbDecision.Location = new System.Drawing.Point(101, 194);
+            this.cmbDecision.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbDecision.Name = "cmbDecision";
-            this.cmbDecision.Size = new System.Drawing.Size(121, 21);
+            this.cmbDecision.Size = new System.Drawing.Size(160, 24);
             this.cmbDecision.TabIndex = 10;
             // 
             // btnPermisos
@@ -261,11 +274,12 @@
             this.btnPermisos.BorderColor = System.Drawing.Color.Black;
             this.btnPermisos.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnPermisos.FocusedColor = System.Drawing.Color.Empty;
-            this.btnPermisos.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPermisos.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPermisos.ForeColor = System.Drawing.Color.White;
             this.btnPermisos.Image = null;
             this.btnPermisos.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnPermisos.Location = new System.Drawing.Point(135, 93);
+            this.btnPermisos.Location = new System.Drawing.Point(180, 114);
+            this.btnPermisos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPermisos.Name = "btnPermisos";
             this.btnPermisos.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnPermisos.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -273,7 +287,7 @@
             this.btnPermisos.OnHoverImage = null;
             this.btnPermisos.OnPressedColor = System.Drawing.Color.Black;
             this.btnPermisos.Radius = 10;
-            this.btnPermisos.Size = new System.Drawing.Size(107, 29);
+            this.btnPermisos.Size = new System.Drawing.Size(143, 36);
             this.btnPermisos.TabIndex = 8;
             this.btnPermisos.Text = "Permisos";
             this.btnPermisos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -285,9 +299,11 @@
             this.grpEliminarRol.Controls.Add(this.btnSeleccionar);
             this.grpEliminarRol.Controls.Add(this.cmbRol);
             this.grpEliminarRol.Controls.Add(this.gunaLabel1);
-            this.grpEliminarRol.Location = new System.Drawing.Point(1010, 172);
+            this.grpEliminarRol.Location = new System.Drawing.Point(1347, 212);
+            this.grpEliminarRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpEliminarRol.Name = "grpEliminarRol";
-            this.grpEliminarRol.Size = new System.Drawing.Size(311, 446);
+            this.grpEliminarRol.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpEliminarRol.Size = new System.Drawing.Size(415, 549);
             this.grpEliminarRol.TabIndex = 4;
             this.grpEliminarRol.TabStop = false;
             // 
@@ -296,27 +312,32 @@
             this.dgvSeleccionar.Controls.Add(this.dgvContenidoRol);
             this.dgvSeleccionar.Controls.Add(this.gunaLabel2);
             this.dgvSeleccionar.Controls.Add(this.gunaButton4);
-            this.dgvSeleccionar.Location = new System.Drawing.Point(6, 146);
+            this.dgvSeleccionar.Location = new System.Drawing.Point(8, 180);
+            this.dgvSeleccionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvSeleccionar.Name = "dgvSeleccionar";
-            this.dgvSeleccionar.Size = new System.Drawing.Size(265, 245);
+            this.dgvSeleccionar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvSeleccionar.Size = new System.Drawing.Size(353, 302);
             this.dgvSeleccionar.TabIndex = 8;
             this.dgvSeleccionar.TabStop = false;
             // 
             // dgvContenidoRol
             // 
             this.dgvContenidoRol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvContenidoRol.Location = new System.Drawing.Point(19, 35);
+            this.dgvContenidoRol.Location = new System.Drawing.Point(25, 43);
+            this.dgvContenidoRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvContenidoRol.Name = "dgvContenidoRol";
-            this.dgvContenidoRol.Size = new System.Drawing.Size(240, 129);
+            this.dgvContenidoRol.RowHeadersWidth = 51;
+            this.dgvContenidoRol.Size = new System.Drawing.Size(320, 159);
             this.dgvContenidoRol.TabIndex = 20;
             // 
             // gunaLabel2
             // 
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel2.Location = new System.Drawing.Point(6, 11);
+            this.gunaLabel2.Location = new System.Drawing.Point(8, 14);
+            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(213, 15);
+            this.gunaLabel2.Size = new System.Drawing.Size(268, 20);
             this.gunaLabel2.TabIndex = 5;
             this.gunaLabel2.Text = "El Rol contiene los siguientes permisos:\r\n";
             // 
@@ -333,7 +354,8 @@
             this.gunaButton4.ForeColor = System.Drawing.Color.White;
             this.gunaButton4.Image = null;
             this.gunaButton4.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton4.Location = new System.Drawing.Point(79, 197);
+            this.gunaButton4.Location = new System.Drawing.Point(105, 242);
+            this.gunaButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaButton4.Name = "gunaButton4";
             this.gunaButton4.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton4.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -341,7 +363,7 @@
             this.gunaButton4.OnHoverImage = null;
             this.gunaButton4.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton4.Radius = 10;
-            this.gunaButton4.Size = new System.Drawing.Size(69, 31);
+            this.gunaButton4.Size = new System.Drawing.Size(92, 38);
             this.gunaButton4.TabIndex = 6;
             this.gunaButton4.Text = "Eliminar";
             this.gunaButton4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -360,7 +382,8 @@
             this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
             this.btnSeleccionar.Image = null;
             this.btnSeleccionar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSeleccionar.Location = new System.Drawing.Point(25, 109);
+            this.btnSeleccionar.Location = new System.Drawing.Point(33, 134);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnSeleccionar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -368,7 +391,7 @@
             this.btnSeleccionar.OnHoverImage = null;
             this.btnSeleccionar.OnPressedColor = System.Drawing.Color.Black;
             this.btnSeleccionar.Radius = 10;
-            this.btnSeleccionar.Size = new System.Drawing.Size(69, 31);
+            this.btnSeleccionar.Size = new System.Drawing.Size(92, 38);
             this.btnSeleccionar.TabIndex = 3;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -385,20 +408,22 @@
             this.cmbRol.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbRol.ForeColor = System.Drawing.Color.Black;
             this.cmbRol.FormattingEnabled = true;
-            this.cmbRol.Location = new System.Drawing.Point(25, 77);
+            this.cmbRol.Location = new System.Drawing.Point(33, 95);
+            this.cmbRol.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbRol.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cmbRol.Size = new System.Drawing.Size(150, 26);
+            this.cmbRol.Size = new System.Drawing.Size(199, 31);
             this.cmbRol.TabIndex = 1;
             // 
             // gunaLabel1
             // 
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel1.Location = new System.Drawing.Point(22, 49);
+            this.gunaLabel1.Location = new System.Drawing.Point(29, 60);
+            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(153, 15);
+            this.gunaLabel1.Size = new System.Drawing.Size(195, 20);
             this.gunaLabel1.TabIndex = 0;
             this.gunaLabel1.Text = "Seleccione el Rol a eliminar:";
             // 
@@ -408,9 +433,11 @@
             this.grpModificar.Controls.Add(this.btnSeleccionMod);
             this.grpModificar.Controls.Add(this.cmbModificar);
             this.grpModificar.Controls.Add(this.gunaLabel3);
-            this.grpModificar.Location = new System.Drawing.Point(1010, 172);
+            this.grpModificar.Location = new System.Drawing.Point(1347, 212);
+            this.grpModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpModificar.Name = "grpModificar";
-            this.grpModificar.Size = new System.Drawing.Size(311, 446);
+            this.grpModificar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpModificar.Size = new System.Drawing.Size(415, 549);
             this.grpModificar.TabIndex = 5;
             this.grpModificar.TabStop = false;
             this.grpModificar.Enter += new System.EventHandler(this.grpModificar_Enter);
@@ -427,9 +454,11 @@
             this.grpSeccionMod.Controls.Add(this.gunaLabel4);
             this.grpSeccionMod.Controls.Add(this.btnModifica);
             this.grpSeccionMod.Controls.Add(this.btnModificarRegistros);
-            this.grpSeccionMod.Location = new System.Drawing.Point(6, 84);
+            this.grpSeccionMod.Location = new System.Drawing.Point(8, 103);
+            this.grpSeccionMod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpSeccionMod.Name = "grpSeccionMod";
-            this.grpSeccionMod.Size = new System.Drawing.Size(299, 350);
+            this.grpSeccionMod.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpSeccionMod.Size = new System.Drawing.Size(399, 431);
             this.grpSeccionMod.TabIndex = 30;
             this.grpSeccionMod.TabStop = false;
             // 
@@ -443,48 +472,54 @@
             this.txtModificar.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtModificar.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtModificar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtModificar.Location = new System.Drawing.Point(99, 44);
+            this.txtModificar.Location = new System.Drawing.Point(132, 54);
+            this.txtModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtModificar.Name = "txtModificar";
             this.txtModificar.PasswordChar = '\0';
             this.txtModificar.Radius = 10;
             this.txtModificar.SelectedText = "";
-            this.txtModificar.Size = new System.Drawing.Size(123, 26);
+            this.txtModificar.Size = new System.Drawing.Size(164, 37);
             this.txtModificar.TabIndex = 25;
             // 
             // gunaLabel7
             // 
             this.gunaLabel7.AutoSize = true;
             this.gunaLabel7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel7.Location = new System.Drawing.Point(50, 16);
+            this.gunaLabel7.Location = new System.Drawing.Point(67, 20);
+            this.gunaLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel7.Name = "gunaLabel7";
-            this.gunaLabel7.Size = new System.Drawing.Size(109, 17);
+            this.gunaLabel7.Size = new System.Drawing.Size(140, 21);
             this.gunaLabel7.TabIndex = 28;
             this.gunaLabel7.Text = " Rol a Modificar";
             // 
             // cmbMod
             // 
             this.cmbMod.FormattingEnabled = true;
-            this.cmbMod.Location = new System.Drawing.Point(103, 249);
+            this.cmbMod.Location = new System.Drawing.Point(137, 306);
+            this.cmbMod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbMod.Name = "cmbMod";
-            this.cmbMod.Size = new System.Drawing.Size(121, 21);
+            this.cmbMod.Size = new System.Drawing.Size(160, 24);
             this.cmbMod.TabIndex = 21;
             // 
             // lblMrol
             // 
             this.lblMrol.AutoSize = true;
             this.lblMrol.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMrol.Location = new System.Drawing.Point(196, 16);
+            this.lblMrol.Location = new System.Drawing.Point(261, 20);
+            this.lblMrol.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMrol.Name = "lblMrol";
-            this.lblMrol.Size = new System.Drawing.Size(28, 17);
+            this.lblMrol.Size = new System.Drawing.Size(34, 21);
             this.lblMrol.TabIndex = 27;
             this.lblMrol.Text = "Rol";
             // 
             // dgvModificar
             // 
             this.dgvModificar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvModificar.Location = new System.Drawing.Point(32, 97);
+            this.dgvModificar.Location = new System.Drawing.Point(43, 119);
+            this.dgvModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvModificar.Name = "dgvModificar";
-            this.dgvModificar.Size = new System.Drawing.Size(244, 118);
+            this.dgvModificar.RowHeadersWidth = 51;
+            this.dgvModificar.Size = new System.Drawing.Size(325, 145);
             this.dgvModificar.TabIndex = 19;
             this.dgvModificar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -501,7 +536,8 @@
             this.gunaButton5.ForeColor = System.Drawing.Color.White;
             this.gunaButton5.Image = null;
             this.gunaButton5.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton5.Location = new System.Drawing.Point(228, 41);
+            this.gunaButton5.Location = new System.Drawing.Point(304, 50);
+            this.gunaButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaButton5.Name = "gunaButton5";
             this.gunaButton5.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton5.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -509,7 +545,7 @@
             this.gunaButton5.OnHoverImage = null;
             this.gunaButton5.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton5.Radius = 10;
-            this.gunaButton5.Size = new System.Drawing.Size(73, 29);
+            this.gunaButton5.Size = new System.Drawing.Size(97, 36);
             this.gunaButton5.TabIndex = 26;
             this.gunaButton5.Text = "Renombrar";
             this.gunaButton5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -518,9 +554,10 @@
             // lblFrmModificar
             // 
             this.lblFrmModificar.AutoSize = true;
-            this.lblFrmModificar.Location = new System.Drawing.Point(20, 257);
+            this.lblFrmModificar.Location = new System.Drawing.Point(27, 316);
+            this.lblFrmModificar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFrmModificar.Name = "lblFrmModificar";
-            this.lblFrmModificar.Size = new System.Drawing.Size(35, 13);
+            this.lblFrmModificar.Size = new System.Drawing.Size(46, 17);
             this.lblFrmModificar.TabIndex = 20;
             this.lblFrmModificar.Text = "label1";
             // 
@@ -528,9 +565,10 @@
             // 
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(8, 53);
+            this.gunaLabel4.Location = new System.Drawing.Point(11, 65);
+            this.gunaLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(85, 17);
+            this.gunaLabel4.Size = new System.Drawing.Size(106, 21);
             this.gunaLabel4.TabIndex = 24;
             this.gunaLabel4.Text = "Nombre Rol";
             // 
@@ -547,7 +585,8 @@
             this.btnModifica.ForeColor = System.Drawing.Color.White;
             this.btnModifica.Image = null;
             this.btnModifica.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnModifica.Location = new System.Drawing.Point(230, 244);
+            this.btnModifica.Location = new System.Drawing.Point(307, 300);
+            this.btnModifica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModifica.Name = "btnModifica";
             this.btnModifica.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnModifica.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -555,7 +594,7 @@
             this.btnModifica.OnHoverImage = null;
             this.btnModifica.OnPressedColor = System.Drawing.Color.Black;
             this.btnModifica.Radius = 10;
-            this.btnModifica.Size = new System.Drawing.Size(63, 29);
+            this.btnModifica.Size = new System.Drawing.Size(84, 36);
             this.btnModifica.TabIndex = 22;
             this.btnModifica.Text = "Modificar";
             this.btnModifica.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -574,7 +613,8 @@
             this.btnModificarRegistros.ForeColor = System.Drawing.Color.White;
             this.btnModificarRegistros.Image = null;
             this.btnModificarRegistros.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnModificarRegistros.Location = new System.Drawing.Point(87, 314);
+            this.btnModificarRegistros.Location = new System.Drawing.Point(116, 386);
+            this.btnModificarRegistros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificarRegistros.Name = "btnModificarRegistros";
             this.btnModificarRegistros.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnModificarRegistros.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -582,7 +622,7 @@
             this.btnModificarRegistros.OnHoverImage = null;
             this.btnModificarRegistros.OnPressedColor = System.Drawing.Color.Black;
             this.btnModificarRegistros.Radius = 10;
-            this.btnModificarRegistros.Size = new System.Drawing.Size(107, 29);
+            this.btnModificarRegistros.Size = new System.Drawing.Size(143, 36);
             this.btnModificarRegistros.TabIndex = 23;
             this.btnModificarRegistros.Text = "Modificar Rol";
             this.btnModificarRegistros.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -601,7 +641,8 @@
             this.btnSeleccionMod.ForeColor = System.Drawing.Color.White;
             this.btnSeleccionMod.Image = null;
             this.btnSeleccionMod.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSeleccionMod.Location = new System.Drawing.Point(184, 49);
+            this.btnSeleccionMod.Location = new System.Drawing.Point(245, 60);
+            this.btnSeleccionMod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSeleccionMod.Name = "btnSeleccionMod";
             this.btnSeleccionMod.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnSeleccionMod.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -609,7 +650,7 @@
             this.btnSeleccionMod.OnHoverImage = null;
             this.btnSeleccionMod.OnPressedColor = System.Drawing.Color.Black;
             this.btnSeleccionMod.Radius = 10;
-            this.btnSeleccionMod.Size = new System.Drawing.Size(73, 29);
+            this.btnSeleccionMod.Size = new System.Drawing.Size(97, 36);
             this.btnSeleccionMod.TabIndex = 29;
             this.btnSeleccionMod.Text = "Modificar";
             this.btnSeleccionMod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -626,11 +667,12 @@
             this.cmbModificar.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbModificar.ForeColor = System.Drawing.Color.Black;
             this.cmbModificar.FormattingEnabled = true;
-            this.cmbModificar.Location = new System.Drawing.Point(20, 52);
+            this.cmbModificar.Location = new System.Drawing.Point(27, 64);
+            this.cmbModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbModificar.Name = "cmbModificar";
             this.cmbModificar.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbModificar.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cmbModificar.Size = new System.Drawing.Size(158, 26);
+            this.cmbModificar.Size = new System.Drawing.Size(209, 31);
             this.cmbModificar.TabIndex = 2;
             this.cmbModificar.SelectedIndexChanged += new System.EventHandler(this.cmbModificar_SelectedIndexChanged);
             // 
@@ -638,9 +680,10 @@
             // 
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel3.Location = new System.Drawing.Point(17, 34);
+            this.gunaLabel3.Location = new System.Drawing.Point(23, 42);
+            this.gunaLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(161, 15);
+            this.gunaLabel3.Size = new System.Drawing.Size(205, 20);
             this.gunaLabel3.TabIndex = 1;
             this.gunaLabel3.Text = "Seleccione el Rol a modificar:";
             // 
@@ -655,21 +698,23 @@
             this.cmbFiltrar.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbFiltrar.ForeColor = System.Drawing.Color.Black;
             this.cmbFiltrar.FormattingEnabled = true;
-            this.cmbFiltrar.Location = new System.Drawing.Point(578, 83);
+            this.cmbFiltrar.Location = new System.Drawing.Point(771, 102);
+            this.cmbFiltrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbFiltrar.Name = "cmbFiltrar";
             this.cmbFiltrar.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbFiltrar.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cmbFiltrar.Size = new System.Drawing.Size(144, 26);
+            this.cmbFiltrar.Size = new System.Drawing.Size(191, 31);
             this.cmbFiltrar.TabIndex = 6;
             this.cmbFiltrar.SelectedIndexChanged += new System.EventHandler(this.cmbFiltrar_SelectedIndexChanged);
             // 
             // gunaLabel5
             // 
             this.gunaLabel5.AutoSize = true;
-            this.gunaLabel5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel5.Location = new System.Drawing.Point(478, 92);
+            this.gunaLabel5.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel5.Location = new System.Drawing.Point(614, 97);
+            this.gunaLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(96, 17);
+            this.gunaLabel5.Size = new System.Drawing.Size(149, 36);
             this.gunaLabel5.TabIndex = 7;
             this.gunaLabel5.Text = "Filtrar por Rol:";
             // 
@@ -683,40 +728,54 @@
             this.telefono,
             this.ciudad,
             this.estado});
-            this.dgvDatosPersona.Location = new System.Drawing.Point(338, 172);
+            this.dgvDatosPersona.Location = new System.Drawing.Point(451, 212);
+            this.dgvDatosPersona.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvDatosPersona.Name = "dgvDatosPersona";
-            this.dgvDatosPersona.Size = new System.Drawing.Size(642, 446);
+            this.dgvDatosPersona.RowHeadersWidth = 51;
+            this.dgvDatosPersona.Size = new System.Drawing.Size(856, 549);
             this.dgvDatosPersona.TabIndex = 8;
             // 
             // nombre
             // 
             this.nombre.HeaderText = "Nombre";
+            this.nombre.MinimumWidth = 6;
             this.nombre.Name = "nombre";
+            this.nombre.Width = 125;
             // 
             // apellido
             // 
             this.apellido.HeaderText = "Apellido";
+            this.apellido.MinimumWidth = 6;
             this.apellido.Name = "apellido";
+            this.apellido.Width = 125;
             // 
             // documento
             // 
             this.documento.HeaderText = "Documento";
+            this.documento.MinimumWidth = 6;
             this.documento.Name = "documento";
+            this.documento.Width = 125;
             // 
             // telefono
             // 
             this.telefono.HeaderText = "Telefono";
+            this.telefono.MinimumWidth = 6;
             this.telefono.Name = "telefono";
+            this.telefono.Width = 125;
             // 
             // ciudad
             // 
             this.ciudad.HeaderText = "Ciudad";
+            this.ciudad.MinimumWidth = 6;
             this.ciudad.Name = "ciudad";
+            this.ciudad.Width = 125;
             // 
             // estado
             // 
             this.estado.HeaderText = "Estado Persona";
+            this.estado.MinimumWidth = 6;
             this.estado.Name = "estado";
+            this.estado.Width = 125;
             // 
             // Crear
             // 
@@ -727,11 +786,12 @@
             this.Crear.BorderColor = System.Drawing.Color.Black;
             this.Crear.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Crear.FocusedColor = System.Drawing.Color.Empty;
-            this.Crear.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Crear.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Crear.ForeColor = System.Drawing.Color.White;
             this.Crear.Image = null;
             this.Crear.ImageSize = new System.Drawing.Size(20, 20);
-            this.Crear.Location = new System.Drawing.Point(174, 122);
+            this.Crear.Location = new System.Drawing.Point(222, 150);
+            this.Crear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Crear.Name = "Crear";
             this.Crear.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.Crear.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -739,7 +799,7 @@
             this.Crear.OnHoverImage = null;
             this.Crear.OnPressedColor = System.Drawing.Color.Black;
             this.Crear.Radius = 10;
-            this.Crear.Size = new System.Drawing.Size(69, 24);
+            this.Crear.Size = new System.Drawing.Size(102, 30);
             this.Crear.TabIndex = 9;
             this.Crear.Text = "Crear Rol";
             this.Crear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -754,11 +814,12 @@
             this.Modificar.BorderColor = System.Drawing.Color.Black;
             this.Modificar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Modificar.FocusedColor = System.Drawing.Color.Empty;
-            this.Modificar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Modificar.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Modificar.ForeColor = System.Drawing.Color.White;
             this.Modificar.Image = null;
             this.Modificar.ImageSize = new System.Drawing.Size(20, 20);
-            this.Modificar.Location = new System.Drawing.Point(249, 122);
+            this.Modificar.Location = new System.Drawing.Point(332, 150);
+            this.Modificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Modificar.Name = "Modificar";
             this.Modificar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.Modificar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -766,7 +827,7 @@
             this.Modificar.OnHoverImage = null;
             this.Modificar.OnPressedColor = System.Drawing.Color.Black;
             this.Modificar.Radius = 10;
-            this.Modificar.Size = new System.Drawing.Size(107, 24);
+            this.Modificar.Size = new System.Drawing.Size(158, 30);
             this.Modificar.TabIndex = 24;
             this.Modificar.Text = "Modificar Rol";
             this.Modificar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -781,11 +842,12 @@
             this.Eliminar.BorderColor = System.Drawing.Color.Black;
             this.Eliminar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Eliminar.FocusedColor = System.Drawing.Color.Empty;
-            this.Eliminar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Eliminar.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminar.ForeColor = System.Drawing.Color.White;
             this.Eliminar.Image = null;
             this.Eliminar.ImageSize = new System.Drawing.Size(20, 20);
-            this.Eliminar.Location = new System.Drawing.Point(362, 122);
+            this.Eliminar.Location = new System.Drawing.Point(513, 150);
+            this.Eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.OnHoverBaseColor = System.Drawing.Color.Red;
             this.Eliminar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -793,7 +855,7 @@
             this.Eliminar.OnHoverImage = null;
             this.Eliminar.OnPressedColor = System.Drawing.Color.Black;
             this.Eliminar.Radius = 10;
-            this.Eliminar.Size = new System.Drawing.Size(69, 24);
+            this.Eliminar.Size = new System.Drawing.Size(116, 30);
             this.Eliminar.TabIndex = 25;
             this.Eliminar.Text = "Eliminar";
             this.Eliminar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -802,10 +864,11 @@
             // gunaLabel6
             // 
             this.gunaLabel6.AutoSize = true;
-            this.gunaLabel6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel6.Location = new System.Drawing.Point(45, 124);
+            this.gunaLabel6.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel6.Location = new System.Drawing.Point(84, 144);
+            this.gunaLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(103, 22);
+            this.gunaLabel6.Size = new System.Drawing.Size(104, 36);
             this.gunaLabel6.TabIndex = 26;
             this.gunaLabel6.Text = "Opciones:";
             // 
@@ -817,11 +880,11 @@
             // 
             // frmRol
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1385, 753);
+            this.ClientSize = new System.Drawing.Size(1847, 927);
             this.Controls.Add(this.gunaLabel6);
             this.Controls.Add(this.Eliminar);
             this.Controls.Add(this.Modificar);
@@ -834,6 +897,7 @@
             this.Controls.Add(this.grpCrear);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmRol";
             this.Text = "frmRol";
             this.Load += new System.EventHandler(this.frmRol_Load_1);

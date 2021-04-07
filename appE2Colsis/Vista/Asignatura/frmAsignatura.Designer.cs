@@ -67,12 +67,12 @@ namespace appE2Colsis.Vista
             // dgvArea
             // 
             this.dgvArea.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArea.Location = new System.Drawing.Point(24, 153);
-            this.dgvArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvArea.Location = new System.Drawing.Point(55, 209);
+            this.dgvArea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvArea.Name = "dgvArea";
             this.dgvArea.RowHeadersWidth = 51;
             this.dgvArea.RowTemplate.Height = 24;
-            this.dgvArea.Size = new System.Drawing.Size(247, 192);
+            this.dgvArea.Size = new System.Drawing.Size(399, 236);
             this.dgvArea.TabIndex = 0;
             this.dgvArea.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArea_CellContentClick);
             // 
@@ -91,11 +91,11 @@ namespace appE2Colsis.Vista
             this.gunaGroupBox1.Controls.Add(this.gunaLabel1);
             this.gunaGroupBox1.Controls.Add(this.txtAsignatura);
             this.gunaGroupBox1.Font = new System.Drawing.Font("Agency FB", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaGroupBox1.LineColor = System.Drawing.Color.Gainsboro;
-            this.gunaGroupBox1.Location = new System.Drawing.Point(9, 54);
-            this.gunaGroupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaGroupBox1.LineColor = System.Drawing.Color.DodgerBlue;
+            this.gunaGroupBox1.Location = new System.Drawing.Point(12, 78);
+            this.gunaGroupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
-            this.gunaGroupBox1.Size = new System.Drawing.Size(288, 193);
+            this.gunaGroupBox1.Size = new System.Drawing.Size(484, 289);
             this.gunaGroupBox1.TabIndex = 1;
             this.gunaGroupBox1.Text = "Registro De Asignatura";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
@@ -104,10 +104,9 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel7.AutoSize = true;
             this.gunaLabel7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel7.Location = new System.Drawing.Point(8, 47);
-            this.gunaLabel7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel7.Location = new System.Drawing.Point(11, 58);
             this.gunaLabel7.Name = "gunaLabel7";
-            this.gunaLabel7.Size = new System.Drawing.Size(78, 15);
+            this.gunaLabel7.Size = new System.Drawing.Size(99, 20);
             this.gunaLabel7.TabIndex = 13;
             this.gunaLabel7.Text = "ID Asignatura";
             // 
@@ -120,13 +119,14 @@ namespace appE2Colsis.Vista
             this.txtId.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtId.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtId.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtId.Location = new System.Drawing.Point(84, 37);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtId.Location = new System.Drawing.Point(112, 46);
+            this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtId.Name = "txtId";
             this.txtId.PasswordChar = '\0';
             this.txtId.SelectedText = "";
-            this.txtId.Size = new System.Drawing.Size(165, 26);
+            this.txtId.Size = new System.Drawing.Size(323, 37);
             this.txtId.TabIndex = 12;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // btnModificarAsignatura
             // 
@@ -140,15 +140,15 @@ namespace appE2Colsis.Vista
             this.btnModificarAsignatura.ForeColor = System.Drawing.Color.White;
             this.btnModificarAsignatura.Image = null;
             this.btnModificarAsignatura.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnModificarAsignatura.Location = new System.Drawing.Point(196, 141);
-            this.btnModificarAsignatura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificarAsignatura.Location = new System.Drawing.Point(355, 213);
+            this.btnModificarAsignatura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnModificarAsignatura.Name = "btnModificarAsignatura";
             this.btnModificarAsignatura.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnModificarAsignatura.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnModificarAsignatura.OnHoverForeColor = System.Drawing.Color.White;
             this.btnModificarAsignatura.OnHoverImage = null;
             this.btnModificarAsignatura.OnPressedColor = System.Drawing.Color.Black;
-            this.btnModificarAsignatura.Size = new System.Drawing.Size(74, 29);
+            this.btnModificarAsignatura.Size = new System.Drawing.Size(99, 36);
             this.btnModificarAsignatura.TabIndex = 11;
             this.btnModificarAsignatura.Text = "Modificar";
             this.btnModificarAsignatura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -165,12 +165,12 @@ namespace appE2Colsis.Vista
             this.cmbArea.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbArea.ForeColor = System.Drawing.Color.Black;
             this.cmbArea.FormattingEnabled = true;
-            this.cmbArea.Location = new System.Drawing.Point(84, 98);
-            this.cmbArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbArea.Location = new System.Drawing.Point(112, 150);
+            this.cmbArea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbArea.Name = "cmbArea";
             this.cmbArea.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbArea.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cmbArea.Size = new System.Drawing.Size(166, 26);
+            this.cmbArea.Size = new System.Drawing.Size(323, 31);
             this.cmbArea.TabIndex = 4;
             // 
             // btnEliminarAsignatura
@@ -185,15 +185,15 @@ namespace appE2Colsis.Vista
             this.btnEliminarAsignatura.ForeColor = System.Drawing.Color.White;
             this.btnEliminarAsignatura.Image = null;
             this.btnEliminarAsignatura.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEliminarAsignatura.Location = new System.Drawing.Point(111, 141);
-            this.btnEliminarAsignatura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminarAsignatura.Location = new System.Drawing.Point(204, 213);
+            this.btnEliminarAsignatura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminarAsignatura.Name = "btnEliminarAsignatura";
             this.btnEliminarAsignatura.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnEliminarAsignatura.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnEliminarAsignatura.OnHoverForeColor = System.Drawing.Color.White;
             this.btnEliminarAsignatura.OnHoverImage = null;
             this.btnEliminarAsignatura.OnPressedColor = System.Drawing.Color.Black;
-            this.btnEliminarAsignatura.Size = new System.Drawing.Size(74, 29);
+            this.btnEliminarAsignatura.Size = new System.Drawing.Size(99, 36);
             this.btnEliminarAsignatura.TabIndex = 10;
             this.btnEliminarAsignatura.Text = "Eliminar";
             this.btnEliminarAsignatura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -211,15 +211,15 @@ namespace appE2Colsis.Vista
             this.btnRegistarAsignatura.ForeColor = System.Drawing.Color.White;
             this.btnRegistarAsignatura.Image = null;
             this.btnRegistarAsignatura.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnRegistarAsignatura.Location = new System.Drawing.Point(24, 141);
-            this.btnRegistarAsignatura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistarAsignatura.Location = new System.Drawing.Point(55, 213);
+            this.btnRegistarAsignatura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistarAsignatura.Name = "btnRegistarAsignatura";
             this.btnRegistarAsignatura.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnRegistarAsignatura.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnRegistarAsignatura.OnHoverForeColor = System.Drawing.Color.White;
             this.btnRegistarAsignatura.OnHoverImage = null;
             this.btnRegistarAsignatura.OnPressedColor = System.Drawing.Color.Black;
-            this.btnRegistarAsignatura.Size = new System.Drawing.Size(74, 29);
+            this.btnRegistarAsignatura.Size = new System.Drawing.Size(99, 36);
             this.btnRegistarAsignatura.TabIndex = 9;
             this.btnRegistarAsignatura.Text = "Registrar";
             this.btnRegistarAsignatura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -229,10 +229,9 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel2.Location = new System.Drawing.Point(23, 107);
-            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel2.Location = new System.Drawing.Point(28, 155);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(31, 15);
+            this.gunaLabel2.Size = new System.Drawing.Size(40, 20);
             this.gunaLabel2.TabIndex = 3;
             this.gunaLabel2.Text = "Area";
             // 
@@ -240,10 +239,9 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel1.Location = new System.Drawing.Point(8, 77);
-            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel1.Location = new System.Drawing.Point(26, 112);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(64, 15);
+            this.gunaLabel1.Size = new System.Drawing.Size(80, 20);
             this.gunaLabel1.TabIndex = 2;
             this.gunaLabel1.Text = "Asignatura";
             // 
@@ -256,12 +254,12 @@ namespace appE2Colsis.Vista
             this.txtAsignatura.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtAsignatura.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtAsignatura.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtAsignatura.Location = new System.Drawing.Point(84, 67);
-            this.txtAsignatura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAsignatura.Location = new System.Drawing.Point(112, 95);
+            this.txtAsignatura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAsignatura.Name = "txtAsignatura";
             this.txtAsignatura.PasswordChar = '\0';
             this.txtAsignatura.SelectedText = "";
-            this.txtAsignatura.Size = new System.Drawing.Size(165, 26);
+            this.txtAsignatura.Size = new System.Drawing.Size(323, 37);
             this.txtAsignatura.TabIndex = 0;
             // 
             // gunaGroupBox2
@@ -278,11 +276,11 @@ namespace appE2Colsis.Vista
             this.gunaGroupBox2.Controls.Add(this.txtArea);
             this.gunaGroupBox2.Controls.Add(this.dgvArea);
             this.gunaGroupBox2.Font = new System.Drawing.Font("Agency FB", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaGroupBox2.LineColor = System.Drawing.Color.Gainsboro;
-            this.gunaGroupBox2.Location = new System.Drawing.Point(9, 258);
-            this.gunaGroupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaGroupBox2.LineColor = System.Drawing.Color.DodgerBlue;
+            this.gunaGroupBox2.Location = new System.Drawing.Point(12, 411);
+            this.gunaGroupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gunaGroupBox2.Name = "gunaGroupBox2";
-            this.gunaGroupBox2.Size = new System.Drawing.Size(288, 363);
+            this.gunaGroupBox2.Size = new System.Drawing.Size(484, 447);
             this.gunaGroupBox2.TabIndex = 2;
             this.gunaGroupBox2.Text = "Registro De Area";
             this.gunaGroupBox2.TextLocation = new System.Drawing.Point(10, 8);
@@ -291,10 +289,9 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel8.AutoSize = true;
             this.gunaLabel8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel8.Location = new System.Drawing.Point(21, 41);
-            this.gunaLabel8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel8.Location = new System.Drawing.Point(28, 50);
             this.gunaLabel8.Name = "gunaLabel8";
-            this.gunaLabel8.Size = new System.Drawing.Size(45, 15);
+            this.gunaLabel8.Size = new System.Drawing.Size(59, 20);
             this.gunaLabel8.TabIndex = 15;
             this.gunaLabel8.Text = "ID Area";
             // 
@@ -310,15 +307,15 @@ namespace appE2Colsis.Vista
             this.btnModificarArea.ForeColor = System.Drawing.Color.White;
             this.btnModificarArea.Image = null;
             this.btnModificarArea.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnModificarArea.Location = new System.Drawing.Point(196, 103);
-            this.btnModificarArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificarArea.Location = new System.Drawing.Point(355, 139);
+            this.btnModificarArea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnModificarArea.Name = "btnModificarArea";
             this.btnModificarArea.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnModificarArea.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnModificarArea.OnHoverForeColor = System.Drawing.Color.White;
             this.btnModificarArea.OnHoverImage = null;
             this.btnModificarArea.OnPressedColor = System.Drawing.Color.Black;
-            this.btnModificarArea.Size = new System.Drawing.Size(74, 29);
+            this.btnModificarArea.Size = new System.Drawing.Size(99, 36);
             this.btnModificarArea.TabIndex = 8;
             this.btnModificarArea.Text = "Modificar";
             this.btnModificarArea.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -333,12 +330,12 @@ namespace appE2Colsis.Vista
             this.txtIdArea.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtIdArea.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtIdArea.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtIdArea.Location = new System.Drawing.Point(84, 31);
-            this.txtIdArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdArea.Location = new System.Drawing.Point(112, 38);
+            this.txtIdArea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdArea.Name = "txtIdArea";
             this.txtIdArea.PasswordChar = '\0';
             this.txtIdArea.SelectedText = "";
-            this.txtIdArea.Size = new System.Drawing.Size(165, 26);
+            this.txtIdArea.Size = new System.Drawing.Size(323, 37);
             this.txtIdArea.TabIndex = 14;
             // 
             // btnEliminarArea
@@ -353,15 +350,15 @@ namespace appE2Colsis.Vista
             this.btnEliminarArea.ForeColor = System.Drawing.Color.White;
             this.btnEliminarArea.Image = null;
             this.btnEliminarArea.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEliminarArea.Location = new System.Drawing.Point(111, 103);
-            this.btnEliminarArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminarArea.Location = new System.Drawing.Point(204, 139);
+            this.btnEliminarArea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminarArea.Name = "btnEliminarArea";
             this.btnEliminarArea.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnEliminarArea.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnEliminarArea.OnHoverForeColor = System.Drawing.Color.White;
             this.btnEliminarArea.OnHoverImage = null;
             this.btnEliminarArea.OnPressedColor = System.Drawing.Color.Black;
-            this.btnEliminarArea.Size = new System.Drawing.Size(74, 29);
+            this.btnEliminarArea.Size = new System.Drawing.Size(99, 36);
             this.btnEliminarArea.TabIndex = 7;
             this.btnEliminarArea.Text = "Eliminar";
             this.btnEliminarArea.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -379,15 +376,15 @@ namespace appE2Colsis.Vista
             this.btnRegistrarArea.ForeColor = System.Drawing.Color.White;
             this.btnRegistrarArea.Image = null;
             this.btnRegistrarArea.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnRegistrarArea.Location = new System.Drawing.Point(24, 103);
-            this.btnRegistrarArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrarArea.Location = new System.Drawing.Point(55, 139);
+            this.btnRegistrarArea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistrarArea.Name = "btnRegistrarArea";
             this.btnRegistrarArea.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnRegistrarArea.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnRegistrarArea.OnHoverForeColor = System.Drawing.Color.White;
             this.btnRegistrarArea.OnHoverImage = null;
             this.btnRegistrarArea.OnPressedColor = System.Drawing.Color.Black;
-            this.btnRegistrarArea.Size = new System.Drawing.Size(74, 29);
+            this.btnRegistrarArea.Size = new System.Drawing.Size(99, 36);
             this.btnRegistrarArea.TabIndex = 6;
             this.btnRegistrarArea.Text = "Registrar";
             this.btnRegistrarArea.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -397,10 +394,9 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel4.Location = new System.Drawing.Point(21, 62);
-            this.gunaLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel4.Location = new System.Drawing.Point(28, 76);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(34, 15);
+            this.gunaLabel4.Size = new System.Drawing.Size(43, 20);
             this.gunaLabel4.TabIndex = 5;
             this.gunaLabel4.Text = "Area:";
             // 
@@ -413,23 +409,23 @@ namespace appE2Colsis.Vista
             this.txtArea.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtArea.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtArea.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtArea.Location = new System.Drawing.Point(84, 62);
-            this.txtArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtArea.Location = new System.Drawing.Point(112, 76);
+            this.txtArea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtArea.Name = "txtArea";
             this.txtArea.PasswordChar = '\0';
             this.txtArea.SelectedText = "";
-            this.txtArea.Size = new System.Drawing.Size(165, 26);
+            this.txtArea.Size = new System.Drawing.Size(323, 37);
             this.txtArea.TabIndex = 5;
             // 
             // gunaPanel1
             // 
-            this.gunaPanel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.gunaPanel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.gunaPanel1.Controls.Add(this.gunaButton1);
             this.gunaPanel1.Controls.Add(this.gunaLabel3);
-            this.gunaPanel1.Location = new System.Drawing.Point(-2, 1);
-            this.gunaPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaPanel1.Location = new System.Drawing.Point(-3, 1);
+            this.gunaPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(899, 49);
+            this.gunaPanel1.Size = new System.Drawing.Size(1738, 60);
             this.gunaPanel1.TabIndex = 3;
             // 
             // gunaButton1
@@ -444,15 +440,15 @@ namespace appE2Colsis.Vista
             this.gunaButton1.ForeColor = System.Drawing.Color.White;
             this.gunaButton1.Image = null;
             this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(779, 9);
-            this.gunaButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaButton1.Location = new System.Drawing.Point(1388, 10);
+            this.gunaButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gunaButton1.Name = "gunaButton1";
             this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Size = new System.Drawing.Size(110, 34);
+            this.gunaButton1.Size = new System.Drawing.Size(147, 42);
             this.gunaButton1.TabIndex = 1;
             this.gunaButton1.Text = "Asignar a Cursos";
             this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
@@ -461,22 +457,21 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Agency FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.Location = new System.Drawing.Point(17, 14);
-            this.gunaLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel3.Location = new System.Drawing.Point(23, 17);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(80, 24);
+            this.gunaLabel3.Size = new System.Drawing.Size(105, 31);
             this.gunaLabel3.TabIndex = 0;
             this.gunaLabel3.Text = "Asignaturas";
             // 
             // dgvAsignatura
             // 
             this.dgvAsignatura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAsignatura.Location = new System.Drawing.Point(322, 143);
-            this.dgvAsignatura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvAsignatura.Location = new System.Drawing.Point(521, 190);
+            this.dgvAsignatura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvAsignatura.Name = "dgvAsignatura";
             this.dgvAsignatura.RowHeadersWidth = 51;
             this.dgvAsignatura.RowTemplate.Height = 24;
-            this.dgvAsignatura.Size = new System.Drawing.Size(566, 478);
+            this.dgvAsignatura.Size = new System.Drawing.Size(1011, 668);
             this.dgvAsignatura.TabIndex = 4;
             this.dgvAsignatura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAsignatura_CellContentClick);
             // 
@@ -484,16 +479,16 @@ namespace appE2Colsis.Vista
             // 
             this.gunaGroupBox3.BackColor = System.Drawing.Color.Transparent;
             this.gunaGroupBox3.BaseColor = System.Drawing.Color.White;
-            this.gunaGroupBox3.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gunaGroupBox3.BorderColor = System.Drawing.Color.Silver;
             this.gunaGroupBox3.Controls.Add(this.btnRecargar);
             this.gunaGroupBox3.Controls.Add(this.cmbFiltroArea);
             this.gunaGroupBox3.Controls.Add(this.gunaLabel6);
             this.gunaGroupBox3.Font = new System.Drawing.Font("Agency FB", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaGroupBox3.LineColor = System.Drawing.Color.Gainsboro;
-            this.gunaGroupBox3.Location = new System.Drawing.Point(322, 54);
-            this.gunaGroupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaGroupBox3.LineColor = System.Drawing.Color.DodgerBlue;
+            this.gunaGroupBox3.Location = new System.Drawing.Point(521, 78);
+            this.gunaGroupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gunaGroupBox3.Name = "gunaGroupBox3";
-            this.gunaGroupBox3.Size = new System.Drawing.Size(566, 73);
+            this.gunaGroupBox3.Size = new System.Drawing.Size(1011, 90);
             this.gunaGroupBox3.TabIndex = 5;
             this.gunaGroupBox3.Text = "Filtro";
             this.gunaGroupBox3.TextLocation = new System.Drawing.Point(10, 8);
@@ -510,15 +505,15 @@ namespace appE2Colsis.Vista
             this.btnRecargar.ForeColor = System.Drawing.Color.White;
             this.btnRecargar.Image = null;
             this.btnRecargar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnRecargar.Location = new System.Drawing.Point(466, 37);
-            this.btnRecargar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRecargar.Location = new System.Drawing.Point(873, 46);
+            this.btnRecargar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRecargar.Name = "btnRecargar";
             this.btnRecargar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnRecargar.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnRecargar.OnHoverForeColor = System.Drawing.Color.White;
             this.btnRecargar.OnHoverImage = null;
             this.btnRecargar.OnPressedColor = System.Drawing.Color.Black;
-            this.btnRecargar.Size = new System.Drawing.Size(74, 29);
+            this.btnRecargar.Size = new System.Drawing.Size(99, 36);
             this.btnRecargar.TabIndex = 14;
             this.btnRecargar.Text = "Recargar";
             this.btnRecargar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -535,12 +530,12 @@ namespace appE2Colsis.Vista
             this.cmbFiltroArea.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbFiltroArea.ForeColor = System.Drawing.Color.Black;
             this.cmbFiltroArea.FormattingEnabled = true;
-            this.cmbFiltroArea.Location = new System.Drawing.Point(72, 38);
-            this.cmbFiltroArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbFiltroArea.Location = new System.Drawing.Point(96, 47);
+            this.cmbFiltroArea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbFiltroArea.Name = "cmbFiltroArea";
             this.cmbFiltroArea.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbFiltroArea.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cmbFiltroArea.Size = new System.Drawing.Size(374, 26);
+            this.cmbFiltroArea.Size = new System.Drawing.Size(761, 31);
             this.cmbFiltroArea.TabIndex = 12;
             this.cmbFiltroArea.SelectionChangeCommitted += new System.EventHandler(this.cmbFiltroArea_SelectionChangeCommitted);
             // 
@@ -548,26 +543,25 @@ namespace appE2Colsis.Vista
             // 
             this.gunaLabel6.AutoSize = true;
             this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel6.Location = new System.Drawing.Point(20, 42);
-            this.gunaLabel6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gunaLabel6.Location = new System.Drawing.Point(27, 52);
             this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(31, 15);
+            this.gunaLabel6.Size = new System.Drawing.Size(40, 20);
             this.gunaLabel6.TabIndex = 12;
             this.gunaLabel6.Text = "Area";
             // 
             // frmAsignatura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(927, 664);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1561, 886);
             this.Controls.Add(this.gunaGroupBox3);
             this.Controls.Add(this.dgvAsignatura);
             this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.gunaGroupBox2);
             this.Controls.Add(this.gunaGroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmAsignatura";
             this.Text = "frmAsignatura";
             this.Load += new System.EventHandler(this.frmAsignatura_Load);

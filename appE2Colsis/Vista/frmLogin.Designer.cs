@@ -49,9 +49,11 @@ namespace appE2Colsis.Vista
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pSettings)).BeginInit();
             this.grpSetting.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaButton1
@@ -69,7 +71,8 @@ namespace appE2Colsis.Vista
             this.gunaButton1.ForeColor = System.Drawing.Color.White;
             this.gunaButton1.Image = null;
             this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(95, 234);
+            this.gunaButton1.Location = new System.Drawing.Point(127, 288);
+            this.gunaButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaButton1.Name = "gunaButton1";
             this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -77,7 +80,7 @@ namespace appE2Colsis.Vista
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton1.Radius = 20;
-            this.gunaButton1.Size = new System.Drawing.Size(110, 41);
+            this.gunaButton1.Size = new System.Drawing.Size(147, 50);
             this.gunaButton1.TabIndex = 0;
             this.gunaButton1.Text = "Login";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -89,9 +92,10 @@ namespace appE2Colsis.Vista
             this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(31, 106);
+            this.gunaLabel1.Location = new System.Drawing.Point(41, 130);
+            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(40, 19);
+            this.gunaLabel1.Size = new System.Drawing.Size(51, 23);
             this.gunaLabel1.TabIndex = 1;
             this.gunaLabel1.Text = "User";
             // 
@@ -101,9 +105,10 @@ namespace appE2Colsis.Vista
             this.gunaLabel2.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel2.Location = new System.Drawing.Point(9, 182);
+            this.gunaLabel2.Location = new System.Drawing.Point(12, 224);
+            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(80, 19);
+            this.gunaLabel2.Size = new System.Drawing.Size(100, 23);
             this.gunaLabel2.TabIndex = 2;
             this.gunaLabel2.Text = "Password";
             // 
@@ -117,12 +122,13 @@ namespace appE2Colsis.Vista
             this.txtUser.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtUser.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtUser.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtUser.Location = new System.Drawing.Point(95, 95);
+            this.txtUser.Location = new System.Drawing.Point(127, 117);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUser.Name = "txtUser";
             this.txtUser.PasswordChar = '\0';
             this.txtUser.Radius = 17;
             this.txtUser.SelectedText = "";
-            this.txtUser.Size = new System.Drawing.Size(129, 41);
+            this.txtUser.Size = new System.Drawing.Size(172, 50);
             this.txtUser.TabIndex = 3;
             // 
             // txtPswd
@@ -135,12 +141,13 @@ namespace appE2Colsis.Vista
             this.txtPswd.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtPswd.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtPswd.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPswd.Location = new System.Drawing.Point(95, 168);
+            this.txtPswd.Location = new System.Drawing.Point(127, 207);
+            this.txtPswd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPswd.Name = "txtPswd";
             this.txtPswd.PasswordChar = '●';
             this.txtPswd.Radius = 18;
             this.txtPswd.SelectedText = "";
-            this.txtPswd.Size = new System.Drawing.Size(129, 43);
+            this.txtPswd.Size = new System.Drawing.Size(172, 53);
             this.txtPswd.TabIndex = 4;
             this.txtPswd.UseSystemPasswordChar = true;
             // 
@@ -149,9 +156,10 @@ namespace appE2Colsis.Vista
             this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
-            this.gunaPictureBox1.Location = new System.Drawing.Point(117, 12);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(156, 15);
+            this.gunaPictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(71, 65);
+            this.gunaPictureBox1.Size = new System.Drawing.Size(95, 80);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox1.TabIndex = 5;
             this.gunaPictureBox1.TabStop = false;
@@ -161,9 +169,10 @@ namespace appE2Colsis.Vista
             this.pSettings.BackColor = System.Drawing.Color.Transparent;
             this.pSettings.BaseColor = System.Drawing.Color.Transparent;
             this.pSettings.Image = ((System.Drawing.Image)(resources.GetObject("pSettings.Image")));
-            this.pSettings.Location = new System.Drawing.Point(257, 245);
+            this.pSettings.Location = new System.Drawing.Point(343, 302);
+            this.pSettings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pSettings.Name = "pSettings";
-            this.pSettings.Size = new System.Drawing.Size(42, 30);
+            this.pSettings.Size = new System.Drawing.Size(56, 37);
             this.pSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pSettings.TabIndex = 6;
             this.pSettings.TabStop = false;
@@ -188,9 +197,10 @@ namespace appE2Colsis.Vista
             this.grpSetting.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpSetting.ForeColor = System.Drawing.Color.Black;
             this.grpSetting.LineColor = System.Drawing.Color.Transparent;
-            this.grpSetting.Location = new System.Drawing.Point(35, 14);
+            this.grpSetting.Location = new System.Drawing.Point(47, 17);
+            this.grpSetting.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpSetting.Name = "grpSetting";
-            this.grpSetting.Size = new System.Drawing.Size(239, 214);
+            this.grpSetting.Size = new System.Drawing.Size(319, 263);
             this.grpSetting.TabIndex = 7;
             this.grpSetting.Text = "Settings";
             this.grpSetting.TextLocation = new System.Drawing.Point(10, 8);
@@ -204,11 +214,12 @@ namespace appE2Colsis.Vista
             this.txtDataBaseDB.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtDataBaseDB.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtDataBaseDB.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtDataBaseDB.Location = new System.Drawing.Point(88, 75);
+            this.txtDataBaseDB.Location = new System.Drawing.Point(117, 92);
+            this.txtDataBaseDB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDataBaseDB.Name = "txtDataBaseDB";
             this.txtDataBaseDB.PasswordChar = '\0';
             this.txtDataBaseDB.SelectedText = "";
-            this.txtDataBaseDB.Size = new System.Drawing.Size(116, 26);
+            this.txtDataBaseDB.Size = new System.Drawing.Size(155, 37);
             this.txtDataBaseDB.TabIndex = 10;
             // 
             // label5
@@ -216,9 +227,10 @@ namespace appE2Colsis.Vista
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(8, 75);
+            this.label5.Location = new System.Drawing.Point(11, 92);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 16);
+            this.label5.Size = new System.Drawing.Size(92, 19);
             this.label5.TabIndex = 9;
             this.label5.Text = "DataBase:";
             // 
@@ -231,11 +243,12 @@ namespace appE2Colsis.Vista
             this.txtPasswordDB.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtPasswordDB.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtPasswordDB.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPasswordDB.Location = new System.Drawing.Point(160, 144);
+            this.txtPasswordDB.Location = new System.Drawing.Point(213, 177);
+            this.txtPasswordDB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPasswordDB.Name = "txtPasswordDB";
             this.txtPasswordDB.PasswordChar = '*';
             this.txtPasswordDB.SelectedText = "";
-            this.txtPasswordDB.Size = new System.Drawing.Size(66, 26);
+            this.txtPasswordDB.Size = new System.Drawing.Size(88, 37);
             this.txtPasswordDB.TabIndex = 8;
             // 
             // txtUserDB
@@ -247,11 +260,12 @@ namespace appE2Colsis.Vista
             this.txtUserDB.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtUserDB.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtUserDB.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtUserDB.Location = new System.Drawing.Point(43, 144);
+            this.txtUserDB.Location = new System.Drawing.Point(57, 177);
+            this.txtUserDB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUserDB.Name = "txtUserDB";
             this.txtUserDB.PasswordChar = '\0';
             this.txtUserDB.SelectedText = "";
-            this.txtUserDB.Size = new System.Drawing.Size(65, 26);
+            this.txtUserDB.Size = new System.Drawing.Size(87, 37);
             this.txtUserDB.TabIndex = 7;
             // 
             // txtPortDB
@@ -263,11 +277,12 @@ namespace appE2Colsis.Vista
             this.txtPortDB.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtPortDB.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtPortDB.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPortDB.Location = new System.Drawing.Point(53, 112);
+            this.txtPortDB.Location = new System.Drawing.Point(71, 138);
+            this.txtPortDB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPortDB.Name = "txtPortDB";
             this.txtPortDB.PasswordChar = '\0';
             this.txtPortDB.SelectedText = "";
-            this.txtPortDB.Size = new System.Drawing.Size(93, 26);
+            this.txtPortDB.Size = new System.Drawing.Size(124, 37);
             this.txtPortDB.TabIndex = 6;
             // 
             // txtServerDB
@@ -279,11 +294,12 @@ namespace appE2Colsis.Vista
             this.txtServerDB.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtServerDB.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtServerDB.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtServerDB.Location = new System.Drawing.Point(61, 33);
+            this.txtServerDB.Location = new System.Drawing.Point(81, 41);
+            this.txtServerDB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtServerDB.Name = "txtServerDB";
             this.txtServerDB.PasswordChar = '\0';
             this.txtServerDB.SelectedText = "";
-            this.txtServerDB.Size = new System.Drawing.Size(120, 26);
+            this.txtServerDB.Size = new System.Drawing.Size(160, 37);
             this.txtServerDB.TabIndex = 5;
             // 
             // gunaButton2
@@ -301,7 +317,8 @@ namespace appE2Colsis.Vista
             this.gunaButton2.ForeColor = System.Drawing.Color.White;
             this.gunaButton2.Image = null;
             this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton2.Location = new System.Drawing.Point(93, 182);
+            this.gunaButton2.Location = new System.Drawing.Point(124, 224);
+            this.gunaButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaButton2.Name = "gunaButton2";
             this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -309,7 +326,7 @@ namespace appE2Colsis.Vista
             this.gunaButton2.OnHoverImage = null;
             this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton2.Radius = 20;
-            this.gunaButton2.Size = new System.Drawing.Size(64, 29);
+            this.gunaButton2.Size = new System.Drawing.Size(85, 36);
             this.gunaButton2.TabIndex = 4;
             this.gunaButton2.Text = "Save";
             this.gunaButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -320,9 +337,10 @@ namespace appE2Colsis.Vista
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(114, 147);
+            this.label4.Location = new System.Drawing.Point(152, 181);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 16);
+            this.label4.Size = new System.Drawing.Size(52, 19);
             this.label4.TabIndex = 3;
             this.label4.Text = "Pswd";
             // 
@@ -331,9 +349,10 @@ namespace appE2Colsis.Vista
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(7, 147);
+            this.label3.Location = new System.Drawing.Point(9, 181);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 16);
+            this.label3.Size = new System.Drawing.Size(48, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "User:";
             // 
@@ -342,9 +361,10 @@ namespace appE2Colsis.Vista
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(7, 112);
+            this.label2.Location = new System.Drawing.Point(9, 138);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 16);
+            this.label2.Size = new System.Drawing.Size(44, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Port:";
             // 
@@ -353,18 +373,31 @@ namespace appE2Colsis.Vista
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(7, 39);
+            this.label1.Location = new System.Drawing.Point(9, 48);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 16);
+            this.label1.Size = new System.Drawing.Size(65, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Server:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::appE2Colsis.Properties.Resources.colsis_logotipo;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 302);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(88, 84);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(312, 323);
+            this.ClientSize = new System.Drawing.Size(416, 398);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grpSetting);
             this.Controls.Add(this.pSettings);
             this.Controls.Add(this.gunaPictureBox1);
@@ -374,6 +407,7 @@ namespace appE2Colsis.Vista
             this.Controls.Add(this.gunaButton1);
             this.Controls.Add(this.gunaLabel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
@@ -382,6 +416,7 @@ namespace appE2Colsis.Vista
             ((System.ComponentModel.ISupportInitialize)(this.pSettings)).EndInit();
             this.grpSetting.ResumeLayout(false);
             this.grpSetting.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,5 +443,6 @@ namespace appE2Colsis.Vista
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaTextBox txtDataBaseDB;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

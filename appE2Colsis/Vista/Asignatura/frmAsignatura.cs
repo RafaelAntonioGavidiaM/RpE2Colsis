@@ -289,5 +289,10 @@ namespace appE2Colsis.Vista
             frmAsignaturaCurso objAsignaturaCurso = new frmAsignaturaCurso();
             objAsignaturaCurso.Show();
         }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

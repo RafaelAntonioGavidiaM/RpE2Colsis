@@ -78,8 +78,7 @@ namespace appE2Colsis.Datos
 
             string consulta = "update asignatura " +
                               "set nombreAsignatura = '" + nombreAsignatura + "', idArea = " + idArea + " " +
-                              "where idAsignatura =" + idAsignatura + " " +
-                              "and not exists(select * from asignatura where nombreAsignatura = '" + nombreAsignatura + "')";
+                              "where idAsignatura =" + idAsignatura;
             int resultado = objConexion.mtdConectado(consulta);
             return resultado;
 
