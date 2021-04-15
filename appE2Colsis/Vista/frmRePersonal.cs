@@ -104,7 +104,17 @@ namespace appE2Colsis.Vista
                     mtdCargar();
                     //GUARDA LA IMAGEN EN LA CARPETA 
                     string ruta = Directory.GetCurrentDirectory() + "\\fotosPersonal\\";
-                    File.Copy(openFoto.FileName, ruta + txtFoto.Text);
+                    try
+                    {
+                        File.Copy(openFoto.FileName, ruta + txtFoto.Text);
+
+                    }
+                    catch (Exception)
+                    {
+
+                        
+                    }
+                  
                     
                   
 
@@ -231,7 +241,17 @@ namespace appE2Colsis.Vista
                     MessageBox.Show("Actualizacion exitosa");
                     mtdCargar();
                     string ruta = Directory.GetCurrentDirectory() + "\\fotosPersonal\\";
-                    File.Copy(openFoto.FileName, ruta + txtFoto.Text);
+                    try
+                    {
+                        File.Copy(openFoto.FileName, ruta + txtFoto.Text);
+
+                    }
+                    catch (Exception)
+                    {
+
+                        
+                    }
+                    
                     mtdBorrarTxt();
                 }
                 else
